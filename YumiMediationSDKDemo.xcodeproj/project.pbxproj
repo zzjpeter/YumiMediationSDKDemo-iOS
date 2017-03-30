@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18B9EA55078CDEDC02089237 /* libPods-YumiMediationSDKDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B66BE2D981389A8993F753 /* libPods-YumiMediationSDKDemoTests.a */; };
+		8CC0938B05979E3B191612A6 /* libPods-YumiMediationSDKDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B4CDF1528922A11091F816 /* libPods-YumiMediationSDKDemoUITests.a */; };
 		B9A065791E8D0F6C00B1B91B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A065781E8D0F6C00B1B91B /* main.m */; };
 		B9A0657C1E8D0F6C00B1B91B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A0657B1E8D0F6C00B1B91B /* AppDelegate.m */; };
 		B9A0657F1E8D0F6C00B1B91B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A0657E1E8D0F6C00B1B91B /* ViewController.m */; };
@@ -15,6 +17,7 @@
 		B9A065871E8D0F6C00B1B91B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9A065851E8D0F6C00B1B91B /* LaunchScreen.storyboard */; };
 		B9A065921E8D0F6C00B1B91B /* YumiMediationSDKDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A065911E8D0F6C00B1B91B /* YumiMediationSDKDemoTests.m */; };
 		B9A0659D1E8D0F6C00B1B91B /* YumiMediationSDKDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A0659C1E8D0F6C00B1B91B /* YumiMediationSDKDemoUITests.m */; };
+		C8CA3ACC3A6063F7692EDD44 /* libPods-YumiMediationSDKDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC711C23106EE995A06D951 /* libPods-YumiMediationSDKDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27B66BE2D981389A8993F753 /* libPods-YumiMediationSDKDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YumiMediationSDKDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EC711C23106EE995A06D951 /* libPods-YumiMediationSDKDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YumiMediationSDKDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D87838E1D9BCAED5DBBD536 /* Pods-YumiMediationSDKDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YumiMediationSDKDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YumiMediationSDKDemoUITests/Pods-YumiMediationSDKDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7414EC105309956644DC2D55 /* Pods-YumiMediationSDKDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YumiMediationSDKDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YumiMediationSDKDemoUITests/Pods-YumiMediationSDKDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		99B4CDF1528922A11091F816 /* libPods-YumiMediationSDKDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YumiMediationSDKDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADCE056284C70FFC5C262393 /* Pods-YumiMediationSDKDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YumiMediationSDKDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YumiMediationSDKDemoTests/Pods-YumiMediationSDKDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		B9A065741E8D0F6C00B1B91B /* YumiMediationSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YumiMediationSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9A065781E8D0F6C00B1B91B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B9A0657A1E8D0F6C00B1B91B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +60,9 @@
 		B9A065981E8D0F6C00B1B91B /* YumiMediationSDKDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YumiMediationSDKDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9A0659C1E8D0F6C00B1B91B /* YumiMediationSDKDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YumiMediationSDKDemoUITests.m; sourceTree = "<group>"; };
 		B9A0659E1E8D0F6C00B1B91B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE9A153BECB07B60E32A03B8 /* Pods-YumiMediationSDKDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YumiMediationSDKDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YumiMediationSDKDemoTests/Pods-YumiMediationSDKDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E41DFD693B96CDAD9D2DE34A /* Pods-YumiMediationSDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YumiMediationSDKDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo.release.xcconfig"; sourceTree = "<group>"; };
+		EF37E67665639753C6F3087A /* Pods-YumiMediationSDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YumiMediationSDKDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8CA3ACC3A6063F7692EDD44 /* libPods-YumiMediationSDKDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18B9EA55078CDEDC02089237 /* libPods-YumiMediationSDKDemoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CC0938B05979E3B191612A6 /* libPods-YumiMediationSDKDemoUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +100,8 @@
 				B9A065901E8D0F6C00B1B91B /* YumiMediationSDKDemoTests */,
 				B9A0659B1E8D0F6C00B1B91B /* YumiMediationSDKDemoUITests */,
 				B9A065751E8D0F6C00B1B91B /* Products */,
+				CF9B7CE14EEFE2495AE58349 /* Pods */,
+				CC17811979C7A6C7D8B4EE8C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,6 +157,29 @@
 			path = YumiMediationSDKDemoUITests;
 			sourceTree = "<group>";
 		};
+		CC17811979C7A6C7D8B4EE8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3EC711C23106EE995A06D951 /* libPods-YumiMediationSDKDemo.a */,
+				27B66BE2D981389A8993F753 /* libPods-YumiMediationSDKDemoTests.a */,
+				99B4CDF1528922A11091F816 /* libPods-YumiMediationSDKDemoUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF9B7CE14EEFE2495AE58349 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EF37E67665639753C6F3087A /* Pods-YumiMediationSDKDemo.debug.xcconfig */,
+				E41DFD693B96CDAD9D2DE34A /* Pods-YumiMediationSDKDemo.release.xcconfig */,
+				DE9A153BECB07B60E32A03B8 /* Pods-YumiMediationSDKDemoTests.debug.xcconfig */,
+				ADCE056284C70FFC5C262393 /* Pods-YumiMediationSDKDemoTests.release.xcconfig */,
+				7414EC105309956644DC2D55 /* Pods-YumiMediationSDKDemoUITests.debug.xcconfig */,
+				5D87838E1D9BCAED5DBBD536 /* Pods-YumiMediationSDKDemoUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +187,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9A065A11E8D0F6C00B1B91B /* Build configuration list for PBXNativeTarget "YumiMediationSDKDemo" */;
 			buildPhases = (
+				F0460564D963287E35078481 /* [CP] Check Pods Manifest.lock */,
 				B9A065701E8D0F6C00B1B91B /* Sources */,
 				B9A065711E8D0F6C00B1B91B /* Frameworks */,
 				B9A065721E8D0F6C00B1B91B /* Resources */,
+				B4217F603A53899298FF5866 /* [CP] Embed Pods Frameworks */,
+				3784E7025DC0D05891BE331C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,9 +207,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9A065A41E8D0F6C00B1B91B /* Build configuration list for PBXNativeTarget "YumiMediationSDKDemoTests" */;
 			buildPhases = (
+				D502E83456DB64030966F724 /* [CP] Check Pods Manifest.lock */,
 				B9A065891E8D0F6C00B1B91B /* Sources */,
 				B9A0658A1E8D0F6C00B1B91B /* Frameworks */,
 				B9A0658B1E8D0F6C00B1B91B /* Resources */,
+				A27B1F30F761D682236FE9D2 /* [CP] Embed Pods Frameworks */,
+				9A03A1591ADFAF9CD14C80C4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,9 +228,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9A065A71E8D0F6C00B1B91B /* Build configuration list for PBXNativeTarget "YumiMediationSDKDemoUITests" */;
 			buildPhases = (
+				F198DED68B7D57C5100C9982 /* [CP] Check Pods Manifest.lock */,
 				B9A065941E8D0F6C00B1B91B /* Sources */,
 				B9A065951E8D0F6C00B1B91B /* Frameworks */,
 				B9A065961E8D0F6C00B1B91B /* Resources */,
+				9F756BC424A1B922FFD77914 /* [CP] Embed Pods Frameworks */,
+				9DACB3C9AFFA68F9C20801A4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -270,6 +319,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3784E7025DC0D05891BE331C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A03A1591ADFAF9CD14C80C4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YumiMediationSDKDemoTests/Pods-YumiMediationSDKDemoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9DACB3C9AFFA68F9C20801A4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YumiMediationSDKDemoUITests/Pods-YumiMediationSDKDemoUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F756BC424A1B922FFD77914 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YumiMediationSDKDemoUITests/Pods-YumiMediationSDKDemoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A27B1F30F761D682236FE9D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YumiMediationSDKDemoTests/Pods-YumiMediationSDKDemoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4217F603A53899298FF5866 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D502E83456DB64030966F724 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F0460564D963287E35078481 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F198DED68B7D57C5100C9982 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B9A065701E8D0F6C00B1B91B /* Sources */ = {
@@ -425,6 +612,7 @@
 		};
 		B9A065A21E8D0F6C00B1B91B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF37E67665639753C6F3087A /* Pods-YumiMediationSDKDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4ZY6EV6TFP;
@@ -437,6 +625,7 @@
 		};
 		B9A065A31E8D0F6C00B1B91B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E41DFD693B96CDAD9D2DE34A /* Pods-YumiMediationSDKDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4ZY6EV6TFP;
@@ -449,6 +638,7 @@
 		};
 		B9A065A51E8D0F6C00B1B91B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE9A153BECB07B60E32A03B8 /* Pods-YumiMediationSDKDemoTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 4ZY6EV6TFP;
@@ -462,6 +652,7 @@
 		};
 		B9A065A61E8D0F6C00B1B91B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADCE056284C70FFC5C262393 /* Pods-YumiMediationSDKDemoTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 4ZY6EV6TFP;
@@ -475,6 +666,7 @@
 		};
 		B9A065A81E8D0F6C00B1B91B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7414EC105309956644DC2D55 /* Pods-YumiMediationSDKDemoUITests.debug.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 4ZY6EV6TFP;
 				INFOPLIST_FILE = YumiMediationSDKDemoUITests/Info.plist;
@@ -487,6 +679,7 @@
 		};
 		B9A065A91E8D0F6C00B1B91B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D87838E1D9BCAED5DBBD536 /* Pods-YumiMediationSDKDemoUITests.release.xcconfig */;
 			buildSettings = {
 				DEVELOPMENT_TEAM = 4ZY6EV6TFP;
 				INFOPLIST_FILE = YumiMediationSDKDemoUITests/Info.plist;
