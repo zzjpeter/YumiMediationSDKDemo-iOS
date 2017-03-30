@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B9A065791E8D0F6C00B1B91B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A065781E8D0F6C00B1B91B /* main.m */; };
+		B9A0657C1E8D0F6C00B1B91B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A0657B1E8D0F6C00B1B91B /* AppDelegate.m */; };
+		B9A0657F1E8D0F6C00B1B91B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A0657E1E8D0F6C00B1B91B /* ViewController.m */; };
+		B9A065821E8D0F6C00B1B91B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9A065801E8D0F6C00B1B91B /* Main.storyboard */; };
+		B9A065841E8D0F6C00B1B91B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9A065831E8D0F6C00B1B91B /* Assets.xcassets */; };
+		B9A065871E8D0F6C00B1B91B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9A065851E8D0F6C00B1B91B /* LaunchScreen.storyboard */; };
+		B9A065921E8D0F6C00B1B91B /* YumiMediationSDKDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A065911E8D0F6C00B1B91B /* YumiMediationSDKDemoTests.m */; };
+		B9A0659D1E8D0F6C00B1B91B /* YumiMediationSDKDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A0659C1E8D0F6C00B1B91B /* YumiMediationSDKDemoUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B9A0658E1E8D0F6C00B1B91B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9A0656C1E8D0F6C00B1B91B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9A065731E8D0F6C00B1B91B;
+			remoteInfo = YumiMediationSDKDemo;
+		};
+		B9A065991E8D0F6C00B1B91B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9A0656C1E8D0F6C00B1B91B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9A065731E8D0F6C00B1B91B;
+			remoteInfo = YumiMediationSDKDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B9A065741E8D0F6C00B1B91B /* YumiMediationSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YumiMediationSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9A065781E8D0F6C00B1B91B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B9A0657A1E8D0F6C00B1B91B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B9A0657B1E8D0F6C00B1B91B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B9A0657D1E8D0F6C00B1B91B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B9A0657E1E8D0F6C00B1B91B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B9A065811E8D0F6C00B1B91B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B9A065831E8D0F6C00B1B91B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B9A065861E8D0F6C00B1B91B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B9A065881E8D0F6C00B1B91B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9A0658D1E8D0F6C00B1B91B /* YumiMediationSDKDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YumiMediationSDKDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9A065911E8D0F6C00B1B91B /* YumiMediationSDKDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YumiMediationSDKDemoTests.m; sourceTree = "<group>"; };
+		B9A065931E8D0F6C00B1B91B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9A065981E8D0F6C00B1B91B /* YumiMediationSDKDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YumiMediationSDKDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9A0659C1E8D0F6C00B1B91B /* YumiMediationSDKDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YumiMediationSDKDemoUITests.m; sourceTree = "<group>"; };
+		B9A0659E1E8D0F6C00B1B91B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B9A065711E8D0F6C00B1B91B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9A0658A1E8D0F6C00B1B91B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9A065951E8D0F6C00B1B91B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B9A0656B1E8D0F6C00B1B91B = {
+			isa = PBXGroup;
+			children = (
+				B9A065761E8D0F6C00B1B91B /* YumiMediationSDKDemo */,
+				B9A065901E8D0F6C00B1B91B /* YumiMediationSDKDemoTests */,
+				B9A0659B1E8D0F6C00B1B91B /* YumiMediationSDKDemoUITests */,
+				B9A065751E8D0F6C00B1B91B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B9A065751E8D0F6C00B1B91B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B9A065741E8D0F6C00B1B91B /* YumiMediationSDKDemo.app */,
+				B9A0658D1E8D0F6C00B1B91B /* YumiMediationSDKDemoTests.xctest */,
+				B9A065981E8D0F6C00B1B91B /* YumiMediationSDKDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B9A065761E8D0F6C00B1B91B /* YumiMediationSDKDemo */ = {
+			isa = PBXGroup;
+			children = (
+				B9A0657A1E8D0F6C00B1B91B /* AppDelegate.h */,
+				B9A0657B1E8D0F6C00B1B91B /* AppDelegate.m */,
+				B9A0657D1E8D0F6C00B1B91B /* ViewController.h */,
+				B9A0657E1E8D0F6C00B1B91B /* ViewController.m */,
+				B9A065801E8D0F6C00B1B91B /* Main.storyboard */,
+				B9A065831E8D0F6C00B1B91B /* Assets.xcassets */,
+				B9A065851E8D0F6C00B1B91B /* LaunchScreen.storyboard */,
+				B9A065881E8D0F6C00B1B91B /* Info.plist */,
+				B9A065771E8D0F6C00B1B91B /* Supporting Files */,
+			);
+			path = YumiMediationSDKDemo;
+			sourceTree = "<group>";
+		};
+		B9A065771E8D0F6C00B1B91B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B9A065781E8D0F6C00B1B91B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B9A065901E8D0F6C00B1B91B /* YumiMediationSDKDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				B9A065911E8D0F6C00B1B91B /* YumiMediationSDKDemoTests.m */,
+				B9A065931E8D0F6C00B1B91B /* Info.plist */,
+			);
+			path = YumiMediationSDKDemoTests;
+			sourceTree = "<group>";
+		};
+		B9A0659B1E8D0F6C00B1B91B /* YumiMediationSDKDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B9A0659C1E8D0F6C00B1B91B /* YumiMediationSDKDemoUITests.m */,
+				B9A0659E1E8D0F6C00B1B91B /* Info.plist */,
+			);
+			path = YumiMediationSDKDemoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B9A065731E8D0F6C00B1B91B /* YumiMediationSDKDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9A065A11E8D0F6C00B1B91B /* Build configuration list for PBXNativeTarget "YumiMediationSDKDemo" */;
+			buildPhases = (
+				B9A065701E8D0F6C00B1B91B /* Sources */,
+				B9A065711E8D0F6C00B1B91B /* Frameworks */,
+				B9A065721E8D0F6C00B1B91B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YumiMediationSDKDemo;
+			productName = YumiMediationSDKDemo;
+			productReference = B9A065741E8D0F6C00B1B91B /* YumiMediationSDKDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B9A0658C1E8D0F6C00B1B91B /* YumiMediationSDKDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9A065A41E8D0F6C00B1B91B /* Build configuration list for PBXNativeTarget "YumiMediationSDKDemoTests" */;
+			buildPhases = (
+				B9A065891E8D0F6C00B1B91B /* Sources */,
+				B9A0658A1E8D0F6C00B1B91B /* Frameworks */,
+				B9A0658B1E8D0F6C00B1B91B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9A0658F1E8D0F6C00B1B91B /* PBXTargetDependency */,
+			);
+			name = YumiMediationSDKDemoTests;
+			productName = YumiMediationSDKDemoTests;
+			productReference = B9A0658D1E8D0F6C00B1B91B /* YumiMediationSDKDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B9A065971E8D0F6C00B1B91B /* YumiMediationSDKDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9A065A71E8D0F6C00B1B91B /* Build configuration list for PBXNativeTarget "YumiMediationSDKDemoUITests" */;
+			buildPhases = (
+				B9A065941E8D0F6C00B1B91B /* Sources */,
+				B9A065951E8D0F6C00B1B91B /* Frameworks */,
+				B9A065961E8D0F6C00B1B91B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9A0659A1E8D0F6C00B1B91B /* PBXTargetDependency */,
+			);
+			name = YumiMediationSDKDemoUITests;
+			productName = YumiMediationSDKDemoUITests;
+			productReference = B9A065981E8D0F6C00B1B91B /* YumiMediationSDKDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B9A0656C1E8D0F6C00B1B91B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Zplay;
+				TargetAttributes = {
+					B9A065731E8D0F6C00B1B91B = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 4ZY6EV6TFP;
+						ProvisioningStyle = Automatic;
+					};
+					B9A0658C1E8D0F6C00B1B91B = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 4ZY6EV6TFP;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B9A065731E8D0F6C00B1B91B;
+					};
+					B9A065971E8D0F6C00B1B91B = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 4ZY6EV6TFP;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B9A065731E8D0F6C00B1B91B;
+					};
+				};
+			};
+			buildConfigurationList = B9A0656F1E8D0F6C00B1B91B /* Build configuration list for PBXProject "YumiMediationSDKDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B9A0656B1E8D0F6C00B1B91B;
+			productRefGroup = B9A065751E8D0F6C00B1B91B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B9A065731E8D0F6C00B1B91B /* YumiMediationSDKDemo */,
+				B9A0658C1E8D0F6C00B1B91B /* YumiMediationSDKDemoTests */,
+				B9A065971E8D0F6C00B1B91B /* YumiMediationSDKDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B9A065721E8D0F6C00B1B91B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9A065871E8D0F6C00B1B91B /* LaunchScreen.storyboard in Resources */,
+				B9A065841E8D0F6C00B1B91B /* Assets.xcassets in Resources */,
+				B9A065821E8D0F6C00B1B91B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9A0658B1E8D0F6C00B1B91B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9A065961E8D0F6C00B1B91B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B9A065701E8D0F6C00B1B91B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9A0657F1E8D0F6C00B1B91B /* ViewController.m in Sources */,
+				B9A0657C1E8D0F6C00B1B91B /* AppDelegate.m in Sources */,
+				B9A065791E8D0F6C00B1B91B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9A065891E8D0F6C00B1B91B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9A065921E8D0F6C00B1B91B /* YumiMediationSDKDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9A065941E8D0F6C00B1B91B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9A0659D1E8D0F6C00B1B91B /* YumiMediationSDKDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B9A0658F1E8D0F6C00B1B91B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B9A065731E8D0F6C00B1B91B /* YumiMediationSDKDemo */;
+			targetProxy = B9A0658E1E8D0F6C00B1B91B /* PBXContainerItemProxy */;
+		};
+		B9A0659A1E8D0F6C00B1B91B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B9A065731E8D0F6C00B1B91B /* YumiMediationSDKDemo */;
+			targetProxy = B9A065991E8D0F6C00B1B91B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B9A065801E8D0F6C00B1B91B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9A065811E8D0F6C00B1B91B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B9A065851E8D0F6C00B1B91B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9A065861E8D0F6C00B1B91B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B9A0659F1E8D0F6C00B1B91B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B9A065A01E8D0F6C00B1B91B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B9A065A21E8D0F6C00B1B91B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4ZY6EV6TFP;
+				INFOPLIST_FILE = YumiMediationSDKDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.YumiMediationSDKDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B9A065A31E8D0F6C00B1B91B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4ZY6EV6TFP;
+				INFOPLIST_FILE = YumiMediationSDKDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.YumiMediationSDKDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B9A065A51E8D0F6C00B1B91B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4ZY6EV6TFP;
+				INFOPLIST_FILE = YumiMediationSDKDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.YumiMediationSDKDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YumiMediationSDKDemo.app/YumiMediationSDKDemo";
+			};
+			name = Debug;
+		};
+		B9A065A61E8D0F6C00B1B91B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 4ZY6EV6TFP;
+				INFOPLIST_FILE = YumiMediationSDKDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.YumiMediationSDKDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YumiMediationSDKDemo.app/YumiMediationSDKDemo";
+			};
+			name = Release;
+		};
+		B9A065A81E8D0F6C00B1B91B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 4ZY6EV6TFP;
+				INFOPLIST_FILE = YumiMediationSDKDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.YumiMediationSDKDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = YumiMediationSDKDemo;
+			};
+			name = Debug;
+		};
+		B9A065A91E8D0F6C00B1B91B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 4ZY6EV6TFP;
+				INFOPLIST_FILE = YumiMediationSDKDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.YumiMediationSDKDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = YumiMediationSDKDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B9A0656F1E8D0F6C00B1B91B /* Build configuration list for PBXProject "YumiMediationSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9A0659F1E8D0F6C00B1B91B /* Debug */,
+				B9A065A01E8D0F6C00B1B91B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9A065A11E8D0F6C00B1B91B /* Build configuration list for PBXNativeTarget "YumiMediationSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9A065A21E8D0F6C00B1B91B /* Debug */,
+				B9A065A31E8D0F6C00B1B91B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B9A065A41E8D0F6C00B1B91B /* Build configuration list for PBXNativeTarget "YumiMediationSDKDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9A065A51E8D0F6C00B1B91B /* Debug */,
+				B9A065A61E8D0F6C00B1B91B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B9A065A71E8D0F6C00B1B91B /* Build configuration list for PBXNativeTarget "YumiMediationSDKDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9A065A81E8D0F6C00B1B91B /* Debug */,
+				B9A065A91E8D0F6C00B1B91B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B9A0656C1E8D0F6C00B1B91B /* Project object */;
+}
