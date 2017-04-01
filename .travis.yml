@@ -6,11 +6,13 @@ before_install:
   - gem update fastlane
   - gem install xcov
 
+install:
+  - pod install --repo-update
+
 before_script:
   - openssl aes-256-cbc -k $ENCRYPTION_PASSWORD -in fastlane/Certificates/distribution.p12.enc -d -a -out fastlane/Certificates/distribution.p12
 
 script:
-  - pod install --repo-update
   - fastlane beta 
 
 env:
