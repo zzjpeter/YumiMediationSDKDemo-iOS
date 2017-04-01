@@ -1,0 +1,121 @@
+# Customise this file, documentation can be found here:
+# https://github.com/fastlane/fastlane/tree/master/fastlane/docs
+# All available actions: https://docs.fastlane.tools/actions
+# can also be listed using the `fastlane actions` command
+
+# Change the syntax highlighting to Ruby
+# All lines starting with a # are ignored when running `fastlane`
+
+# If you want to automatically update fastlane if a new version is available:
+# update_fastlane
+
+# This is the minimum version number required.
+# Update this, if you use features of a newer version
+fastlane_version "2.24.0"
+
+default_platform :ios
+
+platform :ios do
+  before_all do
+    # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
+    cocoapods
+    
+  end
+
+  # desc "Runs all the tests"
+  # lane :test do
+  #   scan
+  # end
+
+  desc "Submit a new Beta Build to HockeyApp"
+  lane :beta do
+    keychain_name = "YumiMediationSDKExample-certs"
+
+    create_keychain(
+      name: keychain_name,
+      default_keychain: true,
+      unlock: true,
+      password: SecureRandom.base64,
+      timeout: 3600
+    )
+
+    import_certificate(
+      certificate_path: "fastlane/Certificates/distribution.p12",
+      certificate_password: ENV["KEY_PASSWORD"],
+      keychain_name: keychain_name
+    )
+
+    # Fetch provisioning file
+    sigh(
+      adhoc: true,
+      username: "nanohugh@gmail.com",
+      team_id: "5DMZPCXW62",
+      provisioning_name: "YumiMediationSDKDemo AdHoc",
+      cert_owner_name: "Chiming HUANG"
+    )
+
+    increment_build_number(build_number: ENV["TRAVIS_BUILD_NUMBER"])
+
+    # Build
+    gym(
+      scheme: "YumiMediationSDKDemo",
+      workspace: "YumiMediationSDKDemo.xcworkspace",
+      configuration: "Release",
+      sdk: "iphoneos10.0",
+      clean: true,
+      include_bitcode: false,
+      include_symbols: true,
+      xcargs: "PROVISIONING_PROFILE_SPECIFIER='YumiMediationSDKDemo AdHoc'",
+      export_method: "ad-hoc"
+    )
+
+    # Push to HockeyApp
+    hockey(
+      api_token: ENV["HOCKEY_API_TOKEN"],
+      public_identifier: ENV["HOCKEY_APP_ID"],
+      notify: '1',
+      status: '2',
+      commit_sha: ENV["TRAVIS_COMMIT"],
+      repository_url: "https://github.com/yumimobi/YumiMediationSDKDemo-iOS.git",
+      notes: ENV["TRAVIS_COMMIT_MESSAGE"],
+    )
+
+    delete_keychain(
+      name: keychain_name
+    )
+
+  end
+
+  # desc "Deploy a new version to the App Store"
+  # lane :release do
+  #   # match(type: "appstore")
+  #   # snapshot
+  #   gym # Build your app - more options available
+  #   deliver(force: true)
+  #   # frameit
+  # end
+
+  # You can define as many lanes as you want
+
+  after_all do |lane|
+    # This block is called, only if the executed lane was successful
+
+    # slack(
+    #   message: "Successfully deployed new App Update."
+    # )
+  end
+
+  error do |lane, exception|
+    # slack(
+    #   message: exception.message,
+    #   success: false
+    # )
+  end
+end
+
+
+# More information about multiple platforms in fastlane: https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Platforms.md
+# All available actions: https://docs.fastlane.tools/actions
+
+# fastlane reports which actions are used
+# No personal data is recorded. Learn more at https://github.com/fastlane/enhancer
