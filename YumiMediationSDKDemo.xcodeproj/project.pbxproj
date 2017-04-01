@@ -256,7 +256,7 @@
 				TargetAttributes = {
 					B9A065731E8D0F6C00B1B91B = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 4ZY6EV6TFP;
+						DevelopmentTeam = VG25A6M88T;
 						ProvisioningStyle = Automatic;
 					};
 					B9A0658C1E8D0F6C00B1B91B = {
@@ -615,7 +615,7 @@
 			baseConfigurationReference = EF37E67665639753C6F3087A /* Pods-YumiMediationSDKDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4ZY6EV6TFP;
+				DEVELOPMENT_TEAM = VG25A6M88T;
 				INFOPLIST_FILE = YumiMediationSDKDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.YumiMediationSDKDemo;
@@ -628,7 +628,7 @@
 			baseConfigurationReference = E41DFD693B96CDAD9D2DE34A /* Pods-YumiMediationSDKDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4ZY6EV6TFP;
+				DEVELOPMENT_TEAM = VG25A6M88T;
 				INFOPLIST_FILE = YumiMediationSDKDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.YumiMediationSDKDemo;
@@ -709,6 +709,7 @@
 				B9A065A31E8D0F6C00B1B91B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B9A065A41E8D0F6C00B1B91B /* Build configuration list for PBXNativeTarget "YumiMediationSDKDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -717,6 +718,7 @@
 				B9A065A61E8D0F6C00B1B91B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B9A065A71E8D0F6C00B1B91B /* Build configuration list for PBXNativeTarget "YumiMediationSDKDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -725,6 +727,7 @@
 				B9A065A91E8D0F6C00B1B91B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

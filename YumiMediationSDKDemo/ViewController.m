@@ -7,20 +7,21 @@
 //
 
 #import "ViewController.h"
-#import <YumiMediationSDK/AdsYuMIView.h>
-#import <YumiMediationSDK/YuMIInterstitial.h>
-#import <YumiMediationSDK/YuMIInterstitialManager.h>
-#import <YumiMediationSDK/YMVideoManager.h>
+#import <YumiMediationSDK_Zplay/AdsYuMIView.h>
+#import <YumiMediationSDK_Zplay/YuMIInterstitial.h>
+#import <YumiMediationSDK_Zplay/YuMIInterstitialManager.h>
+#import <YumiMediationSDK_Zplay/YMVideoManager.h>
 
-#define YUMIBANNER_ID       @"389101ea5bbdaf5235ceddefc7dc34b8"
-#define YUMIINTERSTITIAL_ID @"389101ea5bbdaf5235ceddefc7dc34b8"
-#define YUMIVIDEO_ID        @"389101ea5bbdaf5235ceddefc7dc34b8"
+#define YUMIBANNER_ID       @"3f521f0914fdf691bd23bf85a8fd3c3a"
+#define YUMIINTERSTITIAL_ID @"3f521f0914fdf691bd23bf85a8fd3c3a"
+#define YUMIVIDEO_ID        @"3f521f0914fdf691bd23bf85a8fd3c3a"
 #define YUMI_CHANNELID      @""
 #define YUMI_VERSIONID      @""
 
 @interface ViewController ()<AdsYuMIDelegate,YuMIInterstitialDelegate,UIAlertViewDelegate,YMVideoDelegate> {
     AdsYuMIView * adView;
     YuMIInterstitial * inter;
+    UIAlertController *alertVC;
 }
 @end
 
@@ -34,6 +35,10 @@
     [self.btn_load_inter addTarget:self action:@selector(clickInterstitialUpload:) forControlEvents:UIControlEventTouchUpInside];
     [self.btn_show_inter addTarget:self action:@selector(clickInterstitialShow:) forControlEvents:UIControlEventTouchUpInside];
 
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    
 }
 
 -(void)createBanner{
