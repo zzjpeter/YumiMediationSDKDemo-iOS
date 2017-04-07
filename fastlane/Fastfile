@@ -25,9 +25,6 @@ platform :ios do
   lane :beta do
     next if ENV["TRAVIS_PULL_REQUEST"] != "false" or ENV["TRAVIS_BRANCH"] != "fastlane_integration"
 
-    fastlane_require "retries"
-    with_retries(max_tries: 10) { cocoapods(repo_update: true, verbose: true) }
-
     keychain_name = "YumiMediationSDKExample-certs"
 
     create_keychain(
