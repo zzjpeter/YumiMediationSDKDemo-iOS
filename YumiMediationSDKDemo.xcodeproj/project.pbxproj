@@ -256,8 +256,8 @@
 				TargetAttributes = {
 					B9A065731E8D0F6C00B1B91B = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = VG25A6M88T;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 5DMZPCXW62;
+						ProvisioningStyle = Manual;
 					};
 					B9A0658C1E8D0F6C00B1B91B = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -544,6 +544,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -592,6 +593,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -615,11 +617,14 @@
 			baseConfigurationReference = EF37E67665639753C6F3087A /* Pods-YumiMediationSDKDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = VG25A6M88T;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 5DMZPCXW62;
 				INFOPLIST_FILE = YumiMediationSDKDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.YumiMediationSDKDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.YumiMediationSDKExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "fef0bcc5-a150-41ff-be1a-2540e5250344";
+				PROVISIONING_PROFILE_SPECIFIER = "YumiMediationSDKDemo AdHoc";
 			};
 			name = Debug;
 		};
@@ -628,11 +633,14 @@
 			baseConfigurationReference = E41DFD693B96CDAD9D2DE34A /* Pods-YumiMediationSDKDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = VG25A6M88T;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 5DMZPCXW62;
 				INFOPLIST_FILE = YumiMediationSDKDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.YumiMediationSDKDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.YumiMediationSDKExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "fef0bcc5-a150-41ff-be1a-2540e5250344";
+				PROVISIONING_PROFILE_SPECIFIER = "YumiMediationSDKDemo AdHoc";
 			};
 			name = Release;
 		};
