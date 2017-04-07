@@ -4,6 +4,7 @@ language: objective-c
 before_install:
   - gem update fastlane
   - gem update cocoapods
+  - gem install retries
 
 install:
   - true
