@@ -1,9 +1,6 @@
 osx_image: xcode8
 language: objective-c
 
-before_install:
-  - bundle install
-
 script:
   - sh ./fastlane/decrypt_p12.sh
   - fastlane beta 
