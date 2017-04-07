@@ -7,10 +7,10 @@
 //
 
 #import "ViewController.h"
-#import <YumiMediationSDK_Zplay/AdsYuMIView.h>
-#import <YumiMediationSDK_Zplay/YuMIInterstitial.h>
-#import <YumiMediationSDK_Zplay/YuMIInterstitialManager.h>
-#import <YumiMediationSDK_Zplay/YMVideoManager.h>
+#import <YumiMediationSDK/AdsYuMIView.h>
+#import <YumiMediationSDK/YuMIInterstitial.h>
+#import <YumiMediationSDK/YuMIInterstitialManager.h>
+#import <YumiMediationSDK/YMVideoManager.h>
 
 #define YUMIBANNER_ID       @"3f521f0914fdf691bd23bf85a8fd3c3a"
 #define YUMIINTERSTITIAL_ID @"3f521f0914fdf691bd23bf85a8fd3c3a"

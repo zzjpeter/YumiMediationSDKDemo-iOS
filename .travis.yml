@@ -2,17 +2,10 @@ osx_image: xcode8
 language: objective-c
 
 before_install:
-  - gem update cocoapods
-  - gem update fastlane
-  - gem install xcov
-
-install:
-  - pod install --repo-update
-
-before_script:
-  - openssl aes-256-cbc -k $ENCRYPTION_PASSWORD -in fastlane/Certificates/distribution.p12.enc -d -a -out fastlane/Certificates/distribution.p12
+  - bundle install
 
 script:
+  - sh ./fastlane/decrypt_p12.sh
   - fastlane beta 
 
 env:
