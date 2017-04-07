@@ -23,7 +23,7 @@ platform :ios do
 
   desc "Submit a new Beta Build to HockeyApp"
   lane :beta do
-    next if ENV["TRAVIS_PULL_REQUEST"] != "false" or ENV["TRAVIS_BRANCH"] != "fastlane_integration"
+    next if ENV["TRAVIS_PULL_REQUEST"] != "false" or ENV["TRAVIS_BRANCH"] != "beta"
 
     keychain_name = "YumiMediationSDKExample-certs"
 
