@@ -7,10 +7,12 @@
 //
 
 #import "ViewController.h"
-#import <YumiMediationSDK/AdsYuMIView.h>
-#import <YumiMediationSDK/YuMIInterstitial.h>
-#import <YumiMediationSDK/YuMIInterstitialManager.h>
-#import <YumiMediationSDK/YMVideoManager.h>
+
+#import <YumiMediationSDK_Zplay/AdsYuMIView.h>
+#import <YumiMediationSDK_Zplay/YuMIInterstitial.h>
+#import <YumiMediationSDK_Zplay/YuMIInterstitialManager.h>
+#import <YumiMediationSDK_Zplay/YMVideoManager.h>
+#import <YumiMediationSDK_Zplay/AdsYuMIDeviceInfo.h>
 
 #define YUMIBANNER_ID       @"3f521f0914fdf691bd23bf85a8fd3c3a"
 #define YUMIINTERSTITIAL_ID @"3f521f0914fdf691bd23bf85a8fd3c3a"
@@ -29,7 +31,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    NSString *appname = [[AdsYuMIDeviceInfo shareDevice]getAppName];
     [self.btn_banner_start addTarget:self action:@selector(createBanner) forControlEvents:UIControlEventTouchUpInside];
     [self.btn_banner_end addTarget:self action:@selector(removeBanner) forControlEvents:UIControlEventTouchUpInside];
     [self.btn_load_inter addTarget:self action:@selector(clickInterstitialUpload:) forControlEvents:UIControlEventTouchUpInside];
@@ -39,8 +41,18 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     
+    alertVC = [UIAlertController alertControllerWithTitle:@"WARNING" message:@"PLEASE SELECT SERVER" preferredStyle:UIAlertControllerStyleAlert ];
+    [alertVC addAction:[UIAlertAction actionWithTitle:@"测试服务器" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        [[AdsYuMIDeviceInfo shareDevice] openTestService:YES];
+    }]];
+    [alertVC addAction:[UIAlertAction actionWithTitle:@"正式服务器" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        [[AdsYuMIDeviceInfo shareDevice] openTestService:NO];
+    }]];
+    [self presentViewController:alertVC animated:YES completion:^{
+        
+    }];
+    
 }
-
 -(void)createBanner{
     if (adView) {
         return;

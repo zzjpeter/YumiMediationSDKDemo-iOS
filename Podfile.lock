@@ -36,11 +36,11 @@ PODS:
   - YumiMediationMopub (4.11.1.2):
     - YumiMediationSDK (>= 1.6.41)
     - YumiMopubSDK (= 4.11.1)
-  - YumiMediationSDK (1.7.0):
+  - YumiMediationSDK_Zplay (1.7.0):
     - YumiAdsSDK (= 2.0.5)
     - YumiVideoAdsSDK (= 2.1.1)
-  - YumiMediationStartApp (3.4.1.2):
-    - YumiMediationSDK (>= 1.6.41)
+  - YumiMediationStartApp_Zplay (3.4.1.2):
+    - YumiMediationSDK_Zplay (>= 1.6.41)
     - YumiStartAppSDK (= 3.4.1)
   - YumiMediationUnity (2.0.0.1):
     - YumiMediationSDK (>= 1.6.41)
@@ -75,7 +75,7 @@ PODS:
     - YumiUnitySDK (= 2.0.0)
   - YumiVideoAdsMediationVungle (4.0.8.1):
     - VungleSDK-iOS (= 4.0.8)
-    - YumiMediationSDK (>= 1.6.41)
+    - YumiMediationSDK_Zplay (>= 1.6.41)
   - YumiVideoAdsSDK (2.1.1)
 
 DEPENDENCIES:
@@ -113,32 +113,32 @@ SPEC CHECKSUMS:
   YumiGDTSDK: 51ad47c7c28096bf330fc05664af83e8693fe063
   YumiIronsourceSDK: f26f26b8aa3a256092845fc67b4394075507d4ee
   YumiLoopMeSDK: 856e2c19c4b2116f84ec0642895e86cee713a90a
-  YumiMediationAdMob: 91d6c2827c01f9d9305f4d01ef98b9dec239c45f
-  YumiMediationAppLovin: 67f6b8592bb65f272044c2085b8368c02346ae8f
-  YumiMediationBaidu: f611155c7322f06887e0551eb6c227dfbf3640b1
-  YumiMediationChartboost: bbedb4399fd8654fc5e84e52b7c84e169ba791a2
-  YumiMediationFacebook: 5ba40952cadfac72c513ced06851b74722c90eef
-  YumiMediationGDT: 5bc99aaf2f6714d4288ce3777ee73a561ca3c1d3
-  YumiMediationInMobi: 491a3f0ae72723393962b2bed8205f645c9f4d75
-  YumiMediationMopub: df184602a2efaa0b90fe41c8d3e7ba752b2c9bdc
-  YumiMediationSDK: e914f88c645c31bae1b9a5149d00afbd196e8517
-  YumiMediationStartApp: 024104d9cb01b703e3adf556ccbf3e4fab8c8196
-  YumiMediationUnity: fc7a71ec9171b74c68b815ff322c47596a960a76
+  YumiMediationAdMob_Zplay: 55eb5126b5bc848d88b6918d8a40859f78194c1a
+  YumiMediationAppLovin_Zplay: b9b3857f834589771f26119fd6248f1b108d3a35
+  YumiMediationBaidu_Zplay: d8d4023690d32bbc894687b37503c0227e2da84b
+  YumiMediationChartboost_Zplay: aa4827a188e64dba3fcbc67f45bd9cab4e2c0905
+  YumiMediationFacebook_Zplay: 0384c01987a5ab0bcf5f2221792270cd9841b40a
+  YumiMediationGDT_Zplay: 7b0a1669fc85c3a11a52213a814cd91e050a3e91
+  YumiMediationInMobi_Zplay: bef8a9309b928aafa055cf2c6148d0e0e2b1fcf8
+  YumiMediationMopub_Zplay: 7879ee81bf3461df09c31c30cb005fd246b1238c
+  YumiMediationSDK_Zplay: 3eef13556f2fbc76bfe2e97aaac9c68f1ead1280
+  YumiMediationStartApp_Zplay: f952133b9284e1b1db275321fb997c8613dd41f4
+  YumiMediationUnity_Zplay: fc410dc0e91729310e6415bbc5868a2b983ca087
   YumiMopubSDK: 34a6f42d1947c126262efe48252d3fe2ad18b459
   YumiStartAppSDK: 706066574f63e7aab0d9c01162d11a10a85c0760
   YumiTapjoySDK: a94a14f62151e06ae33ddd61f17ac00883db6e36
   YumiUnitySDK: 6b764125ee4dac347c3324b9345a85a73b20dd15
-  YumiVideoAdsMediationAdColony: 4e4f29f8d7778b2451ed0c05d2e9f74baba35c4b
-  YumiVideoAdsMediationAppLovin: b5c52300e3fd147a4d11df5cec8c9799ca2a6640
-  YumiVideoAdsMediationDomob: ea568fa1d53fd6dce0900fd8d8e9cbfa3761feac
-  YumiVideoAdsMediationInMobi: fd9a6d49b64e757df261ae9bc5e7e2faa0091925
-  YumiVideoAdsMediationIronsource: 1d66af3874e2cde6c8f7e40250394b9ddc59154e
-  YumiVideoAdsMediationLoopMe: 71dd7201240f9eab9003059ce30940f21b01e7e1
-  YumiVideoAdsMediationTapjoy: a88c638f1fe9aedf6f4eb666fd74f46a5d808c5c
-  YumiVideoAdsMediationUnity: 59299d9029c3e5de19745429357e82353d2b0217
-  YumiVideoAdsMediationVungle: 26ae9e7593969e040f09382fd34589cf967d6acc
+  YumiVideoAdsMediationAdColony_Zplay: 355cf5e7cec8934ff0c5e66396a5de2cc49ed314
+  YumiVideoAdsMediationAppLovin_Zplay: c10b17f8c6088d02c4b8da46cdade29ca79372a2
+  YumiVideoAdsMediationDomob_Zplay: b28166143a70bf611f0b07f9be4d32da335dcb01
+  YumiVideoAdsMediationInMobi_Zplay: cbf710ab88d4f28c4c1e64bed5d5cb15728aa916
+  YumiVideoAdsMediationIronsource_Zplay: 0db9cecd10811c37764c52163bf40b50d8b428ce
+  YumiVideoAdsMediationLoopMe_Zplay: 44d76ab0fb6314db8e7e373855a496f02065c951
+  YumiVideoAdsMediationTapjoy_Zplay: a4829bd40174b82a39f05fd2de7743998b32922c
+  YumiVideoAdsMediationUnity_Zplay: 33c33aaff45cf189cbd091b77ea0094a7b496436
+  YumiVideoAdsMediationVungle_Zplay: 7e5a49ef356e10728e0cfc42cbcf9b0f469fb836
   YumiVideoAdsSDK: 6aa6388fc06b812a45cbdb57bc32b86de7ae9411
 
-PODFILE CHECKSUM: 9793f24bdf0d9bd1cc224bb45bd7c0eb0c512ead
+PODFILE CHECKSUM: f07695498c4421897d687b8c15f147a719503d24
 
 COCOAPODS: 1.2.0
