@@ -12,29 +12,29 @@ PODS:
   - YumiGDTSDK (4.5.5)
   - YumiIronsourceSDK (6.4.21)
   - YumiLoopMeSDK (5.2.4)
-  - YumiMediationAdMob (7.18.0.3):
+  - YumiMediationAdMob_Zplay (7.18.0.3):
     - Google-Mobile-Ads-SDK (= 7.18.0)
-    - YumiMediationSDK (>= 1.6.41)
-  - YumiMediationAppLovin (3.4.3.2):
+    - YumiMediationSDK_Zplay (>= 1.6.41)
+  - YumiMediationAppLovin_Zplay (3.4.3.2):
     - YumiAppLovinSDK (= 3.4.3)
-    - YumiMediationSDK (>= 1.6.41)
-  - YumiMediationBaidu (4.5.0.2):
+    - YumiMediationSDK_Zplay (>= 1.6.41)
+  - YumiMediationBaidu_Zplay (4.5.0.2):
     - YumiBaiduSDK (= 4.5.0)
-    - YumiMediationSDK (>= 1.6.41)
-  - YumiMediationChartboost (6.6.1.2):
+    - YumiMediationSDK_Zplay (>= 1.6.41)
+  - YumiMediationChartboost_Zplay (6.6.1.2):
     - ChartboostSDK (= 6.6.1)
-    - YumiMediationSDK (>= 1.6.41)
-  - YumiMediationFacebook (4.17.0.5):
+    - YumiMediationSDK_Zplay (>= 1.6.41)
+  - YumiMediationFacebook_Zplay (4.17.0.5):
     - FBAudienceNetwork (= 4.17.0)
-    - YumiMediationSDK (>= 1.6.41)
-  - YumiMediationGDT (4.5.5.3):
+    - YumiMediationSDK_Zplay (>= 1.6.41)
+  - YumiMediationGDT_Zplay (4.5.5.3):
     - YumiGDTSDK (= 4.5.5)
-    - YumiMediationSDK (>= 1.6.41)
-  - YumiMediationInMobi (6.0.0.3):
+    - YumiMediationSDK_Zplay (>= 1.6.41)
+  - YumiMediationInMobi_Zplay (6.0.0.3):
     - InMobiSDK (= 6.0.0)
-    - YumiMediationSDK (>= 1.6.41)
-  - YumiMediationMopub (4.11.1.2):
-    - YumiMediationSDK (>= 1.6.41)
+    - YumiMediationSDK_Zplay (>= 1.6.41)
+  - YumiMediationMopub_Zplay (4.11.1.2):
+    - YumiMediationSDK_Zplay (>= 1.6.41)
     - YumiMopubSDK (= 4.11.1)
   - YumiMediationSDK_Zplay (1.7.0):
     - YumiAdsSDK (= 2.0.5)
@@ -42,62 +42,62 @@ PODS:
   - YumiMediationStartApp_Zplay (3.4.1.2):
     - YumiMediationSDK_Zplay (>= 1.6.41)
     - YumiStartAppSDK (= 3.4.1)
-  - YumiMediationUnity (2.0.0.1):
-    - YumiMediationSDK (>= 1.6.41)
+  - YumiMediationUnity_Zplay (2.0.0.1):
+    - YumiMediationSDK_Zplay (>= 1.6.41)
     - YumiUnitySDK (= 2.0.0)
   - YumiMopubSDK (4.11.1)
   - YumiStartAppSDK (3.4.1)
   - YumiTapjoySDK (11.6.0)
   - YumiUnitySDK (2.0.0)
-  - YumiVideoAdsMediationAdColony (2.6.3.1):
+  - YumiVideoAdsMediationAdColony_Zplay (2.6.3.1):
     - YumiAdcolonySDK (= 2.6.3)
-    - YumiMediationSDK (>= 1.6.41)
-  - YumiVideoAdsMediationAppLovin (3.4.3.1):
+    - YumiMediationSDK_Zplay (>= 1.6.41)
+  - YumiVideoAdsMediationAppLovin_Zplay (3.4.3.1):
     - YumiAppLovinSDK (= 3.4.3)
-    - YumiMediationSDK (>= 1.6.41)
-  - YumiVideoAdsMediationDomob (3.5.0.1):
+    - YumiMediationSDK_Zplay (>= 1.6.41)
+  - YumiVideoAdsMediationDomob_Zplay (3.5.0.1):
     - YumiDomobSDK (= 3.5.0)
-    - YumiMediationSDK (>= 1.6.41)
-  - YumiVideoAdsMediationInMobi (6.0.0.1):
+    - YumiMediationSDK_Zplay (>= 1.6.41)
+  - YumiVideoAdsMediationInMobi_Zplay (6.0.0.1):
     - InMobiSDK (= 6.0.0)
-    - YumiMediationSDK (>= 1.6.41)
-  - YumiVideoAdsMediationIronsource (6.4.21.1):
+    - YumiMediationSDK_Zplay (>= 1.6.41)
+  - YumiVideoAdsMediationIronsource_Zplay (6.4.21.1):
     - YumiIronsourceSDK (= 6.4.21)
-    - YumiMediationSDK (>= 1.6.41)
-  - YumiVideoAdsMediationLoopMe (5.2.4.1):
+    - YumiMediationSDK_Zplay (>= 1.6.41)
+  - YumiVideoAdsMediationLoopMe_Zplay (5.2.4.1):
     - YumiLoopMeSDK (= 5.2.4)
-    - YumiMediationSDK (>= 1.6.41)
-  - YumiVideoAdsMediationTapjoy (11.6.0.1):
-    - YumiMediationSDK (>= 1.6.41)
+    - YumiMediationSDK_Zplay (>= 1.6.41)
+  - YumiVideoAdsMediationTapjoy_Zplay (11.6.0.1):
+    - YumiMediationSDK_Zplay (>= 1.6.41)
     - YumiTapjoySDK (= 11.6.0)
-  - YumiVideoAdsMediationUnity (2.0.0.1):
-    - YumiMediationSDK (>= 1.6.41)
+  - YumiVideoAdsMediationUnity_Zplay (2.0.0.1):
+    - YumiMediationSDK_Zplay (>= 1.6.41)
     - YumiUnitySDK (= 2.0.0)
-  - YumiVideoAdsMediationVungle (4.0.8.1):
+  - YumiVideoAdsMediationVungle_Zplay (4.0.8.1):
     - VungleSDK-iOS (= 4.0.8)
     - YumiMediationSDK_Zplay (>= 1.6.41)
   - YumiVideoAdsSDK (2.1.1)
 
 DEPENDENCIES:
-  - YumiMediationAdMob
-  - YumiMediationAppLovin
-  - YumiMediationBaidu
-  - YumiMediationChartboost
-  - YumiMediationFacebook
-  - YumiMediationGDT
-  - YumiMediationInMobi
-  - YumiMediationMopub
-  - YumiMediationStartApp
-  - YumiMediationUnity
-  - YumiVideoAdsMediationAdColony
-  - YumiVideoAdsMediationAppLovin
-  - YumiVideoAdsMediationDomob
-  - YumiVideoAdsMediationInMobi
-  - YumiVideoAdsMediationIronsource
-  - YumiVideoAdsMediationLoopMe
-  - YumiVideoAdsMediationTapjoy
-  - YumiVideoAdsMediationUnity
-  - YumiVideoAdsMediationVungle
+  - YumiMediationAdMob_Zplay
+  - YumiMediationAppLovin_Zplay
+  - YumiMediationBaidu_Zplay
+  - YumiMediationChartboost_Zplay
+  - YumiMediationFacebook_Zplay
+  - YumiMediationGDT_Zplay
+  - YumiMediationInMobi_Zplay
+  - YumiMediationMopub_Zplay
+  - YumiMediationStartApp_Zplay
+  - YumiMediationUnity_Zplay
+  - YumiVideoAdsMediationAdColony_Zplay
+  - YumiVideoAdsMediationAppLovin_Zplay
+  - YumiVideoAdsMediationDomob_Zplay
+  - YumiVideoAdsMediationInMobi_Zplay
+  - YumiVideoAdsMediationIronsource_Zplay
+  - YumiVideoAdsMediationLoopMe_Zplay
+  - YumiVideoAdsMediationTapjoy_Zplay
+  - YumiVideoAdsMediationUnity_Zplay
+  - YumiVideoAdsMediationVungle_Zplay
 
 SPEC CHECKSUMS:
   ChartboostSDK: d8a43d8913910b0445f12ae64364c683499e57b6
