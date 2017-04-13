@@ -1,4 +1,8 @@
 # frozen_string_literal: true
 source "https://rubygems.org"
 
-# gem "rails"
+gem "cocoapods"
+gem "cocoapods-packager"
+gem "fastlane"
+gem "aliyun-sdk"
+gem "retries"
