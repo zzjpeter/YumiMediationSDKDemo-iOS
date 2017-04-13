@@ -256,8 +256,7 @@
 				TargetAttributes = {
 					B9A065731E8D0F6C00B1B91B = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = VG25A6M88T;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					B9A0658C1E8D0F6C00B1B91B = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -618,7 +617,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = VG25A6M88T;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = YumiMediationSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -636,7 +635,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = VG25A6M88T;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = YumiMediationSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
