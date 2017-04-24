@@ -8,6 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		18B9EA55078CDEDC02089237 /* libPods-YumiMediationSDKDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B66BE2D981389A8993F753 /* libPods-YumiMediationSDKDemoTests.a */; };
+		630F73E41EAD9E9400A74098 /* YUMIAdStatisticModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 630F73DC1EAD9E9400A74098 /* YUMIAdStatisticModel.m */; };
+		630F73E51EAD9E9400A74098 /* YUMIStatisticCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 630F73DD1EAD9E9400A74098 /* YUMIStatisticCell.xib */; };
+		630F73E61EAD9E9400A74098 /* YUMIStatisticDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630F73DF1EAD9E9400A74098 /* YUMIStatisticDetailTableViewController.m */; };
+		630F73E71EAD9E9400A74098 /* YUMIStatisticDetailTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 630F73E01EAD9E9400A74098 /* YUMIStatisticDetailTableViewController.xib */; };
+		630F73E81EAD9E9400A74098 /* YUMIStatisticTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630F73E21EAD9E9400A74098 /* YUMIStatisticTableViewController.m */; };
+		630F73E91EAD9E9400A74098 /* YUMIStatisticTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 630F73E31EAD9E9400A74098 /* YUMIStatisticTableViewController.xib */; };
+		630F73F91EAD9FFF00A74098 /* YuMIDebugAdapterFactoary.m in Sources */ = {isa = PBXBuildFile; fileRef = 630F73EC1EAD9FFF00A74098 /* YuMIDebugAdapterFactoary.m */; };
+		630F73FA1EAD9FFF00A74098 /* YuMIDebugCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 630F73EE1EAD9FFF00A74098 /* YuMIDebugCenter.m */; };
+		630F73FB1EAD9FFF00A74098 /* YuMIDebugCoreCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 630F73F01EAD9FFF00A74098 /* YuMIDebugCoreCenter.m */; };
+		630F73FC1EAD9FFF00A74098 /* YuMIDebugDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630F73F21EAD9FFF00A74098 /* YuMIDebugDetailViewController.m */; };
+		630F73FD1EAD9FFF00A74098 /* YuMIDebugIntegratedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 630F73F41EAD9FFF00A74098 /* YuMIDebugIntegratedTableViewController.m */; };
+		630F73FE1EAD9FFF00A74098 /* YuMIDebugLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 630F73F61EAD9FFF00A74098 /* YuMIDebugLog.m */; };
+		630F73FF1EAD9FFF00A74098 /* YuMIToolDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 630F73F81EAD9FFF00A74098 /* YuMIToolDevice.m */; };
 		8CC0938B05979E3B191612A6 /* libPods-YumiMediationSDKDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B4CDF1528922A11091F816 /* libPods-YumiMediationSDKDemoUITests.a */; };
 		B9A065791E8D0F6C00B1B91B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A065781E8D0F6C00B1B91B /* main.m */; };
 		B9A0657C1E8D0F6C00B1B91B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A0657B1E8D0F6C00B1B91B /* AppDelegate.m */; };
@@ -41,6 +54,29 @@
 		27B66BE2D981389A8993F753 /* libPods-YumiMediationSDKDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YumiMediationSDKDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EC711C23106EE995A06D951 /* libPods-YumiMediationSDKDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YumiMediationSDKDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D87838E1D9BCAED5DBBD536 /* Pods-YumiMediationSDKDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YumiMediationSDKDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YumiMediationSDKDemoUITests/Pods-YumiMediationSDKDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		630F73DB1EAD9E9400A74098 /* YUMIAdStatisticModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUMIAdStatisticModel.h; sourceTree = "<group>"; };
+		630F73DC1EAD9E9400A74098 /* YUMIAdStatisticModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUMIAdStatisticModel.m; sourceTree = "<group>"; };
+		630F73DD1EAD9E9400A74098 /* YUMIStatisticCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YUMIStatisticCell.xib; sourceTree = "<group>"; };
+		630F73DE1EAD9E9400A74098 /* YUMIStatisticDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUMIStatisticDetailTableViewController.h; sourceTree = "<group>"; };
+		630F73DF1EAD9E9400A74098 /* YUMIStatisticDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUMIStatisticDetailTableViewController.m; sourceTree = "<group>"; };
+		630F73E01EAD9E9400A74098 /* YUMIStatisticDetailTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YUMIStatisticDetailTableViewController.xib; sourceTree = "<group>"; };
+		630F73E11EAD9E9400A74098 /* YUMIStatisticTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YUMIStatisticTableViewController.h; sourceTree = "<group>"; };
+		630F73E21EAD9E9400A74098 /* YUMIStatisticTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YUMIStatisticTableViewController.m; sourceTree = "<group>"; };
+		630F73E31EAD9E9400A74098 /* YUMIStatisticTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YUMIStatisticTableViewController.xib; sourceTree = "<group>"; };
+		630F73EB1EAD9FFF00A74098 /* YuMIDebugAdapterFactoary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YuMIDebugAdapterFactoary.h; sourceTree = "<group>"; };
+		630F73EC1EAD9FFF00A74098 /* YuMIDebugAdapterFactoary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YuMIDebugAdapterFactoary.m; sourceTree = "<group>"; };
+		630F73ED1EAD9FFF00A74098 /* YuMIDebugCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YuMIDebugCenter.h; sourceTree = "<group>"; };
+		630F73EE1EAD9FFF00A74098 /* YuMIDebugCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YuMIDebugCenter.m; sourceTree = "<group>"; };
+		630F73EF1EAD9FFF00A74098 /* YuMIDebugCoreCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YuMIDebugCoreCenter.h; sourceTree = "<group>"; };
+		630F73F01EAD9FFF00A74098 /* YuMIDebugCoreCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YuMIDebugCoreCenter.m; sourceTree = "<group>"; };
+		630F73F11EAD9FFF00A74098 /* YuMIDebugDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YuMIDebugDetailViewController.h; sourceTree = "<group>"; };
+		630F73F21EAD9FFF00A74098 /* YuMIDebugDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YuMIDebugDetailViewController.m; sourceTree = "<group>"; };
+		630F73F31EAD9FFF00A74098 /* YuMIDebugIntegratedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YuMIDebugIntegratedTableViewController.h; sourceTree = "<group>"; };
+		630F73F41EAD9FFF00A74098 /* YuMIDebugIntegratedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YuMIDebugIntegratedTableViewController.m; sourceTree = "<group>"; };
+		630F73F51EAD9FFF00A74098 /* YuMIDebugLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YuMIDebugLog.h; sourceTree = "<group>"; };
+		630F73F61EAD9FFF00A74098 /* YuMIDebugLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YuMIDebugLog.m; sourceTree = "<group>"; };
+		630F73F71EAD9FFF00A74098 /* YuMIToolDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YuMIToolDevice.h; sourceTree = "<group>"; };
+		630F73F81EAD9FFF00A74098 /* YuMIToolDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YuMIToolDevice.m; sourceTree = "<group>"; };
 		7414EC105309956644DC2D55 /* Pods-YumiMediationSDKDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YumiMediationSDKDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YumiMediationSDKDemoUITests/Pods-YumiMediationSDKDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		99B4CDF1528922A11091F816 /* libPods-YumiMediationSDKDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YumiMediationSDKDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADCE056284C70FFC5C262393 /* Pods-YumiMediationSDKDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YumiMediationSDKDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YumiMediationSDKDemoTests/Pods-YumiMediationSDKDemoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +129,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		630F73DA1EAD9E9400A74098 /* YUMIStaticView */ = {
+			isa = PBXGroup;
+			children = (
+				630F73DB1EAD9E9400A74098 /* YUMIAdStatisticModel.h */,
+				630F73DC1EAD9E9400A74098 /* YUMIAdStatisticModel.m */,
+				630F73DD1EAD9E9400A74098 /* YUMIStatisticCell.xib */,
+				630F73DE1EAD9E9400A74098 /* YUMIStatisticDetailTableViewController.h */,
+				630F73DF1EAD9E9400A74098 /* YUMIStatisticDetailTableViewController.m */,
+				630F73E01EAD9E9400A74098 /* YUMIStatisticDetailTableViewController.xib */,
+				630F73E11EAD9E9400A74098 /* YUMIStatisticTableViewController.h */,
+				630F73E21EAD9E9400A74098 /* YUMIStatisticTableViewController.m */,
+				630F73E31EAD9E9400A74098 /* YUMIStatisticTableViewController.xib */,
+			);
+			path = YUMIStaticView;
+			sourceTree = "<group>";
+		};
+		630F73EA1EAD9FFF00A74098 /* YumiDebug */ = {
+			isa = PBXGroup;
+			children = (
+				630F73EB1EAD9FFF00A74098 /* YuMIDebugAdapterFactoary.h */,
+				630F73EC1EAD9FFF00A74098 /* YuMIDebugAdapterFactoary.m */,
+				630F73ED1EAD9FFF00A74098 /* YuMIDebugCenter.h */,
+				630F73EE1EAD9FFF00A74098 /* YuMIDebugCenter.m */,
+				630F73EF1EAD9FFF00A74098 /* YuMIDebugCoreCenter.h */,
+				630F73F01EAD9FFF00A74098 /* YuMIDebugCoreCenter.m */,
+				630F73F11EAD9FFF00A74098 /* YuMIDebugDetailViewController.h */,
+				630F73F21EAD9FFF00A74098 /* YuMIDebugDetailViewController.m */,
+				630F73F31EAD9FFF00A74098 /* YuMIDebugIntegratedTableViewController.h */,
+				630F73F41EAD9FFF00A74098 /* YuMIDebugIntegratedTableViewController.m */,
+				630F73F51EAD9FFF00A74098 /* YuMIDebugLog.h */,
+				630F73F61EAD9FFF00A74098 /* YuMIDebugLog.m */,
+				630F73F71EAD9FFF00A74098 /* YuMIToolDevice.h */,
+				630F73F81EAD9FFF00A74098 /* YuMIToolDevice.m */,
+			);
+			path = YumiDebug;
+			sourceTree = "<group>";
+		};
 		B9A0656B1E8D0F6C00B1B91B = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +191,8 @@
 		B9A065761E8D0F6C00B1B91B /* YumiMediationSDKDemo */ = {
 			isa = PBXGroup;
 			children = (
+				630F73EA1EAD9FFF00A74098 /* YumiDebug */,
+				630F73DA1EAD9E9400A74098 /* YUMIStaticView */,
 				B9A0657A1E8D0F6C00B1B91B /* AppDelegate.h */,
 				B9A0657B1E8D0F6C00B1B91B /* AppDelegate.m */,
 				B9A0657D1E8D0F6C00B1B91B /* ViewController.h */,
@@ -300,6 +375,9 @@
 			files = (
 				B9A065871E8D0F6C00B1B91B /* LaunchScreen.storyboard in Resources */,
 				B9A065841E8D0F6C00B1B91B /* Assets.xcassets in Resources */,
+				630F73E71EAD9E9400A74098 /* YUMIStatisticDetailTableViewController.xib in Resources */,
+				630F73E51EAD9E9400A74098 /* YUMIStatisticCell.xib in Resources */,
+				630F73E91EAD9E9400A74098 /* YUMIStatisticTableViewController.xib in Resources */,
 				B9A065821E8D0F6C00B1B91B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,9 +541,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				630F73FA1EAD9FFF00A74098 /* YuMIDebugCenter.m in Sources */,
+				630F73E81EAD9E9400A74098 /* YUMIStatisticTableViewController.m in Sources */,
+				630F73FE1EAD9FFF00A74098 /* YuMIDebugLog.m in Sources */,
+				630F73FD1EAD9FFF00A74098 /* YuMIDebugIntegratedTableViewController.m in Sources */,
+				630F73FF1EAD9FFF00A74098 /* YuMIToolDevice.m in Sources */,
 				B9A0657F1E8D0F6C00B1B91B /* ViewController.m in Sources */,
 				B9A0657C1E8D0F6C00B1B91B /* AppDelegate.m in Sources */,
+				630F73E61EAD9E9400A74098 /* YUMIStatisticDetailTableViewController.m in Sources */,
+				630F73F91EAD9FFF00A74098 /* YuMIDebugAdapterFactoary.m in Sources */,
 				B9A065791E8D0F6C00B1B91B /* main.m in Sources */,
+				630F73FC1EAD9FFF00A74098 /* YuMIDebugDetailViewController.m in Sources */,
+				630F73FB1EAD9FFF00A74098 /* YuMIDebugCoreCenter.m in Sources */,
+				630F73E41EAD9E9400A74098 /* YUMIAdStatisticModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

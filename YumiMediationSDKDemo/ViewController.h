@@ -10,15 +10,5 @@
 
 @interface ViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIButton *btn_banner_start;
-
-@property (weak, nonatomic) IBOutlet UIButton *btn_banner_end;
-
-@property (weak, nonatomic) IBOutlet UIButton *btn_load_inter;
-
-@property (weak, nonatomic) IBOutlet UIButton *btn_show_inter;
-
-@property (weak, nonatomic) IBOutlet UIButton *click;
-
 @end
 
