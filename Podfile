@@ -3,7 +3,7 @@
 
 target 'YumiMediationSDKDemo' do
   # use_frameworks!
-  
+
   pod "YumiMediationAdMob"
   pod "YumiMediationAppLovin"
   pod "YumiMediationBaidu"
