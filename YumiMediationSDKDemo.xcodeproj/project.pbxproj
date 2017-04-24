@@ -705,14 +705,15 @@
 			baseConfigurationReference = EF37E67665639753C6F3087A /* Pods-YumiMediationSDKDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = VG25A6M88T;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 5DMZPCXW62;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = YumiMediationSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.YumiMediationSDKExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "fef0bcc5-a150-41ff-be1a-2540e5250344";
+				PROVISIONING_PROFILE = "0e6a729d-8b8a-47c6-98de-adc2296381a7";
 				PROVISIONING_PROFILE_SPECIFIER = "YumiMediationSDKDemo AdHoc";
 			};
 			name = Debug;
@@ -722,14 +723,15 @@
 			baseConfigurationReference = E41DFD693B96CDAD9D2DE34A /* Pods-YumiMediationSDKDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = VG25A6M88T;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = 5DMZPCXW62;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = YumiMediationSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.YumiMediationSDKExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "fef0bcc5-a150-41ff-be1a-2540e5250344";
+				PROVISIONING_PROFILE = "0e6a729d-8b8a-47c6-98de-adc2296381a7";
 				PROVISIONING_PROFILE_SPECIFIER = "YumiMediationSDKDemo AdHoc";
 			};
 			name = Release;
