@@ -12,30 +12,49 @@ PODS:
   - YumiGDTSDK (4.5.5)
   - YumiIronsourceSDK (6.4.21)
   - YumiLoopMeSDK (5.2.4)
-  - YumiMediationAdMob (7.18.0.4):
-    - Google-Mobile-Ads-SDK (= 7.18.0)
-    - YumiMediationSDK (>= 1.6.41)
-  - YumiMediationAppLovin (3.4.3.3):
+  - YumiMediationAdapters (1.8.0):
+    - YumiMediationAdapters/AdMob (= 1.8.0)
+    - YumiMediationAdapters/AppLovin (= 1.8.0)
+    - YumiMediationAdapters/Baidu (= 1.8.0)
+    - YumiMediationAdapters/Chartboost (= 1.8.0)
+    - YumiMediationAdapters/Facebook (= 1.8.0)
+    - YumiMediationAdapters/GDT (= 1.8.0)
+    - YumiMediationAdapters/InMobi (= 1.8.0)
+    - YumiMediationAdapters/Mopub (= 1.8.0)
+    - YumiMediationAdapters/StartApp (= 1.8.0)
+    - YumiMediationAdapters/Unity (= 1.8.0)
+    - YumiMediationSDK (~> 1.8.0)
+  - YumiMediationAdapters/AdMob (1.8.0):
+    - YumiAdmobSDK (= 7.18.0)
+    - YumiMediationSDK (~> 1.8.0)
+  - YumiMediationAdapters/AppLovin (1.8.0):
     - YumiAppLovinSDK (= 3.4.3)
-    - YumiMediationSDK (>= 1.6.41)
-  - YumiMediationBaidu (4.5.0.3):
+    - YumiMediationSDK (~> 1.8.0)
+  - YumiMediationAdapters/Baidu (1.8.0):
     - YumiBaiduSDK (= 4.5.0)
-    - YumiMediationSDK (>= 1.6.41)
-  - YumiMediationChartboost (6.6.1.3):
-    - ChartboostSDK (= 6.6.1)
-    - YumiMediationSDK (>= 1.6.41)
-  - YumiMediationFacebook (4.17.0.6):
-    - FBAudienceNetwork (= 4.17.0)
-    - YumiMediationSDK (>= 1.6.41)
-  - YumiMediationGDT (4.5.5.4):
+    - YumiMediationSDK (~> 1.8.0)
+  - YumiMediationAdapters/Chartboost (1.8.0):
+    - YumiChartboostSDK (= 6.6.1)
+    - YumiMediationSDK (~> 1.8.0)
+  - YumiMediationAdapters/Facebook (1.8.0):
+    - YumiFacebookSDK (= 4.17.0)
+    - YumiMediationSDK (~> 1.8.0)
+  - YumiMediationAdapters/GDT (1.8.0):
     - YumiGDTSDK (= 4.5.5)
-    - YumiMediationSDK (>= 1.6.41)
-  - YumiMediationInMobi (6.0.0.4):
-    - InMobiSDK (= 6.0.0)
-    - YumiMediationSDK (>= 1.6.41)
-  - YumiMediationMopub (4.11.1.3):
-    - YumiMediationSDK (>= 1.6.41)
+    - YumiMediationSDK (~> 1.8.0)
+  - YumiMediationAdapters/InMobi (1.8.0):
+    - YumiInmobiSDK (= 6.0.0)
+    - YumiMediationSDK (~> 1.8.0)
+  - YumiMediationAdapters/Mopub (1.8.0):
+    - YumiMediationSDK (~> 1.8.0)
     - YumiMopubSDK (= 4.11.1)
+  - YumiMediationAdapters/StartApp (1.8.0):
+    - YumiMediationSDK (~> 1.8.0)
+    - YumiStartAppSDK (= 3.4.1)
+  - YumiMediationAdapters/Unity (1.8.0):
+    - YumiMediationSDK (~> 1.8.0)
+    - YumiUnitySDK (= 2.0.0)
+  - YumiMediationDebugCenter-iOS (0.1.7)
   - YumiMediationSDK (1.8.0):
     - YumiAdsSDK (= 2.0.5)
     - YumiVideoAdsSDK (= 2.1.1)
@@ -49,33 +68,48 @@ PODS:
   - YumiStartAppSDK (3.4.1)
   - YumiTapjoySDK (11.6.0)
   - YumiUnitySDK (2.0.0)
-  - YumiVideoAdsMediationAdColony (2.6.3.3):
+  - YumiVideoAdsMediationAdapters (1.8.0):
+    - YumiMediationSDK (~> 1.8.0)
+    - YumiVideoAdsMediationAdapters/AdColony (= 1.8.0)
+    - YumiVideoAdsMediationAdapters/AdMob (= 1.8.0)
+    - YumiVideoAdsMediationAdapters/AppLovin (= 1.8.0)
+    - YumiVideoAdsMediationAdapters/Domob (= 1.8.0)
+    - YumiVideoAdsMediationAdapters/InMobi (= 1.8.0)
+    - YumiVideoAdsMediationAdapters/Ironsource (= 1.8.0)
+    - YumiVideoAdsMediationAdapters/LoopMe (= 1.8.0)
+    - YumiVideoAdsMediationAdapters/Tapjoy (= 1.8.0)
+    - YumiVideoAdsMediationAdapters/Unity (= 1.8.0)
+    - YumiVideoAdsMediationAdapters/Vungle (= 1.8.0)
+  - YumiVideoAdsMediationAdapters/AdColony (1.8.0):
     - YumiAdcolonySDK (= 2.6.3)
-    - YumiMediationSDK (>= 1.6.41)
-  - YumiVideoAdsMediationAppLovin (3.4.3.3):
+    - YumiMediationSDK (~> 1.8.0)
+  - YumiVideoAdsMediationAdapters/AdMob (1.8.0):
+    - YumiAdmobSDK (= 7.18.0)
+    - YumiMediationSDK (~> 1.8.0)
+  - YumiVideoAdsMediationAdapters/AppLovin (1.8.0):
     - YumiAppLovinSDK (= 3.4.3)
-    - YumiMediationSDK (>= 1.6.41)
-  - YumiVideoAdsMediationDomob (3.5.0.3):
+    - YumiMediationSDK (~> 1.8.0)
+  - YumiVideoAdsMediationAdapters/Domob (1.8.0):
     - YumiDomobSDK (= 3.5.0)
-    - YumiMediationSDK (>= 1.6.41)
-  - YumiVideoAdsMediationInMobi (6.0.0.3):
-    - InMobiSDK (= 6.0.0)
-    - YumiMediationSDK (>= 1.6.41)
-  - YumiVideoAdsMediationIronsource (6.4.21.3):
+    - YumiMediationSDK (~> 1.8.0)
+  - YumiVideoAdsMediationAdapters/InMobi (1.8.0):
+    - YumiInmobiSDK (= 6.0.0)
+    - YumiMediationSDK (~> 1.8.0)
+  - YumiVideoAdsMediationAdapters/Ironsource (1.8.0):
     - YumiIronsourceSDK (= 6.4.21)
-    - YumiMediationSDK (>= 1.6.41)
-  - YumiVideoAdsMediationLoopMe (5.2.4.3):
+    - YumiMediationSDK (~> 1.8.0)
+  - YumiVideoAdsMediationAdapters/LoopMe (1.8.0):
     - YumiLoopMeSDK (= 5.2.4)
-    - YumiMediationSDK (>= 1.6.41)
-  - YumiVideoAdsMediationTapjoy (11.6.0.3):
-    - YumiMediationSDK (>= 1.6.41)
+    - YumiMediationSDK (~> 1.8.0)
+  - YumiVideoAdsMediationAdapters/Tapjoy (1.8.0):
+    - YumiMediationSDK (~> 1.8.0)
     - YumiTapjoySDK (= 11.6.0)
-  - YumiVideoAdsMediationUnity (2.0.0.3):
-    - YumiMediationSDK (>= 1.6.41)
+  - YumiVideoAdsMediationAdapters/Unity (1.8.0):
+    - YumiMediationSDK (~> 1.8.0)
     - YumiUnitySDK (= 2.0.0)
-  - YumiVideoAdsMediationVungle (4.0.8.3):
-    - VungleSDK-iOS (= 4.0.8)
-    - YumiMediationSDK (>= 1.6.41)
+  - YumiVideoAdsMediationAdapters/Vungle (1.8.0):
+    - YumiMediationSDK (~> 1.8.0)
+    - YumiVungleSDK (= 4.0.8)
   - YumiVideoAdsSDK (2.1.1)
 
 DEPENDENCIES:
@@ -109,34 +143,20 @@ SPEC CHECKSUMS:
   YumiAdsSDK: 8e26ae0c5916c4769999005019e8bddc67124f60
   YumiAppLovinSDK: d789a05ec85e98c8ea82c394620934b6ef3212a0
   YumiBaiduSDK: 51de172cf6ccf1bb59648d9866f801f2f47fecc4
-  YumiDomobSDK: a4a1a683b6df6591c65695708acf7290ff485a02
+  YumiChartboostSDK: d37c05c97714d1c52b903cb61c467770900676a5
+  YumiDomobSDK: 4a886b19487fe4ee70b28d34ebc9204a858bec4d
+  YumiFacebookSDK: a962ea5ce7c7c1fbc8de7f41fde58d48dd05aa2a
   YumiGDTSDK: 51ad47c7c28096bf330fc05664af83e8693fe063
   YumiIronsourceSDK: f26f26b8aa3a256092845fc67b4394075507d4ee
   YumiLoopMeSDK: 856e2c19c4b2116f84ec0642895e86cee713a90a
-  YumiMediationAdMob: 47a4100815be8bc4e414c84a638f018fe730dc33
-  YumiMediationAppLovin: d2eabec2416523606dd3d3e085926c60df12f50a
-  YumiMediationBaidu: 0764114a26ce380be8f8ef0d75f504b3ae9c0562
-  YumiMediationChartboost: 12a04369660663c2b9480bab2ce53e6840111422
-  YumiMediationFacebook: 9c19e9418c9088ae14f9992c9aa0b98c0ae5fd23
-  YumiMediationGDT: cf2af169b3a39f682355b6b737bbb9a98ba0aee5
-  YumiMediationInMobi: bd482985b77d914494b096ede75eb3e51f0138c2
-  YumiMediationMopub: 5a8d5dad43074f3935285e9ea3c4087700fa0f2a
-  YumiMediationSDK: ae1741461ddc2272224592a2a8fbf9726362cce4
-  YumiMediationStartApp: 991a2577487a0e94d072502a0b06a4127f80ab27
-  YumiMediationUnity: 90119523a4e572b66eea41ebd3f3dcb6191452c9
+  YumiMediationAdapters: 4dace97daf37a3fbf4327ccd6da41497beba0a86
+  YumiMediationDebugCenter-iOS: f96c1343d118611e602eb1643ab0e545d4338076
+  YumiMediationSDK: fca099f08bc2b499fb9f35eb6a9eb61d0e30398d
   YumiMopubSDK: 34a6f42d1947c126262efe48252d3fe2ad18b459
   YumiStartAppSDK: 706066574f63e7aab0d9c01162d11a10a85c0760
   YumiTapjoySDK: a94a14f62151e06ae33ddd61f17ac00883db6e36
   YumiUnitySDK: 6b764125ee4dac347c3324b9345a85a73b20dd15
-  YumiVideoAdsMediationAdColony: a61592edfed69edf3a8c0fe12b174a5b71b1d066
-  YumiVideoAdsMediationAppLovin: 1746d40155ac23a52e33374ab8a030f96f39faf8
-  YumiVideoAdsMediationDomob: 836adb3c36ff555d493feb18cf1cbba7aaa1f861
-  YumiVideoAdsMediationInMobi: 8677cce45891b4dc48b9ddfdac38dd44c7349ea3
-  YumiVideoAdsMediationIronsource: 9a8756d42f99d53c8293b0e17a1be343bd9add0d
-  YumiVideoAdsMediationLoopMe: 6932e393b56247c57d520aa709629d9b97fa1433
-  YumiVideoAdsMediationTapjoy: 4e07093262260fd4120343794250d5f02c489c18
-  YumiVideoAdsMediationUnity: cdf5306ef0cb827cb3da8b1a33efa2cf9c9b1004
-  YumiVideoAdsMediationVungle: 0c34386ae880e9092cdd4876076f6ccadd4b64df
+  YumiVideoAdsMediationAdapters: 65a201883941face324b1067af7d7fd16ea146bb
   YumiVideoAdsSDK: 84b478afba778614a64b796cb9a67b23ea0bad79
 
 PODFILE CHECKSUM: dc7993736ce147cf798ddd70a12ccc86926c90a2
