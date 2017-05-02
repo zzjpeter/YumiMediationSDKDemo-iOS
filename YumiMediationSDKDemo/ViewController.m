@@ -12,11 +12,9 @@
 #import <YumiMediationSDK/YuMIInterstitial.h>
 #import <YumiMediationSDK/YuMIInterstitialManager.h>
 #import <YumiMediationSDK/YMVideoManager.h>
-#import <YumiMediationSDK/AdsYuMIDeviceInfo.h>
-
 #import "YUMIStatisticTableViewController.h"
-#import "YuMIDebugCenter.h"
-#import <YumiMediationSDK/AdsYUMILogCenter.h>
+#import <YumiMediationDebugCenter-iOS/YuMIDebugCenter.h>
+#import "AdsYUMILogCenter.h"
 
 #define YUMIBANNER_ID         @"3f521f0914fdf691bd23bf85a8fd3c3a"
 #define YUMIINTERSTITIAL_ID   @"3f521f0914fdf691bd23bf85a8fd3c3a"
@@ -24,6 +22,7 @@
 
 #define YUMI_CHANNELID @""
 #define YUMI_VERSIONID @""
+#define TestServerKey @"testServer"
 
 @interface ViewController () <AdsYuMIDelegate, YuMIInterstitialDelegate,YMVideoDelegate> {
     AdsYuMIView *adView;
@@ -46,10 +45,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     once = YES;
+    [self removeTestService];
     
-    [[AdsYuMIDeviceInfo shareDevice] removeTestService];
     [[AdsYuMILogCenter shareInstance] setLogLeveFlag:9];
 
 }
@@ -59,10 +57,10 @@
     if (once) {
         alertVC = [UIAlertController alertControllerWithTitle:@"WARNING" message:@"PLEASE SELECT SERVER" preferredStyle:UIAlertControllerStyleAlert ];
         [alertVC addAction:[UIAlertAction actionWithTitle:@"测试服务器" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-            [[AdsYuMIDeviceInfo shareDevice] openTestService:YES];
+            [self openTestService:YES];
         }]];
         [alertVC addAction:[UIAlertAction actionWithTitle:@"正式服务器" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-            [[AdsYuMIDeviceInfo shareDevice] openTestService:NO];
+            [self openTestService:NO];
         }]];
         [self presentViewController:alertVC animated:YES completion:^{
             
@@ -343,5 +341,20 @@
         
     }];
 }
+
+- (void)openTestService:(BOOL)openService {
+    [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%d", openService]
+                                              forKey:TestServerKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (BOOL)isOpenTestService {
+    return [[[NSUserDefaults standardUserDefaults] objectForKey:TestServerKey] boolValue];
+}
+
+- (void)removeTestService {
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:TestServerKey];
+}
+
 
 @end
