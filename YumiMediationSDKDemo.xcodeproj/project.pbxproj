@@ -288,7 +288,7 @@
 				TargetAttributes = {
 					B9A065731E8D0F6C00B1B91B = {
 						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					B9A0658C1E8D0F6C00B1B91B = {
 						CreatedOnToolsVersion = 8.2.1;
