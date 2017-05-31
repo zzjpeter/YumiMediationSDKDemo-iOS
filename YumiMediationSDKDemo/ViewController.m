@@ -20,6 +20,7 @@
 #define YUMIINTERSTITIAL_ID   @"a6e37382df13a389d138ebf6cc567dcf"
 #define YUMIVIDEO_ID          @"a6e37382df13a389d138ebf6cc567dcf"
 
+
 #define YUMI_CHANNELID @""
 #define YUMI_VERSIONID @""
 #define TestServerKey @"testServer"
