@@ -16,9 +16,9 @@
 #import <YumiMediationDebugCenter-iOS/YuMIDebugCenter.h>
 #import "AdsYUMILogCenter.h"
 
-#define YUMIBANNER_ID         @"a6e37382df13a389d138ebf6cc567dcf"
-#define YUMIINTERSTITIAL_ID   @"a6e37382df13a389d138ebf6cc567dcf"
-#define YUMIVIDEO_ID          @"a6e37382df13a389d138ebf6cc567dcf"
+#define YUMIBANNER_ID         @"3f521f0914fdf691bd23bf85a8fd3c3a"
+#define YUMIINTERSTITIAL_ID   @"3f521f0914fdf691bd23bf85a8fd3c3a"
+#define YUMIVIDEO_ID          @"3f521f0914fdf691bd23bf85a8fd3c3a"
 
 
 #define YUMI_CHANNELID @""
