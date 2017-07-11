@@ -7,8 +7,16 @@
 //
 
 #import "AppDelegate.h"
+#import <YumiMediationSDK/YumiAdsSplash.h>
+#import "YumiTableViewController.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface AppDelegate ()
+static NSString *const yumiID = @"3f521f0914fdf691bd23bf85a8fd3c3a";
+
+@interface AppDelegate () <YumiAdsSplashDelegate>
+
+@property (nonatomic, strong) CLLocationManager *location;
+@property (nonatomic) YumiAdsSplash *yumiSplash;
 
 @end
 
@@ -16,7 +24,23 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] init];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    YumiTableViewController *tableViewController =
+    [[YumiTableViewController alloc] initWithNibName:@"YumiTableViewController" bundle:nil];
+    UINavigationController *navigationController =
+    [[UINavigationController alloc] initWithRootViewController:tableViewController];
+    self.window.rootViewController = navigationController;
+    [self.window makeKeyAndVisible];
+    
+    self.location = [[CLLocationManager alloc] init];
+    [self.location requestWhenInUseAuthorization];
+    
+    self.yumiSplash = [YumiAdsSplash sharedInstance];
+    [self.yumiSplash showYumiAdsSplashWith:yumiID rootViewController:navigationController delegate:self];
+    
     return YES;
 }
 
@@ -45,6 +69,18 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)yumiAdsSplashDidLoad:(YumiAdsSplash *)splash {
+}
+- (void)yumiAdsSplash:(YumiAdsSplash *)splash DidFailToLoad:(NSError *)error {
+}
+- (void)yumiAdsSplashDidClicked:(YumiAdsSplash *)splash {
+}
+- (void)yumiAdsSplashDidClosed:(YumiAdsSplash *)splash {
+}
+- (nullable UIImage *)yumiAdsSplashDefaultImage {
+    return nil;
 }
 
 

@@ -17,12 +17,23 @@
 		8CC0938B05979E3B191612A6 /* libPods-YumiMediationSDKDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B4CDF1528922A11091F816 /* libPods-YumiMediationSDKDemoUITests.a */; };
 		B9A065791E8D0F6C00B1B91B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A065781E8D0F6C00B1B91B /* main.m */; };
 		B9A0657C1E8D0F6C00B1B91B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A0657B1E8D0F6C00B1B91B /* AppDelegate.m */; };
-		B9A0657F1E8D0F6C00B1B91B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A0657E1E8D0F6C00B1B91B /* ViewController.m */; };
 		B9A065821E8D0F6C00B1B91B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9A065801E8D0F6C00B1B91B /* Main.storyboard */; };
 		B9A065841E8D0F6C00B1B91B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9A065831E8D0F6C00B1B91B /* Assets.xcassets */; };
 		B9A065871E8D0F6C00B1B91B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9A065851E8D0F6C00B1B91B /* LaunchScreen.storyboard */; };
 		B9A065921E8D0F6C00B1B91B /* YumiMediationSDKDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A065911E8D0F6C00B1B91B /* YumiMediationSDKDemoTests.m */; };
 		B9A0659D1E8D0F6C00B1B91B /* YumiMediationSDKDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A0659C1E8D0F6C00B1B91B /* YumiMediationSDKDemoUITests.m */; };
+		B9E3E8DF1F14AFF20038647E /* YumiBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E3E8CE1F14AFF20038647E /* YumiBannerViewController.m */; };
+		B9E3E8E01F14AFF20038647E /* YumiBannerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9E3E8CF1F14AFF20038647E /* YumiBannerViewController.xib */; };
+		B9E3E8E11F14AFF20038647E /* YumiInterstitalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E3E8D11F14AFF20038647E /* YumiInterstitalViewController.m */; };
+		B9E3E8E21F14AFF20038647E /* YumiInterstitalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9E3E8D21F14AFF20038647E /* YumiInterstitalViewController.xib */; };
+		B9E3E8E31F14AFF20038647E /* YumiSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E3E8D41F14AFF20038647E /* YumiSplashViewController.m */; };
+		B9E3E8E41F14AFF20038647E /* YumiSplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9E3E8D51F14AFF20038647E /* YumiSplashViewController.xib */; };
+		B9E3E8E51F14AFF20038647E /* YumiStreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E3E8D71F14AFF20038647E /* YumiStreamViewController.m */; };
+		B9E3E8E61F14AFF20038647E /* YumiStreamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9E3E8D81F14AFF20038647E /* YumiStreamViewController.xib */; };
+		B9E3E8E71F14AFF20038647E /* YumiTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E3E8DA1F14AFF20038647E /* YumiTableViewController.m */; };
+		B9E3E8E81F14AFF20038647E /* YumiTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9E3E8DB1F14AFF20038647E /* YumiTableViewController.xib */; };
+		B9E3E8E91F14AFF20038647E /* YumiVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9E3E8DD1F14AFF20038647E /* YumiVideoViewController.m */; };
+		B9E3E8EA1F14AFF20038647E /* YumiVideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9E3E8DE1F14AFF20038647E /* YumiVideoViewController.xib */; };
 		C8CA3ACC3A6063F7692EDD44 /* libPods-YumiMediationSDKDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EC711C23106EE995A06D951 /* libPods-YumiMediationSDKDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -63,8 +74,6 @@
 		B9A065781E8D0F6C00B1B91B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B9A0657A1E8D0F6C00B1B91B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B9A0657B1E8D0F6C00B1B91B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B9A0657D1E8D0F6C00B1B91B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B9A0657E1E8D0F6C00B1B91B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B9A065811E8D0F6C00B1B91B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B9A065831E8D0F6C00B1B91B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9A065861E8D0F6C00B1B91B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -75,6 +84,24 @@
 		B9A065981E8D0F6C00B1B91B /* YumiMediationSDKDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YumiMediationSDKDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9A0659C1E8D0F6C00B1B91B /* YumiMediationSDKDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YumiMediationSDKDemoUITests.m; sourceTree = "<group>"; };
 		B9A0659E1E8D0F6C00B1B91B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9E3E8CD1F14AFF20038647E /* YumiBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YumiBannerViewController.h; sourceTree = "<group>"; };
+		B9E3E8CE1F14AFF20038647E /* YumiBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YumiBannerViewController.m; sourceTree = "<group>"; };
+		B9E3E8CF1F14AFF20038647E /* YumiBannerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YumiBannerViewController.xib; sourceTree = "<group>"; };
+		B9E3E8D01F14AFF20038647E /* YumiInterstitalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YumiInterstitalViewController.h; sourceTree = "<group>"; };
+		B9E3E8D11F14AFF20038647E /* YumiInterstitalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YumiInterstitalViewController.m; sourceTree = "<group>"; };
+		B9E3E8D21F14AFF20038647E /* YumiInterstitalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YumiInterstitalViewController.xib; sourceTree = "<group>"; };
+		B9E3E8D31F14AFF20038647E /* YumiSplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YumiSplashViewController.h; sourceTree = "<group>"; };
+		B9E3E8D41F14AFF20038647E /* YumiSplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YumiSplashViewController.m; sourceTree = "<group>"; };
+		B9E3E8D51F14AFF20038647E /* YumiSplashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YumiSplashViewController.xib; sourceTree = "<group>"; };
+		B9E3E8D61F14AFF20038647E /* YumiStreamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YumiStreamViewController.h; sourceTree = "<group>"; };
+		B9E3E8D71F14AFF20038647E /* YumiStreamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YumiStreamViewController.m; sourceTree = "<group>"; };
+		B9E3E8D81F14AFF20038647E /* YumiStreamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YumiStreamViewController.xib; sourceTree = "<group>"; };
+		B9E3E8D91F14AFF20038647E /* YumiTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YumiTableViewController.h; sourceTree = "<group>"; };
+		B9E3E8DA1F14AFF20038647E /* YumiTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YumiTableViewController.m; sourceTree = "<group>"; };
+		B9E3E8DB1F14AFF20038647E /* YumiTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YumiTableViewController.xib; sourceTree = "<group>"; };
+		B9E3E8DC1F14AFF20038647E /* YumiVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YumiVideoViewController.h; sourceTree = "<group>"; };
+		B9E3E8DD1F14AFF20038647E /* YumiVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YumiVideoViewController.m; sourceTree = "<group>"; };
+		B9E3E8DE1F14AFF20038647E /* YumiVideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YumiVideoViewController.xib; sourceTree = "<group>"; };
 		DE9A153BECB07B60E32A03B8 /* Pods-YumiMediationSDKDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YumiMediationSDKDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YumiMediationSDKDemoTests/Pods-YumiMediationSDKDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E41DFD693B96CDAD9D2DE34A /* Pods-YumiMediationSDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YumiMediationSDKDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo.release.xcconfig"; sourceTree = "<group>"; };
 		EF37E67665639753C6F3087A /* Pods-YumiMediationSDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YumiMediationSDKDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -150,10 +177,26 @@
 			isa = PBXGroup;
 			children = (
 				630F73DA1EAD9E9400A74098 /* YUMIStaticView */,
+				B9E3E8CD1F14AFF20038647E /* YumiBannerViewController.h */,
+				B9E3E8CE1F14AFF20038647E /* YumiBannerViewController.m */,
+				B9E3E8CF1F14AFF20038647E /* YumiBannerViewController.xib */,
+				B9E3E8D01F14AFF20038647E /* YumiInterstitalViewController.h */,
+				B9E3E8D11F14AFF20038647E /* YumiInterstitalViewController.m */,
+				B9E3E8D21F14AFF20038647E /* YumiInterstitalViewController.xib */,
+				B9E3E8D31F14AFF20038647E /* YumiSplashViewController.h */,
+				B9E3E8D41F14AFF20038647E /* YumiSplashViewController.m */,
+				B9E3E8D51F14AFF20038647E /* YumiSplashViewController.xib */,
+				B9E3E8D61F14AFF20038647E /* YumiStreamViewController.h */,
+				B9E3E8D71F14AFF20038647E /* YumiStreamViewController.m */,
+				B9E3E8D81F14AFF20038647E /* YumiStreamViewController.xib */,
+				B9E3E8D91F14AFF20038647E /* YumiTableViewController.h */,
+				B9E3E8DA1F14AFF20038647E /* YumiTableViewController.m */,
+				B9E3E8DB1F14AFF20038647E /* YumiTableViewController.xib */,
+				B9E3E8DC1F14AFF20038647E /* YumiVideoViewController.h */,
+				B9E3E8DD1F14AFF20038647E /* YumiVideoViewController.m */,
+				B9E3E8DE1F14AFF20038647E /* YumiVideoViewController.xib */,
 				B9A0657A1E8D0F6C00B1B91B /* AppDelegate.h */,
 				B9A0657B1E8D0F6C00B1B91B /* AppDelegate.m */,
-				B9A0657D1E8D0F6C00B1B91B /* ViewController.h */,
-				B9A0657E1E8D0F6C00B1B91B /* ViewController.m */,
 				B9A065801E8D0F6C00B1B91B /* Main.storyboard */,
 				B9A065831E8D0F6C00B1B91B /* Assets.xcassets */,
 				B9A065851E8D0F6C00B1B91B /* LaunchScreen.storyboard */,
@@ -330,11 +373,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9E3E8E61F14AFF20038647E /* YumiStreamViewController.xib in Resources */,
+				B9E3E8E21F14AFF20038647E /* YumiInterstitalViewController.xib in Resources */,
+				B9E3E8E01F14AFF20038647E /* YumiBannerViewController.xib in Resources */,
 				B9A065871E8D0F6C00B1B91B /* LaunchScreen.storyboard in Resources */,
+				B9E3E8E41F14AFF20038647E /* YumiSplashViewController.xib in Resources */,
 				B9A065841E8D0F6C00B1B91B /* Assets.xcassets in Resources */,
 				630F73E71EAD9E9400A74098 /* YUMIStatisticDetailTableViewController.xib in Resources */,
 				630F73E51EAD9E9400A74098 /* YUMIStatisticCell.xib in Resources */,
 				630F73E91EAD9E9400A74098 /* YUMIStatisticTableViewController.xib in Resources */,
+				B9E3E8E81F14AFF20038647E /* YumiTableViewController.xib in Resources */,
+				B9E3E8EA1F14AFF20038647E /* YumiVideoViewController.xib in Resources */,
 				B9A065821E8D0F6C00B1B91B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,12 +547,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9E3E8E91F14AFF20038647E /* YumiVideoViewController.m in Sources */,
 				630F73E81EAD9E9400A74098 /* YUMIStatisticTableViewController.m in Sources */,
-				B9A0657F1E8D0F6C00B1B91B /* ViewController.m in Sources */,
+				B9E3E8E71F14AFF20038647E /* YumiTableViewController.m in Sources */,
 				B9A0657C1E8D0F6C00B1B91B /* AppDelegate.m in Sources */,
 				630F73E61EAD9E9400A74098 /* YUMIStatisticDetailTableViewController.m in Sources */,
+				B9E3E8E31F14AFF20038647E /* YumiSplashViewController.m in Sources */,
 				B9A065791E8D0F6C00B1B91B /* main.m in Sources */,
+				B9E3E8DF1F14AFF20038647E /* YumiBannerViewController.m in Sources */,
 				630F73E41EAD9E9400A74098 /* YUMIAdStatisticModel.m in Sources */,
+				B9E3E8E11F14AFF20038647E /* YumiInterstitalViewController.m in Sources */,
+				B9E3E8E51F14AFF20038647E /* YumiStreamViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
