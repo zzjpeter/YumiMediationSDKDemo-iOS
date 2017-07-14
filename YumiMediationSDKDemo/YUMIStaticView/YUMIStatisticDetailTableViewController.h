@@ -11,7 +11,7 @@
 @interface YUMIStatisticDetailTableViewController : UITableViewController
 
 
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UITableView *yumiTableView;
 
 @property (nonatomic, copy) NSString * adType;
 +(YUMIStatisticDetailTableViewController*)shareViewController;

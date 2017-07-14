@@ -34,8 +34,8 @@ static YUMIStatisticDetailTableViewController * statistic;
 
 
 -(void)viewWillAppear:(BOOL)animated{
-  if (self.tableView) {
-    [self.tableView reloadData];
+  if (self.yumiTableView) {
+    [self.yumiTableView reloadData];
   }
 }
 
@@ -171,8 +171,8 @@ static YUMIStatisticDetailTableViewController * statistic;
 
 
 -(void)refreshObserver_table{  
-    if (self.tableView) {
-        [self.tableView reloadData];
+    if (self.yumiTableView) {
+        [self.yumiTableView reloadData];
     }
 }
 
