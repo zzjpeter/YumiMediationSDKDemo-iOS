@@ -22,10 +22,10 @@
     [super viewDidLoad];
 
     self.title = @"玉米广告";
-    self.textArray = @[ @"横幅", @"插屏", @"视频", @"原生", @"开屏" ];
+    self.textArray = @[@"横幅", @"插屏", @"视频", @"原生", @"开屏", @"统计"];
     self.adTypeNameArray = @[
         @"YumiBannerViewController", @"YumiInterstitalViewController", @"YumiVideoViewController",
-        @"YumiStreamViewController", @"YumiSplashViewController"
+        @"YumiStreamViewController", @"YumiSplashViewController", @"YumiLocalStatisticsAdsListTableViewController",
     ];
 
     [self implementTestFeature];

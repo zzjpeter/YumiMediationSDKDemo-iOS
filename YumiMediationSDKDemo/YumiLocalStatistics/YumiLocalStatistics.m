@@ -7,7 +7,7 @@
 //
 
 #import "YumiLocalStatistics.h"
-#import "NSObject+YumiYYModel.h"
+#import <YumiMediationSDK/NSObject+YumiYYModel.h>
 
 @implementation YumiLocalStatistics
 - (void)encodeWithCoder:(NSCoder *)aCoder {
