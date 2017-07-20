@@ -26,6 +26,15 @@
     self.title = @"横幅广告";
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+
+    if (_bannerView) {
+        [_bannerView removeFromSuperview];
+        _bannerView = nil;
+    }
+}
+
 - (YumiMediationBannerView *)bannerView {
     if (!_bannerView) {
         _bannerView = [[YumiMediationBannerView alloc] initWithYumiID:self.bannerTextField.text
@@ -41,13 +50,14 @@
 
 - (IBAction)requestBanner:(id)sender {
     [self.bannerView loadAd:YES];
+
     [self.view addSubview:self.bannerView];
 }
 
 - (IBAction)removeBanner:(id)sender {
-    if (self.bannerView) {
-        [self.bannerView removeFromSuperview];
-        self.bannerView = nil;
+    if (_bannerView) {
+        [_bannerView removeFromSuperview];
+        _bannerView = nil;
     }
 }
 
@@ -57,7 +67,6 @@
 }
 
 - (void)yumiMediationBannerViewDidClick:(YumiMediationBannerView *)adView {
-    NSLog(@"did click");
 }
 
 - (void)yumiMediationBannerViewDidLoad:(YumiMediationBannerView *)adView {
