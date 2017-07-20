@@ -34,11 +34,11 @@
 
 - (YUMIStreamCustomView *)customView {
     if (!_customView) {
-        _customView = [[YUMIStreamCustomView alloc]
-            initWithCustomView:CGRectMake(([UIScreen mainScreen].bounds.size.width - 320) / 2,
-                                          [UIScreen mainScreen].bounds.size.height - 50, 320, 50)
-                     clickType:CustomViewClickTypeOpenSystem
-                      delegate:self];
+        _customView =
+            [[YUMIStreamCustomView alloc] initWithCustomView:CGRectMake((self.view.frame.size.width - 320) / 2,
+                                                                        self.view.frame.size.height - 50, 320, 50)
+                                                   clickType:CustomViewClickTypeOpenSystem
+                                                    delegate:self];
     }
 
     return _customView;
@@ -54,27 +54,39 @@
     return streamHtml;
 }
 
+- (YUMIStream *)stream {
+    if (!_stream) {
+        _stream = [[YUMIStream alloc] initWithYumiID:self.streamTextField.text channelID:@"" versionID:@""];
+        _stream.delegate = self;
+    }
+
+    return _stream;
+}
+
 - (IBAction)requestStream:(id)sender {
-    _stream = [[YUMIStream alloc] initWithYumiID:self.streamTextField.text channelID:@"" versionID:@""];
-    _stream.delegate = self;
+    [self.stream loadStream];
+}
+
+- (IBAction)removeStream:(id)sender {
+    [self.customView removeFromSuperview];
 }
 
 - (IBAction)present:(id)sender {
-    if ([_stream isExistStream]) {
-
-        //获取信息流广告Model,Model中具体属性请查看.h
-        YUMIStreamModel *smodel = [_stream getStreamModel];
-        // showOfData: 信息流的形式为物料型的
-        if (smodel.showType == showOfData) {
-
+    if (![_stream isExistStream]) {
+        return;
+    }
+    YUMIStreamModel *smodel = [_stream getStreamModel];
+    switch (smodel.showType) {
+        case showOfData: {
             self.customView.streamModel = smodel;
             [self.customView loadHTMLString:[self streamHtmlWithStreamModel:smodel]];
-
-            // showOfView: 信息流的形式为View型的
-        } else if (smodel.showType == showOfView) {
-
-            [smodel reloadWebview];
+            break;
         }
+        case showOfView:
+            [smodel reloadWebview];
+            break;
+        default:
+            break;
     }
 }
 
@@ -84,7 +96,10 @@
 }
 
 - (void)returnStreamModel:(YUMIStreamModel *)model {
-    [model showInview:self.view];
+    UIView *view = [[UIView alloc]
+        initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 162, self.view.frame.size.width, 162)];
+    [model showInview:view];
+    [self.view addSubview:view];
 }
 
 - (void)streamAdStartToRequest {
@@ -102,14 +117,11 @@
 }
 
 - (void)adCustomViewDidFinsh:(YUMIStreamCustomView *)customView {
-
-    [self.view addSubview:_customView];
-
+    [self.view addSubview:customView];
     [customView.streamModel showInview:self.view];
 }
 
 - (void)adCustomViewDidClick:(YUMIStreamCustomView *)customView {
-
     [customView.streamModel clickStreamAd];
 }
 
