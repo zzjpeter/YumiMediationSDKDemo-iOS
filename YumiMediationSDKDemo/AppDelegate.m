@@ -10,8 +10,7 @@
 #import <YumiMediationSDK/YumiAdsSplash.h>
 #import "YumiTableViewController.h"
 #import <CoreLocation/CoreLocation.h>
-
-static NSString *const yumiID = @"3f521f0914fdf691bd23bf85a8fd3c3a";
+#import <YumiMediationDebugCenter-iOS/YumiMediationAppViewController.h>
 
 @interface AppDelegate () <YumiAdsSplashDelegate>
 
@@ -24,22 +23,15 @@ static NSString *const yumiID = @"3f521f0914fdf691bd23bf85a8fd3c3a";
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    self.window = [[UIWindow alloc] init];
-    self.window.backgroundColor = [UIColor whiteColor];
-    
-    YumiTableViewController *tableViewController =
-    [[YumiTableViewController alloc] initWithNibName:@"YumiTableViewController" bundle:nil];
-    UINavigationController *navigationController =
-    [[UINavigationController alloc] initWithRootViewController:tableViewController];
-    self.window.rootViewController = navigationController;
+
+    self.window.rootViewController = [[YumiMediationAppViewController alloc]init];
     [self.window makeKeyAndVisible];
     
     self.location = [[CLLocationManager alloc] init];
     [self.location requestWhenInUseAuthorization];
     
     self.yumiSplash = [YumiAdsSplash sharedInstance];
-    [self.yumiSplash showYumiAdsSplashWith:yumiID rootViewController:navigationController delegate:self];
+    [self.yumiSplash showYumiAdsSplashWith:yumiID rootViewController:[[YumiMediationAppViewController alloc]init] delegate:self];
     
     return YES;
 }
