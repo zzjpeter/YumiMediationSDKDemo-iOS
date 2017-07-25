@@ -94,6 +94,9 @@
 - (UIViewController *)viewControllerForPresentStream {
     return self;
 }
+- (void)returnStreamModel:(YUMIStreamModel *)model impressionSize:(CGSize)adSize{
+    
+}
 
 - (void)returnStreamModel:(YUMIStreamModel *)model {
     UIView *view = [[UIView alloc]
