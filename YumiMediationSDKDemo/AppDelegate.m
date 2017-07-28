@@ -8,9 +8,10 @@
 
 #import "AppDelegate.h"
 #import <YumiMediationSDK/YumiAdsSplash.h>
-#import "YumiTableViewController.h"
 #import <CoreLocation/CoreLocation.h>
-#import <YumiMediationDebugCenter-iOS/YumiMediationAppViewController.h>
+#import "YumiMediationAppViewController.h"
+
+static NSString *const yumiID = @"3f521f0914fdf691bd23bf85a8fd3c3a";
 
 @interface AppDelegate () <YumiAdsSplashDelegate>
 
@@ -31,7 +32,9 @@
     [self.location requestWhenInUseAuthorization];
     
     self.yumiSplash = [YumiAdsSplash sharedInstance];
-    [self.yumiSplash showYumiAdsSplashWith:yumiID rootViewController:[[YumiMediationAppViewController alloc]init] delegate:self];
+
+    [self.yumiSplash showYumiAdsSplashWith:yumiID rootViewController:self.window.rootViewController delegate:self];
+    
     
     return YES;
 }
