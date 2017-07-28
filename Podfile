@@ -5,12 +5,13 @@
 
 target 'YumiMediationSDKDemo' do
   # use_frameworks!
+  
+    pod "YumiMediationAdapters", "3.0.12"
+    pod "YumiMediationSDK", "3.0.12"
+    pod "YumiMediationDebugCenter-iOS", "3.0.0"
 
-    pod "YumiMediationAdapters", "3.0.2"
-    pod "YumiMediationSDK", "3.0.4"
     #pod "YumiMediationAdapters", :subspecs => ['AdMob','InMobi','Chartboost','AppLovin','GDT','Unity','Baidu','Facebook']
     #pod "YumiVideoAdsMediationAdapters", :subspecs => ['InMobi','Vungle','AdColony','AppLovin','Unity','Domob','Ironsource','AdMob']
-
   target 'YumiMediationSDKDemoTests' do
     inherit! :search_paths
     # Pods for testing
