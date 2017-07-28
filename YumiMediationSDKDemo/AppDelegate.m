@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import <YumiMediationSDK/YumiAdsSplash.h>
 #import <CoreLocation/CoreLocation.h>
-#import "YumiMediationAppViewController.h"
 
 static NSString *const yumiID = @"3f521f0914fdf691bd23bf85a8fd3c3a";
 
@@ -24,9 +23,6 @@ static NSString *const yumiID = @"3f521f0914fdf691bd23bf85a8fd3c3a";
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
-    self.window.rootViewController = [[YumiMediationAppViewController alloc]init];
-    [self.window makeKeyAndVisible];
     
     self.location = [[CLLocationManager alloc] init];
     [self.location requestWhenInUseAuthorization];
