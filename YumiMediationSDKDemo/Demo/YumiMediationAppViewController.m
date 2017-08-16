@@ -365,10 +365,15 @@
             } break;
 
             case 3:
+            {
                 weakSelf.yumiSplash = [YumiAdsSplash sharedInstance];
+                UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height-100,[UIScreen mainScreen].bounds.size.width, 100)];
+                view.backgroundColor = [UIColor redColor];
                 [weakSelf.yumiSplash showYumiAdsSplashWith:weakSelf.yumiID
+                                          customBottomView:view
                                         rootViewController:weakSelf
                                                   delegate:weakSelf];
+            }
                 break;
             case 4:
                 [weakSelf
