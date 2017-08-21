@@ -57,6 +57,7 @@
 @property (nonatomic, assign) BOOL isOnce;
 @property (nonatomic, assign) BOOL isConfigSuccess;
 @property (nonatomic, assign) BOOL isObserved;
+@property (nonatomic, assign) BOOL isVideoReceive;
 
 @property (nonatomic) NSString *yumiID;
 @property (nonatomic) NSString *channelID;
@@ -362,6 +363,7 @@
                                                  channelID:weakSelf.channelID
                                                  versionID:weakSelf.versionID];
                 weakSelf.videoAdInstance.delegate = weakSelf;
+                weakSelf.isVideoReceive = NO;
             } break;
 
             case 3:
@@ -398,10 +400,10 @@
             }
             break;
         case 2:
-            if ([self.videoAdInstance isReady]) {
+            if (self.isVideoReceive) {
                 [self.videoAdInstance presentFromRootViewController:self];
             }
-
+            
             break;
         case 4: {
             if (![self.nativeStream isExistStream]) {
@@ -683,6 +685,7 @@
 
 #pragma mark - YumiMediationVideoDelegate
 - (void)yumiMediationVideoDidClose:(YumiMediationVideo *)video {
+    self.isVideoReceive = NO;
     [self showLogConsoleWith:@"video did close " adLogType:YumiMediationAdLogTypeVideo];
 }
 
@@ -698,6 +701,11 @@
 
 - (void)yumiMediationVideoDidStartPlaying:(YumiMediationVideo *)video {
     [self showLogConsoleWith:@"video start playing " adLogType:YumiMediationAdLogTypeVideo];
+}
+
+- (void)yumiMediationVideoDidReceive:(YumiMediationVideo *)video {
+    self.isVideoReceive = YES;
+    [self showLogConsoleWith:@"video did receive " adLogType:YumiMediationAdLogTypeVideo];
 }
 
 #pragma mark : - YumiAdsSplashDelegate
