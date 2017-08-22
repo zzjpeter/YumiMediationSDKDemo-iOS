@@ -72,8 +72,8 @@ PODS:
   - YumiMediationAdapters/Vungle (3.1.0):
     - YumiMediationSDK (~> 3.1.0)
     - YumiVungle (= 5.1.0)
-  - YumiMediationDebugCenter-iOS (3.0.1):
-    - YumiMediationSDK (> 3.0.0)
+  - YumiMediationDebugCenter-iOS (3.1.0):
+    - YumiMediationSDK (>= 3.0.0)
   - YumiMediationSDK (3.1.0)
   - YumiMobvista (2.5.0)
   - YumiStartApp (3.4.2)
@@ -82,7 +82,7 @@ PODS:
 
 DEPENDENCIES:
   - YumiMediationAdapters (= 3.1.0)
-  - YumiMediationDebugCenter-iOS (= 3.0.1)
+  - YumiMediationDebugCenter-iOS (= 3.1.0)
   - YumiMediationSDK (= 3.1.0)
 
 SPEC CHECKSUMS:
@@ -97,14 +97,14 @@ SPEC CHECKSUMS:
   YumiGDT: 6ad45d7a87ffafebe33d2b08eb144db6db580b67
   YumiInMobi: b58b19fc8e28e4af1e746d5f36316bbfc4f1bcbc
   YumiIronSource: eeeffeacddf0bd3b7fe225d1fd1eb0017236762a
-  YumiMediationAdapters: 998fa028bf8d50eb93ff53d1374b24c22da5ac58
-  YumiMediationDebugCenter-iOS: c230b4ed4c1d24a0de004056f941d9115abc3708
-  YumiMediationSDK: c84e9a606f6b1a7826b21cac198ff64293284b48
+  YumiMediationAdapters: 79e4fb790dc9bdaabbba462385fec95acf520ce0
+  YumiMediationDebugCenter-iOS: e61701a61fb9278b4964fb14603630fac2a45917
+  YumiMediationSDK: 07eb08e181c8a611c301178c50cd5e0421e49247
   YumiMobvista: ed4c73acfd3ea32a04eab8e2726bd2e04a78691b
   YumiStartApp: 6740abfbef309c5b66503031c1dc10057285740d
   YumiUnity: 23518ba76883786fa7469f5156bce70c606dbdd8
   YumiVungle: 963eeaa9b415a0aed8a69b0301d8b934814ac779
 
-PODFILE CHECKSUM: 1d53282b763b01a240940e10e5f40963e31f4475
+PODFILE CHECKSUM: 0234925b93657ce22f46bff1c3f73cb64fe6a6bd
 
 COCOAPODS: 1.3.1
