@@ -393,6 +393,7 @@
 				"${PODS_ROOT}/YumiDomob/Resource.bundle",
 				"${PODS_ROOT}/YumiMediationAdapters/YumiMediationAdMob/Resources/YumiMediationAdMob.bundle",
 				"${PODS_ROOT}/YumiMediationAdapters/YumiMediationFacebook/Resources/YumiMediationFacebook.bundle",
+				"${PODS_ROOT}/YumiMediationDebugCenter-iOS/Resources/YumiMediationDebugCenter.bundle",
 				"${PODS_ROOT}/YumiMediationSDK/Resources/YumiMediationSDK.bundle",
 				"${PODS_ROOT}/YumiMediationSDK/Resources/YumiAdsSDK.bundle",
 				"${PODS_ROOT}/YumiStartApp/StartApp.framework/Resources/StartApp.bundle",
