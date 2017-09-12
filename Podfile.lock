@@ -1,4 +1,5 @@
 PODS:
+  - PlayableAds (1.3.0)
   - YumiAdColony (3.1.1)
   - YumiAdMob (7.20.0)
   - YumiAdNative (1.0.3)
@@ -10,82 +11,82 @@ PODS:
   - YumiGDT (4.5.7)
   - YumiInMobi (6.2.1)
   - YumiIronSource (6.6.1.1)
-  - YumiMediationAdapters (3.1.0):
-    - YumiMediationAdapters/AdColony (= 3.1.0)
-    - YumiMediationAdapters/AdMob (= 3.1.0)
-    - YumiMediationAdapters/AdNative (= 3.1.0)
-    - YumiMediationAdapters/AppLovin (= 3.1.0)
-    - YumiMediationAdapters/Baidu (= 3.1.0)
-    - YumiMediationAdapters/Chartboost (= 3.1.0)
-    - YumiMediationAdapters/Domob (= 3.1.0)
-    - YumiMediationAdapters/Facebook (= 3.1.0)
-    - YumiMediationAdapters/GDT (= 3.1.0)
-    - YumiMediationAdapters/InMobi (= 3.1.0)
-    - YumiMediationAdapters/IronSource (= 3.1.0)
-    - YumiMediationAdapters/Mobvista (= 3.1.0)
-    - YumiMediationAdapters/StartApp (= 3.1.0)
-    - YumiMediationAdapters/Unity (= 3.1.0)
-    - YumiMediationAdapters/Vungle (= 3.1.0)
-    - YumiMediationSDK (~> 3.1.0)
-  - YumiMediationAdapters/AdColony (3.1.0):
+  - YumiMediationAdapters (3.0.0):
+    - YumiMediationAdapters/AdColony (= 3.0.0)
+    - YumiMediationAdapters/AdMob (= 3.0.0)
+    - YumiMediationAdapters/AdNative (= 3.0.0)
+    - YumiMediationAdapters/AppLovin (= 3.0.0)
+    - YumiMediationAdapters/Baidu (= 3.0.0)
+    - YumiMediationAdapters/Chartboost (= 3.0.0)
+    - YumiMediationAdapters/Domob (= 3.0.0)
+    - YumiMediationAdapters/Facebook (= 3.0.0)
+    - YumiMediationAdapters/GDT (= 3.0.0)
+    - YumiMediationAdapters/InMobi (= 3.0.0)
+    - YumiMediationAdapters/IronSource (= 3.0.0)
+    - YumiMediationAdapters/PlayableAds (= 3.0.0)
+    - YumiMediationAdapters/StartApp (= 3.0.0)
+    - YumiMediationAdapters/Unity (= 3.0.0)
+    - YumiMediationAdapters/Vungle (= 3.0.0)
+    - YumiMediationSDK (= 3.0.0)
+  - YumiMediationAdapters/AdColony (3.0.0):
     - YumiAdColony (= 3.1.1)
-    - YumiMediationSDK (~> 3.1.0)
-  - YumiMediationAdapters/AdMob (3.1.0):
+    - YumiMediationSDK (= 3.0.0)
+  - YumiMediationAdapters/AdMob (3.0.0):
     - YumiAdMob (= 7.20.0)
-    - YumiMediationSDK (~> 3.1.0)
-  - YumiMediationAdapters/AdNative (3.1.0):
+    - YumiMediationSDK (= 3.0.0)
+  - YumiMediationAdapters/AdNative (3.0.0):
     - YumiAdNative (= 1.0.3)
-    - YumiMediationSDK (~> 3.1.0)
-  - YumiMediationAdapters/AppLovin (3.1.0):
+    - YumiMediationSDK (= 3.0.0)
+  - YumiMediationAdapters/AppLovin (3.0.0):
     - YumiAppLovin (= 4.2.1)
-    - YumiMediationSDK (~> 3.1.0)
-  - YumiMediationAdapters/Baidu (3.1.0):
+    - YumiMediationSDK (= 3.0.0)
+  - YumiMediationAdapters/Baidu (3.0.0):
     - YumiBaidu (= 4.5)
-    - YumiMediationSDK (~> 3.1.0)
-  - YumiMediationAdapters/Chartboost (3.1.0):
+    - YumiMediationSDK (= 3.0.0)
+  - YumiMediationAdapters/Chartboost (3.0.0):
     - YumiChartboost (= 6.6.3)
-    - YumiMediationSDK (~> 3.1.0)
-  - YumiMediationAdapters/Domob (3.1.0):
+    - YumiMediationSDK (= 3.0.0)
+  - YumiMediationAdapters/Domob (3.0.0):
     - YumiDomob (= 3.6.0)
-    - YumiMediationSDK (~> 3.1.0)
-  - YumiMediationAdapters/Facebook (3.1.0):
+    - YumiMediationSDK (= 3.0.0)
+  - YumiMediationAdapters/Facebook (3.0.0):
     - YumiFacebook (= 4.23.0)
-    - YumiMediationSDK (~> 3.1.0)
-  - YumiMediationAdapters/GDT (3.1.0):
+    - YumiMediationSDK (= 3.0.0)
+  - YumiMediationAdapters/GDT (3.0.0):
     - YumiGDT (= 4.5.7)
-    - YumiMediationSDK (~> 3.1.0)
-  - YumiMediationAdapters/InMobi (3.1.0):
+    - YumiMediationSDK (= 3.0.0)
+  - YumiMediationAdapters/InMobi (3.0.0):
     - YumiInMobi (= 6.2.1)
-    - YumiMediationSDK (~> 3.1.0)
-  - YumiMediationAdapters/IronSource (3.1.0):
+    - YumiMediationSDK (= 3.0.0)
+  - YumiMediationAdapters/IronSource (3.0.0):
     - YumiIronSource (= 6.6.1.1)
-    - YumiMediationSDK (~> 3.1.0)
-  - YumiMediationAdapters/Mobvista (3.1.0):
-    - YumiMediationSDK (~> 3.1.0)
-    - YumiMobvista (= 2.5.0)
-  - YumiMediationAdapters/StartApp (3.1.0):
-    - YumiMediationSDK (~> 3.1.0)
+    - YumiMediationSDK (= 3.0.0)
+  - YumiMediationAdapters/PlayableAds (3.0.0):
+    - PlayableAds (= 1.3.0)
+    - YumiMediationSDK (= 3.0.0)
+  - YumiMediationAdapters/StartApp (3.0.0):
+    - YumiMediationSDK (= 3.0.0)
     - YumiStartApp (= 3.4.2)
-  - YumiMediationAdapters/Unity (3.1.0):
-    - YumiMediationSDK (~> 3.1.0)
+  - YumiMediationAdapters/Unity (3.0.0):
+    - YumiMediationSDK (= 3.0.0)
     - YumiUnity (= 2.1.0)
-  - YumiMediationAdapters/Vungle (3.1.0):
-    - YumiMediationSDK (~> 3.1.0)
+  - YumiMediationAdapters/Vungle (3.0.0):
+    - YumiMediationSDK (= 3.0.0)
     - YumiVungle (= 5.1.0)
   - YumiMediationDebugCenter-iOS (3.1.0):
     - YumiMediationSDK (>= 3.0.0)
-  - YumiMediationSDK (3.1.0)
-  - YumiMobvista (2.5.0)
+  - YumiMediationSDK (3.0.0)
   - YumiStartApp (3.4.2)
   - YumiUnity (2.1.0)
   - YumiVungle (5.1.0)
 
 DEPENDENCIES:
-  - YumiMediationAdapters (= 3.1.0)
+  - YumiMediationAdapters (= 3.0.0)
   - YumiMediationDebugCenter-iOS (= 3.1.0)
-  - YumiMediationSDK (= 3.1.0)
+  - YumiMediationSDK (= 3.0.0)
 
 SPEC CHECKSUMS:
+  PlayableAds: 30872df806a68c015ccd1a0561f0bc402b993eb1
   YumiAdColony: f9f426ba238a224b10f5f38f4fe32f5357d666db
   YumiAdMob: 86d83409c02efebded4f9da74820efa4b02577fa
   YumiAdNative: 9e8f656beff0208586bc02aaa02ea4ac7b9fd3cd
@@ -97,14 +98,13 @@ SPEC CHECKSUMS:
   YumiGDT: 6ad45d7a87ffafebe33d2b08eb144db6db580b67
   YumiInMobi: b58b19fc8e28e4af1e746d5f36316bbfc4f1bcbc
   YumiIronSource: eeeffeacddf0bd3b7fe225d1fd1eb0017236762a
-  YumiMediationAdapters: 54d07ec6b015fdbc6827fbcd7dcd9cc49f688831
+  YumiMediationAdapters: be0c98aa949b58194a29dff26b0c7ace11963bd1
   YumiMediationDebugCenter-iOS: e61701a61fb9278b4964fb14603630fac2a45917
-  YumiMediationSDK: 07eb08e181c8a611c301178c50cd5e0421e49247
-  YumiMobvista: ed4c73acfd3ea32a04eab8e2726bd2e04a78691b
+  YumiMediationSDK: 7f11b25ae6351cccac0a514b36bbfc5a6f043465
   YumiStartApp: 6740abfbef309c5b66503031c1dc10057285740d
   YumiUnity: 23518ba76883786fa7469f5156bce70c606dbdd8
   YumiVungle: 963eeaa9b415a0aed8a69b0301d8b934814ac779
 
-PODFILE CHECKSUM: 0234925b93657ce22f46bff1c3f73cb64fe6a6bd
+PODFILE CHECKSUM: 5392482e5b33074e3894301d7e98f0a2a9b6ef64
 
 COCOAPODS: 1.3.1
