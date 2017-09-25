@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		18B9EA55078CDEDC02089237 /* libPods-YumiMediationSDKDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B66BE2D981389A8993F753 /* libPods-YumiMediationSDKDemoTests.a */; };
+		5BE975BD1F78EF19003038EA /* native_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE975B91F78EF19003038EA /* native_back@2x.png */; };
+		5BE975BE1F78EF19003038EA /* native_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BE975BA1F78EF19003038EA /* native_close@2x.png */; };
+		5BE975BF1F78EF19003038EA /* YumiNativeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BE975BC1F78EF19003038EA /* YumiNativeView.m */; };
 		8CC0938B05979E3B191612A6 /* libPods-YumiMediationSDKDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B4CDF1528922A11091F816 /* libPods-YumiMediationSDKDemoUITests.a */; };
 		98F0AF8D1F2AE9E6006B48AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98F0AF8B1F2AE9E6006B48AA /* Main.storyboard */; };
 		98F0AF9F1F2AE9EF006B48AA /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F0AF921F2AE9EF006B48AA /* UIView+Toast.m */; };
@@ -46,6 +49,10 @@
 /* Begin PBXFileReference section */
 		27B66BE2D981389A8993F753 /* libPods-YumiMediationSDKDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YumiMediationSDKDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EC711C23106EE995A06D951 /* libPods-YumiMediationSDKDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YumiMediationSDKDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BE975B91F78EF19003038EA /* native_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "native_back@2x.png"; sourceTree = "<group>"; };
+		5BE975BA1F78EF19003038EA /* native_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "native_close@2x.png"; sourceTree = "<group>"; };
+		5BE975BB1F78EF19003038EA /* YumiNativeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YumiNativeView.h; sourceTree = "<group>"; };
+		5BE975BC1F78EF19003038EA /* YumiNativeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YumiNativeView.m; sourceTree = "<group>"; };
 		5D87838E1D9BCAED5DBBD536 /* Pods-YumiMediationSDKDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YumiMediationSDKDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YumiMediationSDKDemoUITests/Pods-YumiMediationSDKDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7414EC105309956644DC2D55 /* Pods-YumiMediationSDKDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YumiMediationSDKDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YumiMediationSDKDemoUITests/Pods-YumiMediationSDKDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		98F0AF8C1F2AE9E6006B48AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -113,6 +120,10 @@
 		98F0AF8E1F2AE9EF006B48AA /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				5BE975B91F78EF19003038EA /* native_back@2x.png */,
+				5BE975BA1F78EF19003038EA /* native_close@2x.png */,
+				5BE975BB1F78EF19003038EA /* YumiNativeView.h */,
+				5BE975BC1F78EF19003038EA /* YumiNativeView.m */,
 				98F0AF8F1F2AE9EF006B48AA /* Tools */,
 				98F0AF9A1F2AE9EF006B48AA /* YumiMediationAppViewController.h */,
 				98F0AF9B1F2AE9EF006B48AA /* YumiMediationAppViewController.m */,
@@ -362,6 +373,8 @@
 				98F0AFA41F2AE9EF006B48AA /* YumiMediationAppViewController.xib in Resources */,
 				B9A065871E8D0F6C00B1B91B /* LaunchScreen.storyboard in Resources */,
 				B9A065841E8D0F6C00B1B91B /* Assets.xcassets in Resources */,
+				5BE975BE1F78EF19003038EA /* native_close@2x.png in Resources */,
+				5BE975BD1F78EF19003038EA /* native_back@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +403,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo-resources.sh",
 				"${PODS_ROOT}/YumiBaidu/lib/baidumobadsdk.bundle",
+				"${PODS_ROOT}/YumiCentrixlink/Resources/CLBundle.bundle",
 				"${PODS_ROOT}/YumiDomob/Resource.bundle",
 				"${PODS_ROOT}/YumiMediationAdapters/YumiMediationAdMob/Resources/YumiMediationAdMob.bundle",
 				"${PODS_ROOT}/YumiMediationAdapters/YumiMediationFacebook/Resources/YumiMediationFacebook.bundle",
@@ -545,6 +559,7 @@
 			files = (
 				98F0AFA31F2AE9EF006B48AA /* YumiMediationAppViewController.m in Sources */,
 				98F0AF9F1F2AE9EF006B48AA /* UIView+Toast.m in Sources */,
+				5BE975BF1F78EF19003038EA /* YumiNativeView.m in Sources */,
 				98F0AFA51F2AE9EF006B48AA /* YumiViewController.m in Sources */,
 				98F0AFA11F2AE9EF006B48AA /* YumiMediationInitializeInfoUserDefaults.m in Sources */,
 				98F0AFA21F2AE9EF006B48AA /* YumiMediationInitializeModel.m in Sources */,
