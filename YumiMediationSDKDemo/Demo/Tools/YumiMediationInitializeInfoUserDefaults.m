@@ -8,11 +8,11 @@
 
 #import "YumiMediationInitializeInfoUserDefaults.h"
 
-static NSString *const key = @"YumiMediation_YumiIDs_key";
+static NSString *const key = @"YumiMediation_PlacementIDs_key";
 
 @implementation YumiMediationInitializeInfoUserDefaults
 
-+ (instancetype)sharedYumiIDsUserDefaults {
++ (instancetype)sharedPlacementIDsUserDefaults {
     static YumiMediationInitializeInfoUserDefaults *sharedUserDefaults = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -21,37 +21,37 @@ static NSString *const key = @"YumiMediation_YumiIDs_key";
     return sharedUserDefaults;
 }
 
-- (void)persistMediationInitializeInfo:(YumiMediationInitializeModel *)yumiIDInfoModel {
+- (void)persistMediationInitializeInfo:(YumiMediationInitializeModel *)placementIDInfoModel {
 
-    NSMutableArray<YumiMediationInitializeModel *> *yumiIDs = [[self fetchMediationYumiIDs] mutableCopy];
-    if (!yumiIDs) {
-        yumiIDs = [NSMutableArray array];
+    NSMutableArray<YumiMediationInitializeModel *> *placementIDs = [[self fetchMediationPlacementIDs] mutableCopy];
+    if (!placementIDs) {
+        placementIDs = [NSMutableArray array];
     }
 
-    for (int index = 0; index < yumiIDs.count; index++) {
-        YumiMediationInitializeModel *tempModel = yumiIDs[index];
+    for (int index = 0; index < placementIDs.count; index++) {
+        YumiMediationInitializeModel *tempModel = placementIDs[index];
 
-        if ([tempModel.yumiID isEqualToString:yumiIDInfoModel.yumiID]) {
-            [yumiIDs removeObjectAtIndex:index];
+        if ([tempModel.placementID isEqualToString:placementIDInfoModel.placementID]) {
+            [placementIDs removeObjectAtIndex:index];
         }
     }
 
-    [yumiIDs insertObject:yumiIDInfoModel atIndex:0];
+    [placementIDs insertObject:placementIDInfoModel atIndex:0];
 
-    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:yumiIDs];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:placementIDs];
 
     NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
     [standardUserDefaults setObject:data forKey:key];
     [standardUserDefaults synchronize];
 }
 
-- (NSArray<YumiMediationInitializeModel *> *)fetchMediationYumiIDs {
+- (NSArray<YumiMediationInitializeModel *> *)fetchMediationPlacementIDs {
 
     NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
     NSData *data = [standardUserDefaults objectForKey:key];
-    NSArray *yumiIDs = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    NSArray *placementIDs = [NSKeyedUnarchiver unarchiveObjectWithData:data];
 
-    return yumiIDs;
+    return placementIDs;
 }
 
 @end

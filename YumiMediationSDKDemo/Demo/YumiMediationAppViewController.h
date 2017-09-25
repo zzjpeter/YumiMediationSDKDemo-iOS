@@ -13,6 +13,8 @@
 + (instancetype) new NS_UNAVAILABLE;
 - (instancetype)init NS_UNAVAILABLE;
 
-- (instancetype)initWithYumiID:(NSString *)yumiID channelID:(NSString *)channelID versionID:(NSString *)versionID;
+- (instancetype)initWithPlacementID:(NSString *)placementID
+                          channelID:(NSString *)channelID
+                          versionID:(NSString *)versionID;
 
 @end

@@ -11,10 +11,10 @@
 
 @interface YumiMediationInitializeInfoUserDefaults : NSObject
 
-+ (instancetype)sharedYumiIDsUserDefaults;
++ (instancetype)sharedPlacementIDsUserDefaults;
 
-- (void)persistMediationInitializeInfo:(YumiMediationInitializeModel *)yumiIDInfoModel;
+- (void)persistMediationInitializeInfo:(YumiMediationInitializeModel *)placementIDInfoModel;
 
-- (NSArray<YumiMediationInitializeModel *> *)fetchMediationYumiIDs;
+- (NSArray<YumiMediationInitializeModel *> *)fetchMediationPlacementIDs;
 
 @end

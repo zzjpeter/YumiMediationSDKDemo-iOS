@@ -13,7 +13,7 @@
 #pragma mark - NSCoding
 - (void)encodeWithCoder:(NSCoder *)coder {
 
-    [coder encodeObject:self.yumiID forKey:@"yumiID"];
+    [coder encodeObject:self.placementID forKey:@"placementID"];
     [coder encodeObject:self.channelID forKey:@"channelID"];
     [coder encodeObject:self.versionID forKey:@"versionID"];
 }
@@ -21,7 +21,7 @@
 - (instancetype)initWithCoder:(NSCoder *)decoder {
 
     if (self = [super init]) {
-        self.yumiID = [decoder decodeObjectForKey:@"yumiID"];
+        self.placementID = [decoder decodeObjectForKey:@"placementID"];
         self.channelID = [decoder decodeObjectForKey:@"channelID"];
         self.versionID = [decoder decodeObjectForKey:@"versionID"];
     }

@@ -13,23 +13,20 @@
 #import "YumiMediationInitializeInfoUserDefaults.h"
 #import "YumiMediationInitializeModel.h"
 
-#define YUMIIDLENGTH 32
-static NSString *const yumiID = @"3f521f0914fdf691bd23bf85a8fd3c3a";
-static NSString *const channelID = @"";
-static NSString *const versionID = @"";
+#define PLACEMENTIDLENGTH 1
 
 @interface YumiViewController () <UITextFieldDelegate>
 
-@property (weak, nonatomic) IBOutlet UITextField *yumiIDTextField;
+@property (weak, nonatomic) IBOutlet UITextField *placementIDTextField;
 @property (weak, nonatomic) IBOutlet UITextField *channelIDTextField;
 @property (weak, nonatomic) IBOutlet UITextField *versionIDTextField;
 @property (weak, nonatomic) IBOutlet UIButton *gotoYumiDemo;
-@property (weak, nonatomic) IBOutlet UITableView *yumiIDTableView;
+@property (weak, nonatomic) IBOutlet UITableView *placementIDTableView;
 
-@property (nonatomic) NSString *yumiID;
+@property (nonatomic) NSString *placementID;
 @property (nonatomic) NSString *channelID;
 @property (nonatomic) NSString *versionID;
-@property (nonatomic) NSArray *yumiIDsInfo;
+@property (nonatomic) NSArray *placementIDsInfo;
 
 @end
 
@@ -38,13 +35,13 @@ static NSString *const versionID = @"";
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.yumiIDTableView.tableFooterView = [[UIView alloc] init];
-    self.yumiIDTextField.delegate = self;
+    self.placementIDTableView.tableFooterView = [[UIView alloc] init];
+    self.placementIDTextField.delegate = self;
 
-    [self initializeYumiIDs];
+    [self initializePlacementIDs];
 
-    if (!self.yumiID) {
-        self.yumiID = yumiID;
+    if (!self.placementID) {
+        self.placementID = placementID;
     }
     if (!self.channelID) {
         self.channelID = channelID;
@@ -53,21 +50,21 @@ static NSString *const versionID = @"";
         self.versionID = versionID;
     }
 
-    self.yumiIDTextField.text = self.yumiID;
+    self.placementIDTextField.text = self.placementID;
     self.channelIDTextField.text = self.channelID;
     self.versionIDTextField.text = self.versionID;
 }
 
-- (void)initializeYumiIDs {
+- (void)initializePlacementIDs {
 
     YumiMediationInitializeInfoUserDefaults *yumiUserDefaults =
-        [YumiMediationInitializeInfoUserDefaults sharedYumiIDsUserDefaults];
+        [YumiMediationInitializeInfoUserDefaults sharedPlacementIDsUserDefaults];
 
-    self.yumiIDsInfo = [yumiUserDefaults fetchMediationYumiIDs];
+    self.placementIDsInfo = [yumiUserDefaults fetchMediationPlacementIDs];
 
-    if (self.yumiIDsInfo.count > 0) {
-        YumiMediationInitializeModel *yumiModel = [self.yumiIDsInfo firstObject];
-        self.yumiID = yumiModel.yumiID;
+    if (self.placementIDsInfo.count > 0) {
+        YumiMediationInitializeModel *yumiModel = [self.placementIDsInfo firstObject];
+        self.placementID = yumiModel.placementID;
         self.channelID = yumiModel.channelID;
         self.versionID = yumiModel.versionID;
     }
@@ -76,13 +73,14 @@ static NSString *const versionID = @"";
 #pragma mark : - provate method
 
 - (void)showMessage {
-    [self.view makeToast:@"yumiID is nil or  The length error " duration:1.0 position:CSToastPositionCenter];
+    [self.view makeToast:@"placementID is nil or  The length error " duration:1.0 position:CSToastPositionCenter];
 }
 
 - (void)setRootVc {
-    YumiMediationAppViewController *rootVc = [[YumiMediationAppViewController alloc] initWithYumiID:self.yumiID
-                                                                                          channelID:self.channelID
-                                                                                          versionID:self.versionID];
+    YumiMediationAppViewController *rootVc =
+        [[YumiMediationAppViewController alloc] initWithPlacementID:self.placementID
+                                                          channelID:self.channelID
+                                                          versionID:self.versionID];
     [UIApplication sharedApplication].keyWindow.rootViewController = rootVc;
 
     [[UIApplication sharedApplication].keyWindow.layer transitionWithAnimType:TransitionAnimTypeRamdom
@@ -95,19 +93,19 @@ static NSString *const versionID = @"";
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
-    self.yumiIDTableView.hidden = YES;
+    self.placementIDTableView.hidden = YES;
 }
 
 - (IBAction)ClickGotoYumiDemo:(UIButton *)sender {
 
-    NSString *yumiIDTextString =
-        [self.yumiIDTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    if (yumiIDTextString.length != YUMIIDLENGTH) {
+    NSString *placementIDTextString = [self.placementIDTextField.text
+        stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    if (placementIDTextString.length < PLACEMENTIDLENGTH) {
         [self showMessage];
         return;
     }
 
-    self.yumiID = yumiIDTextString;
+    self.placementID = placementIDTextString;
     self.channelID = [self.channelIDTextField.text
         stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     self.versionID = [self.versionIDTextField.text
@@ -121,11 +119,12 @@ static NSString *const versionID = @"";
         __weak typeof(self) weakSelf = self;
         [self dismissViewControllerAnimated:NO
                                  completion:^{
-                                     if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector
-                                                                                 (modifyYumiID:channelID:versionID:)]) {
-                                         [weakSelf.delegate modifyYumiID:weakSelf.yumiID
-                                                               channelID:weakSelf.channelID
-                                                               versionID:weakSelf.versionID];
+                                     if (weakSelf.delegate &&
+                                         [weakSelf.delegate
+                                             respondsToSelector:@selector(modifyPlacementID:channelID:versionID:)]) {
+                                         [weakSelf.delegate modifyPlacementID:weakSelf.placementID
+                                                                    channelID:weakSelf.channelID
+                                                                    versionID:weakSelf.versionID];
                                      }
                                  }];
         [[UIApplication sharedApplication].keyWindow.layer transitionWithAnimType:TransitionAnimTypeRamdom
@@ -139,10 +138,10 @@ static NSString *const versionID = @"";
 
 - (void)saveLocalStorage {
     YumiMediationInitializeInfoUserDefaults *yumiUserDefaults =
-        [YumiMediationInitializeInfoUserDefaults sharedYumiIDsUserDefaults];
+        [YumiMediationInitializeInfoUserDefaults sharedPlacementIDsUserDefaults];
 
     YumiMediationInitializeModel *yumiModel = [[YumiMediationInitializeModel alloc] init];
-    yumiModel.yumiID = self.yumiID;
+    yumiModel.placementID = self.placementID;
     yumiModel.channelID = self.channelID;
     yumiModel.versionID = self.versionID;
 
@@ -152,16 +151,16 @@ static NSString *const versionID = @"";
 #pragma mark : -UITextFieldDelegate
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
-    if (self.yumiIDTableView.hidden) {
-        [self.yumiIDTableView reloadData];
-        self.yumiIDTableView.hidden = NO;
+    if (self.placementIDTableView.hidden) {
+        [self.placementIDTableView reloadData];
+        self.placementIDTableView.hidden = NO;
     }
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
-    NSString *yumiIDTextString =
-        [self.yumiIDTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    if (yumiIDTextString.length != YUMIIDLENGTH) {
+    NSString *placementIDTextString = [self.placementIDTextField.text
+        stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    if (placementIDTextString.length < PLACEMENTIDLENGTH) {
         [self showMessage];
     }
     self.channelIDTextField.text = @"";
@@ -171,9 +170,9 @@ static NSString *const versionID = @"";
 - (BOOL)textField:(UITextField *)textField
     shouldChangeCharactersInRange:(NSRange)range
                 replacementString:(NSString *)string {
-    if (self.yumiIDTableView.hidden) {
-        [self.yumiIDTableView reloadData];
-        self.yumiIDTableView.hidden = NO;
+    if (self.placementIDTableView.hidden) {
+        [self.placementIDTableView reloadData];
+        self.placementIDTableView.hidden = NO;
     }
 
     return YES;
@@ -181,7 +180,7 @@ static NSString *const versionID = @"";
 #pragma mark : - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.yumiIDsInfo.count;
+    return self.placementIDsInfo.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -190,10 +189,10 @@ static NSString *const versionID = @"";
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
     }
-    YumiMediationInitializeModel *yumiModel = self.yumiIDsInfo[indexPath.row];
+    YumiMediationInitializeModel *yumiModel = self.placementIDsInfo[indexPath.row];
     cell.textLabel.textColor = [UIColor lightGrayColor];
     cell.textLabel.font = [UIFont systemFontOfSize:14.0];
-    cell.textLabel.text = yumiModel.yumiID;
+    cell.textLabel.text = yumiModel.placementID;
 
     return cell;
 }
@@ -210,13 +209,13 @@ static NSString *const versionID = @"";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
-    YumiMediationInitializeModel *yumiModel = self.yumiIDsInfo[indexPath.row];
+    YumiMediationInitializeModel *yumiModel = self.placementIDsInfo[indexPath.row];
 
-    self.yumiIDTextField.text = yumiModel.yumiID;
+    self.placementIDTextField.text = yumiModel.placementID;
     self.channelIDTextField.text = yumiModel.channelID;
     self.versionIDTextField.text = yumiModel.versionID;
 
-    self.yumiIDTableView.hidden = YES;
+    self.placementIDTableView.hidden = YES;
 }
 
 @end

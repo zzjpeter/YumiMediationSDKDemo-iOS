@@ -10,7 +10,7 @@
 
 @interface YumiMediationInitializeModel : NSObject <NSCoding>
 
-@property (nonatomic) NSString *yumiID;
+@property (nonatomic) NSString *placementID;
 @property (nonatomic) NSString *channelID;
 @property (nonatomic) NSString *versionID;
 
