@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -120,9 +120,9 @@
                     <connections>
                         <outlet property="channelIDTextField" destination="oH6-ui-Q2J" id="SXI-KN-sKm"/>
                         <outlet property="gotoYumiDemo" destination="Vi2-Fy-vWV" id="OpZ-fI-mk3"/>
+                        <outlet property="placementIDTableView" destination="i5N-Pm-zdk" id="bPa-a7-tdG"/>
+                        <outlet property="placementIDTextField" destination="0vB-1p-CX2" id="5Ba-V9-jYq"/>
                         <outlet property="versionIDTextField" destination="0DQ-ML-daa" id="ki5-DF-zDy"/>
-                        <outlet property="yumiIDTableView" destination="i5N-Pm-zdk" id="HKq-R4-UW0"/>
-                        <outlet property="yumiIDTextField" destination="0vB-1p-CX2" id="Gd8-uf-4gs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
