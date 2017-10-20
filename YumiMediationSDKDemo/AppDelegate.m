@@ -10,8 +10,6 @@
 #import <YumiMediationSDK/YumiAdsSplash.h>
 #import <CoreLocation/CoreLocation.h>
 
-static NSString *const yumiID = @"3f521f0914fdf691bd23bf85a8fd3c3a";
-
 @interface AppDelegate () <YumiAdsSplashDelegate>
 
 @property (nonatomic, strong) CLLocationManager *location;
@@ -25,9 +23,6 @@ static NSString *const yumiID = @"3f521f0914fdf691bd23bf85a8fd3c3a";
     
     self.location = [[CLLocationManager alloc] init];
     [self.location requestWhenInUseAuthorization];
-    
-    self.yumiSplash = [YumiAdsSplash sharedInstance];
-    [self.yumiSplash showYumiAdsSplashWith:@"" appKey:@"" rootViewController:[UIApplication sharedApplication].keyWindow.rootViewController delegate:self];
     
     return YES;
 }
