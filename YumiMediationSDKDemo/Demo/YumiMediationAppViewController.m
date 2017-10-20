@@ -24,6 +24,7 @@
 #import <YumiMediationSDK/YumiTool.h>
 
 static NSString *const appKey = @"";
+static int nativeAdNumber = 10;
 
 @interface YumiMediationAppViewController () <YumiMediationBannerViewDelegate, YumiMediationInterstitialDelegate,
                                               YumiMediationVideoDelegate, YumiAdsSplashDelegate,
@@ -164,6 +165,7 @@ static NSString *const appKey = @"";
     [self fetchAdConfigWith:YumiMediationAdTypeBanner];
     [self fetchAdConfigWith:YumiMediationAdTypeInterstitial];
     [self fetchAdConfigWith:YumiMediationAdTypeVideo];
+    [self fetchAdConfigWith:YumiMediationAdTypeNative];
 
     if (!self.isConfigSuccess) {
         retry();
@@ -371,7 +373,7 @@ static NSString *const appKey = @"";
                 [weakSelf showLogConsoleWith:[NSString stringWithFormat:@"initialize  native ad placementID : %@",
                                                                         weakSelf.placementID]
                                    adLogType:YumiMediationAdLogTypeNative];
-                [weakSelf.nativeAd loadAd:5];
+                [weakSelf.nativeAd loadAd:nativeAdNumber];
                 break;
 
             default:
@@ -583,7 +585,9 @@ static NSString *const appKey = @"";
 
 - (YumiMediationNativeAd *)nativeAd {
     if (!_nativeAd) {
-        _nativeAd = [[YumiMediationNativeAd alloc] initWithPlacementID:self.placementID channelID:self.channelID versionID:self.versionID];
+        _nativeAd = [[YumiMediationNativeAd alloc] initWithPlacementID:self.placementID
+                                                             channelID:self.channelID
+                                                             versionID:self.versionID];
         _nativeAd.delegate = self;
     }
     return _nativeAd;
@@ -694,6 +698,9 @@ static NSString *const appKey = @"";
 /// Tells the delegate that an ad has been successfully loaded.
 - (void)yumiMediationNativeAdDidLoad:(NSArray<YumiMediationNativeModel *> *)nativeAdArray {
 
+    NSString *nativeStr = [NSString stringWithFormat:@"native did load ad count is %ld", nativeAdArray.count];
+    [self showLogConsoleWith:nativeStr adLogType:YumiMediationAdLogTypeNative];
+
     self.nativeView = [[NSBundle mainBundle] loadNibNamed:@"YumiNativeView" owner:nil options:nil].firstObject;
     self.nativeView.frame = self.view.frame;
     [self.nativeView.closeButton addTarget:self
@@ -721,7 +728,10 @@ static NSString *const appKey = @"";
     dispatch_async(dispatch_get_main_queue(), ^{
         self.nativeView.title.text = adData.title;
         self.nativeView.desc.text = adData.desc;
-        self.nativeView.callToAction.titleLabel.text = @"hahaha";
+        self.nativeView.callToAction.titleLabel.text = adData.callToAction;
+        self.nativeView.callToAction.titleLabel.textColor = [UIColor whiteColor];
+        self.nativeView.callToAction.backgroundColor = [UIColor blackColor];
+        self.nativeView.callToAction.layer.cornerRadius = 5.0;
 
         [self.view addSubview:self.nativeView];
         [self.nativeAd registerViewForInteraction:self.nativeView withViewController:self nativeAd:adData];
@@ -731,10 +741,14 @@ static NSString *const appKey = @"";
 
 /// Tells the delegate that a request failed.
 - (void)yumiMediationNativeAd:(YumiMediationNativeAd *)nativeAd didFailWithError:(YumiMediationError *)error {
+    [self showLogConsoleWith:[NSString
+                                 stringWithFormat:@"native did fail with error [ %@ ] ", [error localizedDescription]]
+                   adLogType:YumiMediationAdLogTypeNative];
 }
 
 /// Tells the delegate that the Native view has been clicked.
 - (void)yumiMediationNativeAdDidClick:(YumiMediationNativeModel *)nativeAd {
+    [self showLogConsoleWith:@"native did clicked " adLogType:YumiMediationAdLogTypeNative];
 }
 
 - (void)closeNativeView {
