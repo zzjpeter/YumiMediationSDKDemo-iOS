@@ -1,5 +1,5 @@
 PODS:
-  - PlayableAds (1.3.0)
+  - PlayableAds (1.4.1)
   - YumiAdColony (3.1.1)
   - YumiAdMob (7.20.0)
   - YumiAppLovin (4.2.1)
@@ -10,7 +10,7 @@ PODS:
   - YumiFacebook (4.23.0)
   - YumiGDT (4.5.7)
   - YumiInMobi (6.2.1)
-  - YumiIronSource (6.6.1.1)
+  - YumiIronSource (6.6.8.1)
   - YumiMediationAdapters (3.2.0):
     - YumiMediationAdapters/AdColony (= 3.2.0)
     - YumiMediationAdapters/AdMob (= 3.2.0)
@@ -60,13 +60,13 @@ PODS:
     - YumiInMobi (= 6.2.1)
     - YumiMediationSDK (~> 3.2.0)
   - YumiMediationAdapters/IronSource (3.2.0):
-    - YumiIronSource (= 6.6.1.1)
+    - YumiIronSource (= 6.6.8.1)
     - YumiMediationSDK (~> 3.2.0)
   - YumiMediationAdapters/Mobvista (3.2.0):
     - YumiMediationSDK (~> 3.2.0)
     - YumiMobvista (= 2.5.0)
   - YumiMediationAdapters/PlayableAds (3.2.0):
-    - PlayableAds (= 1.3.0)
+    - PlayableAds (= 1.4.1)
     - YumiMediationSDK (~> 3.2.0)
   - YumiMediationAdapters/StartApp (3.2.0):
     - YumiMediationSDK (~> 3.2.0)
@@ -78,7 +78,7 @@ PODS:
     - YumiMediationSDK (~> 3.2.0)
     - YumiVungle (= 5.1.0)
   - YumiMediationDebugCenter-iOS (3.2.0):
-    - YumiMediationSDK (>= 3.0.0)
+    - YumiMediationSDK (>= 3.2.0)
   - YumiMediationSDK (3.2.0)
   - YumiMobvista (2.5.0)
   - YumiStartApp (3.4.2)
@@ -91,7 +91,7 @@ DEPENDENCIES:
   - YumiMediationSDK (= 3.2.0)
 
 SPEC CHECKSUMS:
-  PlayableAds: 30872df806a68c015ccd1a0561f0bc402b993eb1
+  PlayableAds: 6946dfc0f9842ae514a1d51f8a6643ebaf7a7bea
   YumiAdColony: f9f426ba238a224b10f5f38f4fe32f5357d666db
   YumiAdMob: 86d83409c02efebded4f9da74820efa4b02577fa
   YumiAppLovin: 75a29e042539ac2d5caa0a6afb4e6698afcd6470
@@ -102,10 +102,10 @@ SPEC CHECKSUMS:
   YumiFacebook: 1f4f22d25c68589333ad5291b04ae730e7874c28
   YumiGDT: 6ad45d7a87ffafebe33d2b08eb144db6db580b67
   YumiInMobi: b58b19fc8e28e4af1e746d5f36316bbfc4f1bcbc
-  YumiIronSource: eeeffeacddf0bd3b7fe225d1fd1eb0017236762a
-  YumiMediationAdapters: e81c14ed98372c7583e5eb5781388f0e6f9d47ea
-  YumiMediationDebugCenter-iOS: 011f9867e0c728f795cea64fee784702e64317e8
-  YumiMediationSDK: 930601ee3655356d1cb32a506fc6146d52b7ba70
+  YumiIronSource: fc5dc356d1cfa2fb5900fd3780fb676d5462bf4b
+  YumiMediationAdapters: 95a0caa61b8e5091c41c5ab0d233db8090a02b6f
+  YumiMediationDebugCenter-iOS: f52c7d35180820ee8182f31c6bf4103336873450
+  YumiMediationSDK: 0969cafe96f02f51b76cf197fbd0d37a64d6eb78
   YumiMobvista: ed4c73acfd3ea32a04eab8e2726bd2e04a78691b
   YumiStartApp: 6740abfbef309c5b66503031c1dc10057285740d
   YumiUnity: 23518ba76883786fa7469f5156bce70c606dbdd8
