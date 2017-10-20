@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +17,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="native_back.png" translatesAutoresizingMaskIntoConstraints="NO" id="vju-Wu-WgY" userLabel="YumiNativeBackView">
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="native_back.png" translatesAutoresizingMaskIntoConstraints="NO" id="vju-Wu-WgY" userLabel="YumiNativeBackView">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QCn-vG-f5e">
@@ -66,7 +66,7 @@
                             <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzq-Me-zrP">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzq-Me-zrP">
                             <rect key="frame" x="208" y="235" width="100" height="28"/>
                             <color key="backgroundColor" red="0.35686274509999999" green="0.57647058819999997" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
@@ -74,7 +74,7 @@
                                 <constraint firstAttribute="height" constant="28" id="LtH-lf-KnT"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                            <state key="normal">
+                            <state key="normal" title="Call To Action">
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                         </button>
@@ -107,10 +107,10 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZdB-tK-ogZ">
-                    <rect key="frame" x="342" y="25" width="25" height="25"/>
+                    <rect key="frame" x="334" y="30" width="25" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="25" id="lOy-i4-IgS"/>
-                        <constraint firstAttribute="height" constant="25" id="u2j-qe-bdN"/>
+                        <constraint firstAttribute="height" constant="30" id="u2j-qe-bdN"/>
                     </constraints>
                     <state key="normal" image="native_close.png"/>
                 </button>
@@ -124,7 +124,7 @@
                 <constraint firstItem="QCn-vG-f5e" firstAttribute="centerY" secondItem="sq1-6g-Hrf" secondAttribute="centerY" id="WHv-zn-z50"/>
                 <constraint firstItem="QCn-vG-f5e" firstAttribute="centerX" secondItem="sq1-6g-Hrf" secondAttribute="centerX" id="hf4-lB-pba"/>
                 <constraint firstItem="vju-Wu-WgY" firstAttribute="height" secondItem="sq1-6g-Hrf" secondAttribute="height" id="kIc-qW-gHe"/>
-                <constraint firstItem="ZdB-tK-ogZ" firstAttribute="top" secondItem="sq1-6g-Hrf" secondAttribute="top" constant="25" id="t2B-7e-5Lx"/>
+                <constraint firstItem="ZdB-tK-ogZ" firstAttribute="top" secondItem="sq1-6g-Hrf" secondAttribute="top" constant="30" id="t2B-7e-5Lx"/>
                 <constraint firstItem="vju-Wu-WgY" firstAttribute="centerX" secondItem="sq1-6g-Hrf" secondAttribute="centerX" id="zrM-Kl-VKi"/>
             </constraints>
             <connections>
