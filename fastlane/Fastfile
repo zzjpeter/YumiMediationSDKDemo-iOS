@@ -65,15 +65,10 @@ platform :ios do
       export_method: "ad-hoc"
     )
 
-    # Push to HockeyApp
-    hockey(
-      api_token: ENV["HOCKEY_API_TOKEN"],
-      public_identifier: ENV["HOCKEY_APP_ID"],
-      notify: '1',
-      status: '2',
-      commit_sha: ENV["TRAVIS_COMMIT"],
-      repository_url: "https://github.com/yumimobi/YumiMediationSDKDemo-iOS.git",
-      notes: ENV["TRAVIS_COMMIT_MESSAGE"],
+    # Push to pgyer
+    pgyer(
+      api_key: "9a57e69885455c0dd7c80c02f6d438a5", 
+      user_key: "542c17f75a2e4ab32af8ad236fbd6739"
     )
 
     delete_keychain(
