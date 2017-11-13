@@ -8,7 +8,7 @@
 
 @import UIKit;
 
-static NSString *const placementID = @"vy60abfp";
+static NSString *const placementID = @"qlgld5td";
 static NSString *const channelID = @"";
 static NSString *const versionID = @"1.0";
 
