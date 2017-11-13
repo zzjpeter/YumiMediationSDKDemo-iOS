@@ -3,13 +3,14 @@ language: objective-c
 rvm: 2.2
 cache:
   - cocoapods
+  - bundler
 
 before_install:
-  - gem update fastlane
-  - gem update cocoapods
+  - gem install bundler
   - gem install retries
 
 install:
+  - bundle install
   - pod install --repo-update --verbose
 
 script:
