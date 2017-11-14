@@ -26,12 +26,13 @@ platform :ios do
     next if ENV["TRAVIS_PULL_REQUEST"] != "false" or ENV["TRAVIS_BRANCH"] != "beta"
 
     keychain_name = "YumiMediationSDKExample-certs"
+    keychain_password = SecureRandom.base64
 
     create_keychain(
       name: keychain_name,
       default_keychain: true,
       unlock: true,
-      password: SecureRandom.base64,
+      password: keychain_password,
       timeout: 3600
     )
 
