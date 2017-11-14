@@ -39,6 +39,7 @@ platform :ios do
       certificate_path: "fastlane/Certificates/distribution.p12",
       certificate_password: ENV["KEY_PASSWORD"],
       keychain_name: keychain_name
+      keychain_password: keychain_password
     )
 
     # Fetch provisioning file
