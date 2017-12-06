@@ -5,8 +5,8 @@
 target 'YumiMediationSDKDemo' do
   # use_frameworks!
   
-    pod "YumiMediationAdapters", “3.2.0”
-    pod "YumiMediationSDK", “3.2.0”
+    pod "YumiMediationAdapters", “3.2.1”
+    pod "YumiMediationSDK", “3.2.1”
     pod "YumiMediationDebugCenter-iOS", “3.2.0”
 
   target 'YumiMediationSDKDemoTests' do
