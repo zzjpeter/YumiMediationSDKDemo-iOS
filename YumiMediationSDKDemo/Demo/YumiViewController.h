@@ -8,9 +8,9 @@
 
 @import UIKit;
 
-static NSString *const placementID = @"qlgld5td";
+static NSString *const placementID = @"8dbpem2v";
 static NSString *const channelID = @"";
-static NSString *const versionID = @"1.0";
+static NSString *const versionID = @"";
 
 @protocol YumiViewControllerDelegate <NSObject>
 
