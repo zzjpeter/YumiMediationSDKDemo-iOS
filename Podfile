@@ -1,12 +1,13 @@
  source "https://github.com/yumimobi/Specs.git"
+
  source "https://github.com/CocoaPods/Specs"
  platform :ios, '8.0'
 
 target 'YumiMediationSDKDemo' do
   # use_frameworks!
   
-    pod "YumiMediationAdapters", “3.2.1”
-    pod "YumiMediationSDK", “3.2.1”
+    pod "YumiMediationAdapters", “3.2.2”
+    pod "YumiMediationSDK", “3.2.2”
     pod "YumiMediationDebugCenter-iOS", “3.2.0”
 
   target 'YumiMediationSDKDemoTests' do
