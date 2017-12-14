@@ -1,5 +1,4 @@
  source "https://github.com/yumimobi/Specs.git"
-
  source "https://github.com/CocoaPods/Specs"
  platform :ios, '8.0'
 
