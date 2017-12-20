@@ -10,7 +10,7 @@ PODS:
   - YumiFacebook (4.26.1)
   - YumiGDT (4.5.7)
   - YumiInMobi (6.2.1)
-  - YumiIronSource (6.6.8.1)
+  - YumiIronSource (6.7.3.1)
   - YumiMediationAdapters (3.2.2):
     - YumiMediationAdapters/AdColony (= 3.2.2)
     - YumiMediationAdapters/AdMob (= 3.2.2)
@@ -60,7 +60,7 @@ PODS:
     - YumiInMobi (= 6.2.1)
     - YumiMediationSDK (~> 3.2.0)
   - YumiMediationAdapters/IronSource (3.2.2):
-    - YumiIronSource (= 6.6.8.1)
+    - YumiIronSource (= 6.7.3.1)
     - YumiMediationSDK (~> 3.2.0)
   - YumiMediationAdapters/Mobvista (3.2.2):
     - YumiMediationSDK (~> 3.2.0)
@@ -102,8 +102,8 @@ SPEC CHECKSUMS:
   YumiFacebook: a71567c440c6505ea32369a45663c160def43686
   YumiGDT: 6ad45d7a87ffafebe33d2b08eb144db6db580b67
   YumiInMobi: b58b19fc8e28e4af1e746d5f36316bbfc4f1bcbc
-  YumiIronSource: fc5dc356d1cfa2fb5900fd3780fb676d5462bf4b
-  YumiMediationAdapters: bd0f6fc28136f23c9cb8c3aaed0aa98092a7eefc
+  YumiIronSource: 1807dfe595562b990c61244be6b2327a53f3c3be
+  YumiMediationAdapters: 9a7a575b1d099892a5b59838c21abcb26de2600b
   YumiMediationDebugCenter-iOS: 333a821436435df050a768a29f0f1824706a75e2
   YumiMediationSDK: a12660ef9843a4f2b0be71b84db6a20df0f79f45
   YumiMobvista: ed4c73acfd3ea32a04eab8e2726bd2e04a78691b
@@ -113,4 +113,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 47c59c09475fd65f77e3a13e8c6e15e7675f20dc
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.2.1
