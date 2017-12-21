@@ -103,9 +103,9 @@ SPEC CHECKSUMS:
   YumiGDT: 6ad45d7a87ffafebe33d2b08eb144db6db580b67
   YumiInMobi: b58b19fc8e28e4af1e746d5f36316bbfc4f1bcbc
   YumiIronSource: 1807dfe595562b990c61244be6b2327a53f3c3be
-  YumiMediationAdapters: 9a7a575b1d099892a5b59838c21abcb26de2600b
+  YumiMediationAdapters: ca3efe07b67707152cc85892accb310f55040251
   YumiMediationDebugCenter-iOS: 333a821436435df050a768a29f0f1824706a75e2
-  YumiMediationSDK: a12660ef9843a4f2b0be71b84db6a20df0f79f45
+  YumiMediationSDK: c3e978a323f4b3b91e4a2ea5e19fb5633526ad37
   YumiMobvista: ed4c73acfd3ea32a04eab8e2726bd2e04a78691b
   YumiStartApp: 6740abfbef309c5b66503031c1dc10057285740d
   YumiUnity: 23518ba76883786fa7469f5156bce70c606dbdd8
@@ -113,4 +113,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 47c59c09475fd65f77e3a13e8c6e15e7675f20dc
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.3.1
