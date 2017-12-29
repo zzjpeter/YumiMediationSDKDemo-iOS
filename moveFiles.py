@@ -1,7 +1,9 @@
 import shutil 
 import os
+import sys
 
-sdkVersion = 'YumiMediationSDK_v'+'3.2.2'
+
+sdkVersion = 'YumiMediationSDK_v'+ sys.argv[1]
 thirdPartys = ['PlayableAds','AdColony','AdMob','Applovin','Baidu','Centrixlink','ChartBoost','Domob','Facebook','GDT','InMobi','IronSource','Mobvista','StartApp','Unity','Vungle']
 
 for thirdParty in thirdPartys:
