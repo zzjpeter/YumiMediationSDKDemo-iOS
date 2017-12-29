@@ -10,7 +10,7 @@ before_install:
   - gem install retries
 
 install:
-  - bundle install
+  - bundle update
   - pod install --repo-update --verbose
 
 script:
