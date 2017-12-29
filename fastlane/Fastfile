@@ -70,6 +70,7 @@ platform :ios do
     pgyer(
       api_key: "9a57e69885455c0dd7c80c02f6d438a5", 
       user_key: "542c17f75a2e4ab32af8ad236fbd6739"
+      update_description: "update by fastlane"
     )
 
     delete_keychain(
