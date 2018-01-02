@@ -49,6 +49,9 @@ static NSString *const key = @"YumiMediation_PlacementIDs_key";
 
     NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
     NSData *data = [standardUserDefaults objectForKey:key];
+    if (!data) {
+        return nil;
+    }
     NSArray *placementIDs = [NSKeyedUnarchiver unarchiveObjectWithData:data];
 
     return placementIDs;
