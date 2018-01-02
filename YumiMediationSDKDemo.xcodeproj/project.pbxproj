@@ -51,6 +51,7 @@
 		27B66BE2D981389A8993F753 /* libPods-YumiMediationSDKDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YumiMediationSDKDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EC711C23106EE995A06D951 /* libPods-YumiMediationSDKDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YumiMediationSDKDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D87838E1D9BCAED5DBBD536 /* Pods-YumiMediationSDKDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YumiMediationSDKDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YumiMediationSDKDemoUITests/Pods-YumiMediationSDKDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6DBE00B81FFB3BA70084828A /* YumiCommonHeaderFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YumiCommonHeaderFile.h; sourceTree = "<group>"; };
 		7414EC105309956644DC2D55 /* Pods-YumiMediationSDKDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YumiMediationSDKDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YumiMediationSDKDemoUITests/Pods-YumiMediationSDKDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9892DE6F1F99E0CC00C2E180 /* native_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "native_back@2x.png"; sourceTree = "<group>"; };
 		9892DE701F99E0CC00C2E180 /* native_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "native_close@2x.png"; sourceTree = "<group>"; };
@@ -139,6 +140,7 @@
 		9892DE711F99E0CC00C2E180 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				6DBE00B81FFB3BA70084828A /* YumiCommonHeaderFile.h */,
 				9892DE721F99E0CC00C2E180 /* Toast */,
 				9892DE751F99E0CC00C2E180 /* TSZLayer+Transition */,
 				9892DE781F99E0CC00C2E180 /* YumiMediationInitializeInfoUserDefaults.h */,
