@@ -22,11 +22,15 @@
 @property (weak, nonatomic) IBOutlet UITextField *versionIDTextField;
 @property (weak, nonatomic) IBOutlet UIButton *gotoYumiDemo;
 @property (weak, nonatomic) IBOutlet UITableView *placementIDTableView;
+@property (weak, nonatomic) IBOutlet UITableView *adTypeTableView;
+@property (weak, nonatomic) IBOutlet UIImageView *triangleImg;
+@property (weak, nonatomic) IBOutlet UIButton *selectAdTypeBtn;
 
 @property (nonatomic) NSString *placementID;
 @property (nonatomic) NSString *channelID;
 @property (nonatomic) NSString *versionID;
 @property (nonatomic) NSArray *placementIDsInfo;
+@property (nonatomic) NSArray *adTypesInfo;
 
 @end
 
@@ -37,6 +41,10 @@
 
     self.placementIDTableView.tableFooterView = [[UIView alloc] init];
     self.placementIDTextField.delegate = self;
+    self.adTypeTableView.layer.cornerRadius = 5.0;
+    self.adTypeTableView.layer.borderWidth = 1.0;
+    self.adTypeTableView.layer.borderColor = [UIColor colorWithWhite:0 alpha:0.1].CGColor;
+    self.adTypeTableView.clipsToBounds = YES;
 
     [self initializePlacementIDs];
 
@@ -53,6 +61,9 @@
     self.placementIDTextField.text = self.placementID;
     self.channelIDTextField.text = self.channelID;
     self.versionIDTextField.text = self.versionID;
+    if (self.isPresented) {
+        [self updatedAdTypeMessageWith:self.adType];
+    }
 }
 
 - (void)initializePlacementIDs {
@@ -80,7 +91,8 @@
     YumiMediationAppViewController *rootVc =
         [[YumiMediationAppViewController alloc] initWithPlacementID:self.placementID
                                                           channelID:self.channelID
-                                                          versionID:self.versionID];
+                                                          versionID:self.versionID
+                                                             adType:self.adType];
     [UIApplication sharedApplication].keyWindow.rootViewController = rootVc;
 
     [[UIApplication sharedApplication].keyWindow.layer transitionWithAnimType:TransitionAnimTypeRamdom
@@ -94,6 +106,34 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
     self.placementIDTableView.hidden = YES;
+    [self setupAdTypeHidden];
+}
+
+- (IBAction)popViewToSelectAdType:(UIButton *)sender {
+    [self setupAdTypeShow];
+}
+
+- (void)setupAdTypeHidden {
+    self.triangleImg.hidden = YES;
+    self.adTypeTableView.hidden = YES;
+}
+
+- (void)setupAdTypeShow {
+    self.triangleImg.hidden = NO;
+    self.adTypeTableView.hidden = NO;
+}
+
+- (void)updatedAdTypeMessageWith:(YumiAdType)adType {
+    self.adType = adType;
+    NSString *adTypeMsg = [NSString stringWithFormat:@"Selected: %@", self.adTypesInfo[(NSUInteger)self.adType]];
+    [self.selectAdTypeBtn setTitle:adTypeMsg forState:UIControlStateNormal];
+}
+
+- (NSArray *)adTypesInfo {
+    if (!_adTypesInfo) {
+        _adTypesInfo = @[ @"Banner", @"Interstitial", @"Video", @"Splash", @"Native" ];
+    }
+    return _adTypesInfo;
 }
 
 - (IBAction)ClickGotoYumiDemo:(UIButton *)sender {
@@ -120,11 +160,12 @@
         [self dismissViewControllerAnimated:NO
                                  completion:^{
                                      if (weakSelf.delegate &&
-                                         [weakSelf.delegate
-                                             respondsToSelector:@selector(modifyPlacementID:channelID:versionID:)]) {
+                                         [weakSelf.delegate respondsToSelector:@selector
+                                                            (modifyPlacementID:channelID:versionID:adType:)]) {
                                          [weakSelf.delegate modifyPlacementID:weakSelf.placementID
                                                                     channelID:weakSelf.channelID
-                                                                    versionID:weakSelf.versionID];
+                                                                    versionID:weakSelf.versionID
+                                                                       adType:weakSelf.adType];
                                      }
                                  }];
         [[UIApplication sharedApplication].keyWindow.layer transitionWithAnimType:TransitionAnimTypeRamdom
@@ -180,25 +221,42 @@
 #pragma mark : - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (tableView == self.adTypeTableView) {
+        return self.adTypesInfo.count;
+    }
     return self.placementIDsInfo.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellID = @"YumiCellID";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
-    }
-    YumiMediationInitializeModel *yumiModel = self.placementIDsInfo[indexPath.row];
-    cell.textLabel.textColor = [UIColor lightGrayColor];
-    cell.textLabel.font = [UIFont systemFontOfSize:14.0];
-    cell.textLabel.text = yumiModel.placementID;
+    if (tableView == self.placementIDTableView) {
+        static NSString *cellID = @"YumiCellID";
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+        if (!cell) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+        }
+        YumiMediationInitializeModel *yumiModel = self.placementIDsInfo[indexPath.row];
+        cell.textLabel.textColor = [UIColor lightGrayColor];
+        cell.textLabel.font = [UIFont systemFontOfSize:14.0];
+        cell.textLabel.text = yumiModel.placementID;
 
+        return cell;
+    }
+
+    static NSString *adTypeCellId = @"adTypeCellId";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:adTypeCellId];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:adTypeCellId];
+    }
+    cell.textLabel.text = self.adTypesInfo[indexPath.row];
+    cell.textLabel.font = [UIFont systemFontOfSize:15.0];
     return cell;
 }
 
 #pragma mark : - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (tableView == self.adTypeTableView) {
+        return 32;
+    }
     return 40.0;
 }
 
@@ -209,13 +267,20 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 
-    YumiMediationInitializeModel *yumiModel = self.placementIDsInfo[indexPath.row];
+    if (tableView == self.placementIDTableView) {
+        YumiMediationInitializeModel *yumiModel = self.placementIDsInfo[indexPath.row];
 
-    self.placementIDTextField.text = yumiModel.placementID;
-    self.channelIDTextField.text = yumiModel.channelID;
-    self.versionIDTextField.text = yumiModel.versionID;
+        self.placementIDTextField.text = yumiModel.placementID;
+        self.channelIDTextField.text = yumiModel.channelID;
+        self.versionIDTextField.text = yumiModel.versionID;
 
-    self.placementIDTableView.hidden = YES;
+        self.placementIDTableView.hidden = YES;
+    }
+
+    if (tableView == self.adTypeTableView) {
+        [self setupAdTypeHidden];
+        [self updatedAdTypeMessageWith:(YumiAdType)indexPath.row];
+    }
 }
 
 @end

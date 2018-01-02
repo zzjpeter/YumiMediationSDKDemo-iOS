@@ -6,6 +6,7 @@
 //  Copyright © 2017年 Zplay. All rights reserved.
 //
 
+#import "YumiCommonHeaderFile.h"
 #import <UIKit/UIKit.h>
 
 @interface YumiMediationAppViewController : UIViewController
@@ -15,6 +16,7 @@
 
 - (instancetype)initWithPlacementID:(NSString *)placementID
                           channelID:(NSString *)channelID
-                          versionID:(NSString *)versionID;
+                          versionID:(NSString *)versionID
+                             adType:(YumiAdType)adType;
 
 @end
