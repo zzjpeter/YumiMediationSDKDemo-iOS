@@ -9,9 +9,9 @@
 @import UIKit;
 #import "YumiCommonHeaderFile.h"
 
-static NSString *const placementID = @"51x4yqe8";
-static NSString *const channelID = @"zy005";
-static NSString *const versionID = @"5.1.1";
+static NSString *const placementID = @"ciurbckj";
+static NSString *const channelID = @"";
+static NSString *const versionID = @"";
 
 @protocol YumiViewControllerDelegate <NSObject>
 
