@@ -23,7 +23,7 @@ platform :ios do
 
   desc "Submit a new Beta Build to HockeyApp"
   lane :beta do
-    next if ENV["TRAVIS_PULL_REQUEST"] != "false" or ENV["TRAVIS_BRANCH"] != "beta"
+    #next if ENV["TRAVIS_PULL_REQUEST"] != "false" or ENV["TRAVIS_BRANCH"] != "beta"
 
     keychain_name = "YumiMediationSDKExample-certs"
     keychain_password = SecureRandom.base64
@@ -46,13 +46,17 @@ platform :ios do
     # Fetch provisioning file
     sigh(
       adhoc: true,
-      username: "nanohugh@gmail.com",
-      team_id: "5DMZPCXW62",
-      provisioning_name: "YumiMediationSDKDemo AdHoc",
-      cert_owner_name: "Chiming HUANG"
+      username: "weienios@zplay.cn",
+      team_id: "VG25A6M88T",
+      provisioning_name: "YumiMediationSDKDemo",
+      cert_owner_name: "haiying wang"
     )
 
-    increment_build_number(build_number: ENV["TRAVIS_BUILD_NUMBER"])
+    increment_build_number_in_plist(target: 'YumiMediationSDKDemo')
+    increment_version_number_in_plist(
+    target: 'YumiMediationSDKDemo',
+    version_number: '3.3.2'
+    )
 
     # Build
     gym(
@@ -60,16 +64,14 @@ platform :ios do
       workspace: "YumiMediationSDKDemo.xcworkspace",
       configuration: "Release",
       clean: true,
-      include_bitcode: false,
       include_symbols: true,
-      xcargs: "PROVISIONING_PROFILE_SPECIFIER='YumiMediationSDKDemo AdHoc'",
       export_method: "ad-hoc"
     )
 
     # Push to pgyer
     pgyer(
       api_key: "9a57e69885455c0dd7c80c02f6d438a5", 
-      user_key: "542c17f75a2e4ab32af8ad236fbd6739"
+      user_key: "542c17f75a2e4ab32af8ad236fbd6739",
       update_description: "update by fastlane"
     )
 
