@@ -98,6 +98,7 @@ GEM
       xcpretty (>= 0.2.4, < 1.0.0)
       xcpretty-travis-formatter (>= 0.0.3)
     fastlane-plugin-pgyer (0.2.1)
+    fastlane-plugin-versioning (0.3.3)
     fourflusher (2.0.1)
     fuzzy_match (2.0.4)
     gh_inspector (1.0.3)
@@ -189,6 +190,7 @@ DEPENDENCIES
   cocoapods
   fastlane
   fastlane-plugin-pgyer
+  fastlane-plugin-versioning
 
 BUNDLED WITH
-   1.15.4
+   1.16.1
