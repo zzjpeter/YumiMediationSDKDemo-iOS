@@ -9,7 +9,7 @@
 @import UIKit;
 #import "YumiCommonHeaderFile.h"
 
-static NSString *const placementID = @"ciurbckj";
+static NSString *const placementID = @"pwzcvso3";
 static NSString *const channelID = @"";
 static NSString *const versionID = @"";
 
