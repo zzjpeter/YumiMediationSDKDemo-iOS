@@ -37,20 +37,21 @@ platform :ios do
     )
 
     import_certificate(
-      certificate_path: "fastlane/Certificates/distribution.p12",
+      log_output: true,
+      certificate_path: "fastlane/Certificates/ZplayAds_Distribute.p12",
       certificate_password: ENV["KEY_PASSWORD"],
       keychain_name: keychain_name,
       keychain_password: keychain_password
     )
 
     # Fetch provisioning file
-    sigh(
-      adhoc: true,
-      username: "weienios@zplay.cn",
-      team_id: "VG25A6M88T",
-      provisioning_name: "YumiMediationSDKDemo",
-      cert_owner_name: "haiying wang"
-    )
+    # sigh(
+    #   adhoc: true,
+    #   username: "weienios@zplay.cn",
+    #   team_id: "VG25A6M88T",
+    #   provisioning_name: "YumiMediationSDKDemo",
+    #   cert_owner_name: "haiying wang"
+    # )
 
     increment_build_number_in_plist(target: 'YumiMediationSDKDemo')
     increment_version_number_in_plist(
