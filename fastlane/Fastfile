@@ -65,8 +65,9 @@ platform :ios do
       workspace: "YumiMediationSDKDemo.xcworkspace",
       configuration: "Release",
       clean: true,
+      include_bitcode: false,
       include_symbols: true,
-      export_method: "ad-hoc"
+      export_method: "enterprise"
     )
 
     # Push to pgyer
