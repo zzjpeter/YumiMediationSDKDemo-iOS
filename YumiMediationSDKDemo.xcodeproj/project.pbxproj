@@ -332,7 +332,7 @@
 				TargetAttributes = {
 					B9A065731E8D0F6C00B1B91B = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = VG25A6M88T;
+						DevelopmentTeam = L5UE3EGW93;
 						ProvisioningStyle = Manual;
 					};
 					B9A0658C1E8D0F6C00B1B91B = {
@@ -729,15 +729,15 @@
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CURRENT_PROJECT_VERSION = 1.3;
-				DEVELOPMENT_TEAM = VG25A6M88T;
+				DEVELOPMENT_TEAM = L5UE3EGW93;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = YumiMediationSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.YumiMediationSDKExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "07ca099f-cb3b-4458-aa48-ff40d02c7aec";
-				PROVISIONING_PROFILE_SPECIFIER = YumiMediationSDKDemo;
+				PROVISIONING_PROFILE = "9f445f8f-ab1c-4958-b506-0257824d3d39";
+				PROVISIONING_PROFILE_SPECIFIER = "Dis-zplay*";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -750,15 +750,15 @@
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CURRENT_PROJECT_VERSION = 1.3;
-				DEVELOPMENT_TEAM = VG25A6M88T;
+				DEVELOPMENT_TEAM = L5UE3EGW93;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = YumiMediationSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.YumiMediationSDKExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "07ca099f-cb3b-4458-aa48-ff40d02c7aec";
-				PROVISIONING_PROFILE_SPECIFIER = YumiMediationSDKDemo;
+				PROVISIONING_PROFILE = "9f445f8f-ab1c-4958-b506-0257824d3d39";
+				PROVISIONING_PROFILE_SPECIFIER = "Dis-zplay*";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
