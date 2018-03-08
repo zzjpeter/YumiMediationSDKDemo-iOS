@@ -55,7 +55,7 @@ platform :ios do
     increment_build_number_in_plist(target: 'YumiMediationSDKDemo')
     increment_version_number_in_plist(
     target: 'YumiMediationSDKDemo',
-    version_number: "3.2.4"
+    version_number: "3.3.2"
     )
 
     # Build
