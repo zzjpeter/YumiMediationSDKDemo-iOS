@@ -77,6 +77,16 @@ platform :ios do
       update_description: "update by fastlane"
     )
 
+    # Push to HockeyApp
+    hockey(
+      api_token: "e4b2db23aced4eb7abbe540b925f64ec",
+      public_identifier: 'b1ec3f8648fb479f9c4666c4edc97004',
+      notify: "1",
+      status: "2",
+      commit_sha: ENV["TRAVIS_COMMIT"],
+      notes: ENV["TRAVIS_COMMIT_MESSAGE"],
+    )
+
     delete_keychain(
       name: keychain_name
     )
