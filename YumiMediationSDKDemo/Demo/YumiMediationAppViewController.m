@@ -16,7 +16,6 @@
 #import <YumiMediationDebugCenter-iOS/YumiMediationFetchAdConfig.h>
 #import <YumiMediationSDK/YumiAdsSplash.h>
 #import <YumiMediationSDK/YumiMediationAdapterRegistry.h>
-#import <YumiMediationSDK/YumiMediationBannerView.h>
 #import <YumiMediationSDK/YumiMediationInterstitial.h>
 #import <YumiMediationSDK/YumiMediationNativeAd.h>
 #import <YumiMediationSDK/YumiMediationVideo.h>
@@ -371,6 +370,7 @@ static int nativeAdNumber = 10;
                                                                       channelID:self.channelID
                                                                       versionID:self.versionID
                                                              rootViewController:self];
+    [[YumiMediationDebugController sharedInstance] setupBannerSize:self.bannerSize];
 }
 - (IBAction)clickRequestAd:(UIButton *)sender {
 
@@ -381,6 +381,7 @@ static int nativeAdNumber = 10;
             case 0:
 
                 [weakSelf.bannerView loadAd:weakSelf.switchIsSmartSize.on];
+                weakSelf.bannerView.bannerSize = self.bannerSize;
                 _bannerView.delegate = weakSelf;
                 [weakSelf showLogConsoleWith:[NSString stringWithFormat:@"initialize   banner ad placementID : %@",
                                                                         weakSelf.bannerPlacementID]
@@ -616,6 +617,7 @@ static int nativeAdNumber = 10;
     rootVc.presented = YES;
     rootVc.delegate = self;
     rootVc.adType = (YumiAdType)self.adType;
+    rootVc.bannerSize = self.bannerSize;
     [self presentViewController:rootVc animated:YES completion:nil];
 
     [[UIApplication sharedApplication].keyWindow.layer transitionWithAnimType:TransitionAnimTypeRamdom
@@ -813,7 +815,8 @@ static int nativeAdNumber = 10;
 - (void)modifyPlacementID:(NSString *)placementID
                 channelID:(NSString *)channelID
                 versionID:(NSString *)versionID
-                   adType:(YumiAdType)adType {
+                   adType:(YumiAdType)adType
+               bannerSize:(YumiMediationAdViewBannerSize) bannerSize {
 
     [self removeBannerAd:YES];
     [self removeNativeAd:YES];
@@ -828,7 +831,7 @@ static int nativeAdNumber = 10;
     if (self.yumiSplash) {
         self.yumiSplash = nil;
     }
-
+    self.bannerSize = bannerSize;
     [self setupAdPlacementID:placementID adType:adType];
     self.channelID = channelID;
     self.versionID = versionID;
