@@ -8,8 +8,11 @@
 
 #import "YumiCommonHeaderFile.h"
 #import <UIKit/UIKit.h>
+#import <YumiMediationSDK/YumiMediationBannerView.h>
 
 @interface YumiMediationAppViewController : UIViewController
+
+@property (nonatomic, assign) YumiMediationAdViewBannerSize bannerSize;
 
 + (instancetype) new NS_UNAVAILABLE;
 - (instancetype)init NS_UNAVAILABLE;

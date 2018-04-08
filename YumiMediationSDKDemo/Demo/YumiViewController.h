@@ -8,8 +8,9 @@
 
 @import UIKit;
 #import "YumiCommonHeaderFile.h"
+#import <YumiMediationSDK/YumiMediationConstants.h>
 
-static NSString *const placementID = @"pwzcvso3";
+static NSString *const placementID = @"k21ubzif";
 static NSString *const channelID = @"";
 static NSString *const versionID = @"";
 
@@ -18,7 +19,8 @@ static NSString *const versionID = @"";
 - (void)modifyPlacementID:(NSString *)placementID
                 channelID:(NSString *)channelID
                 versionID:(NSString *)versionID
-                   adType:(YumiAdType)adType;
+                   adType:(YumiAdType)adType
+               bannerSize:(YumiMediationAdViewBannerSize) bannerSize;
 
 @end
 
@@ -27,5 +29,6 @@ static NSString *const versionID = @"";
 @property (nonatomic, weak) id<YumiViewControllerDelegate> delegate;
 @property (nonatomic, assign, getter=isPresented) BOOL presented;
 @property (nonatomic, assign) YumiAdType adType;
+@property (nonatomic, assign) YumiMediationAdViewBannerSize bannerSize;
 
 @end
