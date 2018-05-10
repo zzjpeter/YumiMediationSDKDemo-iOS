@@ -416,6 +416,7 @@
 				"${PODS_ROOT}/YumiMediationDebugCenter-iOS/Resources/YumiMediationDebugCenter.bundle",
 				"${PODS_ROOT}/YumiMediationSDK/Resources/YumiMediationSDK.bundle",
 				"${PODS_ROOT}/YumiMediationSDK/Resources/YumiAdsSDK.bundle",
+				"${PODS_ROOT}/YumiMediationSDK/Resources/ZplayMuteListener.bundle",
 				"${PODS_ROOT}/YumiStartApp/StartApp.framework/Resources/StartApp.bundle",
 				"${PODS_ROOT}/YumiTouTiao/WMAdSDK.bundle",
 			);
