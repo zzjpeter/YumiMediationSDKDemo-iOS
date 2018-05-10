@@ -67,7 +67,7 @@ WWDC 15 提出的 ATS (App Transport Security) 是 Apple 在推进网络通讯�
    2. 如果您需要聚合其他平台
 
       ```ruby
-      pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','StartApp','Unity','Vungle','PlayableAds','Centrixlink','Mobvista']
+      pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','StartApp','Unity','Vungle','PlayableAds','Centrixlink','Mobvista','OneWay','TouTiao']
       ```
 
    接下来在命令行界面中运行：
@@ -135,6 +135,16 @@ WWDC 15 提出的 ATS (App Transport Security) 是 Apple 在推进网络通讯�
     [self.view addSubview:self.yumiBanner];
 }
 @end
+```
+
+##### 设置 Banner 尺寸
+
+```objective-c
+//目前我们支持三种尺寸
+//在 iPhone 上默认为 320 * 50，如无调整不需设置下列代码。
+//在 iPad 上默认为 728 * 90，如无调整不需设置下列代码。
+//如果您有特殊需求，300 * 250 为可选项。请在 loadAd 之前，执行下列代码。
+self.yumiBanner.bannerSize = kYumiMediationAdViewBanner300x250;
 ```
 
 ##### 移除 Banner
