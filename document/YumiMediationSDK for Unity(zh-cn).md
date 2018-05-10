@@ -14,7 +14,7 @@
 
    iOS 8.0 或更高版本。
 
-3. [Demo 获取地址](https://github.com/yumimobi/YumiMediationSDKDemo-iOS/tree/branch_3.2.0)   
+3. [Demo 获取地址](https://github.com/yumimobi/YumiMediationSDKDemo-iOS.git)   
 
 ## 导入YumiMediationPlugins.unitypackage
 
