@@ -79,7 +79,7 @@ WWDC 15 提出的 ATS (App Transport Security) 是 Apple 在推进网络通讯�
    2. 如果您需要聚合其他平台
 
       ```ruby
-      pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','StartApp','Unity','Vungle','PlayableAds','Centrixlink','Mobvista']
+      pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','StartApp','Unity','Vungle','PlayableAds','Centrixlink','Mobvista','OneWay','TouTiao']
       ```
 
    接下来在命令行界面中运行：

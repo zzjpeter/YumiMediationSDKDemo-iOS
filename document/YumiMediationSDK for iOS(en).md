@@ -67,7 +67,7 @@ Upload app to App Store, and add the following peimissions to info.plist.
    2. If also need other platforms:
 
       ```ruby
-      pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','StartApp','Unity','Vungle','Centrixlink','Mobvista','PlayableAds']
+      pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','StartApp','Unity','Vungle','Centrixlink','Mobvista','PlayableAds','OneWay','TouTiao']
       ```
 
    Then run the followings at command line interface:
@@ -135,6 +135,16 @@ Upload app to App Store, and add the following peimissions to info.plist.
     [self.view addSubview:self.yumiBanner];
 }
 @end
+```
+
+##### Reset banner size
+
+```objective-c
+/// Required to set this banner view to a proper size. Use one of the predefined standard ad sizes (such as kYumiMediationAdViewBanner320x50) If you want to specify the ad size you need to set it before calling loadAd:
+/// default: iPhone and iPod Touch ad size. Typically 320x50.
+/// default: iPad ad size. Typically 728x90.
+/// If you do not need to change the default values, do not execute the following code.
+self.yumiBanner.bannerSize = kYumiMediationAdViewBanner300x250;
 ```
 
 ##### Remove banner
