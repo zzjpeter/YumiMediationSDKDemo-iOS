@@ -14,7 +14,7 @@
 
    iOS 8.0 and above
 
-3. [Get Demo ](https://github.com/yumimobi/YumiMediationSDKDemo-iOS/tree/branch_3.2.0)   
+3. [Get Demo ](https://github.com/yumimobi/YumiMediationSDKDemo-iOS.git)   
 
 ## Import YumiMediationPlugins.unitypackage
 
