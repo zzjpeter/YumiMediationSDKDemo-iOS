@@ -666,10 +666,6 @@ static int nativeAdNumber = 10;
 
 #pragma mark : - YumiMediationInterstitialDelegate
 
-- (void)yumiMediationInterstitialWillRequestAd:(YumiMediationInterstitial *)interstitial {
-    [self showLogConsoleWith:@"interstitial will request ad" adLogType:YumiMediationAdLogTypeInterstitial];
-}
-
 - (void)yumiMediationInterstitialDidReceiveAd:(YumiMediationInterstitial *)interstitial {
     self.isConfigSuccess = YES;
     [self showLogConsoleWith:@"interstitial did receive ad" adLogType:YumiMediationAdLogTypeInterstitial];
@@ -682,7 +678,7 @@ static int nativeAdNumber = 10;
                    adLogType:YumiMediationAdLogTypeInterstitial];
 }
 
-- (void)yumiMediationInterstitialwillDismissScreen:(YumiMediationInterstitial *)interstitial {
+- (void)yumiMediationInterstitialWillDismissScreen:(YumiMediationInterstitial *)interstitial {
     [self showLogConsoleWith:@"interstitial will dismiss screen" adLogType:YumiMediationAdLogTypeInterstitial];
 }
 
