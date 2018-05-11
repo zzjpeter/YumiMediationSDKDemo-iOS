@@ -3,7 +3,7 @@ import os
 import sys
 
 sdkVersion = 'YumiMediationSDK_v'+ sys.argv[1]
-thirdPartys = ['PlayableAds','AdColony','AdMob','Applovin','Baidu','Centrixlink','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','Mobvista','StartApp','Unity','Vungle','OneWay','TouTiao']
+thirdPartys = ['AdColony','AdMob','Applovin','Baidu','Centrixlink','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','Mobvista','StartApp','Unity','Vungle','OneWay','TouTiao']
 podDir = './Pods/'
 mediationSDKPath = podDir + sdkVersion
 thirdPartyPathName = mediationSDKPath +'/YumiMediationThirdPartys'
@@ -13,8 +13,6 @@ yumiMediationSDKPathName = mediationSDKPath +'/YumiMediationSDK'
 # adapter
 def archiveAdapter(adapterName):
 	thirdYumiSDKName = 'Yumi' + adapterName
-	if adapterName == 'PlayableAds':
-		thirdYumiSDKName = adapterName
 	thirdYumiMediationAdapterName = 'YumiMediation' + adapterName
 	#copy adapters
 	srcAdapterPath = podDir + 'YumiMediationAdapters' + '/'+ thirdYumiMediationAdapterName
