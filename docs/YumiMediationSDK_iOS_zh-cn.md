@@ -1,28 +1,26 @@
-[TOC]
-
 # YumiMediationSDK iOS
 
-## Summary
+## 概述
 
-1. To Readers
+1. 面向人群
 
-   This documentation is intended for developers who want to integrate Yumimobi SDK in IOS products.
+   本产品主要面向需要在 iOS 产品中接入玉米移动广告 SDK 的开发人员。
 
-2. Develop Environment
+2. 开发环境
 
-   Xcode 7.0 and above. 
+   Xcode 7.0 或更高版本。
 
-   iOS 8.0 and above.
+   iOS 8.0 或更高版本。
 
-3. [ Get Demo ](https://github.com/yumimobi/YumiMediationSDKDemo-iOS.git)
+3. [Demo 获取地址](https://github.com/yumimobi/YumiMediationSDKDemo-iOS.git)         
 
-## Develop Encironment Configuration 
+## 开发环境配置
 
-### App Transport Security
+### App Transport Security {docsify-ignore}
 
-ATS (App Transport Security) proposed by WWDC 15 features an important method for Apple to boost network communication security. Non-HTTPS access will be banned by default for ios 9 and later.
+WWDC 15 提出的 ATS (App Transport Security) 是 Apple 在推进网络通讯安全的一个重要方式。在 iOS 9 及以上版本中，默认非 HTTPS 的网络访问是被禁止的。
 
-As most of materials are provided by HTTP, please set as the followings to improve fillrate：
+因为大部分广告物料以 HTTP 形式提供，为提高广告填充率，请进行以下设置：
 
 ```objective-c
 <key>NSAppTransportSecurity</key>
@@ -34,83 +32,83 @@ As most of materials are provided by HTTP, please set as the followings to impro
 
 ![ats_exceptions](resources/ats_exceptions.png)
 
-*The `NSAllowsArbitraryLoads` exception is required to make sure your ads are not impacted by ATS on iOS 9 devices, while `NSAllowsArbitraryLoadsForMedia` and `NSAllowsArbitraryLoadsInWebContent` are required to make sure your ads are not impacted by ATS on iOS 10 devices.*
+*当 `NSAllowsArbitraryLoads` 和 `NSAllowsArbitraryLoadsInWebContent` 或 `NSAllowsArbitraryLoadsForMedia` 同时存在时，根据系统不同，表现的行为也会不一样。简单说，iOS 9 只看 `NSAllowsArbitraryLoads`，而 iOS 10 会优先看 `InWebContent` 和 `ForMedia` 的部分。在 iOS 10 中，要是后两者存在的话，在相关部分就会忽略掉 `NSAllowsArbitraryLoads`；如果不存在，则遵循 `NSAllowsArbitraryLoads` 的设定。*
 
-### Permissions for ios 9 and later
+### iOS 9 及以上系统相关权限 {docsify-ignore}
 
-Upload app to App Store, and add the following peimissions to info.plist.
+应用程序上传 App Store, 请在 info.plist 文件中添加以下权限。
 
 ```objective-c
-<-- Calendar -->
+<-- 日历 -->
 <key>NSCalendarsUsageDescription</key>
-<string>App shall access calendar with your permission</string>
-<!-- Photos -->
+<string>App需要您的同意,才能访问日历</string>
+<!-- 相册 -->
 <key>NSPhotoLibraryUsageDescription</key>
-<string>App shall access photos with your permission</string>
+<string>App需要您的同意,才能访问相册</string>
 ```
-## Integration Method
+## 接入方式
 
-1. CocoaPods ( recommend )
+### CocoaPods (推荐)
 
-   CocoaPods is a dependency manager for ios, which will make it easy to manage YumiMediationSDK.
+   CocoaPods 是 iOS 的依赖管理工具，使用它可以轻松管理 YumiMediationSDK。
 
-   Open Podfile, add one of the following methods to target.
+   打开您工程的 Podfile，选择下面其中一种方式添加到您应用的 target。
 
-   If use CocoaPods for the first time, please view [CocoaPods Guides](https://guides.cocoapods.org/using/using-cocoapods.html).
+   如果您是初次使用 CocoaPods，请查阅 [CocoaPods Guides](https://guides.cocoapods.org/using/using-cocoapods.html) 。
 
-   1. If need YumiMediationSDK only:
+   1. 如果您只需要 YumiMediationSDK 
 
       ```ruby
       pod "YumiMediationSDK"
       ```
 
-   2. If also need other platforms:
+   2. 如果您需要聚合其他平台
 
       ```ruby
-      pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','StartApp','Unity','Vungle','Centrixlink','Mobvista','PlayableAds','OneWay','TouTiao']
+      pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','StartApp','Unity','Vungle','PlayableAds','Centrixlink','Mobvista','OneWay','TouTiao']
       ```
 
-   Then run the followings at command line interface:
+   接下来在命令行界面中运行：
 
    ```ruby
    $ pod install --repo-update
    ```
 
-   Finally, open project by workspace. 
+   最终通过 workspace 打开工程。
 
-2. Manually Integrating YumiMediationSDK
+### 手动集成 YumiMediationSDK
 
-   1. Choose third-party SDK 
+   1. 三方 SDK 选择
 
-   2. Download third-party SDK 
+   2. 三方 SDK 下载
 
-   3. Download YumiMediationSDK 
+   3. YumiMediationSDK 下载
 
-   4. Add YumiMediationSDK to your project
+   4. 添加 YumiMediationSDK 到您的工程
 
    <img src="resources/addFiles.png" width="280" height="320"> 
 
    <img src="resources/addFiles-2.png" width="500" height="400"> 
 
-   5. Script configuration
+   5. 配置脚本
 
-   Add YUMISDKConfig according to steps as shown.
+   按照如图所示步骤，添加 YumiMediationSDKConfig.xcconfig
 
    ![ios02](resources/ios02.png) 
 
-   6. Import Framework
+   6. 导入 Framework
 
-   Import system dynamic libraries as shown.
+   导入如图所示的系统动态库。
 
    ![ios06](resources/ios06.png) 
 
-## Code Sample
+## 代码集成示例
 
-### Advertisement Forms
+### 广告形式 {docsify-ignore}
 
-#### Banner
+### Banner
 
-##### Initialization and banner request
+#### 初始化及请求横幅
 
 ```objective-c
 #import <YumiMediationSDK/YumiMediationBannerView.h>
@@ -137,17 +135,17 @@ Upload app to App Store, and add the following peimissions to info.plist.
 @end
 ```
 
-##### Reset banner size
+#### 设置 Banner 尺寸
 
 ```objective-c
-/// Required to set this banner view to a proper size. Use one of the predefined standard ad sizes (such as kYumiMediationAdViewBanner320x50) If you want to specify the ad size you need to set it before calling loadAd:
-/// default: iPhone and iPod Touch ad size. Typically 320x50.
-/// default: iPad ad size. Typically 728x90.
-/// If you do not need to change the default values, do not execute the following code.
+//目前我们支持三种尺寸
+//在 iPhone 上默认为 320 * 50，如无调整不需设置下列代码。
+//在 iPad 上默认为 728 * 90，如无调整不需设置下列代码。
+//如果您有特殊需求，300 * 250 为可选项。请在 loadAd 之前，执行下列代码。
 self.yumiBanner.bannerSize = kYumiMediationAdViewBanner300x250;
 ```
 
-##### Remove banner
+#### 移除 Banner
 
 ```objective-c
 //remove yumiBanner
@@ -160,7 +158,7 @@ self.yumiBanner.bannerSize = kYumiMediationAdViewBanner300x250;
 }
 ```
 
-##### Delegate implementation 
+#### 实现代理方法 
 
 ```objective-c
 //implementing yumiBanner delegate
@@ -175,29 +173,30 @@ self.yumiBanner.bannerSize = kYumiMediationAdViewBanner300x250;
 }
 ```
 
-##### Self-adaptation
+#### 自适应功能
 
 ```objective-c
 - (void)loadAd:(BOOL)isSmartBanner;
 ```
 
-You are available to set whether to turn on self-adaptation when making `banner` request.
+您在请求 `banner` 广告的同时可以设置是否开启自适应功能。
 
-If `isSmartBanner` is `YES` ,YumiMediationBannerView will automatically adapt to size of device. 
+如果设置 `isSmartBanner` 为 `YES` ,YumiMediationBannerView 将会自动根据设备的尺寸进行适配。
 
-You are supported to get size of YumiMediationBannerView by the following method.
+此时您可以通过下面的方法获取 YumiMediationBannerView 的尺寸。
 
 ```objective-c
 - (CGSize)fetchBannerAdSize;
 ```
 
- ![fzsy](resources/fzsy.png) ![zsy](resources/zsy.png) 
+ ![fzsy](resources/fzsy.png) 
+ *非自适应模式*
+ ![zsy](resources/zsy.png) 
+ *自适应模式*										
 
-​	*non self-adaptation mode* 	  	  *self-adaptation mode*										
+### Interstitial
 
-#### Interstitial
-
-##### Initialization and interstitial request
+#### 初始化及请求插屏
 
 ```objective-c
 #import <YumiMediationSDK/YumiMediationInterstitial.h>
@@ -220,7 +219,7 @@ You are supported to get size of YumiMediationBannerView by the following method
 @end
 ```
 
-##### Show Interstitial
+#### 展示插屏
 
 ```objective-c
 //present YumiMediationInterstitial
@@ -233,7 +232,7 @@ You are supported to get size of YumiMediationBannerView by the following method
 }
 ```
 
-##### Delegate implementation
+#### 实现代理方法
 
 ```objective-c
 //implementing YumiMediationInterstitial Delegate
@@ -252,9 +251,9 @@ You are supported to get size of YumiMediationBannerView by the following method
 }
 ```
 
-#### Rewarded Video
+### Rewarded Video
 
-##### Initialization and rewarded video request
+#### 初始化及请求视频
 
 ```objective-c
 #import <YumiMediationSDK/YumiMediationVideo.h>
@@ -270,7 +269,7 @@ You are supported to get size of YumiMediationBannerView by the following method
 @end
 ```
 
-##### Show rewarded video
+#### 展示视频
 
 ```objective-c
 - (IBAction)presentYumiMediationVideo:(id)sender {
@@ -282,7 +281,7 @@ You are supported to get size of YumiMediationBannerView by the following method
 }
 ```
 
-##### Delegate implementation
+#### 实现代理方法
 
 ```objective-c
 - (void)yumiMediationVideoDidOpen:(YumiMediationVideo *)video{
@@ -299,32 +298,32 @@ You are supported to get size of YumiMediationBannerView by the following method
 }
 ```
 
-#### Splash
+### Splash
 
-##### Initialization and splash request
+#### 初始化及展示开屏
 
-To ensure splash impression, it is recommended to operate as the followings when App launching.
+为了保证开屏的展示，我们推荐尽量在 App 启动时开始执行下面的方法。
 
-for example：in your `AppDelegate.m`  `application:didFinishLaunchingWithOptions:` 
+例如：在您 `AppDelegate.m` 的 `application:didFinishLaunchingWithOptions:` 方法中。
 
 ```objective-c
 #import <YumiMediationSDK/YumiAdsSplash.h>
 ```
 
-#####show splash full screen
+#### 展示全屏广告
 
 ```objective-c
-//AppKey is a reserved field that can fill in an empty string.
+//appKey 为预留字段，可填空字符串。
 [[YumiAdsSplash sharedInstance] showYumiAdsSplashWith:@"Your PlacementID"
  											   appKey:@"nullable" 
  								   rootViewController:self.window.rootViewController 
  											 delegate:self]
 ```
 
-##### show splash with bottom custom view
+#### 展示半屏广告
 
 ```objective-c
-//AppKey is a reserved field that can fill in an empty string.
+//appKey 为预留字段，可填空字符串。
 UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height-100,
         [UIScreen mainScreen].bounds.size.width, 100)]; 
 view.backgroundColor = [UIColor redColor];
@@ -337,7 +336,7 @@ view.backgroundColor = [UIColor redColor];
  											 delegate:self];
 ```
 
-##### Delegate implementation
+#### 实现代理方法
 
 ```objective-c
 - (void)yumiAdsSplashDidLoad:(YumiAdsSplash *)splash{
@@ -357,9 +356,9 @@ view.backgroundColor = [UIColor redColor];
 }
 ```
 
-#### Native
+### Native
 
-##### Initialization and request
+#### 初始化及请求
 
 ```objective-c
 #import <YumiMediationSDK/YumiMediationNativeAd.h>
@@ -381,32 +380,32 @@ view.backgroundColor = [UIColor redColor];
 @end
 ```
 
-#####Register View
+#### Register View
 
 ```objective-c
 /**
- This is a method to associate a YumiNativeAd with the UIView you will use to display the native ads.
- - Parameter view: The UIView you created to render all the native ads data elements.
- - Parameter viewController: The UIViewController that will be used to present SKStoreProductViewController(iTunes Store product information) or the in-app browser. If nil is passed, the top view controller currently shown will be used.
- The whole area of the UIView will be clickable.
+ 注册用来渲染广告的 View
+ - Parameter view: 渲染广告的 View.
+ - Parameter viewController: 将用于当前的ui SKStoreProductViewController(iTunes商店产品信息)或	应用程序的浏览器。
+ 整个渲染区域可点击。
  */
 - (void)registerViewForInteraction:(UIView *)view
                 withViewController:(nullable UIViewController *)viewController
                           nativeAd:(YumiMediationNativeModel *)nativeAd;
 ```
 
-##### Report Impression
+#### Report Impression
 
 ```objective-c
 /**
- report impression when display the native ad.
- - Parameter nativeAd: the ad you want to display.
- - Parameter view: view you display the ad.
+ 当原生广告被展示时调用此方法
+ - Parameter nativeAd: 将要被展示的广告对象.
+ - Parameter view: 用来渲染广告的 View.
 */
 - (void)reportImpression:(YumiMediationNativeModel *)nativeAd view:(UIView *)view;
 ```
 
-##### Delegate implementation
+#### 实现代理方法
 
 ```objective-c
 /// Tells the delegate that an ad has been successfully loaded.
@@ -425,26 +424,26 @@ view.backgroundColor = [UIColor redColor];
 }
 ```
 
-## Debug Mode
+## 调试模式
 
-Please select debug mode if you want to test whether ad ruturn is available for an app.
+如果您想调试平台key是否有广告返回，可选择调试模式。
 
- Please ensure your app has initialized YumiMediationSDK before calling debug mode.
+调用调试模式之前，请保证您的 app 已经初始化 YumiMediationSDK 。
 
-### Integration Method
+### 接入方式 {docsify-ignore}
 
-- CocoaPods ( recommend )
+- CocoaPods（推荐）
 
   ```ruby
   pod "YumiMediationDebugCenter-iOS" 
   ```
 
 
-- Manually Integrating YumiMediationSDK
+- 手动方式
 
-  Unzip the downloaded file to get our ``YumiMediationDebugCenter-iOS.framework``. Select this framework and add them to your project. Make sure to have 'Copy Items' checked.
+  将下载好的``YumiMediationDebugCenter-iOS.framework``加入``Xcode``工程即可。 
 
-### Call debug mode
+### 调用调试模式 {docsify-ignore}
 
 ```objective-c
 #import <YumiMediationDebugCenter-iOS/YumiMediationDebugController.h>
@@ -459,21 +458,21 @@ Please select debug mode if you want to test whether ad ruturn is available for 
 	          rootViewController:self];//your rootVC
 ```
 
-### Sample
+### 图示 {docsify-ignore}
 
 
 
 <img src="resources/debug-1.png" width="240" height="426">
 
-  										*Select platform integration category*
+*选择平台类型*
 
 <img src="resources/debug-2.png"width="240" height="426">
 
- 								   *Select single platform, the grey indicates  not configurated yet.*
+*选择单一平台，灰色平台为已添加未配置*
 
 <img src="resources/debug-3.png"width="240" height="426">
 
-​									*select ad category, debug single platform*
+*选择广告类型，调试单一平台*
 
 
 
