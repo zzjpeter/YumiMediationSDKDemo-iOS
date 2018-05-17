@@ -12,6 +12,8 @@
 
 * SDK 下载
 
+  * [iOS Download Page](iOSDownloadPage.md)
+
 * 查疑解惑
 
 * 历史版本

@@ -12,6 +12,8 @@
 
 * SDK Download
 
+  * [iOS Download Page](iOSDownloadPage.md)
+
 * Q & A
 
 * History version
