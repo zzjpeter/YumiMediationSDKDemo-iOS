@@ -428,9 +428,9 @@ view.backgroundColor = [UIColor redColor];
 
 Please select debug mode if you want to test whether ad ruturn is available for an app.
 
- Please ensure your app has initialized YumiMediationSDK before calling debug mode.
+Please ensure your app has initialized YumiMediationSDK before calling debug mode.
 
-### Integration Method
+### Integration Method {docsify-ignore}
 
 - CocoaPods ( recommend )
 
@@ -443,7 +443,7 @@ Please select debug mode if you want to test whether ad ruturn is available for 
 
   Unzip the downloaded file to get our ``YumiMediationDebugCenter-iOS.framework``. Select this framework and add them to your project. Make sure to have 'Copy Items' checked.
 
-### Call debug mode
+### Call debug mode {docsify-ignore}
 
 ```objective-c
 #import <YumiMediationDebugCenter-iOS/YumiMediationDebugController.h>
@@ -458,9 +458,7 @@ Please select debug mode if you want to test whether ad ruturn is available for 
 	          rootViewController:self];//your rootVC
 ```
 
-### Sample
-
-
+### Sample {docsify-ignore}
 
 <img src="resources/debug-1.png" width="240" height="426">
 
