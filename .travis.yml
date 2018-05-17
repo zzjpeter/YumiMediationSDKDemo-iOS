@@ -12,7 +12,6 @@ install:
 - pod install --repo-update --verbose
 script:
 - sh ./fastlane/decrypt_p12.sh
-- python3 archivedYumiMediationSDK.py 3.3.4
 - fastlane beta
 - fastlane pushOss
 env:
