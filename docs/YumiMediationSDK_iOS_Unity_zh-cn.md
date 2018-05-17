@@ -241,13 +241,13 @@ void yumiMediationVideoDidOpenEvent(){
   Debug.Log ("YumiMediationVideo, DidOpen");
 }
 void yumiMediationVideoDidStartPlayingEvent(){
-	Debug.Log ("YumiMediationVideo, DidStartPlaying");
+  Debug.Log ("YumiMediationVideo, DidStartPlaying");
 }
 void yumiMediationVideoDidCloseEvent(){
-	Debug.Log ("YumiMediationVideo, DidClosed");
+  Debug.Log ("YumiMediationVideo, DidClosed");
 }
 void yumiMediationVideoDidRewardEvent(){
-	Debug.Log ("YumiMediationVideo, DidRewarded");
+  Debug.Log ("YumiMediationVideo, DidRewarded");
 }
 ```
 

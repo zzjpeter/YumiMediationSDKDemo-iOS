@@ -420,7 +420,7 @@ view.backgroundColor = [UIColor redColor];
 
 /// Tells the delegate that the Native view has been clicked.
 - (void)yumiMediationNativeAdDidClick:(YumiMediationNativeModel *)nativeAd{
-  	NSLog(@"Native Ad Did Click.");
+    NSLog(@"Native Ad Did Click.");
 }
 ```
 
