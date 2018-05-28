@@ -86,8 +86,60 @@ platform :ios do
 
   desc "push archived files to oss"
   lane :pushOss do
-    next if ENV["TRAVIS_PULL_REQUEST"] != "false" or ENV["TRAVIS_BRANCH"] != "pushOss"
+    #next if ENV["TRAVIS_PULL_REQUEST"] != "false" or ENV["TRAVIS_BRANCH"] != "pushOss"
+    sdkVersion = "YumiMediationSDK_v"+ ENV["TRAVIS_TAG"]
+    thirdPartys = ['AdColony','AdMob','Applovin','Baidu','Centrixlink','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','Mobvista','StartApp','Unity','Vungle','OneWay','TouTiao']
+    podDir = '../Pods/'
+    mediationSDKPath = podDir + sdkVersion
+    thirdPartyPathName = mediationSDKPath +'/YumiMediationThirdPartys'
+    debugcenterPathName = mediationSDKPath +'/YumiMediationDebugCenter-iOS'
+    yumiMediationSDKPathName = mediationSDKPath +'/YumiMediationSDK'
+    iOSDownloadPage = "iOSDownloadPage.md"
+
+    fastlane_require "aliyun/oss"
+    fastlane_require "retries"
+    fastlane_require 'fileutils'
     
+    Dir.chdir("#{podDir}") do
+      FileUtils.mkdir_p "#{sdkVersion}/YumiMediationThirdPartys"
+      sh "touch #{iOSDownloadPage}"
+      #adapter
+      thirdPartys.each do |thirdParty|
+        puts "is copying #{thirdParty}"
+        thirdYumiSDKName = 'Yumi' + thirdParty
+	      thirdYumiMediationAdapterName = 'YumiMediation' + thirdParty
+	      #copy adapters
+	      srcAdapterPath = podDir + 'YumiMediationAdapters' + '/'+ thirdYumiMediationAdapterName
+	      targetAdapterPath = thirdPartyPathName + '/'+ thirdYumiMediationAdapterName
+	      srcThirdSDKPath = podDir + thirdYumiSDKName
+        targetThirdSDKPath = thirdPartyPathName + '/'+ thirdYumiMediationAdapterName + '/' +thirdYumiSDKName
+
+        FileUtils.mv(srcAdapterPath,targetAdapterPath)
+        FileUtils.mv(srcThirdSDKPath,targetThirdSDKPath)
+        
+        thirdSource = "#{thirdYumiMediationAdapterName}.tar.bz2"
+        Dir.chdir("#{sdkVersion}/YumiMediationThirdPartys") do
+          # compress and upload to oss
+          sh "tar cjf #{thirdSource} #{thirdYumiMediationAdapterName}"
+          with_retries(max_tries: 10) do
+            Aliyun::OSS::Client.new(
+              :endpoint => "http://oss-cn-beijing.aliyuncs.com",
+              :access_key_id => ENV["OSS_KEY_ID"],
+              :access_key_secret => ENV["OSS_KEY_SECRET"]
+            ).
+            get_bucket("ad-sdk").
+            put_object("iOS/Archived/#{ENV["TRAVIS_TAG"]}/#{thirdSource}", :file => thirdSource)
+          end
+        remoteAddress = "http://adsdk.yumimobi.com/iOS/Archived/#{ENV["TRAVIS_TAG"]}/#{thirdSource}"
+        File.open("#{iOSDownloadPage}", "w") do |file|
+          file.puts("[#{thirdParty}](#{remoteAddress})")
+        end
+        end
+      end
+    end
+    
+
+
   end
 
   # You can define as many lanes as you want
