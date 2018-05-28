@@ -127,6 +127,30 @@ platform :ios do
         end
       end
 
+      #debugCenter
+      puts "is copying debugCenter"
+      srcDebugcenterPath = podDir + 'YumiMediationDebugCenter-iOS'
+      FileUtils.mv(srcDebugcenterPath,mediationSDKPath + "/YumiMediationDebugCenter-iOS")
+      debugCenterSource = "YumiMediationDebugCenter-iOS.tar.bz2"
+      debugRemoteAddress = "http://adsdk.yumimobi.com/iOS/Archived/#{ENV["TRAVIS_TAG"]}/#{debugCenterSource}"
+      File.open(iOSDownloadPage,"a") do |file|
+        file.puts("[YumiMediationDebugCenter-iOS](#{debugRemoteAddress})")
+        file.puts(" ")
+      end
+      Dir.chdir("#{sdkVersion}") do
+        #compress and upload to oss
+        sh "tar cjf #{debugCenterSource} YumiMediationDebugCenter-iOS"
+        with_retries(max_tries: 10) do
+          Aliyun::OSS::Client.new(
+            :endpoint => "http://oss-cn-beijing.aliyuncs.com",
+            :access_key_id => ENV["OSS_KEY_ID"],
+            :access_key_secret => ENV["OSS_KEY_SECRET"]
+          ).
+          get_bucket("ad-sdk").
+          put_object("iOS/Archived/#{ENV["TRAVIS_TAG"]}/#{debugCenterSource}", :file => debugCenterSource)
+        end
+      end
+
       #adapter
       thirdPartys.each do |thirdParty|
         puts "is copying #{thirdParty}"
