@@ -95,6 +95,29 @@ DEPENDENCIES:
   - YumiMediationDebugCenter-iOS (= 3.3.4)
   - YumiMediationSDK (= 3.3.4)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - YumiAdColony
+    - YumiAdMob
+    - YumiAppLovin
+    - YumiBaidu
+    - YumiCentrixlink
+    - YumiChartboost
+    - YumiDomob
+    - YumiFacebook
+    - YumiGDT
+    - YumiInMobi
+    - YumiIronSource
+    - YumiMediationAdapters
+    - YumiMediationDebugCenter-iOS
+    - YumiMediationSDK
+    - YumiMobvista
+    - YumiOneWay
+    - YumiStartApp
+    - YumiTouTiao
+    - YumiUnity
+    - YumiVungle
+
 SPEC CHECKSUMS:
   YumiAdColony: 53a86599471196ce21fb8bd388f5053296c14f03
   YumiAdMob: 5fb0a02745026af413304460aa7485b2de3950e9
@@ -119,4 +142,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 7e347be851fed039e741712afd87215debfd8bab
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.3

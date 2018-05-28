@@ -1,5 +1,3 @@
-[TOC]
-
 # YumiMediationSDK for Unity
 
 ## Summary
@@ -30,7 +28,7 @@
 
 ## Develop Encironment Configuration 
 
-### App Transport Security
+### App Transport Security {docsify-ignore}
 
 ATS (App Transport Security) proposed by WWDC 15 features an important method for Apple to boost network communication security. Non-HTTPS access will be banned by default for ios 9 and later.
 
@@ -48,7 +46,7 @@ As most of materials are provided by HTTP, please set as the followings to impro
 
 *The `NSAllowsArbitraryLoads` exception is required to make sure your ads are not impacted by ATS on iOS 9 devices, while `NSAllowsArbitraryLoadsForMedia` and `NSAllowsArbitraryLoadsInWebContent` are required to make sure your ads are not impacted by ATS on iOS 10 devices.*
 
-### Permissions for ios 9 and later
+### Permissions for ios 9 and later {docsify-ignore}
 
 Upload app to App Store, and add the following peimissions to info.plist.
 
@@ -60,9 +58,10 @@ Upload app to App Store, and add the following peimissions to info.plist.
 <key>NSPhotoLibraryUsageDescription</key>
 <string>App shall access photos with your permission</string>
 ```
+
 ## Integration Method
 
-1. CocoaPods ( recommend )
+### CocoaPods ( recommend )
 
    CocoaPods is a dependency manager for ios, which will make it easy to manage YumiMediationSDK.
 
@@ -90,7 +89,7 @@ Upload app to App Store, and add the following peimissions to info.plist.
 
    Finally, open project by workspace.。
 
-2. Manually Integrating YumiMediationSDK
+### Manually Integrating YumiMediationSDK
 
    1. Choose third-party SDK
 
@@ -105,13 +104,13 @@ Upload app to App Store, and add the following peimissions to info.plist.
    <img src="resources/addFiles-2.png" width="500" height="400"> 
 
 
-## Code Sample
+## Code Sample 
 
-### Advertisement Forms
+### Advertisement Forms {docsify-ignore}
 
-#### Banner
+### Banner
 
-##### Initialization
+#### Initialization
 
 ```c
 //banner position
@@ -126,19 +125,29 @@ YumiMediationSDK_Unity.initYumiMediationBanner("Your PlacementID","Your channelI
                                                "Your versionID",                                             YumiMediationSDK_Unity.YumiMediationBannerPosition.YumiMediationBannerPositionBottom);
 ```
 
-##### Request banner
+#### Reset banner size
+
+```c#
+/// Required to set this banner view to a proper size. Use one of the predefined standard ad sizes (such as kYumiMediationAdViewBanner320x50) If you want to specify the ad size you need to set it before calling loadAd:
+/// default: iPhone and iPod Touch ad size. Typically 320x50.
+/// default: iPad ad size. Typically 728x90.
+/// If you do not need to change the default values, do not execute the following code.
+YumiMediationSDK_Unity.setBannerAdSize (YumiMediationSDK_Unity.YumiMediationAdViewBannerSize.kYumiMediationAdViewBanner300x250);
+```
+
+#### Request banner
 
 ```c
 YumiMediationSDK_Unity.loadAd(false);
 ```
 
-##### Remove Banner
+#### Remove Banner
 
 ```c
 YumiMediationSDK_Unity.removeBanner();
 ```
 
-##### Delegate implementation 
+#### Delegate implementation 
 
 ```c#
 void yumiMediationBannerViewDidLoadEvent()
@@ -155,7 +164,7 @@ void yumiMediationBannerViewDidClickEvent()
 }
 ```
 
-##### Self-adaptation
+#### Self-adaptation
 
 ```objective-c
 YumiMediationSDK_Unity.loadAd(false);
@@ -165,13 +174,14 @@ You are available to set whether to turn on self-adaptation when making banner r
 
 If isSmartBanner is YES ,YumiMediationBannerView will automatically adapt to size of device.
 
- ![fzsy](resources/fzsy.png) ![zsy](resources/zsy.png) 
+ ![fzsy](resources/fzsy.png) 
+ *non self-adaptation mode*
+ ![zsy](resources/zsy.png) 
+ *self-adaptation mode*										
 
-​	*non self-adaptation mode* 		  *self-adaptation mode*										
+### Interstitial
 
-#### Interstitial
-
-##### Initialization and interstitial request
+#### Initialization and interstitial request
 
 ```c#
 YumiMediationSDK_Unity.initYumiMediationInterstitial("Your PlacementID",
@@ -179,13 +189,13 @@ YumiMediationSDK_Unity.initYumiMediationInterstitial("Your PlacementID",
                                                      "Your versionID");
 ```
 
-##### Show Interstitial
+#### Show Interstitial
 
 ```c#
 YumiMediationSDK_Unity.present();
 ```
 
-##### Delegate implementation
+#### Delegate implementation
 
 ```c#
 void yumiMediationInterstitialDidReceiveAdEvent(){
@@ -202,9 +212,9 @@ void yumiMediationInterstitialDidClickEvent() {
 }
 ```
 
-#### Rewarded Video
+### Rewarded Video
 
-##### Initialization and rewarded video request
+#### Initialization and rewarded video request
 
 ```c#
 YumiMediationSDK_Unity.loadYumiMediationVideo("Your PlacementID",
@@ -212,32 +222,32 @@ YumiMediationSDK_Unity.loadYumiMediationVideo("Your PlacementID",
                                               "Your versionID");
 ```
 
-##### Determine whether rewarded video is ready.
+#### Determine whether rewarded video is ready.
 
 ```c#
 bool isplay = YumiMediationSDK_Unity.isVideoReady();
 ```
 
-##### Show rewarded video
+#### Show rewarded video
 
 ```c#
 YumiMediationSDK_Unity.playVideo();
 ```
 
-##### Delegate implementation
+#### Delegate implementation
 
-```objective-c
+```c#
 void yumiMediationVideoDidOpenEvent(){
-  	Debug.Log ("YumiMediationVideo, DidOpen");
+  Debug.Log ("YumiMediationVideo, DidOpen");
 }
 void yumiMediationVideoDidStartPlayingEvent(){
-	Debug.Log ("YumiMediationVideo, DidStartPlaying");
+  Debug.Log ("YumiMediationVideo, DidStartPlaying");
 }
 void yumiMediationVideoDidCloseEvent(){
-	Debug.Log ("YumiMediationVideo, DidClosed");
+  Debug.Log ("YumiMediationVideo, DidClosed");
 }
 void yumiMediationVideoDidRewardEvent(){
-	Debug.Log ("YumiMediationVideo, DidRewarded");
+  Debug.Log ("YumiMediationVideo, DidRewarded");
 }
 ```
 
@@ -247,7 +257,7 @@ Please select debug mode if you want to test whether ad ruturn is available for 
 
 Please ensure your app has initialized YumiMediationSDK before calling debug mode.
 
-### Integration Method
+### Integration Method {docsify-ignore}
 
 - CocoaPods ( recommend )
 
@@ -260,7 +270,7 @@ Please ensure your app has initialized YumiMediationSDK before calling debug mod
 
   Unzip the downloaded file to get our ``YumiMediationDebugCenter-iOS.framework``. Select this framework and add them to your project. Make sure to have 'Copy Items' checked.
 
-### Call debug mode
+### Call debug mode {docsify-ignore}
 
 ```objective-c
 #import <YumiMediationDebugCenter-iOS/YumiMediationDebugController.h>
@@ -275,21 +285,19 @@ Please ensure your app has initialized YumiMediationSDK before calling debug mod
 	          rootViewController:self];//your rootVC
 ```
 
-### Sample
-
-
+### Sample {docsify-ignore}
 
 <img src="resources/debug-1.png" width="240" height="426">
 
-  										*Select platform integration category*
+*Select platform integration category*
 
 <img src="resources/debug-2.png"width="240" height="426">
 
- 								   *Select single platform, the grey indicates  not configurated yet*
+*Select single platform, the grey indicates  not configurated yet*
 
 <img src="resources/debug-3.png"width="240" height="426">
 
-​									*select ad category, debug single platform*
+*select ad category, debug single platform*
 
 
 

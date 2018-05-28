@@ -267,7 +267,6 @@
 				B9A065701E8D0F6C00B1B91B /* Sources */,
 				B9A065711E8D0F6C00B1B91B /* Frameworks */,
 				B9A065721E8D0F6C00B1B91B /* Resources */,
-				B4217F603A53899298FF5866 /* [CP] Embed Pods Frameworks */,
 				3784E7025DC0D05891BE331C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -287,8 +286,6 @@
 				B9A065891E8D0F6C00B1B91B /* Sources */,
 				B9A0658A1E8D0F6C00B1B91B /* Frameworks */,
 				B9A0658B1E8D0F6C00B1B91B /* Resources */,
-				A27B1F30F761D682236FE9D2 /* [CP] Embed Pods Frameworks */,
-				9A03A1591ADFAF9CD14C80C4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -308,8 +305,6 @@
 				B9A065941E8D0F6C00B1B91B /* Sources */,
 				B9A065951E8D0F6C00B1B91B /* Frameworks */,
 				B9A065961E8D0F6C00B1B91B /* Resources */,
-				9F756BC424A1B922FFD77914 /* [CP] Embed Pods Frameworks */,
-				9DACB3C9AFFA68F9C20801A4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -422,89 +417,21 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/baidumobadsdk.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CLBundle.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Resource.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YumiMediationAdMob.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YumiMediationFacebook.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YumiMediationDebugCenter.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YumiMediationSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YumiAdsSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZplayMuteListener.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/StartApp.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WMAdSDK.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9A03A1591ADFAF9CD14C80C4 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YumiMediationSDKDemoTests/Pods-YumiMediationSDKDemoTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9DACB3C9AFFA68F9C20801A4 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YumiMediationSDKDemoUITests/Pods-YumiMediationSDKDemoUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9F756BC424A1B922FFD77914 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YumiMediationSDKDemoUITests/Pods-YumiMediationSDKDemoUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A27B1F30F761D682236FE9D2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YumiMediationSDKDemoTests/Pods-YumiMediationSDKDemoTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B4217F603A53899298FF5866 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo-frameworks.sh",
-				"${PODS_ROOT}/PlayableAds/PlayableAds.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayableAds.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D502E83456DB64030966F724 /* [CP] Check Pods Manifest.lock */ = {

@@ -1,5 +1,3 @@
-[TOC]
-
 # YumiMediationSDK for Unity
 
 ## 概述
@@ -30,7 +28,7 @@
 
 ## 开发环境配置 
 
-### App Transport Security
+### App Transport Security {docsify-ignore}
 
 WWDC 15 提出的 ATS (App Transport Security) 是 Apple 在推进网络通讯安全的一个重要方式。在 iOS 9 及以上版本中，默认非 HTTPS 的网络访问是被禁止的。
 
@@ -48,7 +46,7 @@ WWDC 15 提出的 ATS (App Transport Security) 是 Apple 在推进网络通讯�
 
 *当 `NSAllowsArbitraryLoads` 和 `NSAllowsArbitraryLoadsInWebContent` 或 `NSAllowsArbitraryLoadsForMedia` 同时存在时，根据系统不同，表现的行为也会不一样。简单说，iOS 9 只看 `NSAllowsArbitraryLoads`，而 iOS 10 会优先看 `InWebContent` 和 `ForMedia` 的部分。在 iOS 10 中，要是后两者存在的话，在相关部分就会忽略掉 `NSAllowsArbitraryLoads`；如果不存在，则遵循 `NSAllowsArbitraryLoads` 的设定。*
 
-### iOS 9 及以上系统相关权限
+### iOS 9 及以上系统相关权限 {docsify-ignore}
 
 应用程序上传 App Store, 请在 info.plist 文件中添加以下权限。
 
@@ -60,9 +58,10 @@ WWDC 15 提出的 ATS (App Transport Security) 是 Apple 在推进网络通讯�
 <key>NSPhotoLibraryUsageDescription</key>
 <string>App需要您的同意,才能访问相册</string>
 ```
+
 ## 接入方式
 
-1. CocoaPods (推荐)
+### CocoaPods (推荐)
 
    CocoaPods 是 iOS 的依赖管理工具，使用它可以轻松管理 YumiMediationSDK。
 
@@ -90,7 +89,7 @@ WWDC 15 提出的 ATS (App Transport Security) 是 Apple 在推进网络通讯�
 
    最终通过 workspace 打开工程。
 
-2. 手动集成 YumiMediationSDK
+### 手动集成 YumiMediationSDK
 
    1. 三方 SDK 选择
 
@@ -107,11 +106,11 @@ WWDC 15 提出的 ATS (App Transport Security) 是 Apple 在推进网络通讯�
 
 ## 代码集成示例
 
-### 广告形式
+### 广告形式 {docsify-ignore}
 
-#### Banner
+### Banner
 
-##### 初始化
+#### 初始化
 
 ```c
 //banner展示位置
@@ -126,19 +125,29 @@ YumiMediationSDK_Unity.initYumiMediationBanner("Your PlacementID","Your channelI
                                                "Your versionID",                                             YumiMediationSDK_Unity.YumiMediationBannerPosition.YumiMediationBannerPositionBottom);
 ```
 
-##### 请求横幅
+#### 设置banner 尺寸
+
+```c#
+//目前我们支持三种尺寸
+//在 iPhone 上默认为 320 * 50，如无调整不需设置下列代码。
+//在 iPad 上默认为 728 * 90，如无调整不需设置下列代码。
+//如果您有特殊需求，300 * 250 为可选项。请在 loadAd 之前，执行下列代码。
+YumiMediationSDK_Unity.setBannerAdSize (YumiMediationSDK_Unity.YumiMediationAdViewBannerSize.kYumiMediationAdViewBanner300x250);
+```
+
+#### 请求横幅
 
 ```c
 YumiMediationSDK_Unity.loadAd(false);
 ```
 
-##### 移除 Banner
+#### 移除 Banner
 
 ```c
 YumiMediationSDK_Unity.removeBanner();
 ```
 
-##### 实现代理方法 
+#### 实现代理方法 
 
 ```c#
 void yumiMediationBannerViewDidLoadEvent()
@@ -155,7 +164,7 @@ void yumiMediationBannerViewDidClickEvent()
 }
 ```
 
-##### 自适应功能
+#### 自适应功能
 
 ```objective-c
 YumiMediationSDK_Unity.loadAd(false);
@@ -165,13 +174,14 @@ YumiMediationSDK_Unity.loadAd(false);
 
 如果设置 `isSmartBanner` 为 `YES` ,YumiMediationBannerView 将会自动根据设备的尺寸进行适配。
 
- ![fzsy](resources/fzsy.png) ![zsy](resources/zsy.png) 
+ ![fzsy](resources/fzsy.png) 
+ *非自适应模式*
+ ![zsy](resources/zsy.png) 
+ *自适应模式*										
 
-​	*非自适应模式* 		  *自适应模式*										
+### Interstitial
 
-#### Interstitial
-
-##### 初始化及请求插屏
+#### 初始化及请求插屏
 
 ```c#
 YumiMediationSDK_Unity.initYumiMediationInterstitial("Your PlacementID",
@@ -179,13 +189,13 @@ YumiMediationSDK_Unity.initYumiMediationInterstitial("Your PlacementID",
                                                      "Your versionID");
 ```
 
-##### 展示插屏
+#### 展示插屏
 
 ```c#
 YumiMediationSDK_Unity.present();
 ```
 
-##### 实现代理方法
+#### 实现代理方法
 
 ```c#
 void yumiMediationInterstitialDidReceiveAdEvent(){
@@ -202,9 +212,9 @@ void yumiMediationInterstitialDidClickEvent() {
 }
 ```
 
-#### Rewarded Video
+### Rewarded Video
 
-##### 初始化及请求视频
+#### 初始化及请求视频
 
 ```c#
 YumiMediationSDK_Unity.loadYumiMediationVideo("Your PlacementID",
@@ -212,32 +222,32 @@ YumiMediationSDK_Unity.loadYumiMediationVideo("Your PlacementID",
                                               "Your versionID");
 ```
 
-##### 判断视频是否准备好
+#### 判断视频是否准备好
 
 ```c#
 bool isplay = YumiMediationSDK_Unity.isVideoReady();
 ```
 
-##### 展示视频
+#### 展示视频
 
 ```c#
 YumiMediationSDK_Unity.playVideo();
 ```
 
-##### 实现代理方法
+#### 实现代理方法
 
 ```objective-c
 void yumiMediationVideoDidOpenEvent(){
-  	Debug.Log ("YumiMediationVideo, DidOpen");
+  Debug.Log ("YumiMediationVideo, DidOpen");
 }
 void yumiMediationVideoDidStartPlayingEvent(){
-	Debug.Log ("YumiMediationVideo, DidStartPlaying");
+  Debug.Log ("YumiMediationVideo, DidStartPlaying");
 }
 void yumiMediationVideoDidCloseEvent(){
-	Debug.Log ("YumiMediationVideo, DidClosed");
+  Debug.Log ("YumiMediationVideo, DidClosed");
 }
 void yumiMediationVideoDidRewardEvent(){
-	Debug.Log ("YumiMediationVideo, DidRewarded");
+  Debug.Log ("YumiMediationVideo, DidRewarded");
 }
 ```
 
@@ -247,7 +257,7 @@ void yumiMediationVideoDidRewardEvent(){
 
 调用调试模式之前，请保证您的 app 已经初始化 YumiMediationSDK 。
 
-### 接入方式
+### 接入方式 {docsify-ignore}
 
 - CocoaPods（推荐）
 
@@ -260,7 +270,7 @@ void yumiMediationVideoDidRewardEvent(){
 
   将下载好的``YumiMediationDebugCenter-iOS.framework``加入``Xcode``工程即可。 
 
-### 调用调试模式
+### 调用调试模式 {docsify-ignore}
 
 ```objective-c
 #import <YumiMediationDebugCenter-iOS/YumiMediationDebugController.h>
@@ -275,21 +285,19 @@ void yumiMediationVideoDidRewardEvent(){
 	          rootViewController:self];//your rootVC
 ```
 
-### 图示
-
-
+### 图示 {docsify-ignore}
 
 <img src="resources/debug-1.png" width="240" height="426">
 
-  										*选择平台类型*
+*选择平台类型*
 
 <img src="resources/debug-2.png"width="240" height="426">
 
- 								   *选择单一平台，灰色平台为已添加未配置*
+*选择单一平台，灰色平台为已添加未配置*
 
 <img src="resources/debug-3.png"width="240" height="426">
 
-​									*选择广告类型，调试单一平台*
+*选择广告类型，调试单一平台*
 
 
 

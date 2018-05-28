@@ -44,15 +44,6 @@ platform :ios do
       keychain_password: keychain_password
     )
 
-    # Fetch provisioning file
-    # sigh(
-    #   adhoc: true,
-    #   username: "weienios@zplay.cn",
-    #   team_id: "VG25A6M88T",
-    #   provisioning_name: "YumiMediationSDKDemo",
-    #   cert_owner_name: "haiying wang"
-    # )
-
     increment_build_number_in_plist(target: 'YumiMediationSDKDemo')
     increment_version_number_in_plist(
     target: 'YumiMediationSDKDemo',
@@ -90,17 +81,136 @@ platform :ios do
     delete_keychain(
       name: keychain_name
     )
-
   end
 
-  # desc "Deploy a new version to the App Store"
-  # lane :release do
-  #   # match(type: "appstore")
-  #   # snapshot
-  #   gym # Build your app - more options available
-  #   deliver(force: true)
-  #   # frameit
-  # end
+  desc "push archived files to oss"
+  lane :pushOss do
+    #next if ENV["TRAVIS_PULL_REQUEST"] != "false" or ENV["TRAVIS_BRANCH"] != "pushOss"
+    sdkVersion = "YumiMediationSDK_v"+ ENV["TRAVIS_TAG"]
+    thirdPartys = ['AdColony','AdMob','Applovin','Baidu','Centrixlink','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','Mobvista','StartApp','Unity','Vungle','OneWay','TouTiao']
+    podDir = '../Pods/'
+    mediationSDKPath = podDir + sdkVersion
+    thirdPartyPathName = mediationSDKPath +'/YumiMediationThirdPartys'
+    debugcenterPathName = mediationSDKPath +'/YumiMediationDebugCenter-iOS'
+    yumiMediationSDKPathName = mediationSDKPath +'/YumiMediationSDK'
+    iOSDownloadPage =  mediationSDKPath + "/iOSDownloadPage.md"
+
+    fastlane_require "aliyun/oss"
+    fastlane_require "retries"
+    fastlane_require 'fileutils'
+    
+    Dir.chdir("#{podDir}") do
+      FileUtils.mkdir_p "#{sdkVersion}/YumiMediationThirdPartys"
+      sh "touch #{iOSDownloadPage}"
+
+      #mediationSDK
+      puts "is copying SDK"
+      srcYumiMediationSDKPath = podDir + 'YumiMediationSDK'
+      FileUtils.mv(srcYumiMediationSDKPath,mediationSDKPath + "/YumiMediationSDK")
+      sdkSource = "YumiMediationSDK-iOS.tar.bz2"
+      sdkRemoteAddress = "http://adsdk.yumimobi.com/iOS/Archived/#{ENV["TRAVIS_TAG"]}/#{sdkSource}"
+      File.open(iOSDownloadPage,"a") do |file|
+        file.puts("[YumiMediationSDK-iOS](#{sdkRemoteAddress})")
+        file.puts(" ")
+      end
+      Dir.chdir("#{sdkVersion}") do
+        #compress and upload to oss
+        sh "tar cjf #{sdkSource} YumiMediationSDK"
+        with_retries(max_tries: 10) do
+          Aliyun::OSS::Client.new(
+            :endpoint => "http://oss-cn-beijing.aliyuncs.com",
+            :access_key_id => ENV["OSS_KEY_ID"],
+            :access_key_secret => ENV["OSS_KEY_SECRET"]
+          ).
+          get_bucket("ad-sdk").
+          put_object("iOS/Archived/#{ENV["TRAVIS_TAG"]}/#{sdkSource}", :file => sdkSource)
+        end
+      end
+
+      #debugCenter
+      puts "is copying debugCenter"
+      srcDebugcenterPath = podDir + 'YumiMediationDebugCenter-iOS'
+      FileUtils.mv(srcDebugcenterPath,mediationSDKPath + "/YumiMediationDebugCenter-iOS")
+      debugCenterSource = "YumiMediationDebugCenter-iOS.tar.bz2"
+      debugRemoteAddress = "http://adsdk.yumimobi.com/iOS/Archived/#{ENV["TRAVIS_TAG"]}/#{debugCenterSource}"
+      File.open(iOSDownloadPage,"a") do |file|
+        file.puts("[YumiMediationDebugCenter-iOS](#{debugRemoteAddress})")
+        file.puts(" ")
+      end
+      Dir.chdir("#{sdkVersion}") do
+        #compress and upload to oss
+        sh "tar cjf #{debugCenterSource} YumiMediationDebugCenter-iOS"
+        with_retries(max_tries: 10) do
+          Aliyun::OSS::Client.new(
+            :endpoint => "http://oss-cn-beijing.aliyuncs.com",
+            :access_key_id => ENV["OSS_KEY_ID"],
+            :access_key_secret => ENV["OSS_KEY_SECRET"]
+          ).
+          get_bucket("ad-sdk").
+          put_object("iOS/Archived/#{ENV["TRAVIS_TAG"]}/#{debugCenterSource}", :file => debugCenterSource)
+        end
+      end
+
+      #adapter
+      thirdPartys.each do |thirdParty|
+        puts "is copying #{thirdParty}"
+        thirdYumiSDKName = 'Yumi' + thirdParty
+	      thirdYumiMediationAdapterName = 'YumiMediation' + thirdParty
+	      #copy adapters
+	      srcAdapterPath = podDir + 'YumiMediationAdapters' + '/'+ thirdYumiMediationAdapterName
+	      targetAdapterPath = thirdPartyPathName + '/'+ thirdYumiMediationAdapterName
+	      srcThirdSDKPath = podDir + thirdYumiSDKName
+        targetThirdSDKPath = thirdPartyPathName + '/'+ thirdYumiMediationAdapterName + '/' +thirdYumiSDKName
+
+        FileUtils.mv(srcAdapterPath,targetAdapterPath)
+        FileUtils.mv(srcThirdSDKPath,targetThirdSDKPath)
+        
+        thirdSource = "#{thirdYumiMediationAdapterName}.tar.bz2"
+        remoteAddress = "http://adsdk.yumimobi.com/iOS/Archived/#{ENV["TRAVIS_TAG"]}/#{thirdSource}"
+        File.open(iOSDownloadPage, "a") do |file|
+          file.puts("[#{thirdParty}](#{remoteAddress})")
+          file.puts(" ")
+        end
+        Dir.chdir("#{sdkVersion}/YumiMediationThirdPartys") do
+          # compress and upload to oss
+          sh "tar cjf #{thirdSource} #{thirdYumiMediationAdapterName}"
+          sh "rm -rf #{thirdYumiMediationAdapterName}"
+          with_retries(max_tries: 10) do
+            Aliyun::OSS::Client.new(
+              :endpoint => "http://oss-cn-beijing.aliyuncs.com",
+              :access_key_id => ENV["OSS_KEY_ID"],
+              :access_key_secret => ENV["OSS_KEY_SECRET"]
+            ).
+            get_bucket("ad-sdk").
+            put_object("iOS/Archived/#{ENV["TRAVIS_TAG"]}/#{thirdSource}", :file => thirdSource)
+          end
+        end
+      end
+
+      allThirdPartysSource = "allThirdPartys.tar.bz2"
+      remoteAllThirdPartysAddress = "http://adsdk.yumimobi.com/iOS/Archived/#{ENV["TRAVIS_TAG"]}/#{allThirdPartysSource}"
+      File.open(iOSDownloadPage, "a") do |file|
+        file.puts("[allThirdPartys](#{remoteAllThirdPartysAddress})")
+        file.puts(" ")
+      end
+      Dir.chdir(sdkVersion) do
+        sh "tar cjf #{allThirdPartysSource} YumiMediationThirdPartys"
+        with_retries(max_tries: 10) do
+          Aliyun::OSS::Client.new(
+            :endpoint => "http://oss-cn-beijing.aliyuncs.com",
+            :access_key_id => ENV["OSS_KEY_ID"],
+            :access_key_secret => ENV["OSS_KEY_SECRET"]
+          ).
+          get_bucket("ad-sdk").
+          put_object("iOS/Archived/#{ENV["TRAVIS_TAG"]}/#{allThirdPartysSource}", :file => allThirdPartysSource)
+        end
+      end
+      FileUtils.mv(iOSDownloadPage,"../docs/iOSDownloadPage.md")
+    end
+    
+
+
+  end
 
   # You can define as many lanes as you want
 
