@@ -166,6 +166,11 @@ platform :ios do
         FileUtils.mv(srcThirdSDKPath,targetThirdSDKPath)
         
         thirdSource = "#{thirdYumiMediationAdapterName}.tar.bz2"
+        remoteAddress = "http://adsdk.yumimobi.com/iOS/Archived/#{ENV["TRAVIS_TAG"]}/#{thirdSource}"
+        File.open(iOSDownloadPage, "a") do |file|
+          file.puts("[#{thirdParty}](#{remoteAddress})")
+          file.puts(" ")
+        end
         Dir.chdir("#{sdkVersion}/YumiMediationThirdPartys") do
           # compress and upload to oss
           sh "tar cjf #{thirdSource} #{thirdYumiMediationAdapterName}"
@@ -178,10 +183,6 @@ platform :ios do
             get_bucket("ad-sdk").
             put_object("iOS/Archived/#{ENV["TRAVIS_TAG"]}/#{thirdSource}", :file => thirdSource)
           end
-        remoteAddress = "http://adsdk.yumimobi.com/iOS/Archived/#{ENV["TRAVIS_TAG"]}/#{thirdSource}"
-        File.open("#{iOSDownloadPage}", "w") do |file|
-          file.puts("[#{thirdParty}](#{remoteAddress})")
-        end
         end
       end
     end
