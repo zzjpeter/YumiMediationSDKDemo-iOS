@@ -81,7 +81,6 @@ platform :ios do
     delete_keychain(
       name: keychain_name
     )
-
   end
 
   desc "push archived files to oss"
@@ -94,7 +93,7 @@ platform :ios do
     thirdPartyPathName = mediationSDKPath +'/YumiMediationThirdPartys'
     debugcenterPathName = mediationSDKPath +'/YumiMediationDebugCenter-iOS'
     yumiMediationSDKPathName = mediationSDKPath +'/YumiMediationSDK'
-    iOSDownloadPage = "iOSDownloadPage.md"
+    iOSDownloadPage =  mediationSDKPath + "/iOSDownloadPage.md"
 
     fastlane_require "aliyun/oss"
     fastlane_require "retries"
