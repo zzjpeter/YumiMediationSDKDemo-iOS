@@ -1,5 +1,3 @@
-[TOC]
-
 # YumiMediationSDK iOS
 
 ## 概述
@@ -461,17 +459,15 @@ view.backgroundColor = [UIColor redColor];
 
 ### 图示
 
-
-
 <img src="resources/debug-1.png" width="240" height="426">
 
   										*选择平台类型*
 
-<img src="resources/debug-2.png"width="240" height="426">
+<img src="resources/debug-2.png" width="240" height="426">
 
  								   *选择单一平台，灰色平台为已添加未配置*
 
-<img src="resources/debug-3.png"width="240" height="426">
+<img src="resources/debug-3.png" width="240" height="426">
 
 ​									*选择广告类型，调试单一平台*
 
