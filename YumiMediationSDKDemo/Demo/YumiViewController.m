@@ -86,7 +86,6 @@
 }
 
 #pragma mark : - provate method
-
 - (void)showMessage {
     [self.view makeToast:@"placementID is nil or  The length error " duration:1.0 position:CSToastPositionCenter];
 }

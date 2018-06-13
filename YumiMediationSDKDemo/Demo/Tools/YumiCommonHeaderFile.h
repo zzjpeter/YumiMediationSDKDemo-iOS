@@ -6,10 +6,9 @@
 //  Copyright © 2017年 JiaDingYi. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 #ifndef YumiCommonHeaderFile_h
 #define YumiCommonHeaderFile_h
+#import <Foundation/Foundation.h>
 typedef enum : NSUInteger {
     YumiAdBanner,
     YumiAdInterstitial,

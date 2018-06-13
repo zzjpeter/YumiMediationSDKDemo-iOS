@@ -10,7 +10,7 @@
 #import "YumiCommonHeaderFile.h"
 #import <YumiMediationSDK/YumiMediationConstants.h>
 
-static NSString *const placementID = @"k21ubzif";
+static NSString *const placementID = @"w8isycd7"; // banner placementID
 static NSString *const channelID = @"";
 static NSString *const versionID = @"";
 
