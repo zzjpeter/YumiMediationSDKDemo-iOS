@@ -110,7 +110,7 @@ platform :ios do
       sdkSource = "YumiMediationSDK-iOS.tar.bz2"
       sdkRemoteAddress = "http://adsdk.yumimobi.com/iOS/Archived/#{ENV["TRAVIS_TAG"]}/#{sdkSource}"
       File.open(iOSDownloadPage,"a") do |file|
-      	file.puts("SDK Version" + "#{ENV["TRAVIS_TAG"]")
+      	file.puts("SDK Version" + "#{ENV["TRAVIS_TAG"]}")
         file.puts("[YumiMediationSDK-iOS](#{sdkRemoteAddress})")
         file.puts(" ")
       end
