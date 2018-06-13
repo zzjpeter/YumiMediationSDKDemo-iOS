@@ -293,11 +293,11 @@ Please ensure your app has initialized YumiMediationSDK before calling debug mod
 
   										*Select platform integration category*
 
-<img src="resources/debug-2.png"width="240" height="426">
+<img src="resources/debug-2.png" width="240" height="426">
 
  								   *Select single platform, the grey indicates  not configurated yet*
 
-<img src="resources/debug-3.png"width="240" height="426">
+<img src="resources/debug-3.png" width="240" height="426">
 
 ​									*select ad category, debug single platform*
 
