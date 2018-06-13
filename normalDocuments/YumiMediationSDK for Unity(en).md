@@ -20,7 +20,7 @@
 
 1. Double-click YumiMediationPlugins.unitypackage and import all files into Unity project
 
-   <img src="resources/UnityPackage.png" width="300" height="500"> 
+   <img src="resources/UnityPackage1.png" width="300" height="500"> 
 
 2. Add Component 
 
@@ -60,23 +60,17 @@ Upload app to App Store, and add the following peimissions to info.plist.
 <key>NSPhotoLibraryUsageDescription</key>
 <string>App shall access photos with your permission</string>
 ```
-## Integration Method
+##  Third-party SDK Integration Method
 
 1. CocoaPods ( recommend )
 
-   CocoaPods is a dependency manager for ios, which will make it easy to manage YumiMediationSDK.
+   CocoaPods is a dependency manager for ios, which will make it easy to manage  third-party SDK.
 
    Open Podfile, add one of the following methods to target.
 
    If use CocoaPods for the first time, please view [CocoaPods Guides](https://guides.cocoapods.org/using/using-cocoapods.html) 。
 
-   1. If need YumiMediationSDK only:
-
-      ```ruby
-      pod "YumiMediationSDK"
-      ```
-
-   2. If also need other platforms:
+   1. If also need other platforms:
 
       ```ruby
       pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','StartApp','Unity','Vungle','PlayableAds','Centrixlink','Mobvista','OneWay','TouTiao']
@@ -90,19 +84,17 @@ Upload app to App Store, and add the following peimissions to info.plist.
 
    Finally, open project by workspace.。
 
-2. Manually Integrating YumiMediationSDK
+2. Manually Integrating  third-party SDK
 
    1. Choose third-party SDK
 
    2. Download third-party SDK
 
-   3. Download YumiMediationSDK
-
-   4. Add YumiMediationSDK to your project
+   3. Add  third-party SDK to your project
 
    <img src="resources/addFiles.png" width="280" height="320"> 
 
-   <img src="resources/addFiles-2.png" width="500" height="400"> 
+   <img src="resources/addFiles-3.png" width="500" height="400"> 
 
 
 ## Code Sample
@@ -255,34 +247,20 @@ void yumiMediationVideoDidRewardEvent(){
 
 Please select debug mode if you want to test whether ad ruturn is available for an app.
 
-Please ensure your app has initialized YumiMediationSDK before calling debug mode.
-
-### Integration Method
-
-- CocoaPods ( recommend )
-
-  ```ruby
-  pod "YumiMediationDebugCenter-iOS" 
-  ```
-
-
-- Manually Integrating YumiMediationSDK
-
-  Unzip the downloaded file to get our ``YumiMediationDebugCenter-iOS.framework``. Select this framework and add them to your project. Make sure to have 'Copy Items' checked.
-
 ### Call debug mode
 
-```objective-c
-#import <YumiMediationDebugCenter-iOS/YumiMediationDebugController.h>
+```c#
+YumiMediationSDK_Unity.presentYumiMediationDebugCenter (" your banner placementID"," your interstitial placementID","your video placementID","your native placementID","your channelID","your versionID");
+```
 
-[[YumiMediationDebugController sharedInstance] 
-	presentWithBannerPlacementID:@"Your BannerPlacementID"
-	     interstitialPlacementID:@"Your interstitialPlacementID"
-	            videoPlacementID:@"Your videoPlacementID"
-	           nativePlacementID:@"Your nativePlacementID"
-	                   channelID:@"Your channelID"
-	                   versionID:@"Your versionID"
-	          rootViewController:self];//your rootVC
+### Reset banner size of debug mode
+
+```c#
+/// Required to set this banner view to a proper size. Use one of the predefined standard ad sizes (such as kYumiMediationAdViewBanner320x50) If you want to specify the ad size you need to set it before calling 'presentYumiMediationDebugCenter'
+/// default: iPhone and iPod Touch ad size. Typically 320x50.
+/// default: iPad ad size. Typically 728x90.
+/// If you do not need to change the default values, do not execute the following code.
+YumiMediationSDK_Unity.setBannerSizeInDebugCenter (YumiMediationSDK_Unity.YumiMediationAdViewBannerSize.kYumiMediationAdViewBanner300x250);
 ```
 
 ### Sample
@@ -293,11 +271,11 @@ Please ensure your app has initialized YumiMediationSDK before calling debug mod
 
   										*Select platform integration category*
 
-<img src="resources/debug-2.png" width="240" height="426">
+<img src="resources/debug-2.png"width="240" height="426">
 
  								   *Select single platform, the grey indicates  not configurated yet*
 
-<img src="resources/debug-3.png" width="240" height="426">
+<img src="resources/debug-3.png"width="240" height="426">
 
 ​									*select ad category, debug single platform*
 

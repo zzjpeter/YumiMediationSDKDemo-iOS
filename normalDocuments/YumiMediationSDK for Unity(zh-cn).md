@@ -20,7 +20,7 @@
 
 1. 双击 YumiMediationPlugins.unitypackage 将所有文件导入 Unity 工程
 
-   <img src="resources/UnityPackage.png" width="300" height="500"> 
+   <img src="resources/UnityPackage1.png" width="300" height="500"> 
 
 2. Add Component 
 
@@ -60,27 +60,22 @@ WWDC 15 提出的 ATS (App Transport Security) 是 Apple 在推进网络通讯�
 <key>NSPhotoLibraryUsageDescription</key>
 <string>App需要您的同意,才能访问相册</string>
 ```
-## 接入方式
+## 三方SDK接入方式
 
 1. CocoaPods (推荐)
 
-   CocoaPods 是 iOS 的依赖管理工具，使用它可以轻松管理 YumiMediationSDK。
+   CocoaPods 是 iOS 的依赖管理工具，使用它可以轻松管理您的三方SDK。
 
    打开您工程的 Podfile，选择下面其中一种方式添加到您应用的 target。
 
    如果您是初次使用 CocoaPods，请查阅 [CocoaPods Guides](https://guides.cocoapods.org/using/using-cocoapods.html) 。
 
-   1. 如果您只需要 YumiMediationSDK 
-
-      ```ruby
-      pod "YumiMediationSDK"
-      ```
-
-   2. 如果您需要聚合其他平台
+   1. 如果您需要聚合其他平台
 
       ```ruby
       pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','StartApp','Unity','Vungle','PlayableAds','Centrixlink','Mobvista','OneWay','TouTiao']
       ```
+
 
    接下来在命令行界面中运行：
 
@@ -90,19 +85,17 @@ WWDC 15 提出的 ATS (App Transport Security) 是 Apple 在推进网络通讯�
 
    最终通过 workspace 打开工程。
 
-2. 手动集成 YumiMediationSDK
+2. 手动集成三方SDK
 
    1. 三方 SDK 选择
 
    2. 三方 SDK 下载
 
-   3. YumiMediationSDK 下载
-
-   4. 添加 YumiMediationSDK 到您的工程
+   3. 添加 三方SDK 到您的工程
 
    <img src="resources/addFiles.png" width="280" height="320"> 
 
-   <img src="resources/addFiles-2.png" width="500" height="400"> 
+   <img src="resources/addFiles-3.png" width="500" height="400"> 
 
 
 ## 代码集成示例
@@ -253,36 +246,22 @@ void yumiMediationVideoDidRewardEvent(){
 
 ## 调试模式
 
-如果您想调试平台key是否有广告返回，可选择调试模式。
-
-调用调试模式之前，请保证您的 app 已经初始化 YumiMediationSDK 。
-
-### 接入方式
-
-- CocoaPods（推荐）
-
-  ```ruby
-  pod "YumiMediationDebugCenter-iOS" 
-  ```
-
-
-- 手动方式
-
-  将下载好的``YumiMediationDebugCenter-iOS.framework``加入``Xcode``工程即可。 
+如果您想调试平台key是否有广告返回，可选择调试模式。 
 
 ### 调用调试模式
 
-```objective-c
-#import <YumiMediationDebugCenter-iOS/YumiMediationDebugController.h>
+```c#
+YumiMediationSDK_Unity.presentYumiMediationDebugCenter (" your banner placementID"," your interstitial placementID","your video placementID","your native placementID","your channelID","your versionID");
+```
 
-[[YumiMediationDebugController sharedInstance] 
-	presentWithBannerPlacementID:@"Your BannerPlacementID"
-	     interstitialPlacementID:@"Your interstitialPlacementID"
-	            videoPlacementID:@"Your videoPlacementID"
-	           nativePlacementID:@"Your nativePlacementID"
-	                   channelID:@"Your channelID"
-	                   versionID:@"Your versionID"
-	          rootViewController:self];//your rootVC
+### 设置调试模式的banner尺寸
+
+```c#
+//目前我们支持三种尺寸
+//在 iPhone 上默认为 320 * 50，如无调整不需设置下列代码。
+//在 iPad 上默认为 728 * 90，如无调整不需设置下列代码。
+//如果您有特殊需求，300 * 250 为可选项。请在 presentYumiMediationDebugCenter 之前，执行下列代码。
+YumiMediationSDK_Unity.setBannerSizeInDebugCenter (YumiMediationSDK_Unity.YumiMediationAdViewBannerSize.kYumiMediationAdViewBanner300x250);
 ```
 
 ### 图示
@@ -293,11 +272,11 @@ void yumiMediationVideoDidRewardEvent(){
 
   										*选择平台类型*
 
-<img src="resources/debug-2.png" width="240" height="426">
+<img src="resources/debug-2.png"width="240" height="426">
 
  								   *选择单一平台，灰色平台为已添加未配置*
 
-<img src="resources/debug-3.png" width="240" height="426">
+<img src="resources/debug-3.png"width="240" height="426">
 
 ​									*选择广告类型，调试单一平台*
 
