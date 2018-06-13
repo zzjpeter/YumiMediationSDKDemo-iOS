@@ -1,5 +1,3 @@
-[TOC]
-
 # YumiMediationSDK for Unity
 
 ## Summary
@@ -265,17 +263,15 @@ YumiMediationSDK_Unity.setBannerSizeInDebugCenter (YumiMediationSDK_Unity.YumiMe
 
 ### Sample
 
-
-
 <img src="resources/debug-1.png" width="240" height="426">
 
   										*Select platform integration category*
 
-<img src="resources/debug-2.png"width="240" height="426">
+<img src="resources/debug-2.png" width="240" height="426">
 
  								   *Select single platform, the grey indicates  not configurated yet*
 
-<img src="resources/debug-3.png"width="240" height="426">
+<img src="resources/debug-3.png" width="240" height="426">
 
 ​									*select ad category, debug single platform*
 
