@@ -461,19 +461,13 @@ Please select debug mode if you want to test whether ad ruturn is available for 
 
 <img src="resources/debug-1.png" width="240" height="426">
 
-  										*Select platform integration category*
+Select platform integration category
 
 <img src="resources/debug-2.png" width="240" height="426">
 
- 								   *Select single platform, the grey indicates  not configurated yet.*
+Select single platform, the grey indicates  not configurated yet.
 
 <img src="resources/debug-3.png" width="240" height="426">
 
-​									*select ad category, debug single platform*
-
-
-
-
-
-
+select ad category, debug single platform
 
