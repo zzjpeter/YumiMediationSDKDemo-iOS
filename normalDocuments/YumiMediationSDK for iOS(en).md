@@ -65,7 +65,7 @@ Upload app to App Store, and add the following peimissions to info.plist.
    2. If also need other platforms:
 
       ```ruby
-      pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','StartApp','Unity','Vungle','Centrixlink','Mobvista','PlayableAds','OneWay','TouTiao']
+      pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','StartApp','Unity','Vungle','Centrixlink','Mobvista','OneWay','TouTiao']
       ```
 
    Then run the followings at command line interface:

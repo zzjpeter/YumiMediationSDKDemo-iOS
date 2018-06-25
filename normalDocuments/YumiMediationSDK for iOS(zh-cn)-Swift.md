@@ -67,7 +67,7 @@ CocoaPods 是 iOS 的依赖管理工具，使用它可以轻松管理 YumiMediat
 2. 如果您需要聚合其他平台
 
    ```ruby
-   pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','StartApp','Unity','Vungle','PlayableAds','Centrixlink','Mobvista','OneWay','TouTiao']
+   pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','StartApp','Unity','Vungle','Centrixlink','Mobvista','OneWay','TouTiao']
    ```
 
 接下来在命令行界面中运行：
