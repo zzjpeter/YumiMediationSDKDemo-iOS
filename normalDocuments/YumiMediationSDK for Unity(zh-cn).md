@@ -87,7 +87,7 @@
 
 2. 手动集成三方SDK
 
-   1. 三方 SDK 选择 [download page](ddd)
+   1. 三方 SDK 选择 ([SDKDownloadPage-iOS](https://github.com/yumimobi/YumiMediationSDKDemo-iOS/blob/master/normalDocuments/iOSDownloadPage.md)) 
    2. 添加 三方SDK 到您的工程
 
    <img src="resources/addFiles.png" width="280" height="320"> 

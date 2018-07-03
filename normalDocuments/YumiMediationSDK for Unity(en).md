@@ -87,7 +87,7 @@ Finally, open project by workspace.。
 
 - Manually Integrating  third-party SDK
 
-  1. Download third-party SDK [download page](dd)
+  1. Download third-party SDK ([SDKDownloadPage-iOS](https://github.com/yumimobi/YumiMediationSDKDemo-iOS/blob/master/normalDocuments/iOSDownloadPage.md)) 
   2. Add  third-party SDK to your project
 
   <img src="resources/addFiles.png" width="280" height="320"> 

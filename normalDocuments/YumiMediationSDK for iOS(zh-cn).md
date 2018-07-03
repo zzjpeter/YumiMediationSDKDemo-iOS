@@ -78,7 +78,7 @@
 
 - 手动集成 YumiMediationSDK
 
-   1. 下载 （[**SDKDownloadPage-iOS**](https://github.com/yumimobi/YumiMediationSDKDemo-iOS/blob/master/normalDocuments/iOSDownloadPage.md)） YumiMediationSDK 及您所需的三方平台
+   1. 下载 ([SDKDownloadPage-iOS](https://github.com/yumimobi/YumiMediationSDKDemo-iOS/blob/master/normalDocuments/iOSDownloadPage.md)) YumiMediationSDK 及您所需的三方平台
 
    2. 添加 YumiMediationSDK 及您所需的三方平台到您的工程
 
