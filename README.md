@@ -9,5 +9,5 @@
 
 [**YumiMediationSDK for Unity(en)**](https://github.com/yumimobi/YumiMediationSDKDemo-iOS/blob/master/normalDocuments/YumiMediationSDK%20for%20Unity(en).md)
 
-[**SDKDownloadPage-iOS**](https://github.com/yumimobi/YumiMediationSDKDemo-iOS/blob/master/docs/iOSDownloadPage.md)
+[**SDKDownloadPage-iOS**](https://github.com/yumimobi/YumiMediationSDKDemo-iOS/blob/master/normalDocuments/iOSDownloadPage.md)
 

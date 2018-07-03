@@ -78,24 +78,25 @@
   Finally, open project by workspace. 
 
 - Manually Integrating YumiMediationSDK
-  1. Download ([DownLoadPage](https://github.com/yumimobi/YumiMediationSDKDemo-iOS/blob/master/docs/iOSDownloadPage.md)) YumiMediationSDK and third-party SDK which you need.
+
+  1. Download ([**SDKDownloadPage-iOS**](https://github.com/yumimobi/YumiMediationSDKDemo-iOS/blob/master/normalDocuments/iOSDownloadPage.md)) YumiMediationSDK and third-party SDK which you need.
   2. Add YumiMediationSDK and third-party SDK to your project
 
-<img src="resources/addFiles.png" width="280" height="320"> 
+  <img src="resources/addFiles.png" width="280" height="320"> 
 
-<img src="resources/addFiles-2.png" width="500" height="400"> 
+  <img src="resources/addFiles-2.png" width="500" height="400"> 
 
 3. Script configuration
 
    Add YUMISDKConfig according to steps as shown.
 
-![ios02](resources/ios02.png) 
+   ![ios02](resources/ios02.png) 
 
 4. Import Framework
 
    Import system dynamic libraries as shown.
 
-![ios06](resources/ios06.png) 
+   ![ios06](resources/ios06.png) 
 
 ## Code Sample
 
@@ -434,6 +435,8 @@ Please ensure your app has initialized YumiMediationSDK before calling debug mod
 
 
 - Manually Integrating YumiMediationSDK
+
+  [**DownloadPage-iOS**](https://github.com/yumimobi/YumiMediationSDKDemo-iOS/blob/master/normalDocuments/iOSDownloadPage.md)
 
   Unzip the downloaded file to get our ``YumiMediationDebugCenter-iOS.framework``. Select this framework and add them to your project. Make sure to have 'Copy Items' checked.
 

@@ -78,25 +78,25 @@
 
 - 手动集成 YumiMediationSDK
 
-   1. 下载 （ [DownloadPage](https://github.com/yumimobi/YumiMediationSDKDemo-iOS/blob/master/docs/iOSDownloadPage.md)） YumiMediationSDK 及您所需的三方平台
+   1. 下载 （[**SDKDownloadPage-iOS**](https://github.com/yumimobi/YumiMediationSDKDemo-iOS/blob/master/normalDocuments/iOSDownloadPage.md)） YumiMediationSDK 及您所需的三方平台
 
    2. 添加 YumiMediationSDK 及您所需的三方平台到您的工程
 
-   <img src="resources/addFiles.png" width="280" height="320"> 
+      <img src="resources/addFiles.png" width="280" height="320"> 
 
-   <img src="resources/addFiles-2.png" width="500" height="400"> 
+      <img src="resources/addFiles-2.png" width="500" height="400"> 
 
    3. 配置脚本
 
       按照如图所示步骤，添加 YumiMediationSDKConfig.xcconfig
 
-   ![ios02](resources/ios02.png) 
+      ![ios02](resources/ios02.png) 
 
    4. 导入 Framework
 
       导入如图所示的系统动态库。
 
-   ![ios06](resources/ios06.png) 
+      ![ios06](resources/ios06.png) 
 
 ## 代码集成示例
 
@@ -438,7 +438,7 @@
 
   将下载好的``YumiMediationDebugCenter-iOS.framework``加入``Xcode``工程即可。 
 
-  [下载地址](https://github.com/yumimobi/YumiMediationSDKDemo-iOS/blob/master/docs/iOSDownloadPage.md)
+  [**DownloadPage-iOS**](https://github.com/yumimobi/YumiMediationSDKDemo-iOS/blob/master/normalDocuments/iOSDownloadPage.md)
 
 ### 调用调试模式
 
