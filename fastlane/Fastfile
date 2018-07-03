@@ -110,10 +110,11 @@ platform :ios do
       sdkSource = "YumiMediationSDK-iOS.tar.bz2"
       sdkRemoteAddress = "http://adsdk.yumimobi.com/iOS/Archived/#{ENV["TRAVIS_TAG"]}/#{sdkSource}"
       File.open(iOSDownloadPage,"a") do |file|
-        file.puts("SDK Version" +" " + "#{ENV["TRAVIS_TAG"]}")
+        file.puts("### SDK Download List" +" " + "#{ENV["TRAVIS_TAG"]}")
         file.puts(" ")
-        file.puts("[YumiMediationSDK-iOS](#{sdkRemoteAddress})")
-        file.puts(" ")
+        file.puts("|    Name     | Version  | Support AdType | DownloadLink | Note |")
+        file.puts("| :---------: | :------: | :------------: | :----------: | :--: |")
+        file.puts("|    YumiMediationSDK    |  #{ENV["TRAVIS_TAG"]}  |    B+I+V+N+S     |   [link](#{sdkRemoteAddress})   |      |")
       end
       Dir.chdir("#{sdkVersion}") do
         #compress and upload to oss
@@ -136,8 +137,7 @@ platform :ios do
       debugCenterSource = "YumiMediationDebugCenter-iOS.tar.bz2"
       debugRemoteAddress = "http://adsdk.yumimobi.com/iOS/Archived/#{ENV["TRAVIS_TAG"]}/#{debugCenterSource}"
       File.open(iOSDownloadPage,"a") do |file|
-        file.puts("[YumiMediationDebugCenter-iOS](#{debugRemoteAddress})")
-        file.puts(" ")
+        file.puts("|    YumiMediationDebugCenter    |  #{ENV["TRAVIS_TAG"]}  |         |   [link](#{debugRemoteAddress})   |      |")
       end
       Dir.chdir("#{sdkVersion}") do
         #compress and upload to oss
@@ -170,8 +170,7 @@ platform :ios do
         thirdSource = "#{thirdYumiMediationAdapterName}.tar.bz2"
         remoteAddress = "http://adsdk.yumimobi.com/iOS/Archived/#{ENV["TRAVIS_TAG"]}/#{thirdSource}"
         File.open(iOSDownloadPage, "a") do |file|
-          file.puts("[#{thirdParty}](#{remoteAddress})")
-          file.puts(" ")
+          file.puts("|    #{thirdParty}    |  #{ENV["TRAVIS_TAG"]}  |         |   [link](#{remoteAddress})   |      |")
         end
         Dir.chdir("#{sdkVersion}/YumiMediationThirdPartys") do
           # compress and upload to oss
@@ -192,8 +191,15 @@ platform :ios do
       allThirdPartysSource = "allThirdPartys.tar.bz2"
       remoteAllThirdPartysAddress = "http://adsdk.yumimobi.com/iOS/Archived/#{ENV["TRAVIS_TAG"]}/#{allThirdPartysSource}"
       File.open(iOSDownloadPage, "a") do |file|
-        file.puts("[allThirdPartys](#{remoteAllThirdPartysAddress})")
+        file.puts("|    AllThirdPartysAdapter    |  #{ENV["TRAVIS_TAG"]}  |         |   [link](#{remoteAllThirdPartysAddress})   |      |")
         file.puts(" ")
+        file.puts("| shortName |   FullName   |")
+        file.puts("| :-------: | :----------: |")
+        file.puts("|     B     |    Banner    |")
+        file.puts("|     I     | Interstitial |")
+        file.puts("|     V     |    Video     |")
+        file.puts("|     N     |    Native    |")
+        file.puts("|     S     |    Stream    |")
       end
       Dir.chdir(sdkVersion) do
         sh "tar cjf #{allThirdPartysSource} YumiMediationThirdPartys"
