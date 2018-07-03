@@ -18,6 +18,8 @@
 
 1. Double-click YumiMediationPlugins.unitypackage and import all files into Unity project
 
+   [YumiMediationUnityPlugins_v3.3.5 download](http://adsdk.yumimobi.com/iOS/Archived/3.3.5/YumiMediationUnityPlugins%20v335.unitypackage)
+
    <img src="resources/UnityPackage1.png" width="300" height="500"> 
 
 2. Add Component 
@@ -28,71 +30,69 @@
 
 ## Develop Encironment Configuration 
 
-### App Transport Security
+- ### App Transport Security
 
-ATS (App Transport Security) proposed by WWDC 15 features an important method for Apple to boost network communication security. Non-HTTPS access will be banned by default for ios 9 and later.
+  ATS (App Transport Security) proposed by WWDC 15 features an important method for Apple to boost network communication security. Non-HTTPS access will be banned by default for ios 9 and later.
 
-As most of materials are provided by HTTP, please set as the followings to improve fillrate：
+  As most of materials are provided by HTTP, please set as the followings to improve fillrate：
 
-```objective-c
-<key>NSAppTransportSecurity</key>
-<dict>
-    <key>NSAllowsArbitraryLoads</key>
-    <true/>
-</dict>
-```
+  ```plsql
+  <key>NSAppTransportSecurity</key>
+  <dict>
+      <key>NSAllowsArbitraryLoads</key>
+      <true/>
+  </dict>
+  ```
 
-![ats_exceptions](resources/ats_exceptions.png)
+  ![ats_exceptions](resources/ats_exceptions.png)
 
-*The `NSAllowsArbitraryLoads` exception is required to make sure your ads are not impacted by ATS on iOS 9 devices, while `NSAllowsArbitraryLoadsForMedia` and `NSAllowsArbitraryLoadsInWebContent` are required to make sure your ads are not impacted by ATS on iOS 10 devices.*
+  *The `NSAllowsArbitraryLoads` exception is required to make sure your ads are not impacted by ATS on iOS 9 devices, while `NSAllowsArbitraryLoadsForMedia` and `NSAllowsArbitraryLoadsInWebContent` are required to make sure your ads are not impacted by ATS on iOS 10 devices.*
 
-### Permissions for ios 9 and later
+- ### Permissions for ios 9 and later
 
-Upload app to App Store, and add the following peimissions to info.plist.
+  Upload app to App Store, and add the following peimissions to info.plist.
 
-```objective-c
-<-- Calendar -->
-<key>NSCalendarsUsageDescription</key>
-<string>App shall access calendar with your permission</string>
-<!-- Photos -->
-<key>NSPhotoLibraryUsageDescription</key>
-<string>App shall access photos with your permission</string>
-```
+  ```plsql
+  <-- Calendar -->
+  <key>NSCalendarsUsageDescription</key>
+  <string>App shall access calendar with your permission</string>
+  <!-- Photos -->
+  <key>NSPhotoLibraryUsageDescription</key>
+  <string>App shall access photos with your permission</string>
+  ```
+
 ##  Third-party SDK Integration Method
 
-1. CocoaPods ( recommend )
+- CocoaPods ( recommend )
 
-   CocoaPods is a dependency manager for ios, which will make it easy to manage  third-party SDK.
+  CocoaPods is a dependency manager for ios, which will make it easy to manage  third-party SDK.
 
-   Open Podfile, add one of the following methods to target.
+  Open Podfile, add one of the following methods to target.
 
-   If use CocoaPods for the first time, please view [CocoaPods Guides](https://guides.cocoapods.org/using/using-cocoapods.html) 。
+  If use CocoaPods for the first time, please view [CocoaPods Guides](https://guides.cocoapods.org/using/using-cocoapods.html) 。
 
-   1. If also need other platforms:
+  - If also need other platforms:
 
-      ```ruby
-      pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','StartApp','Unity','Vungle','Centrixlink','Mobvista','OneWay','TouTiao']
-      ```
+    ```ruby
+    pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','StartApp','Unity','Vungle','Centrixlink','Mobvista','OneWay','TouTiao']
+    ```
 
-   Then run the followings at command line interface:
+  - Then run the followings at command line interface:
 
-   ```ruby
-   $ pod install --repo-update
-   ```
+    ```ruby
+    $ pod install --repo-update
+    ```
 
-   Finally, open project by workspace.。
+Finally, open project by workspace.。
 
-2. Manually Integrating  third-party SDK
+- Manually Integrating  third-party SDK
 
-   1. Choose third-party SDK
+  1. Download third-party SDK ([SDKDownloadPage-iOS](https://github.com/yumimobi/YumiMediationSDKDemo-iOS/blob/master/normalDocuments/iOSDownloadPage.md)) 
+  2. Add  third-party SDK to your project
 
-   2. Download third-party SDK
+  <img src="resources/addFiles.png" width="280" height="320"> 
 
-   3. Add  third-party SDK to your project
-
-   <img src="resources/addFiles.png" width="280" height="320"> 
-
-   <img src="resources/addFiles-3.png" width="500" height="400"> 
+  <img src="resources/addFiles-3.png" width="500" height="400"> 
 
 
 ## Code Sample
@@ -101,69 +101,69 @@ Upload app to App Store, and add the following peimissions to info.plist.
 
 #### Banner
 
-##### Initialization
+- ##### Initialization
 
-```c
-//banner position
-public enum YumiMediationBannerPosition{
-		YumiMediationBannerPositionTop,
-		YumiMediationBannerPositionBottom
-	}
-```
+  ```c#
+  //banner position
+  public enum YumiMediationBannerPosition{
+  		YumiMediationBannerPositionTop,
+  		YumiMediationBannerPositionBottom
+  	}
+  ```
 
-```c
-YumiMediationSDK_Unity.initYumiMediationBanner("Your PlacementID","Your channelID",
-                                               "Your versionID",                                             YumiMediationSDK_Unity.YumiMediationBannerPosition.YumiMediationBannerPositionBottom);
-```
+  ```c#
+  YumiMediationSDK_Unity.initYumiMediationBanner("Your PlacementID","Your channelID",
+                                                 "Your versionID",                                             YumiMediationSDK_Unity.YumiMediationBannerPosition.YumiMediationBannerPositionBottom);
+  ```
 
-##### Reset banner size
+- ##### Reset banner size
 
-```c#
-/// Required to set this banner view to a proper size. Use one of the predefined standard ad sizes (such as kYumiMediationAdViewBanner320x50) If you want to specify the ad size you need to set it before calling loadAd:
-/// default: iPhone and iPod Touch ad size. Typically 320x50.
-/// default: iPad ad size. Typically 728x90.
-/// If you do not need to change the default values, do not execute the following code.
-YumiMediationSDK_Unity.setBannerAdSize (YumiMediationSDK_Unity.YumiMediationAdViewBannerSize.kYumiMediationAdViewBanner300x250);
-```
+  ```c#
+  /// Required to set this banner view to a proper size. Use one of the predefined standard ad sizes (such as kYumiMediationAdViewBanner320x50) If you want to specify the ad size you need to set it before calling loadAd:
+  /// default: iPhone and iPod Touch ad size. Typically 320x50.
+  /// default: iPad ad size. Typically 728x90.
+  /// If you do not need to change the default values, do not execute the following code.
+  YumiMediationSDK_Unity.setBannerAdSize (YumiMediationSDK_Unity.YumiMediationAdViewBannerSize.kYumiMediationAdViewBanner300x250);
+  ```
 
-##### Request banner
+- ##### Request banner
 
-```c
-YumiMediationSDK_Unity.loadAd(false);
-```
+  ```c#
+  YumiMediationSDK_Unity.loadAd(false);
+  ```
 
-##### Remove Banner
+- ##### Remove Banner
 
-```c
-YumiMediationSDK_Unity.removeBanner();
-```
+  ```c#
+  YumiMediationSDK_Unity.removeBanner();
+  ```
 
-##### Delegate implementation 
+- ##### Delegate implementation 
 
-```c#
-void yumiMediationBannerViewDidLoadEvent()
-{
-	Debug.Log("YumiMediationSDKBanner,didLoaded");
-}
-void yumiMediationSDKDidFailToReceiveAdEvent(string error)
-{
-	Debug.Log("YumiMediationSDKBanner,didFailToReceiveAd");
-}
-void yumiMediationBannerViewDidClickEvent()
-{
-	Debug.Log("YumiMediationSDKBanner,didClickedAd");
-}
-```
+  ```c#
+  void yumiMediationBannerViewDidLoadEvent()
+  {
+  	Debug.Log("YumiMediationSDKBanner,didLoaded");
+  }
+  void yumiMediationSDKDidFailToReceiveAdEvent(string error)
+  {
+  	Debug.Log("YumiMediationSDKBanner,didFailToReceiveAd");
+  }
+  void yumiMediationBannerViewDidClickEvent()
+  {
+  	Debug.Log("YumiMediationSDKBanner,didClickedAd");
+  }
+  ```
 
-##### Self-adaptation
+- ##### Self-adaptation
 
-```objective-c
-YumiMediationSDK_Unity.loadAd(false);
-```
+  ```c#
+  YumiMediationSDK_Unity.loadAd(false);
+  ```
 
-You are available to set whether to turn on self-adaptation when making banner request.
+  You are available to set whether to turn on self-adaptation when making banner request.
 
-If isSmartBanner is YES ,YumiMediationBannerView will automatically adapt to size of device.
+  If isSmartBanner is YES ,YumiMediationBannerView will automatically adapt to size of device.
 
  ![fzsy](resources/fzsy.png) ![zsy](resources/zsy.png) 
 
@@ -171,75 +171,77 @@ If isSmartBanner is YES ,YumiMediationBannerView will automatically adapt to siz
 
 #### Interstitial
 
-##### Initialization and interstitial request
+- ##### Initialization and interstitial request
 
-```c#
-YumiMediationSDK_Unity.initYumiMediationInterstitial("Your PlacementID",
-                                                     "Your channelID",
-                                                     "Your versionID");
-```
+  ``` c# 
+  YumiMediationSDK_Unity.initYumiMediationInterstitial("Your PlacementID",
+                                                       "Your channelID",
+                                                       "Your versionID");
+  ```
 
-##### Show Interstitial
+- ##### Show Interstitial
 
-```c#
-YumiMediationSDK_Unity.present();
-```
+  ``` c# 
+  YumiMediationSDK_Unity.present();
+  ```
 
-##### Delegate implementation
+- ##### Delegate implementation
 
-```c#
-void yumiMediationInterstitialDidReceiveAdEvent(){
-	Debug.Log ("YumiMediationInterstital, DidReceiveAd");
-}
-void yumiMediationInterstitialDidFailToReceiveAdEvent(string error){
-	Debug.Log ("YumiMediationInterstital, DidFailToReceiveAd");
-}
-void yumiMediationInterstitialWillDismissScreenEvent(){
-	Debug.Log ("YumiMediationInterstital, WillDismissScreen");
-}
-void yumiMediationInterstitialDidClickEvent() {
-	Debug.Log ("YumiMediationInterstital, DidClicked");
-}
-```
+  ``` c#
+  void yumiMediationInterstitialDidReceiveAdEvent(){
+  	Debug.Log ("YumiMediationInterstital, DidReceiveAd");
+  }
+  void yumiMediationInterstitialDidFailToReceiveAdEvent(string error){
+  	Debug.Log ("YumiMediationInterstital, DidFailToReceiveAd");
+  }
+  void yumiMediationInterstitialWillDismissScreenEvent(){
+  	Debug.Log ("YumiMediationInterstital, WillDismissScreen");
+  }
+  void yumiMediationInterstitialDidClickEvent() {
+  	Debug.Log ("YumiMediationInterstital, DidClicked");
+  }
+  ```
 
 #### Rewarded Video
 
-##### Initialization and rewarded video request
+- ##### Initialization and rewarded video request
 
-```c#
-YumiMediationSDK_Unity.loadYumiMediationVideo("Your PlacementID",
-                                              "Your channelID",
-                                              "Your versionID");
-```
+  ``` c#
+  YumiMediationSDK_Unity.loadYumiMediationVideo("Your PlacementID",
+                                                "Your channelID",
+                                                "Your versionID");
+  ```
 
-##### Determine whether rewarded video is ready.
+  
 
-```c#
-bool isplay = YumiMediationSDK_Unity.isVideoReady();
-```
+- ##### Determine whether rewarded video is ready.
 
-##### Show rewarded video
+  ``` c#
+  bool isplay = YumiMediationSDK_Unity.isVideoReady();
+  ```
 
-```c#
-YumiMediationSDK_Unity.playVideo();
-```
+- ##### Show rewarded video
 
-##### Delegate implementation
+  ``` c#
+  YumiMediationSDK_Unity.playVideo();
+  ```
 
-```objective-c
-void yumiMediationVideoDidOpenEvent(){
-  	Debug.Log ("YumiMediationVideo, DidOpen");
-}
-void yumiMediationVideoDidStartPlayingEvent(){
-	Debug.Log ("YumiMediationVideo, DidStartPlaying");
-}
-void yumiMediationVideoDidCloseEvent(){
-	Debug.Log ("YumiMediationVideo, DidClosed");
-}
-void yumiMediationVideoDidRewardEvent(){
-	Debug.Log ("YumiMediationVideo, DidRewarded");
-}
-```
+- ##### Delegate implementation
+
+  ``` c#
+  void yumiMediationVideoDidOpenEvent(){
+    	Debug.Log ("YumiMediationVideo, DidOpen");
+  }
+  void yumiMediationVideoDidStartPlayingEvent(){
+  	Debug.Log ("YumiMediationVideo, DidStartPlaying");
+  }
+  void yumiMediationVideoDidCloseEvent(){
+  	Debug.Log ("YumiMediationVideo, DidClosed");
+  }
+  void yumiMediationVideoDidRewardEvent(){
+  	Debug.Log ("YumiMediationVideo, DidRewarded");
+  }
+  ```
 
 ## Debug Mode
 

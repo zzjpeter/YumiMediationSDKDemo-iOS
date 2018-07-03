@@ -85,9 +85,28 @@ platform :ios do
 
   desc "push archived files to oss"
   lane :pushOss do
-    #next if ENV["TRAVIS_PULL_REQUEST"] != "false" or ENV["TRAVIS_BRANCH"] != "pushOss"
+
+    allAdapters = [
+      { :name => "AdColony", :version => "3.1.1", :supportAdtype => "V" },
+      { :name => "AdMob", :version => "7.30.0", :supportAdtype => "B+I+V+N" },
+      { :name => "AppLovin", :version => "5.0.2", :supportAdtype => "V+I" },
+      { :name => "Baidu", :version => "4.5.0.1", :supportAdtype => "B+I" },
+      { :name => "Chartboost", :version => "6.6.3", :supportAdtype => "V+I" },
+      { :name => "Domob", :version => "3.6.0", :supportAdtype => "V" },
+      { :name => "Facebook", :version => "4.26.1", :supportAdtype => "B+I+N+V" },
+      { :name => "GDT", :version => "4.7.0", :supportAdtype => "B+I+N+S" },
+      { :name => "InMobi", :version => "6.2.1", :supportAdtype => "B+N+I+V" },
+      { :name => "IronSource", :version => "6.7.6", :supportAdtype => "V" },
+      { :name => "StartApp", :version => "3.4.2", :supportAdtype => "B+I" },
+      { :name => "Unity", :version => "2.1.0", :supportAdtype => "I+V" },
+      { :name => "Vungle", :version => "5.1.0", :supportAdtype => "I+V" },
+      { :name => "Mobvista", :version => "3.3.5", :supportAdtype => "V"},
+      { :name => "Centrixlink", :version => "2.4.1", :supportAdtype => "V"},
+      { :name => "OneWay",:version => "2.1.0", :supportAdtype => "V"},
+      { :name => "TouTiao",:version => "1.2.0", :supportAdtype => "B+I"},
+      #{ :name => "PlayableAds",:version => "2.0.8", :supportAdtype => "V+I"},
+    ]
     sdkVersion = "YumiMediationSDK_v"+ ENV["TRAVIS_TAG"]
-    thirdPartys = ['AdColony','AdMob','Applovin','Baidu','Centrixlink','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','Mobvista','StartApp','Unity','Vungle','OneWay','TouTiao']
     podDir = '../Pods/'
     mediationSDKPath = podDir + sdkVersion
     thirdPartyPathName = mediationSDKPath +'/YumiMediationThirdPartys'
@@ -110,10 +129,11 @@ platform :ios do
       sdkSource = "YumiMediationSDK-iOS.tar.bz2"
       sdkRemoteAddress = "http://adsdk.yumimobi.com/iOS/Archived/#{ENV["TRAVIS_TAG"]}/#{sdkSource}"
       File.open(iOSDownloadPage,"a") do |file|
-        file.puts("SDK Version" +" " + "#{ENV["TRAVIS_TAG"]}")
+        file.puts("### SDK Download List" +" " + "#{ENV["TRAVIS_TAG"]}")
         file.puts(" ")
-        file.puts("[YumiMediationSDK-iOS](#{sdkRemoteAddress})")
-        file.puts(" ")
+        file.puts("|    Name     | Version  | Support AdType | DownloadLink | Note |")
+        file.puts("| :---------: | :------: | :------------: | :----------: | :--: |")
+        file.puts("|    YumiMediationSDK    |  #{ENV["TRAVIS_TAG"]}  |    B+I+V+N+S     |   [link](#{sdkRemoteAddress})   |      |")
       end
       Dir.chdir("#{sdkVersion}") do
         #compress and upload to oss
@@ -136,8 +156,7 @@ platform :ios do
       debugCenterSource = "YumiMediationDebugCenter-iOS.tar.bz2"
       debugRemoteAddress = "http://adsdk.yumimobi.com/iOS/Archived/#{ENV["TRAVIS_TAG"]}/#{debugCenterSource}"
       File.open(iOSDownloadPage,"a") do |file|
-        file.puts("[YumiMediationDebugCenter-iOS](#{debugRemoteAddress})")
-        file.puts(" ")
+        file.puts("|    YumiMediationDebugCenter    |  #{ENV["TRAVIS_TAG"]}  |         |   [link](#{debugRemoteAddress})   |      |")
       end
       Dir.chdir("#{sdkVersion}") do
         #compress and upload to oss
@@ -154,10 +173,14 @@ platform :ios do
       end
 
       #adapter
-      thirdPartys.each do |thirdParty|
-        puts "is copying #{thirdParty}"
-        thirdYumiSDKName = 'Yumi' + thirdParty
-	      thirdYumiMediationAdapterName = 'YumiMediation' + thirdParty
+      allAdapters.each do |thirdParty|
+        adapterName = thirdParty[:name]
+        version = thirdParty[:version]
+        supportAdtype = thirdParty[:supportAdtype]
+
+        puts "is copying #{adapterName}"
+        thirdYumiSDKName = 'Yumi' + adapterName
+	      thirdYumiMediationAdapterName = 'YumiMediation' + adapterName
 	      #copy adapters
 	      srcAdapterPath = podDir + 'YumiMediationAdapters' + '/'+ thirdYumiMediationAdapterName
 	      targetAdapterPath = thirdPartyPathName + '/'+ thirdYumiMediationAdapterName
@@ -170,8 +193,7 @@ platform :ios do
         thirdSource = "#{thirdYumiMediationAdapterName}.tar.bz2"
         remoteAddress = "http://adsdk.yumimobi.com/iOS/Archived/#{ENV["TRAVIS_TAG"]}/#{thirdSource}"
         File.open(iOSDownloadPage, "a") do |file|
-          file.puts("[#{thirdParty}](#{remoteAddress})")
-          file.puts(" ")
+          file.puts("|    #{adapterName}    |  #{version}  |   #{supportAdtype}      |   [link](#{remoteAddress})   |      |")
         end
         Dir.chdir("#{sdkVersion}/YumiMediationThirdPartys") do
           # compress and upload to oss
@@ -192,8 +214,15 @@ platform :ios do
       allThirdPartysSource = "allThirdPartys.tar.bz2"
       remoteAllThirdPartysAddress = "http://adsdk.yumimobi.com/iOS/Archived/#{ENV["TRAVIS_TAG"]}/#{allThirdPartysSource}"
       File.open(iOSDownloadPage, "a") do |file|
-        file.puts("[allThirdPartys](#{remoteAllThirdPartysAddress})")
+        file.puts("|    AllThirdPartysAdapter    |  #{ENV["TRAVIS_TAG"]}  |         |   [link](#{remoteAllThirdPartysAddress})   |      |")
         file.puts(" ")
+        file.puts("| shortName |   FullName   |")
+        file.puts("| :-------: | :----------: |")
+        file.puts("|     B     |    Banner    |")
+        file.puts("|     I     | Interstitial |")
+        file.puts("|     V     |    Video     |")
+        file.puts("|     N     |    Native    |")
+        file.puts("|     S     |    Stream    |")
       end
       Dir.chdir(sdkVersion) do
         sh "tar cjf #{allThirdPartysSource} YumiMediationThirdPartys"
@@ -207,7 +236,7 @@ platform :ios do
           put_object("iOS/Archived/#{ENV["TRAVIS_TAG"]}/#{allThirdPartysSource}", :file => allThirdPartysSource)
         end
       end
-      FileUtils.mv(iOSDownloadPage,"../docs/iOSDownloadPage.md")
+      FileUtils.mv(iOSDownloadPage,"../normalDocuments/iOSDownloadPage.md")
     end
     
 
