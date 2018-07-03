@@ -174,7 +174,7 @@
 - ##### 初始化及请求插屏
 
   ```c#
-YumiMediationSDK_Unity.initYumiMediationInterstitial("Your PlacementID",
+  YumiMediationSDK_Unity.initYumiMediationInterstitial("Your PlacementID",
                                                      "Your channelID",
                                                      "Your versionID");
   ```
