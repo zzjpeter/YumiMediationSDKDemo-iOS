@@ -219,16 +219,16 @@
 
   ```c#
   void yumiMediationInterstitialDidReceiveAdEvent(){
-	  Debug.Log ("YumiMediationInterstital, DidReceiveAd");
+      Debug.Log ("YumiMediationInterstital, DidReceiveAd");
   }
   void yumiMediationInterstitialDidFailToReceiveAdEvent(string error){
-	  Debug.Log ("YumiMediationInterstital, DidFailToReceiveAd");
+      Debug.Log ("YumiMediationInterstital, DidFailToReceiveAd");
   }
   void yumiMediationInterstitialWillDismissScreenEvent(){
-	  Debug.Log ("YumiMediationInterstital, WillDismissScreen");
+      Debug.Log ("YumiMediationInterstital, WillDismissScreen");
   }
   void yumiMediationInterstitialDidClickEvent() {
-  	  Debug.Log ("YumiMediationInterstital, DidClicked");
+      Debug.Log ("YumiMediationInterstital, DidClicked");
   }
   ```
 
@@ -258,16 +258,16 @@
 
   ```objective-c
   void yumiMediationVideoDidOpenEvent(){
-    	Debug.Log ("YumiMediationVideo, DidOpen");
+      Debug.Log ("YumiMediationVideo, DidOpen");
   }
   void yumiMediationVideoDidStartPlayingEvent(){
-  	  Debug.Log ("YumiMediationVideo, DidStartPlaying");
+      Debug.Log ("YumiMediationVideo, DidStartPlaying");
   }
   void yumiMediationVideoDidCloseEvent(){
-	  Debug.Log ("YumiMediationVideo, DidClosed");
+      Debug.Log ("YumiMediationVideo, DidClosed");
   }
   void yumiMediationVideoDidRewardEvent(){
-	  Debug.Log ("YumiMediationVideo, DidRewarded");
+      Debug.Log ("YumiMediationVideo, DidRewarded");
   }
   ```
 

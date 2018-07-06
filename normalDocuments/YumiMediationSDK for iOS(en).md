@@ -195,13 +195,13 @@
   ```objective-c
   //implementing yumiBanner delegate
   - (void)yumiMediationBannerViewDidLoad:(YumiMediationBannerView *)adView{
-  	NSLog(@"adViewDidReceiveAd");
+      NSLog(@"adViewDidReceiveAd");
   }
   - (void)yumiMediationBannerView:(YumiMediationBannerView *)adView didFailWithError:(YumiMediationError *)error{
-    	NSLog(@"adView:didFailToReceiveAdWithError: %@", error);
+      NSLog(@"adView:didFailToReceiveAdWithError: %@", error);
   }
   - (void)yumiMediationBannerViewDidClick:(YumiMediationBannerView *)adView{
-    	NSLog(@"adViewDidClick");
+      NSLog(@"adViewDidClick");
   }
   ```
 
@@ -268,17 +268,17 @@
   ```objective-c
   //implementing YumiMediationInterstitial Delegate
   - (void)yumiMediationInterstitialDidReceiveAd:(YumiMediationInterstitial *)interstitial{
-  	NSLog(@"interstitialDidReceiveAd");
+      NSLog(@"interstitialDidReceiveAd");
   }
   - (void)yumiMediationInterstitial:(YumiMediationInterstitial *)interstitial
                    didFailWithError:(YumiMediationError *)error{
-  	NSLog(@"interstitial:didFailToReceiveAdWithError: %@", error)
+      NSLog(@"interstitial:didFailToReceiveAdWithError: %@", error)
   }
   - (void)yumiMediationInterstitialWillDismissScreen:(YumiMediationInterstitial *)interstitial{
-    	NSLog(@"interstitialWillDismissScreen");
+      NSLog(@"interstitialWillDismissScreen");
   }
   - (void)yumiMediationInterstitialDidClick:(YumiMediationInterstitial *)interstitial{
-    	NSLog(@"interstitialDidClick");
+      NSLog(@"interstitialDidClick");
   }
   ```
 
@@ -316,16 +316,16 @@
 
   ```objective-c
   - (void)yumiMediationVideoDidOpen:(YumiMediationVideo *)video{
-  	NSLog(@"Opened reward video ad.");
+      NSLog(@"Opened reward video ad.");
   }
   - (void)yumiMediationVideoDidStartPlaying:(YumiMediationVideo *)video{
-  	NSLog(@"Reward video ad started playing.");
+      NSLog(@"Reward video ad started playing.");
   }
   - (void)yumiMediationVideoDidClose:(YumiMediationVideo *)video{
-  	NSLog(@"Reward video ad is closed.");
+      NSLog(@"Reward video ad is closed.");
   }
   - (void)yumiMediationVideoDidReward:(YumiMediationVideo *)video{
-    	NSLog(@"is Reward");
+      NSLog(@"is Reward");
   }
   ```
 
@@ -371,19 +371,19 @@
 
   ```objective-c
   - (void)yumiAdsSplashDidLoad:(YumiAdsSplash *)splash{
-  	NSLog(@"yumiAdsSplashDidLoad.");
+      NSLog(@"yumiAdsSplashDidLoad.");
   }
   - (void)yumiAdsSplash:(YumiAdsSplash *)splash DidFailToLoad:(NSError *)error{
-  	NSLog(@"yumiAdsSplash:DidFailToLoad: %@", error)
+      NSLog(@"yumiAdsSplash:DidFailToLoad: %@", error)
   }
   - (void)yumiAdsSplashDidClicked:(YumiAdsSplash *)splash{
-    	NSLog(@"yumiAdsSplashDidClicked.");
+      NSLog(@"yumiAdsSplashDidClicked.");
   }
   - (void)yumiAdsSplashDidClosed:(YumiAdsSplash *)splash{
-    	NSLog(@"yumiAdsSplashDidClosed.");
+      NSLog(@"yumiAdsSplashDidClosed.");
   }
   - (nullable UIImage *)yumiAdsSplashDefaultImage{
-    	return UIImage;//Your default image when app start
+      return UIImage;//Your default image when app start
   }
   ```
 
@@ -411,7 +411,7 @@
   @end
   ```
 
-- #####Register View
+- ##### Register View
 
   ```objective-c
   /**
@@ -451,7 +451,7 @@
   
   /// Tells the delegate that the Native view has been clicked.
   - (void)yumiMediationNativeAdDidClick:(YumiMediationNativeModel *)nativeAd{
-    	NSLog(@"Native Ad Did Click.");
+      NSLog(@"Native Ad Did Click.");
   }
   ```
 
