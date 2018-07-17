@@ -22,7 +22,7 @@
 |    Centrixlink    |  2.4.1  |   V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.6/YumiMediationCentrixlink.tar.bz2)   |      |
 |    OneWay    |  2.1.0  |   V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.6/YumiMediationOneWay.tar.bz2)   |      |
 |    TouTiao    |  1.2.0  |   B+I      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.6/YumiMediationTouTiao.tar.bz2)   |      |
-|    PlayableAds    |  2.0.8  |   V+I      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.6/YumiMediationPlayableAds.tar.bz2)   |      |
+|    PlayableAds (ZplayAds)    |  2.0.8  |   V+I      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.6/YumiMediationPlayableAds.tar.bz2)   |      |
 |    AllThirdPartysAdapter    |  3.3.6  |         |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.6/allThirdPartys.tar.bz2)   |      |
 
 | shortName |   FullName   |
