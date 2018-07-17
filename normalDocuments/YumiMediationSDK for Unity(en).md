@@ -48,7 +48,7 @@
 
 1. Double-click YumiMediationPlugins.unitypackage and import all files into Unity project
 
-   [YumiMediationUnityPlugins_v3.3.5 download](http://adsdk.yumimobi.com/iOS/Archived/3.3.5/YumiMediationUnityPlugins%20v335.unitypackage)
+   [YumiMediationUnityPlugins_v3.3.6 download](https://adsdk.yumimobi.com/iOS/Archived/3.3.6/YumiMediationUnityPlugins_v3.3.6.unitypackage)
 
    <img src="resources/UnityPackage1.png" width="300" height="500"> 
 
@@ -104,7 +104,7 @@
   - If also need other platforms:
 
     ```ruby
-    pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','StartApp','Unity','Vungle','Centrixlink','Mobvista','OneWay','TouTiao']
+    pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','StartApp','Unity','Vungle','Centrixlink','Mobvista','OneWay','TouTiao','PlayableAds']
     ```
 
   - Then run the followings at command line interface:

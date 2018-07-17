@@ -48,7 +48,7 @@
 
 1. 双击 YumiMediationPlugins.unitypackage 将所有文件导入 Unity 工程
 
-   [YumiMediationUnityPlugins_v3.3.5 download](http://adsdk.yumimobi.com/iOS/Archived/3.3.5/YumiMediationUnityPlugins%20v335.unitypackage)
+   [YumiMediationUnityPlugins_v3.3.6 download](https://adsdk.yumimobi.com/iOS/Archived/3.3.6/YumiMediationUnityPlugins_v3.3.6.unitypackage)
 
    <img src="resources/UnityPackage1.png" width="300" height="500"> 
 
@@ -104,7 +104,7 @@
   - 如果您需要聚合其他平台
 
     ```ruby
-    pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','StartApp','Unity','Vungle','Centrixlink','Mobvista','OneWay','TouTiao']
+    pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','StartApp','Unity','Vungle','Centrixlink','Mobvista','OneWay','TouTiao','PlayableAds']
     ```
 
     接下来在命令行界面中运行：
