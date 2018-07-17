@@ -104,7 +104,7 @@ platform :ios do
       { :name => "Centrixlink", :version => "2.4.1", :supportAdtype => "V"},
       { :name => "OneWay",:version => "2.1.0", :supportAdtype => "V"},
       { :name => "TouTiao",:version => "1.2.0", :supportAdtype => "B+I"},
-      #{ :name => "PlayableAds",:version => "2.0.8", :supportAdtype => "V+I"},
+      { :name => "PlayableAds",:version => "2.0.8", :supportAdtype => "V+I"},
     ]
     sdkVersion = "YumiMediationSDK_v"+ ENV["TRAVIS_TAG"]
     podDir = '../Pods/'
@@ -179,12 +179,16 @@ platform :ios do
         supportAdtype = thirdParty[:supportAdtype]
 
         puts "is copying #{adapterName}"
-        thirdYumiSDKName = 'Yumi' + adapterName
-	      thirdYumiMediationAdapterName = 'YumiMediation' + adapterName
-	      #copy adapters
-	      srcAdapterPath = podDir + 'YumiMediationAdapters' + '/'+ thirdYumiMediationAdapterName
-	      targetAdapterPath = thirdPartyPathName + '/'+ thirdYumiMediationAdapterName
-	      srcThirdSDKPath = podDir + thirdYumiSDKName
+        if adapterName != "PlayableAds"
+          thirdYumiSDKName = 'Yumi' + adapterName
+        else
+          thirdYumiSDKName = adapterName 
+        end
+        thirdYumiMediationAdapterName = 'YumiMediation' + adapterName
+        #copy adapters
+        srcAdapterPath = podDir + 'YumiMediationAdapters' + '/'+ thirdYumiMediationAdapterName
+        targetAdapterPath = thirdPartyPathName + '/'+ thirdYumiMediationAdapterName
+        srcThirdSDKPath = podDir + thirdYumiSDKName
         targetThirdSDKPath = thirdPartyPathName + '/'+ thirdYumiMediationAdapterName + '/' +thirdYumiSDKName
 
         FileUtils.mv(srcAdapterPath,targetAdapterPath)
