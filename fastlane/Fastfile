@@ -184,11 +184,11 @@ platform :ios do
         else
           thirdYumiSDKName = adapterName 
         end
-	      thirdYumiMediationAdapterName = 'YumiMediation' + adapterName
-	      #copy adapters
-	      srcAdapterPath = podDir + 'YumiMediationAdapters' + '/'+ thirdYumiMediationAdapterName
-	      targetAdapterPath = thirdPartyPathName + '/'+ thirdYumiMediationAdapterName
-	      srcThirdSDKPath = podDir + thirdYumiSDKName
+        thirdYumiMediationAdapterName = 'YumiMediation' + adapterName
+        #copy adapters
+        srcAdapterPath = podDir + 'YumiMediationAdapters' + '/'+ thirdYumiMediationAdapterName
+        targetAdapterPath = thirdPartyPathName + '/'+ thirdYumiMediationAdapterName
+        srcThirdSDKPath = podDir + thirdYumiSDKName
         targetThirdSDKPath = thirdPartyPathName + '/'+ thirdYumiMediationAdapterName + '/' +thirdYumiSDKName
 
         FileUtils.mv(srcAdapterPath,targetAdapterPath)
