@@ -1,4 +1,4 @@
-# YumiMediationSDKDemo-iOS v3.3.6
+# YumiMediationSDKDemo-iOS v3.3.7
 
 ## Document
 
