@@ -1,4 +1,7 @@
 # YumiMediationSDKDemo-iOS v3.3.7
+## SDK Changelog
+[**SDK Changelog for iOS(zh-cn)**](https://github.com/yumimobi/YumiMediationSDKDemo-Android/blob/master/SDK%20Changelog/SDK%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97.md)
+[**SDK Changelog for iOS(en)**](https://github.com/yumimobi/YumiMediationSDKDemo-Android/blob/master/SDK%20Changelog/SDK%20Changelog.md)
 
 ## Document
 
