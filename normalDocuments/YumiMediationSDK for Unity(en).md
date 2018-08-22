@@ -48,7 +48,7 @@
 
 1. Double-click YumiMediationPlugins.unitypackage and import all files into Unity project
 
-   [YumiMediationUnityPlugins_v3.3.7 download](https://adsdk.yumimobi.com/iOS/Archived/3.3.7/YumiMediationUnityPlugins_v337.unitypackage)
+   [YumiMediationUnityPlugins_v3.3.8 download](https://adsdk.yumimobi.com/iOS/Archived/3.3.8/YumiMediationUnityPlugins_v338.unitypackage)
 
    <img src="resources/UnityPackage1.png" width="300" height="500"> 
 
@@ -197,7 +197,7 @@ Finally, open project by workspace.。
 
  ![fzsy](resources/fzsy.png) ![zsy](resources/zsy.png) 
 
-​	*non self-adaptation mode* 		  *self-adaptation mode*										
+	*non self-adaptation mode* 		  *self-adaptation mode*										
 
 #### Interstitial
 
@@ -241,8 +241,6 @@ Finally, open project by workspace.。
                                                 "Your channelID",
                                                 "Your versionID");
   ```
-
-  
 
 - ##### Determine whether rewarded video is ready.
 
