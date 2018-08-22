@@ -1,9 +1,10 @@
 ### SDK Download List 3.3.8
- 
+
 |    Name     | Version  | Support AdType | DownloadLink | Note |
 | :---------: | :------: | :------------: | :----------: | :--: |
 |    YumiMediationSDK    |  3.3.8  |    B+I+V+N+S     |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.8/YumiMediationSDK-iOS.tar.bz2)   |      |
 |    YumiMediationDebugCenter    |  3.3.8  |         |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.8/YumiMediationDebugCenter-iOS.tar.bz2)   |      |
+| YumiMediationUnityPlugins_v3.3.8.unitypackage | 3.3.8 | | [link](https://adsdk.yumimobi.com/iOS/Archived/3.3.8/YumiMediationUnityPlugins_v338.unitypackage) | |
 |    AdColony    |  3.1.1  |   V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.8/YumiMediationAdColony.tar.bz2)   |      |
 |    AdMob    |  7.30.0  |   B+I+V+N      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.8/YumiMediationAdMob.tar.bz2)   |      |
 |    AppLovin    |  5.0.2  |   V+I      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.8/YumiMediationAppLovin.tar.bz2)   |      |
@@ -18,9 +19,9 @@
 |    Vungle    |  5.1.0  |   I+V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.8/YumiMediationVungle.tar.bz2)   |      |
 |    Mobvista    |  3.9.1  |   V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.8/YumiMediationMobvista.tar.bz2)   |      |
 |    OneWay    |  2.1.0  |   V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.8/YumiMediationOneWay.tar.bz2)   |      |
-|    PlayableAds    |  2.1.0  |   V+I      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.8/YumiMediationPlayableAds.tar.bz2)   |      |
+|    ZplayAds    |  2.1.0  |   V+I      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.8/YumiMediationPlayableAds.tar.bz2)   |      |
 |    AllThirdPartysAdapter    |  3.3.8  |         |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.8/allThirdPartys.tar.bz2)   |      |
- 
+
 | shortName |   FullName   |
 | :-------: | :----------: |
 |     B     |    Banner    |
