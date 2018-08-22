@@ -47,8 +47,7 @@
 ## 导入YumiMediationPlugins.unitypackage
 
 1. 双击 YumiMediationPlugins.unitypackage 将所有文件导入 Unity 工程
-
-   [YumiMediationUnityPlugins_v3.3.7 download](https://adsdk.yumimobi.com/iOS/Archived/3.3.7/YumiMediationUnityPlugins_v337.unitypackage)
+   [YumiMediationUnityPlugins_v3.3.8 download](https://adsdk.yumimobi.com/iOS/Archived/3.3.8/YumiMediationUnityPlugins_v338.unitypackage)
 
    <img src="resources/UnityPackage1.png" width="300" height="500"> 
 
@@ -197,7 +196,7 @@
 
  ![fzsy](resources/fzsy.png) ![zsy](resources/zsy.png) 
 
-​	*非自适应模式* 		  *自适应模式*										
+	*非自适应模式* 		  *自适应模式*										
 
 #### Interstitial
 
