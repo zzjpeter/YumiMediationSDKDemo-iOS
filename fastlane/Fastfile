@@ -96,7 +96,7 @@ platform :ios do
       { :name => "Facebook", :version => "4.99.1", :supportAdtype => "B+I+N+V" },
       { :name => "GDT", :version => "4.7.0", :supportAdtype => "B+I+N+S" },
       { :name => "InMobi", :version => "6.2.1", :supportAdtype => "B+N+I+V" },
-      { :name => "IronSource", :version => "6.7.6", :supportAdtype => "V+I" },
+      { :name => "IronSource", :version => "6.7.10", :supportAdtype => "V+I" },
       { :name => "Unity", :version => "2.1.0", :supportAdtype => "I+V" },
       { :name => "Vungle", :version => "5.1.0", :supportAdtype => "I+V" },
       { :name => "Mobvista", :version => "3.9.1", :supportAdtype => "V"},
