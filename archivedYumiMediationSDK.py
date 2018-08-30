@@ -3,7 +3,7 @@ import os
 import sys
 
 sdkVersion = 'YumiMediationSDK_v'+ sys.argv[1]
-thirdPartys = ['PlayableAds','AdColony','AdMob','Applovin','Baidu','Centrixlink','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','Mobvista','StartApp','Unity','Vungle','OneWay','TouTiao']
+thirdPartys = ['PlayableAds','AdColony','AdMob','Applovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','Mobvista','Unity','Vungle','OneWay']
 podDir = './Pods/'
 mediationSDKPath = podDir + sdkVersion
 thirdPartyPathName = mediationSDKPath +'/YumiMediationThirdPartys'
