@@ -17,7 +17,7 @@
 |                IronSource                | 6.7.10  |      V+I       | [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.8/YumiMediationIronSource.tar.bz2) |      |
 |                  Unity                   |  2.1.0  |      I+V       | [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.8/YumiMediationUnity.tar.bz2) |      |
 |                  Vungle                  |  5.1.0  |      I+V       | [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.8/YumiMediationVungle.tar.bz2) |      |
-|                 Mobvista                 |  3.9.1  |       V        | [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.8/YumiMediationMobvista.tar.bz2) |      |
+|                 Mintegral                 |  3.9.1  |       V        | [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.8/YumiMediationMobvista.tar.bz2) |      |
 |                  OneWay                  |  2.1.0  |       V        | [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.8/YumiMediationOneWay.tar.bz2) |      |
 |                 ZplayAds                 |  2.1.0  |      V+I       | [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.8/YumiMediationPlayableAds.tar.bz2) |      |
 |          AllThirdPartysAdapter           |  3.3.8  |                | [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.8/YumiMediationThirdPartys_1.tar.bz2) |      |
