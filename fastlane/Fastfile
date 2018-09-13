@@ -131,6 +131,7 @@ platform :ios do
         file.puts("|    Name     | Version  | Support AdType | DownloadLink | Note |")
         file.puts("| :---------: | :------: | :------------: | :----------: | :--: |")
         file.puts("|    YumiMediationSDK    |  #{ENV["TRAVIS_TAG"]}  |    B+I+V+N+S     |   [link](#{sdkRemoteAddress})   |      |")
+        file.puts("|        YumiMediationSDKConfig.xcconfig        |  #{ENV["TRAVIS_TAG"]}  |                | [link](https://adsdk.yumimobi.com/iOS/Archived/YumiMediationSDKConfig.xcconfig) |      |")
       end
       Dir.chdir("#{sdkVersion}") do
         #compress and upload to oss
