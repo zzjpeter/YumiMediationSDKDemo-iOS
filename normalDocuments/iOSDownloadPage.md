@@ -8,7 +8,7 @@
 | YumiMediationUnityPlugins_v3.3.8.unitypackage |  3.3.8  |                | [link](https://adsdk.yumimobi.com/iOS/Archived/3.3.8/YumiMediationUnityPlugins_v338.unitypackage) |      |
 |                 AdColony                 |  3.1.1  |       V        | [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.8/YumiMediationAdColony.tar.bz2) |      |
 |                  AdMob                   | 7.30.0  |    B+I+V+N     | [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.8/YumiMediationAdMob.tar.bz2) |      |
-|                 AppLovin                 |  5.0.2  |      V+I       | [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.8/YumiMediationAppLovin.tar.bz2) |      |
+|                 AppLovin                 |  5.0.2  |     B+V+I       | [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.8/YumiMediationAppLovin.tar.bz2) |      |
 |                  Baidu                   | 4.5.0.1 |      B+I       | [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.8/YumiMediationBaidu.tar.bz2) |      |
 |                Chartboost                |  6.6.3  |      V+I       | [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.8/YumiMediationChartboost.tar.bz2) |      |
 |                  Domob                   |  3.8.0  |       V        | [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.8/YumiMediationDomob.tar.bz2) |      |

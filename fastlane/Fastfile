@@ -89,7 +89,7 @@ platform :ios do
     allAdapters = [
       { :name => "AdColony", :version => "3.1.1", :supportAdtype => "V" },
       { :name => "AdMob", :version => "7.30.0", :supportAdtype => "B+I+V+N" },
-      { :name => "AppLovin", :version => "5.0.2", :supportAdtype => "V+I" },
+      { :name => "AppLovin", :version => "5.0.2", :supportAdtype => "B+V+I" },
       { :name => "Baidu", :version => "4.5.0.1", :supportAdtype => "B+I" },
       { :name => "Chartboost", :version => "6.6.3", :supportAdtype => "V+I" },
       { :name => "Domob", :version => "3.8.0", :supportAdtype => "V" },
