@@ -5,6 +5,7 @@
 |    YumiMediationSDK    |  3.3.9  |    B+I+V+N+S     |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.9/YumiMediationSDK-iOS.tar.bz2)   |      |
 |        YumiMediationSDKConfig.xcconfig        |  3.3.9  |                | [link](https://adsdk.yumimobi.com/iOS/Archived/YumiMediationSDKConfig.xcconfig) |      |
 |    YumiMediationDebugCenter    |  3.3.9  |         |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.9/YumiMediationDebugCenter-iOS.tar.bz2)   |      |
+| YumiMediationUnityPlugins_v3.3.9.unitypackage |  3.3.9  |                | [link](https://adsdk.yumimobi.com/iOS/Archived/3.3.9/YumiMediationUnityPlugins_v339.unitypackage) |      |
 |    AdColony    |  3.1.1  |   V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.9/YumiMediationAdColony.tar.bz2)   |      |
 |    AdMob    |  7.30.0  |   B+I+V+N      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.9/YumiMediationAdMob.tar.bz2)   |      |
 |    AppLovin    |  5.0.2  |   B+V+I      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.9/YumiMediationAppLovin.tar.bz2)   |      |
