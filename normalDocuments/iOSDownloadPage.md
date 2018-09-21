@@ -20,7 +20,7 @@
 |    Vungle    |  6.2.0  |   I+V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.9/YumiMediationVungle.tar.bz2)   |      |
 |    Mintegral    |  3.9.1  |   V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.9/YumiMediationMintegral.tar.bz2)   |      |
 |    OneWay    |  2.1.0  |   V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.9/YumiMediationOneWay.tar.bz2)   |      |
-|    PlayableAds    |  2.1.0  |   V+I      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.9/YumiMediationPlayableAds.tar.bz2)   |      |
+|    ZplayAds    |  2.1.0  |   V+I      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.9/YumiMediationPlayableAds.tar.bz2)   |      |
 |    AllThirdPartysAdapter    |  3.3.9  |         |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.3.9/allThirdPartys.tar.bz2)   |      |
  
 | shortName |   FullName   |
