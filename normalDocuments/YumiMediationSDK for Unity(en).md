@@ -48,7 +48,7 @@
 
 1. Double-click YumiMediationPlugins.unitypackage and import all files into Unity project
 
-   [YumiMediationUnityPlugins_v3.3.9 download](https://adsdk.yumimobi.com/iOS/Archived/3.3.9/YumiMediationUnityPlugins_v339.unitypackage)
+   [YumiMediationUnityPlugins_v3.3.9 download](https://adsdk.yumimobi.com/iOS/Archived/3.4.0/YumiMediationUnityPlugin_v340.unitypackage)
 
    <img src="resources/UnityPackage1.png" width="300" height="500"> 
 

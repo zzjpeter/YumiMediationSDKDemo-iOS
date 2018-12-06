@@ -47,7 +47,7 @@
 ## 导入YumiMediationPlugins.unitypackage
 
 1. 双击 YumiMediationPlugins.unitypackage 将所有文件导入 Unity 工程
-   [YumiMediationUnityPlugins_v3.3.9 download](https://adsdk.yumimobi.com/iOS/Archived/3.3.9/YumiMediationUnityPlugins_v339.unitypackage)
+   [YumiMediationUnityPlugins_v3.3.9 download](https://adsdk.yumimobi.com/iOS/Archived/3.4.0/YumiMediationUnityPlugin_v340.unitypackage)
 
    <img src="resources/UnityPackage1.png" width="300" height="500"> 
 
