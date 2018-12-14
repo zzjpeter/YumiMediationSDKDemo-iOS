@@ -34,6 +34,7 @@
       * [接入方式](#接入方式-1)
       * [调用调试模式](#调用调试模式)   
       * [图示](#图示)   
+      * [测试广告位](#测试广告位)
 
 # YumiMediationSDK iOS
 
@@ -145,13 +146,13 @@
 
   ```objective-c
   #import <YumiMediationSDK/YumiMediationBannerView.h>
-  
+
   @interface ViewController ()<YumiMediationBannerViewDelegate>
   @property (nonatomic) YumiMediationBannerView *yumiBanner;
   @end
     
   @implementation ViewController
-  
+
   //init yumiBanner
   - (void)viewDidLoad {
   	[super viewDidLoad];
@@ -232,11 +233,11 @@
 
   ```objective-c
   #import <YumiMediationSDK/YumiMediationInterstitial.h>
-  
+
   @interface ViewController ()<YumiMediationInterstitialDelegate>
   @property (nonatomic) YumiMediationInterstitial *yumiInterstitial;
   @end
-  
+
   @implementation ViewController
   //init yumiInterstitial
   - (void)viewDidLoad {
@@ -394,7 +395,7 @@
 
   ```objective-c
   #import <YumiMediationSDK/YumiMediationNativeAd.h>
-  
+
   @interface ViewController ()<YumiMediationNativeAdDelegate>
   @property (nonatomic) YumiMediationNativeAd *yumiNativeAd;
   @end
@@ -444,12 +445,12 @@
   - (void)yumiMediationNativeAdDidLoad:(NSArray<YumiMediationNativeModel *> *)nativeAdArray{
       NSLog(@"Native Ad Did Load.");
   }
-  
+
   /// Tells the delegate that a request failed.
   - (void)yumiMediationNativeAd:(YumiMediationNativeAd *)nativeAd didFailWithError:(YumiMediationError *)error{
       NSLog(@"NativeAd Did Fail With Error.");
   }
-  
+
   /// Tells the delegate that the Native view has been clicked.
   - (void)yumiMediationNativeAdDidClick:(YumiMediationNativeModel *)nativeAd{
       NSLog(@"Native Ad Did Click.");
@@ -505,6 +506,12 @@
 <img src="resources/debug-3.png" width="240" height="426">
 
 选择广告类型，调试单一平台
+
+### 测试广告位
+
+| 平台   | Banner   | Interstitial | Rewarded Video | Native   | Splash   |
+| ---- | -------- | ------------ | -------------- | -------- | -------- |
+| iOS  | l6ibkpae | onkkeg5i     | 5xmpgti4       | atb3ke1i | pwmf5r42 |
 
 
 
