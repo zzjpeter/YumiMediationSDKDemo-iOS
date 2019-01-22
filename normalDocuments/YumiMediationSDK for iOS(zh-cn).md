@@ -186,8 +186,9 @@
   - (void)viewWillDisappear:(BOOL)animated {
       [super viewWillDisappear:animated];
       if (_yumiBanner) {
-          [_yumiBanner removeFromSuperview];
-          _yumiBanner = nil;
+      	[_yumiBanner disableAutoRefresh];
+      	[_yumiBanner removeFromSuperview];
+      	_yumiBanner = nil;
       }
   }
   ```
@@ -247,7 +248,7 @@
   							            channelID:@"Your channelID"
   							            versionID:@"Your versionID"
   							   rootViewController:self];
-    	self.yumiInterstitial.delegate = self;
+  	self.yumiInterstitial.delegate = self;
   }
   @end
   ```
@@ -327,7 +328,7 @@
       NSLog(@"Reward video ad is closed.");
   }
   - (void)yumiMediationVideoDidReward:(YumiMediationVideo *)video{
-      NSLog(@"is Reward");
+      NSLog(@"is Rewarded");
   }
   ```
 
