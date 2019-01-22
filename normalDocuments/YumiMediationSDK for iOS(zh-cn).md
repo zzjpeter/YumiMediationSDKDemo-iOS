@@ -164,7 +164,7 @@
                         rootViewController:self];
     	self.yumiBanner.delegate = self;
     	[self.yumiBanner loadAd:YES];
-      [self.view addSubview:self.yumiBanner];
+    	[self.view addSubview:self.yumiBanner];
   }
   @end
   ```
