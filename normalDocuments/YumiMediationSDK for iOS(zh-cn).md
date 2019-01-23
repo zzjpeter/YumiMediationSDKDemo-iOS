@@ -154,8 +154,8 @@
   @implementation ViewController
 
   //init yumiBanner
-  //调用 `- (void)loadAd:(BOOL)isSmartBanner;` 方法后，banner 广告位会自动填充，无需重复调用。
-  //如果您不想自动填充 banner 广告位，可以调用 `- (void)disableAutoRefresh;` 方法。
+  //调用 `loadAd:` 方法后，banner 广告位会自动填充，无需重复调用。
+  //如果您不想自动填充 banner 广告位，可以调用 `disableAutoRefresh` 方法。
   - (void)viewDidLoad {
   	[super viewDidLoad];
   	self.yumiBanner = [[YumiMediationBannerView alloc] 
