@@ -59,7 +59,7 @@
 
   As most of materials are provided by HTTP, please set as the followings to improve fillrate：
 
-  ```plsql
+  ```xml
   <key>NSAppTransportSecurity</key>
   <dict>
       <key>NSAllowsArbitraryLoads</key>
@@ -75,8 +75,8 @@
 
   Upload app to App Store, and add the following peimissions to info.plist.
 
-  ```plsql
-  <-- Calendar -->
+  ```xml
+  <!-- Calendar -->
   <key>NSCalendarsUsageDescription</key>
   <string>App shall access calendar with your permission</string>
   <!-- Photos -->
@@ -108,7 +108,7 @@
 
   Then run the followings at command line interface:
 
-  ```c
+  ```shell
   $ pod install --repo-update
   ```
 
