@@ -47,7 +47,7 @@
 ## 导入YumiMediationPlugins.unitypackage
 
 1. 双击 YumiMediationPlugins.unitypackage 将所有文件导入 Unity 工程
-   [YumiMediationUnityPlugins_v3.3.9 download](https://adsdk.yumimobi.com/iOS/Archived/3.4.0/YumiMediationUnityPlugin_v340.unitypackage)
+   [YumiMediationUnityPlugins_v3.4.0 download](https://adsdk.yumimobi.com/iOS/Archived/3.4.0/YumiMediationUnityPlugin_v340.unitypackage)
 
    <img src="resources/UnityPackage1.png" width="300" height="500"> 
 
@@ -65,7 +65,7 @@
 
   因为大部分广告物料以 HTTP 形式提供，为提高广告填充率，请进行以下设置：
 
-  ```plsql
+  ```xml
   <key>NSAppTransportSecurity</key>
   <dict>
       <key>NSAllowsArbitraryLoads</key>
@@ -81,8 +81,8 @@
 
   应用程序上传 App Store, 请在 info.plist 文件中添加以下权限。
 
-  ```plsql
-  <-- 日历 -->
+  ```xml
+  <!-- 日历 -->
   <key>NSCalendarsUsageDescription</key>
   <string>App需要您的同意,才能访问日历</string>
   <!-- 相册 -->
@@ -158,6 +158,7 @@
 - ##### 请求横幅
 
   ```c#
+  //banner 广告位会自动填充，您无需重复调用
   YumiMediationSDK_Unity.loadAd(false);
   ```
 

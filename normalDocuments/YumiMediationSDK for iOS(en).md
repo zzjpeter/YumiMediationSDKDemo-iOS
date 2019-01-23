@@ -59,7 +59,7 @@
 
   As most of materials are provided by HTTP, please set as the followings to improve fillrate：
 
-  ```plsql
+  ```xml
   <key>NSAppTransportSecurity</key>
   <dict>
       <key>NSAllowsArbitraryLoads</key>
@@ -75,8 +75,8 @@
 
   Upload app to App Store, and add the following peimissions to info.plist.
 
-  ```plsql
-  <-- Calendar -->
+  ```xml
+  <!-- Calendar -->
   <key>NSCalendarsUsageDescription</key>
   <string>App shall access calendar with your permission</string>
   <!-- Photos -->
@@ -108,7 +108,7 @@
 
   Then run the followings at command line interface:
 
-  ```c
+  ```shell
   $ pod install --repo-update
   ```
 
@@ -153,6 +153,8 @@
   @implementation ViewController
 
   //init yumiBanner
+  //if you implement the method `loadAd:`,the banner placement will auto refresh.You don't need to call this method repeatedly.
+  //if you don't want to auto refresh banner,You can implement the method `disableAutoRefresh`.
   - (void)viewDidLoad {
   	[super viewDidLoad];
   	self.yumiBanner = [[YumiMediationBannerView alloc] 
@@ -185,8 +187,9 @@
   - (void)viewWillDisappear:(BOOL)animated {
       [super viewWillDisappear:animated];
       if (_yumiBanner) {
-          [_yumiBanner removeFromSuperview];
-          _yumiBanner = nil;
+      	[_yumiBanner disableAutoRefresh];
+      	[_yumiBanner removeFromSuperview];
+      	_yumiBanner = nil;
       }
   }
   ```
@@ -194,7 +197,7 @@
 - ##### Delegate implementation 
 
   ```objective-c
-  //implementing yumiBanner delegate
+  //implement yumiBanner delegate
   - (void)yumiMediationBannerViewDidLoad:(YumiMediationBannerView *)adView{
       NSLog(@"adViewDidReceiveAd");
   }
@@ -239,6 +242,7 @@
 
   @implementation ViewController
   //init yumiInterstitial
+  //the interstitial placement will auto cached.
   - (void)viewDidLoad {
   	[super viewDidLoad];
    	self.yumiInterstitial =  [[YumiMediationInterstitial alloc] 
@@ -283,14 +287,15 @@
   }
   ```
 
-#### Rewarded Video
+#### Reward Video
 
-- ##### Initialization and rewarded video request
+- ##### Initialization and reward video request
 
   ```objective-c
   #import <YumiMediationSDK/YumiMediationVideo.h>
    
   @implementation ViewController
+  //the reward video placement will auto cached.
   - (void)viewDidLoad {
   	[super viewDidLoad];
       [[YumiMediationVideo sharedInstance] loadAdWithPlacementID:@"Your PlacementID" 

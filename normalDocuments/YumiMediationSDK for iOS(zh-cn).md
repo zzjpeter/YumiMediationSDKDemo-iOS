@@ -59,7 +59,7 @@
 
   因为大部分广告物料以 HTTP 形式提供，为提高广告填充率，请进行以下设置：
 
-  ```plsql
+  ```xml
   <key>NSAppTransportSecurity</key>
   <dict>
       <key>NSAllowsArbitraryLoads</key>
@@ -75,8 +75,8 @@
 
   应用程序上传 App Store, 请在 info.plist 文件中添加以下权限。
 
-  ```plsql
-  <-- 日历 -->
+  ```xml
+  <!-- 日历 -->
   <key>NSCalendarsUsageDescription</key>
   <string>App需要您的同意,才能访问日历</string>
   <!-- 相册 -->
@@ -154,6 +154,8 @@
   @implementation ViewController
 
   //init yumiBanner
+  //调用 `loadAd:` 方法后，banner 广告位会自动填充，无需重复调用。
+  //如果您不想自动填充 banner 广告位，可以调用 `disableAutoRefresh` 方法。
   - (void)viewDidLoad {
   	[super viewDidLoad];
   	self.yumiBanner = [[YumiMediationBannerView alloc] 
@@ -164,7 +166,7 @@
                         rootViewController:self];
     	self.yumiBanner.delegate = self;
     	[self.yumiBanner loadAd:YES];
-      [self.view addSubview:self.yumiBanner];
+    	[self.view addSubview:self.yumiBanner];
   }
   @end
   ```
@@ -186,8 +188,9 @@
   - (void)viewWillDisappear:(BOOL)animated {
       [super viewWillDisappear:animated];
       if (_yumiBanner) {
-          [_yumiBanner removeFromSuperview];
-          _yumiBanner = nil;
+      	[_yumiBanner disableAutoRefresh];
+      	[_yumiBanner removeFromSuperview];
+      	_yumiBanner = nil;
       }
   }
   ```
@@ -240,6 +243,7 @@
 
   @implementation ViewController
   //init yumiInterstitial
+  //插屏广告位会自动加载广告，您无需重复调用。
   - (void)viewDidLoad {
   	[super viewDidLoad];
    	self.yumiInterstitial =  [[YumiMediationInterstitial alloc] 
@@ -247,7 +251,7 @@
   							            channelID:@"Your channelID"
   							            versionID:@"Your versionID"
   							   rootViewController:self];
-    	self.yumiInterstitial.delegate = self;
+  	self.yumiInterstitial.delegate = self;
   }
   @end
   ```
@@ -289,6 +293,7 @@
 - ##### 初始化及请求视频
 
   ```objective-c
+  //视频广告位会自动加载广告，您无需重复调用。
   #import <YumiMediationSDK/YumiMediationVideo.h>
    
   @implementation ViewController
@@ -327,7 +332,7 @@
       NSLog(@"Reward video ad is closed.");
   }
   - (void)yumiMediationVideoDidReward:(YumiMediationVideo *)video{
-      NSLog(@"is Reward");
+      NSLog(@"is Rewarded");
   }
   ```
 

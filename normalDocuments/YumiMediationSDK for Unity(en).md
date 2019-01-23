@@ -48,7 +48,7 @@
 
 1. Double-click YumiMediationPlugins.unitypackage and import all files into Unity project
 
-   [YumiMediationUnityPlugins_v3.3.9 download](https://adsdk.yumimobi.com/iOS/Archived/3.4.0/YumiMediationUnityPlugin_v340.unitypackage)
+   [YumiMediationUnityPlugins_v3.4.0 download](https://adsdk.yumimobi.com/iOS/Archived/3.4.0/YumiMediationUnityPlugin_v340.unitypackage)
 
    <img src="resources/UnityPackage1.png" width="300" height="500"> 
 
@@ -66,7 +66,7 @@
 
   As most of materials are provided by HTTP, please set as the followings to improve fillrate：
 
-  ```plsql
+  ```xml
   <key>NSAppTransportSecurity</key>
   <dict>
       <key>NSAllowsArbitraryLoads</key>
@@ -82,8 +82,8 @@
 
   Upload app to App Store, and add the following peimissions to info.plist.
 
-  ```plsql
-  <-- Calendar -->
+  ```xml
+  <!-- Calendar -->
   <key>NSCalendarsUsageDescription</key>
   <string>App shall access calendar with your permission</string>
   <!-- Photos -->
