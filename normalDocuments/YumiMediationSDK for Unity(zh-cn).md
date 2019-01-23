@@ -158,6 +158,7 @@
 - ##### 请求横幅
 
   ```c#
+  //banner 广告位会自动填充，您无需重复调用
   YumiMediationSDK_Unity.loadAd(false);
   ```
 
