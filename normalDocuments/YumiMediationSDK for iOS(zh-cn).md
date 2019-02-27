@@ -71,18 +71,9 @@
 
   *当 `NSAllowsArbitraryLoads` 和 `NSAllowsArbitraryLoadsInWebContent` 或 `NSAllowsArbitraryLoadsForMedia` 同时存在时，根据系统不同，表现的行为也会不一样。简单说，iOS 9 只看 `NSAllowsArbitraryLoads`，而 iOS 10 会优先看 `InWebContent` 和 `ForMedia` 的部分。在 iOS 10 中，要是后两者存在的话，在相关部分就会忽略掉 `NSAllowsArbitraryLoads`；如果不存在，则遵循 `NSAllowsArbitraryLoads` 的设定。*
 
-- ### iOS 9 及以上系统相关权限
+- ### [各三方平台环境配置](./Thirdparty Network Configuration/Thirdparty Network Configuration.md)
+  请按照您接入的三方平台，进行相关配置。此内容来源于各三方平台开发文档。
 
-  应用程序上传 App Store, 请在 info.plist 文件中添加以下权限。
-
-  ```xml
-  <!-- 日历 -->
-  <key>NSCalendarsUsageDescription</key>
-  <string>App需要您的同意,才能访问日历</string>
-  <!-- 相册 -->
-  <key>NSPhotoLibraryUsageDescription</key>
-  <string>App需要您的同意,才能访问相册</string>
-  ```
 
 ## 接入方式
 
