@@ -439,15 +439,13 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
 
 - ##### 确定加载完成时间
 
-在应用调用 `loadAd:` 后，可通过以下方法获取请求的结果：
-
-`YumiMediationNativeAdDelegate` 中的：
-- 
+在应用调用 `loadAd:` 后，可通过`YumiMediationNativeAdDelegate` 中的以下方法获取请求的结果：
+ 
 ```objective-c
 /// Tells the delegate that an ad has been successfully loaded.
 - (void)yumiMediationNativeAdDidLoad:(NSArray<YumiMediationNativeModel *> *)nativeAdArray;
 ```
-- 
+
 ```objective-c
 /// Tells the delegate that a request failed.
 - (void)yumiMediationNativeAd:(YumiMediationNativeAd *)nativeAd didFailWithError:(YumiMediationError *)error;
@@ -455,7 +453,7 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
 
 - ##### Register View
 
-  ```objective-c
+```objective-c
   /**
    注册用来渲染广告的 View
    - Parameter view: 渲染广告的 View.
@@ -469,7 +467,7 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
                 withViewController:(nullable UIViewController *)viewController
                           nativeAd:(YumiMediationNativeModel *)nativeAd;
 
-   /// 例子：
+ /// 例子：
 [self.nativeAd registerViewForInteraction:self.nativeView.adView
                                   clickableAssetViews:@{
                                                         YumiMediationUnifiedNativeTitleAsset : self.nativeView.title,
@@ -481,12 +479,13 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
                                                         }
                                    withViewController:self
                                              nativeAd:adData];
-  ```
+```
+
 如果以这种方式注册视图， SDK 就可以自动处理诸如以下任务：
-- 记录点击
-- 显示广告选择叠加层 （AdMob，Facebook 支持）
-- 显示广告标识
-- 显示广告平台 logo （Baidu，GDT，Yumi 支持）
+ - 记录点击
+ - 显示广告选择叠加层 （AdMob，Facebook 支持）
+ - 显示广告标识
+ - 显示广告平台 logo （Baidu，GDT，Yumi 支持）
 
 - ##### Report Impression
 
@@ -503,8 +502,8 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
 
 1. 如果您想在原生广告中展示视频，您仅需要在注册视图时，将您的 MediaView 传入 SDK。 `YumiMediationUnifiedNativeMediaViewAsset : self.nativeView.mediaView`。
 SDK 会自动处理此填充事宜：
-- 如果有视频素材资源可用，则系统会对其进行缓冲，并在您传入的 MediaView 中播放。
-- 如果广告中不包含视频素材资源，则会改为下载第一个图片素材资源，并放置在您传入的 MediaView 中。
+ - 如果有视频素材资源可用，则系统会对其进行缓冲，并在您传入的 MediaView 中播放。
+ - 如果广告中不包含视频素材资源，则会改为下载第一个图片素材资源，并放置在您传入的 MediaView 中。
 
 ```objective-c
 [self.nativeAd registerViewForInteraction:self.nativeView.adView
@@ -561,28 +560,28 @@ SDK 会自动处理此填充事宜：
 
 `YumiMediationNativeAd` 的创建过程中包含的最后一个参数是一个可选的对象数组：本节将介绍这些选项。
 
-- `disableImageLoading`
+ - `disableImageLoading`
 通过包含 `image`, `imageURL` 和 `ratios` 属性的 YumiMediationNativeAdImage 实例返回原生广告的图片素材资源。如果 disableImageLoading 设置为 false（这是默认值，在 Objective-C 中为 NO），则 SDK 会自动获取图片素材资源，并为您填充各项属性。不过，如果设置为 true（在 Objective-C 中为 YES），SDK 将只填充 imageURL，从而允许您自行决定是否下载实际图片。
 
-- `preferredAdChoicesPosition`
+ - `preferredAdChoicesPosition`
 您可以使用该属性指定“广告选择”图标应放置的位置。该图标可以显示在广告的任一角，默认为 YumiMediationAdChoicesPositionTopRightCorner。
 
-- `preferredAdAttributionPosition`
+ - `preferredAdAttributionPosition`
 您可以使用该属性指定广告标识图标应放置的位置。该图标可以显示在广告的任一角，默认为 YumiMediationAdViewPositionTopLeftCorner。
 
-- `preferredAdAttributionText`
+ - `preferredAdAttributionText`
 您可以使用该属性指定广告标识的文案。根据手机语言显示为“广告”或者“Ad”。
 
-- `preferredAdAttributionTextColor`
+ - `preferredAdAttributionTextColor`
 您可以使用该属性指定广告标识的文字颜色。默认白色。
 
-- `preferredAdAttributionTextBackgroundColor`
+ - `preferredAdAttributionTextBackgroundColor`
 您可以使用该属性指定广告标识的背景颜色。默认蓝色。
 
-- `preferredAdAttributionTextFont`
+ - `preferredAdAttributionTextFont`
 您可以使用该属性指定广告标识的字体大小。默认10。
 
-- `hideAdAttribution`
+ - `hideAdAttribution`
 您可以使用该属性指定广告标识是否显示。默认显示。
 
 
