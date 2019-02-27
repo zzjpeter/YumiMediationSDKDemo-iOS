@@ -407,19 +407,19 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
 
 - ##### 初始化及请求
 
-  ```objective-c
+  ```objectivec 
   #import <YumiMediationSDK/YumiMediationNativeAd.h>
   #import <YumiMediationSDK/YumiMediationNativeAdConfiguration.h>
-
+  
   @interface ViewController ()<YumiMediationNativeAdDelegate>
   @property (nonatomic) YumiMediationNativeAd *yumiNativeAd;
   @end
    
   @implementation ViewController
   - (void)viewDidLoad {
-  	[super viewDidLoad];
-  	YumiMediationNativeAdConfiguration *config = [[YumiMediationNativeAdConfiguration alloc] init];
-   	self.yumiNativeAd = [[YumiMediationNativeAd alloc] 
+	[super viewDidLoad];
+	YumiMediationNativeAdConfiguration *config = [[YumiMediationNativeAdConfiguration alloc] init];
+	self.yumiNativeAd = [[YumiMediationNativeAd alloc] 
   					                        initWithPlacementID:@"Your PlacementID" 
                                                         channelID:@"Your channelID" 
                                                         versionID:@"Your versionID"];
@@ -430,179 +430,181 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
   ```
 - ##### 何时请求广告
 
-展示原生广告的应用可以在实际展示广告之前随时请求这些广告。在许多情况下，这是推荐的做法。例如，如果某款应用展示一个商品清单，其中会夹杂一些原生广告，那么该应用就可以加载整个清单中的原生广告，因为它知道一些广告仅在用户滚动浏览视图后才会展示，还有一些可能根本不会展示。
+  展示原生广告的应用可以在实际展示广告之前随时请求这些广告。在许多情况下，这是推荐的做法。例如，如果某款应用展示一个商品清单，其中会夹杂一些原生广告，那么该应用就可以加载整个清单中的原生广告，因为它知道一些广告仅在用户滚动浏览视图后才会展示，还有一些可能根本不会展示。
 
-注意：尽管预先提取广告是一种很好的方法，但务必不要长久保留旧广告而不进行展示。对任何原生广告对象来说，如果在保留30分钟后仍没有获得展示，就应该予以舍弃，并替换为来自新请求的新广告。
-您可通过 `YumiMediationNativeModel.h` 中的 `-(BOOL)isExpired;` 来判断当前广告是否过期。
+   - 注意：尽管预先提取广告是一种很好的方法，但务必不要长久保留旧广告而不进行展示。对任何原生广告对象来说，如果在保留30分钟后仍没有获得展示，就应该予以舍弃，并替换为来自新请求的新广告。
+    您可通过 `YumiMediationNativeModel.h` 中的 `-(BOOL)isExpired;` 来判断当前广告是否过期。
 
-注意：重复使用 `loadAd:` 时，请确保等待每个请求完成，然后再重新调用 `loadAd:`:。
+   - 注意：重复使用 `loadAd:` 时，请确保等待每个请求完成，然后再重新调用 `loadAd:`:。
 
 - ##### 确定加载完成时间
 
-在应用调用 `loadAd:` 后，可通过`YumiMediationNativeAdDelegate` 中的以下方法获取请求的结果：
- 
-```objective-c
-/// Tells the delegate that an ad has been successfully loaded.
-- (void)yumiMediationNativeAdDidLoad:(NSArray<YumiMediationNativeModel *> *)nativeAdArray;
-```
+   在应用调用 `loadAd:` 后，可通过`YumiMediationNativeAdDelegate` 中的以下方法获取请求的结果：
 
-```objective-c
-/// Tells the delegate that a request failed.
-- (void)yumiMediationNativeAd:(YumiMediationNativeAd *)nativeAd didFailWithError:(YumiMediationError *)error;
-```
+ ```objectivec
+ /// Tells the delegate that an ad has been successfully loaded.
+ - (void)yumiMediationNativeAdDidLoad:(NSArray<YumiMediationNativeModel *> *)nativeAdArray;
+ ```
+
+ ```objectivec
+ /// Tells the delegate that a request failed.
+ - (void)yumiMediationNativeAd:(YumiMediationNativeAd *)nativeAd didFailWithError:(YumiMediationError *)error;
+ ```
 
 - ##### Register View
 
-```objective-c
-  /**
-   注册用来渲染广告的 View
-   - Parameter view: 渲染广告的 View.
-   - Parameter clickableAssetViews: 可用于点击 view 的字典，使用 YumiMediationUnifiedNativeAssetIdentifier 为 key
-   - Parameter viewController: 将用于当前的ui SKStoreProductViewController(iTunes商店产品信息)或	应用程序的浏览器。
-   - Parameter nativeAd: 用于展示的原生广告模型对象
-   */
-- (void)registerViewForInteraction:(UIView *)view
-               clickableAssetViews:
-                   (NSDictionary<YumiMediationUnifiedNativeAssetIdentifier, UIView *> *)clickableAssetViews
-                withViewController:(nullable UIViewController *)viewController
-                          nativeAd:(YumiMediationNativeModel *)nativeAd;
+ ```objectivec
+   /**
+    注册用来渲染广告的 View
+    - Parameter view: 渲染广告的 View.
+    - Parameter clickableAssetViews: 可用于点击 view 的字典，使用 YumiMediationUnifiedNativeAssetIdentifier 为 key
+    - Parameter viewController: 将用于当前的ui SKStoreProductViewController(iTunes商店产品信息)或	应用程序的浏览器。
+    - Parameter nativeAd: 用于展示的原生广告模型对象
+    */
+ - (void)registerViewForInteraction:(UIView *)view
+                clickableAssetViews:
+                    (NSDictionary<YumiMediationUnifiedNativeAssetIdentifier, UIView *> *)clickableAssetViews
+                 withViewController:(nullable UIViewController *)viewController
+                           nativeAd:(YumiMediationNativeModel *)nativeAd;
+ 
+  /// 例子：
+ [self.nativeAd registerViewForInteraction:self.nativeView.adView
+                                   clickableAssetViews:@{
+                                                         YumiMediationUnifiedNativeTitleAsset : self.nativeView.title,
+                                                         YumiMediationUnifiedNativeDescAsset : self.nativeView.desc,
+                                                         YumiMediationUnifiedNativeCoverImageAsset : self.nativeView.coverImage,
+                                                         YumiMediationUnifiedNativeMediaViewAsset : self.nativeView.mediaView,
+                                                         YumiMediationUnifiedNativeIconAsset : self.nativeView.icon,
+                                                         YumiMediationUnifiedNativeCallToActionAsset : self.nativeView.callToAction
+                                                         }
+                                    withViewController:self
+                                              nativeAd:adData];
+ ```
 
- /// 例子：
-[self.nativeAd registerViewForInteraction:self.nativeView.adView
-                                  clickableAssetViews:@{
-                                                        YumiMediationUnifiedNativeTitleAsset : self.nativeView.title,
-                                                        YumiMediationUnifiedNativeDescAsset : self.nativeView.desc,
-                                                        YumiMediationUnifiedNativeCoverImageAsset : self.nativeView.coverImage,
-                                                        YumiMediationUnifiedNativeMediaViewAsset : self.nativeView.mediaView,
-                                                        YumiMediationUnifiedNativeIconAsset : self.nativeView.icon,
-                                                        YumiMediationUnifiedNativeCallToActionAsset : self.nativeView.callToAction
-                                                        }
-                                   withViewController:self
-                                             nativeAd:adData];
-```
+    如果以这种方式注册视图， SDK 就可以自动处理诸如以下任务：
+  - *记录点击*
 
-如果以这种方式注册视图， SDK 就可以自动处理诸如以下任务：
- - 记录点击
- - 显示广告选择叠加层 （AdMob，Facebook 支持）
- - 显示广告标识
- - 显示广告平台 logo （Baidu，GDT，Yumi 支持）
+  - *显示广告选择叠加层 （AdMob，Facebook 支持）*
+
+  - *显示广告标识*
+
+  - *显示广告平台 logo （Baidu，GDT，Yumi 支持）*
 
 - ##### Report Impression
 
-  ```objective-c
-  /**
-   当原生广告被展示时调用此方法
-   - Parameter nativeAd: 将要被展示的广告对象.
-   - Parameter view: 用来渲染广告的 View.
-  */
-  - (void)reportImpression:(YumiMediationNativeModel *)nativeAd view:(UIView *)view;
-  ```
+    ```objectivec
+     /**
+      当原生广告被展示时调用此方法
+      - Parameter nativeAd: 将要被展示的广告对象.
+      - Parameter view: 用来渲染广告的 View.
+     */
+     - (void)reportImpression:(YumiMediationNativeModel *)nativeAd view:(UIView *)view;
+    ```
 
 - ##### 原生视频广告
 
-1. 如果您想在原生广告中展示视频，您仅需要在注册视图时，将您的 MediaView 传入 SDK。 `YumiMediationUnifiedNativeMediaViewAsset : self.nativeView.mediaView`。
-SDK 会自动处理此填充事宜：
- - 如果有视频素材资源可用，则系统会对其进行缓冲，并在您传入的 MediaView 中播放。
- - 如果广告中不包含视频素材资源，则会改为下载第一个图片素材资源，并放置在您传入的 MediaView 中。
+- 如果您想在原生广告中展示视频，您仅需要在注册视图时，将您的 MediaView 传入 SDK。 `YumiMediationUnifiedNativeMediaViewAsset : self.nativeView.mediaView`。
+ SDK 会自动处理此填充事宜：
+    - *如果有视频素材资源可用，则系统会对其进行缓冲，并在您传入的 MediaView 中播放。*
+    - *如果广告中不包含视频素材资源，则会改为下载第一个图片素材资源，并放置在您传入的 MediaView 中。*
 
-```objective-c
-[self.nativeAd registerViewForInteraction:self.nativeView.adView
-                                  clickableAssetViews:@{
-                                                        YumiMediationUnifiedNativeTitleAsset : self.nativeView.title,
-                                                        YumiMediationUnifiedNativeDescAsset : self.nativeView.desc,
-                                                        YumiMediationUnifiedNativeCoverImageAsset : self.nativeView.coverImage,
-                                                        YumiMediationUnifiedNativeMediaViewAsset : self.nativeView.mediaView,
-                                                        YumiMediationUnifiedNativeIconAsset : self.nativeView.icon,
-                                                        YumiMediationUnifiedNativeCallToActionAsset : self.nativeView.callToAction
-                                                        }
-                                   withViewController:self
-                                             nativeAd:adData];
+ ```objectivec
+ [self.nativeAd registerViewForInteraction:self.nativeView.adView
+                                   clickableAssetViews:@{
+                                                         YumiMediationUnifiedNativeTitleAsset : self.nativeView.title,
+                                                         YumiMediationUnifiedNativeDescAsset : self.nativeView.desc,
+                                                         YumiMediationUnifiedNativeCoverImageAsset : self.nativeView.coverImage,
+                                                         YumiMediationUnifiedNativeMediaViewAsset : self.nativeView.mediaView,
+                                                         YumiMediationUnifiedNativeIconAsset : self.nativeView.icon,
+                                                         YumiMediationUnifiedNativeCallToActionAsset : self.nativeView.callToAction
+                                                         }
+                                    withViewController:self
+                                              nativeAd:adData];
+ 
+ ```
 
-```
+- 通过 `YumiMediationNativeModel.h` 中的 `hasVideoContent` 您可以判断该原生对象中是否存在视频资源。
+ ```objectivec
+ /// Indicates whether the ad has video content.
+ @property (nonatomic, assign, readonly) BOOL hasVideoContent;
+ ```
+- YumiMediationNativeVideoController 提供以下查询视频状态的方法：
 
-2. 通过 `YumiMediationNativeModel.h` 中的 `hasVideoContent` 您可以判断该原生对象中是否存在视频资源。
-```objective-c
-/// Indicates whether the ad has video content.
-@property (nonatomic, assign, readonly) BOOL hasVideoContent;
-```
+ ```objectivec
+ /// Delegate for receiving video notifications.
+ @property(nonatomic, weak) id<YumiMediationNativeVideoControllerDelegate> delegate;
 
-3. YumiMediationNativeVideoController 提供以下查询视频状态的方法：
+ /// Play the video. Doesn't do anything if the video is already playing.
+ - (void)play;
 
-```objective-c
-/// Delegate for receiving video notifications.
-@property(nonatomic, weak) id<YumiMediationNativeVideoControllerDelegate> delegate;
+ /// Pause the video. Doesn't do anything if the video is already paused.
+ - (void)pause;
 
-/// Play the video. Doesn't do anything if the video is already playing.
-- (void)play;
+ /// Returns the video's aspect ratio (width/height) or 0 if no video is present.
+ /// baidu always return 0
+ - (double)aspectRatio;
 
-/// Pause the video. Doesn't do anything if the video is already paused.
-- (void)pause;
+ @protocol YumiMediationNativeVideoControllerDelegate<NSObject>
+ @optional
+ /// Tells the delegate that the video controller has began or resumed playing a video.
+ - (void)yumiMediationNativeVideoControllerDidPlayVideo:(YumiMediationNativeVideoController *)videoController;
 
-/// Returns the video's aspect ratio (width/height) or 0 if no video is present.
-/// baidu always return 0
-- (double)aspectRatio;
+ /// Tells the delegate that the video controller has paused video.
+ - (void)yumiMediationNativeVideoControllerDidPauseVideo:(YumiMediationNativeVideoController *)videoController;
 
-@protocol YumiMediationNativeVideoControllerDelegate<NSObject>
-@optional
-/// Tells the delegate that the video controller has began or resumed playing a video.
-- (void)yumiMediationNativeVideoControllerDidPlayVideo:(YumiMediationNativeVideoController *)videoController;
+ /// Tells the delegate that the video controller's video playback has ended.
+ - (void)yumiMediationNativeVideoControllerDidEndVideoPlayback:(YumiMediationNativeVideoController *)videoController;
 
-/// Tells the delegate that the video controller has paused video.
-- (void)yumiMediationNativeVideoControllerDidPauseVideo:(YumiMediationNativeVideoController *)videoController;
+ @end
+ ```
 
-/// Tells the delegate that the video controller's video playback has ended.
-- (void)yumiMediationNativeVideoControllerDidEndVideoPlayback:(YumiMediationNativeVideoController *)videoController;
+- ##### 原生广告选项 `YumiMediationNativeAdConfiguration`
 
-@end
-```
+   `YumiMediationNativeAd` 的创建过程中包含的最后一个参数是一个可选的对象数组：本节将介绍这些选项。
 
-4. 原生广告选项 `YumiMediationNativeAdConfiguration`
+   - `disableImageLoading`
+  通过包含 `image`, `imageURL` 和 `ratios` 属性的 YumiMediationNativeAdImage 实例返回原生广告的图片素材资源。如果 disableImageLoading 设置为 false（这是默认值，在 Objective-C 中为 NO），则 SDK 会自动获取图片素材资源，并为您填充各项属性。不过，如果设置为 true（在 Objective-C 中为 YES），SDK 将只填充 imageURL，从而允许您自行决定是否下载实际图片。
 
-`YumiMediationNativeAd` 的创建过程中包含的最后一个参数是一个可选的对象数组：本节将介绍这些选项。
+   - `preferredAdChoicesPosition`
+  您可以使用该属性指定“广告选择”图标应放置的位置。该图标可以显示在广告的任一角，默认为 YumiMediationAdChoicesPositionTopRightCorner。
 
- - `disableImageLoading`
-通过包含 `image`, `imageURL` 和 `ratios` 属性的 YumiMediationNativeAdImage 实例返回原生广告的图片素材资源。如果 disableImageLoading 设置为 false（这是默认值，在 Objective-C 中为 NO），则 SDK 会自动获取图片素材资源，并为您填充各项属性。不过，如果设置为 true（在 Objective-C 中为 YES），SDK 将只填充 imageURL，从而允许您自行决定是否下载实际图片。
+   - `preferredAdAttributionPosition`
+  您可以使用该属性指定广告标识图标应放置的位置。该图标可以显示在广告的任一角，默认为 YumiMediationAdViewPositionTopLeftCorner。
 
- - `preferredAdChoicesPosition`
-您可以使用该属性指定“广告选择”图标应放置的位置。该图标可以显示在广告的任一角，默认为 YumiMediationAdChoicesPositionTopRightCorner。
+   - `preferredAdAttributionText`
+  您可以使用该属性指定广告标识的文案。根据手机语言显示为“广告”或者“Ad”。
 
- - `preferredAdAttributionPosition`
-您可以使用该属性指定广告标识图标应放置的位置。该图标可以显示在广告的任一角，默认为 YumiMediationAdViewPositionTopLeftCorner。
+   - `preferredAdAttributionTextColor`
+  您可以使用该属性指定广告标识的文字颜色。默认白色。
 
- - `preferredAdAttributionText`
-您可以使用该属性指定广告标识的文案。根据手机语言显示为“广告”或者“Ad”。
+   - `preferredAdAttributionTextBackgroundColor`
+  您可以使用该属性指定广告标识的背景颜色。默认蓝色。
 
- - `preferredAdAttributionTextColor`
-您可以使用该属性指定广告标识的文字颜色。默认白色。
+   - `preferredAdAttributionTextFont`
+  您可以使用该属性指定广告标识的字体大小。默认10。
 
- - `preferredAdAttributionTextBackgroundColor`
-您可以使用该属性指定广告标识的背景颜色。默认蓝色。
-
- - `preferredAdAttributionTextFont`
-您可以使用该属性指定广告标识的字体大小。默认10。
-
- - `hideAdAttribution`
-您可以使用该属性指定广告标识是否显示。默认显示。
+   - `hideAdAttribution`
+  您可以使用该属性指定广告标识是否显示。默认显示。
 
 
 - ##### 实现代理方法
 
-  ```objective-c
-  /// Tells the delegate that an ad has been successfully loaded.
-  - (void)yumiMediationNativeAdDidLoad:(NSArray<YumiMediationNativeModel *> *)nativeAdArray{
-      NSLog(@"Native Ad Did Load.");
-  }
+   ```objectivec
+   /// Tells the delegate that an ad has been successfully loaded.
+   - (void)yumiMediationNativeAdDidLoad:(NSArray<YumiMediationNativeModel *> *)nativeAdArray{
+       NSLog(@"Native Ad Did Load.");
+   }
 
-  /// Tells the delegate that a request failed.
-  - (void)yumiMediationNativeAd:(YumiMediationNativeAd *)nativeAd didFailWithError:(YumiMediationError *)error{
-      NSLog(@"NativeAd Did Fail With Error.");
-  }
+   /// Tells the delegate that a request failed.
+   - (void)yumiMediationNativeAd:(YumiMediationNativeAd *)nativeAd didFailWithError:(YumiMediationError *)error{
+       NSLog(@"NativeAd Did Fail With Error.");
+   }
 
-  /// Tells the delegate that the Native view has been clicked.
-  - (void)yumiMediationNativeAdDidClick:(YumiMediationNativeModel *)nativeAd{
-      NSLog(@"Native Ad Did Click.");
-  }
-  ```
+   /// Tells the delegate that the Native view has been clicked.
+   - (void)yumiMediationNativeAdDidClick:(YumiMediationNativeModel *)nativeAd{
+       NSLog(@"Native Ad Did Click.");
+   }
+   ```
 
 ## 调试模式
 
