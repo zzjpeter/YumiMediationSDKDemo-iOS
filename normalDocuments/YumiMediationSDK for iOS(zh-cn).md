@@ -165,10 +165,28 @@
 - ##### 设置 Banner 尺寸
 
   ```objective-c
+/// Represents the fixed banner ad size
+typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
+    /// iPhone and iPod Touch ad size. Typically 320x50.
+    kYumiMediationAdViewBanner320x50 = 1 << 0,
+    // Leaderboard size for the iPad. Typically 728x90.
+    kYumiMediationAdViewBanner728x90 = 1 << 1,
+    // Represents the fixed banner ad size - 300pt by 250pt.
+    kYumiMediationAdViewBanner300x250 = 1 << 2,
+    /// An ad size that spans the full width of the application in portrait orientation. 
+    /// The height is typically 50 pixels on an iPhone/iPod UI, and 90 pixels tall on an iPad UI.
+    kYumiMediationAdViewSmartBannerPortrait = 1 << 3,
+    /// An ad size that spans the full width of the application in landscape orientation. 
+    /// The height is typically 32 pixels on an iPhone/iPod UI, and 90 pixels tall on an iPad UI.
+    kYumiMediationAdViewSmartBannerLandscape = 1 << 4
+};
+  ```
+
+  ```objective-c
   //目前我们支持三种尺寸
   //在 iPhone 上默认为 320 * 50，如无调整不需设置下列代码。
   //在 iPad 上默认为 728 * 90，如无调整不需设置下列代码。
-  //如果您有特殊需求，300 * 250 为可选项。请在 loadAd 之前，执行下列代码。
+  //如果您有特殊需求，可根据枚举所述尺寸，在 loadAd 之前，执行下列代码。
   self.yumiBanner.bannerSize = kYumiMediationAdViewBanner300x250;
   ```
 
