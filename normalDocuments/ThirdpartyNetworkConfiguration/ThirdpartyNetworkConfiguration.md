@@ -1,4 +1,20 @@
-[TOC]
+   * [Thirdparty Network Configuration](#thirdparty-network-configuration)
+      * [AdColony](#adcolony)
+         * [Step 1: Configuring Supported Orientations](#step-1-configuring-supported-orientations)
+         * [Step 2: Configuring URL Schemes](#step-2-configuring-url-schemes)
+         * [Step 3: Configuring Privacy Controls (Optional)](#step-3-configuring-privacy-controls-optional)
+      * [Baidu](#baidu)
+         * [iOS9 适配说明:](#ios9-适配说明)
+         * [iOS9 configuration:](#ios9-configuration)
+      * [InMobi](#inmobi)
+         * [iOS 12 WiFi Settings](#ios-12-wifi-settings)
+            * [Step 1: Enable ‘Access WiFi Information’ on your App ID.](#step-1-enable-access-wifi-information-on-your-app-id)
+            * [Step 2: Enable access ‘Access WiFi Information’ for your target app from XCode capabilities.](#step-2-enable-access-access-wifi-information-for-your-target-app-from-xcode-capabilities)
+            * [Step 3: Ensure WiFi Access is added to your App.entitlements file.](#step-3-ensure-wifi-access-is-added-to-your-appentitlements-file)
+      * [Vungle](#vungle)
+         * [Remove the iOS Status Bar](#remove-the-ios-status-bar)
+
+
 # Thirdparty Network Configuration
 ## AdColony
 ### Step 1: Configuring Supported Orientations
