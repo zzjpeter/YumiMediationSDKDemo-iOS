@@ -87,21 +87,22 @@ platform :ios do
   lane :pushOss do
 
     allAdapters = [
-      { :name => "AdColony", :version => "3.1.1", :supportAdtype => "V" },
+      { :name => "AdColony", :version => "3.3.6", :supportAdtype => "V" },
       { :name => "AdMob", :version => "7.30.0", :supportAdtype => "B+I+V+N" },
       { :name => "AppLovin", :version => "5.0.2", :supportAdtype => "B+V+I" },
-      { :name => "Baidu", :version => "4.5.0.4", :supportAdtype => "B+I" },
-      { :name => "Chartboost", :version => "7.2.0", :supportAdtype => "V+I" },
+      { :name => "Baidu", :version => "4.6.0", :supportAdtype => "B+I+V+N" },
+      { :name => "Chartboost", :version => "7.3.0", :supportAdtype => "V+I" },
+      { :name => "Facebook", :version => "5.1.0", :supportAdtype => "B+I+N+V" },
       { :name => "Domob", :version => "3.8.0", :supportAdtype => "V" },
-      { :name => "Facebook", :version => "4.99.3", :supportAdtype => "B+I+N+V" },
-      { :name => "GDT", :version => "4.8.1", :supportAdtype => "B+I+N+S" },
-      { :name => "InMobi", :version => "6.2.1", :supportAdtype => "B+N+I+V" },
+      { :name => "GDT", :version => "4.8.1", :supportAdtype => "B+I+N+V" },
+      { :name => "InMobi", :version => "7.2.1", :supportAdtype => "B+I+V" },
       { :name => "IronSource", :version => "6.7.10", :supportAdtype => "V+I" },
       { :name => "Unity", :version => "2.3.0", :supportAdtype => "I+V" },
       { :name => "Vungle", :version => "6.2.0", :supportAdtype => "I+V" },
-      { :name => "Mintegral", :version => "3.9.1", :supportAdtype => "V"},
+      { :name => "Mintegral", :version => "4.9.4", :supportAdtype => "V+I"},
       { :name => "OneWay",:version => "2.1.0", :supportAdtype => "V"},
-      { :name => "PlayableAds",:version => "2.3.0", :supportAdtype => "V+I"},
+      { :name => "ZplayAds",:version => "2.4.0", :supportAdtype => "V+I"},
+      { :name => "IQzone", :version => "3.0.2134", :supportAdtype => "B+I+V" },
     ]
     sdkVersion = "YumiMediationSDK_v"+ ENV["TRAVIS_TAG"]
     podDir = '../Pods/'
@@ -177,10 +178,8 @@ platform :ios do
         supportAdtype = thirdParty[:supportAdtype]
 
         puts "is copying #{adapterName}"
-        if adapterName != "PlayableAds"
+        if adapterName != "ZplayAds"
           thirdYumiSDKName = 'Yumi' + adapterName
-        else
-          thirdYumiSDKName = adapterName 
         end
         thirdYumiMediationAdapterName = 'YumiMediation' + adapterName
         #copy adapters
