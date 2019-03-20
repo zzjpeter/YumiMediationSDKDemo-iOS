@@ -185,11 +185,15 @@ platform :ios do
         #copy adapters
         srcAdapterPath = podDir + 'YumiMediationAdapters' + '/'+ thirdYumiMediationAdapterName
         targetAdapterPath = thirdPartyPathName + '/'+ thirdYumiMediationAdapterName
-        srcThirdSDKPath = podDir + thirdYumiSDKName
-        targetThirdSDKPath = thirdPartyPathName + '/'+ thirdYumiMediationAdapterName + '/' +thirdYumiSDKName
+        if adapterName != "ZplayAds"
+          srcThirdSDKPath = podDir + thirdYumiSDKName
+          targetThirdSDKPath = thirdPartyPathName + '/'+ thirdYumiMediationAdapterName + '/' +thirdYumiSDKName
+        end
 
         FileUtils.mv(srcAdapterPath,targetAdapterPath)
-        FileUtils.mv(srcThirdSDKPath,targetThirdSDKPath)
+        if adapterName != "ZplayAds"
+          FileUtils.mv(srcThirdSDKPath,targetThirdSDKPath)
+        end
         
         thirdSource = "#{thirdYumiMediationAdapterName}.tar.bz2"
         remoteAddress = "http://adsdk.yumimobi.com/iOS/Archived/#{ENV["TRAVIS_TAG"]}/#{thirdSource}"
