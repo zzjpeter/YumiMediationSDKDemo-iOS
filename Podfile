@@ -1,5 +1,5 @@
- source "https://github.com/CocoaPods/Specs"
- platform :ios, '8.0'
+source "https://github.com/CocoaPods/Specs"
+platform :ios, '8.0'
 
 target 'YumiMediationSDKDemo' do
   # use_frameworks!
