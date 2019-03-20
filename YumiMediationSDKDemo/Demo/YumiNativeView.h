@@ -15,7 +15,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *title;
 @property (strong, nonatomic) IBOutlet UIImageView *coverImage;
 @property (strong, nonatomic) IBOutlet UILabel *desc;
-@property (strong, nonatomic) IBOutlet UIButton *callToAction;
+@property (strong, nonatomic) IBOutlet UILabel *callToAction;
 @property (strong, nonatomic) IBOutlet UIButton *closeButton;
+@property (weak, nonatomic) IBOutlet UIView *adView;
 
 @end

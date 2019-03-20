@@ -12,6 +12,7 @@
 #import "YumiMediationAppViewController.h"
 #import "YumiMediationInitializeInfoUserDefaults.h"
 #import "YumiMediationInitializeModel.h"
+#import <YumiMediationSDK/YumiTool.h>
 
 #define PLACEMENTIDLENGTH 1
 
@@ -25,7 +26,9 @@
 @property (weak, nonatomic) IBOutlet UITableView *adTypeTableView;
 @property (weak, nonatomic) IBOutlet UIImageView *triangleImg;
 @property (weak, nonatomic) IBOutlet UIButton *selectAdTypeBtn;
-@property (weak, nonatomic) IBOutlet UISwitch *swicthCustomSize;
+@property (weak, nonatomic) IBOutlet UISwitch *bannerH250;
+@property (weak, nonatomic) IBOutlet UISwitch *smartBannerLandscape;
+@property (weak, nonatomic) IBOutlet UISwitch *smartBannerPortrait;
 
 @property (nonatomic) NSString *placementID;
 @property (nonatomic) NSString *channelID;
@@ -66,7 +69,13 @@
         [self updatedAdTypeMessageWith:self.adType];
     }
     if (self.bannerSize == kYumiMediationAdViewBanner300x250) {
-        self.swicthCustomSize.on = YES;
+        self.bannerH250.on = YES;
+    }
+    if (self.bannerSize == kYumiMediationAdViewSmartBannerPortrait) {
+        self.smartBannerPortrait.on = YES;
+    }
+    if (self.bannerSize == kYumiMediationAdViewSmartBannerLandscape) {
+        self.smartBannerLandscape.on = YES;
     }
 }
 
@@ -97,8 +106,14 @@
                                                           versionID:self.versionID
                                                              adType:self.adType];
     [UIApplication sharedApplication].keyWindow.rootViewController = rootVc;
-    if (self.swicthCustomSize.on) {
+    if (self.bannerH250.on) {
         rootVc.bannerSize = kYumiMediationAdViewBanner300x250;
+    }
+    if (self.smartBannerPortrait.on) {
+        rootVc.bannerSize = kYumiMediationAdViewSmartBannerPortrait;
+    }
+    if (self.smartBannerLandscape.on) {
+        rootVc.bannerSize = kYumiMediationAdViewSmartBannerLandscape;
     }
     [[UIApplication sharedApplication].keyWindow.layer transitionWithAnimType:TransitionAnimTypeRamdom
                                                                       subType:TransitionSubtypesFromRamdom
@@ -160,19 +175,30 @@
     [self saveLocalStorage];
 
     if (self.isPresented) {
-
+        YumiMediationAdViewBannerSize bannerSizeTemp = [[YumiTool sharedTool] isiPad] ? kYumiMediationAdViewBanner728x90 : kYumiMediationAdViewBanner320x50;
+        if (self.bannerH250.on) {
+            bannerSizeTemp = kYumiMediationAdViewBanner300x250;
+        }
+        if (self.smartBannerPortrait.on) {
+            bannerSizeTemp = kYumiMediationAdViewSmartBannerPortrait;
+        }
+        if (self.smartBannerLandscape.on) {
+            bannerSizeTemp = kYumiMediationAdViewSmartBannerLandscape;
+        }
         __weak typeof(self) weakSelf = self;
-        [self dismissViewControllerAnimated:NO
-                                 completion:^{
-                                     if (weakSelf.delegate &&
-                                         [weakSelf.delegate respondsToSelector:@selector
-                                                            (modifyPlacementID:channelID:versionID:adType: bannerSize:)]) {
-                                         [weakSelf.delegate modifyPlacementID:weakSelf.placementID
-                                                                    channelID:weakSelf.channelID
-                                                                    versionID:weakSelf.versionID
-                                                                       adType:weakSelf.adType bannerSize:self.swicthCustomSize.on ?kYumiMediationAdViewBanner300x250: kYumiMediationAdViewBanner320x50 ];
-                                     }
-                                 }];
+        [self
+            dismissViewControllerAnimated:NO
+                               completion:^{
+                                   if (weakSelf.delegate &&
+                                       [weakSelf.delegate respondsToSelector:@selector
+                                                          (modifyPlacementID:channelID:versionID:adType:bannerSize:)]) {
+                                       [weakSelf.delegate modifyPlacementID:weakSelf.placementID
+                                                                  channelID:weakSelf.channelID
+                                                                  versionID:weakSelf.versionID
+                                                                     adType:weakSelf.adType
+                                                                 bannerSize:bannerSizeTemp];
+                                   }
+                               }];
         [[UIApplication sharedApplication].keyWindow.layer transitionWithAnimType:TransitionAnimTypeRamdom
                                                                           subType:TransitionSubtypesFromRamdom
                                                                             curve:TransitionCurveRamdom
