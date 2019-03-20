@@ -98,7 +98,7 @@
    - 如果您需要聚合其他平台
 
      ```ruby
-     pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','Unity','Vungle','Mintegral','OneWay','ZplayAds','IQzone']
+     pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','Unity','Vungle','Mintegral','OneWay','PlayableAds']
      ```
 
    接下来在命令行界面中运行：
@@ -437,7 +437,7 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
   展示原生广告的应用可以在实际展示广告之前随时请求这些广告。在许多情况下，这是推荐的做法。例如，如果某款应用展示一个商品清单，其中会夹杂一些原生广告，那么该应用就可以加载整个清单中的原生广告，因为它知道一些广告仅在用户滚动浏览视图后才会展示，还有一些可能根本不会展示。
 
    - 注意：尽管预先提取广告是一种很好的方法，但务必不要长久保留旧广告而不进行展示。对任何原生广告对象来说，如果在保留30分钟后仍没有获得展示，就应该予以舍弃，并替换为来自新请求的新广告。
-      您可通过 `YumiMediationNativeModel.h` 中的 `-(BOOL)isExpired;` 来判断当前广告是否过期。
+    您可通过 `YumiMediationNativeModel.h` 中的 `-(BOOL)isExpired;` 来判断当前广告是否过期。
 
    - 注意：重复使用 `loadAd:` 时，请确保等待每个请求完成，然后再重新调用 `loadAd:`。
 
@@ -520,7 +520,7 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
                                         withViewController:self
                                                 nativeAd:adData];
     
-    ```
+    ``` 
 
  
 
