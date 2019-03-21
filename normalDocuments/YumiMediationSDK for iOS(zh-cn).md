@@ -485,10 +485,10 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
     - 注意: 如果您使用 `UIButton` 来展示原生广告元素，必须禁用 `userInteractionEnabled`，以便 SDK 处理事件。
            最好的方式是避免使用 `UIButton`，而使用 `UILabel` 或者 `UIImageView`。
 
-    如果以这种方式注册视图， SDK 就可以自动处理诸如以下任务：
-    1. 记录点击
-    2. 显示广告选择叠加层 （AdMob，Facebook 支持）
-    3. 显示广告标识
+    - 如果以这种方式注册视图， SDK 就可以自动处理诸如以下任务：
+      1. 记录点击
+      2. 显示广告选择叠加层 （AdMob，Facebook 支持）
+      3. 显示广告标识
 
 - ##### Report Impression
 
