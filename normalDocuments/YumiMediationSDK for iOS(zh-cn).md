@@ -258,7 +258,7 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
   //插屏广告位会自动加载广告，您无需重复调用。
   - (void)viewDidLoad {
   	[super viewDidLoad];
-   	self.yumiInterstitial =  [[YumiMediationInterstitial alloc] 
+   	self.yumiInterstitial = [[YumiMediationInterstitial alloc] 
                                            initWithPlacementID:@"Your PlacementID"
                                                      channelID:@"Your channelID"
                                                      versionID:@"Your versionID"
@@ -273,10 +273,10 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
   ```objective-c
   //present YumiMediationInterstitial
   - (IBAction)presentYumiMediationInterstitial:(id)sender {
-  	if ([self.yumiInterstitial isReady]) {
-      	[self.yumiInterstitial present];
+    if ([self.yumiInterstitial isReady]) {
+      [self.yumiInterstitial present];
     } else {
-      	NSLog(@"Ad wasn't ready");
+      NSLog(@"Ad wasn't ready");
     }
   }
   ```
