@@ -310,7 +310,7 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
    
   @implementation ViewController
   - (void)viewDidLoad {
-  	[super viewDidLoad];
+    [super viewDidLoad];
     [[YumiMediationVideo sharedInstance] loadAdWithPlacementID:@"Your PlacementID" 
                                                      channelID:@"Your channelID" 
                                                      versionID:@"Your versionID"];
