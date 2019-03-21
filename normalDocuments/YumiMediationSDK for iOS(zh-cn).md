@@ -257,13 +257,13 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
   //init yumiInterstitial
   //插屏广告位会自动加载广告，您无需重复调用。
   - (void)viewDidLoad {
-  	[super viewDidLoad];
-   	self.yumiInterstitial = [[YumiMediationInterstitial alloc] 
+    [super viewDidLoad];
+    self.yumiInterstitial = [[YumiMediationInterstitial alloc] 
                                            initWithPlacementID:@"Your PlacementID"
                                                      channelID:@"Your channelID"
                                                      versionID:@"Your versionID"
                                             rootViewController:self];
-  	self.yumiInterstitial.delegate = self;
+    self.yumiInterstitial.delegate = self;
   }
   @end
   ```
