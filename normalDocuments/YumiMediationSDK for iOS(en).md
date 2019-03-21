@@ -311,8 +311,8 @@
   - (void)viewDidLoad {
   	[super viewDidLoad];
       [[YumiMediationVideo sharedInstance] loadAdWithPlacementID:@"Your PlacementID" 
-       									             channelID:@"Your channelID" 
-       									             versionID:@"Your versionID"];
+       									                               channelID:@"Your channelID" 
+       									                               versionID:@"Your versionID"];
     	[YumiMediationVideo sharedInstance].delegate = self;
   }
   @end
@@ -364,9 +364,9 @@
   ```objective-c
   //AppKey is a reserved field that can fill in an empty string.
   [[YumiAdsSplash sharedInstance] showYumiAdsSplashWith:@"Your PlacementID"
-   											   appKey:@"nullable" 
-   								   rootViewController:self.window.rootViewController 
-   											 delegate:self]
+   											                         appKey:@"nullable" 
+   								                   rootViewController:self.window.rootViewController 
+   											                       delegate:self]
   ```
 
 - ##### show splash with bottom custom view
@@ -379,10 +379,10 @@
   //view is your customView.You can show your logo there.
   //warning:view's frame is nonnull.
   [[YumiAdsSplash sharedInstance] showYumiAdsSplashWith:@"Your PlacementID" 
-   											   appKey:@"nullable" 
-   									 customBottomView:view
+   											                         appKey:@"nullable" 
+   									                   customBottomView:view
                                      rootViewController:self.window.rootViewController 
-   											 delegate:self];
+   											                       delegate:self];
   ```
 
 - ##### Delegate implementation
@@ -450,10 +450,10 @@
    - Parameter nativeAd: The current native ad model.
    */
   - (void)registerViewForInteraction:(UIView *)view
-                clickableAssetViews:
+                 clickableAssetViews:
                     (NSDictionary<YumiMediationUnifiedNativeAssetIdentifier, UIView *> *)clickableAssetViews
-                withViewController:(nullable UIViewController *)viewController
-                        nativeAd:(YumiMediationNativeModel *)nativeAd;
+                  withViewController:(nullable UIViewController *)viewController
+                            nativeAd:(YumiMediationNativeModel *)nativeAd;
 
   /// for example:
   [self.nativeAd registerViewForInteraction:self.nativeView.adView
