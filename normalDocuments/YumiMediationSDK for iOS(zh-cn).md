@@ -2,7 +2,7 @@
    * [概述](#概述)   
    * [开发环境配置](#开发环境配置)   
       * [App Transport Security](#app-transport-security)
-      * [<a href="./ThirdpartyNetworkConfiguration/ThirdpartyNetworkConfiguration.md">各三方平台环境配置</a>](#各三方平台环境配置)   
+      * [<a href="./ThirdpartyNetworkConfiguration/ThirdpartyNetworkConfiguration.md">各三方平台环境配置</a>](#各三方平台环境配置)
    * [接入方式](#接入方式)   
    * [代码集成示例](#代码集成示例)   
       * [广告形式](#广告形式)   
@@ -154,14 +154,14 @@
   - (void)viewDidLoad {
   	[super viewDidLoad];
   	self.yumiBanner = [[YumiMediationBannerView alloc] 
-                       initWithPlacementID:@"Your PlacementID" 			
-                         		   channelID:@"Your ChannelID" 
-                                 versionID:@"Your VersionNumber"
-                                  position:YumiMediationBannerPositionBottom
-                        rootViewController:self];
-    	self.yumiBanner.delegate = self;
-    	[self.yumiBanner loadAd:YES];
-    	[self.view addSubview:self.yumiBanner];
+                                  initWithPlacementID:@"Your PlacementID" 			
+                                            channelID:@"Your ChannelID" 
+                                            versionID:@"Your VersionNumber"
+                                             position:YumiMediationBannerPositionBottom
+                                   rootViewController:self];
+    self.yumiBanner.delegate = self;
+    [self.yumiBanner loadAd:YES];
+    [self.view addSubview:self.yumiBanner];
   }
   @end
   ```
@@ -187,7 +187,6 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
 ```
 
 ```objective-c
-  //目前我们支持三种尺寸
   //在 iPhone 上默认为 320 * 50，如无调整不需设置下列代码。
   //在 iPad 上默认为 728 * 90，如无调整不需设置下列代码。
   //如果您有特殊需求，可根据枚举所述尺寸，在 loadAd 之前，执行下列代码。
@@ -258,13 +257,13 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
   //init yumiInterstitial
   //插屏广告位会自动加载广告，您无需重复调用。
   - (void)viewDidLoad {
-  	[super viewDidLoad];
-   	self.yumiInterstitial =  [[YumiMediationInterstitial alloc] 
-                                initWithPlacementID:@"Your PlacementID"
-  							            channelID:@"Your channelID"
-  							            versionID:@"Your versionID"
-  							   rootViewController:self];
-  	self.yumiInterstitial.delegate = self;
+    [super viewDidLoad];
+    self.yumiInterstitial = [[YumiMediationInterstitial alloc] 
+                                           initWithPlacementID:@"Your PlacementID"
+                                                     channelID:@"Your channelID"
+                                                     versionID:@"Your versionID"
+                                            rootViewController:self];
+    self.yumiInterstitial.delegate = self;
   }
   @end
   ```
@@ -274,10 +273,10 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
   ```objective-c
   //present YumiMediationInterstitial
   - (IBAction)presentYumiMediationInterstitial:(id)sender {
-  	if ([self.yumiInterstitial isReady]) {
-      	[self.yumiInterstitial present];
+    if ([self.yumiInterstitial isReady]) {
+      [self.yumiInterstitial present];
     } else {
-      	NSLog(@"Ad wasn't ready");
+      NSLog(@"Ad wasn't ready");
     }
   }
   ```
@@ -311,11 +310,11 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
    
   @implementation ViewController
   - (void)viewDidLoad {
-  	[super viewDidLoad];
-      [[YumiMediationVideo sharedInstance] loadAdWithPlacementID:@"Your PlacementID" 
-       									             channelID:@"Your channelID" 
-       									             versionID:@"Your versionID"];
-    	[YumiMediationVideo sharedInstance].delegate = self;
+    [super viewDidLoad];
+    [[YumiMediationVideo sharedInstance] loadAdWithPlacementID:@"Your PlacementID" 
+                                                     channelID:@"Your channelID" 
+                                                     versionID:@"Your versionID"];
+    [YumiMediationVideo sharedInstance].delegate = self;
   }
   @end
   ```
@@ -324,10 +323,10 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
 
   ```objective-c
   - (IBAction)presentYumiMediationVideo:(id)sender {
-  	if ([[YumiMediationVideo sharedInstance] isReady]) {
-      	 [[YumiMediationVideo sharedInstance] presentFromRootViewController:self];
+    if ([[YumiMediationVideo sharedInstance] isReady]) {
+      [[YumiMediationVideo sharedInstance] presentFromRootViewController:self];
     } else {
-      	NSLog(@"Ad wasn't ready");
+      NSLog(@"Ad wasn't ready");
     }
   }
   ```
@@ -366,9 +365,9 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
   ```objective-c
   //appKey 为预留字段，可填空字符串。
   [[YumiAdsSplash sharedInstance] showYumiAdsSplashWith:@"Your PlacementID"
-   											   appKey:@"nullable" 
-   								   rootViewController:self.window.rootViewController 
-   											 delegate:self]
+                                                 appKey:@"nullable" 
+                                     rootViewController:self.window.rootViewController 
+                                               delegate:self]
   ```
 
 - ###### 展示半屏广告
@@ -381,10 +380,10 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
   //view is your customView.You can show your logo there.
   //warning:view's frame is nonnull.
   [[YumiAdsSplash sharedInstance] showYumiAdsSplashWith:@"Your PlacementID" 
-   											   appKey:@"nullable" 
-   									 customBottomView:view
+                                                 appKey:@"nullable" 
+                                       customBottomView:view
                                      rootViewController:self.window.rootViewController 
-   											 delegate:self];
+                                               delegate:self];
   ```
 
 - ##### 实现代理方法
@@ -421,12 +420,12 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
    
   @implementation ViewController
   - (void)viewDidLoad {
-	[super viewDidLoad];
-	YumiMediationNativeAdConfiguration *config = [[YumiMediationNativeAdConfiguration alloc] init];
-	self.yumiNativeAd = [[YumiMediationNativeAd alloc] 
-  					                        initWithPlacementID:@"Your PlacementID" 
-                                                        channelID:@"Your channelID" 
-                                                        versionID:@"Your versionID"];
+    [super viewDidLoad];
+    YumiMediationNativeAdConfiguration *config = [[YumiMediationNativeAdConfiguration alloc] init];
+    self.yumiNativeAd = [[YumiMediationNativeAd alloc] initWithPlacementID:@"Your PlacementID"
+                                                                 channelID:@"Your channelID"
+                                                                 versionID:@"Your versionID"
+                                                             configuration:config];
     self.yumiNativeAd.delegate = self;
     [self.nativeAd loadAd:1];//You can request more than one ad.
   }
@@ -466,29 +465,30 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
         - Parameter nativeAd: 用于展示的原生广告模型对象
         */
     - (void)registerViewForInteraction:(UIView *)view
-                    clickableAssetViews:
-                        (NSDictionary<YumiMediationUnifiedNativeAssetIdentifier, UIView *> *)clickableAssetViews
+                   clickableAssetViews: (NSDictionary<YumiMediationUnifiedNativeAssetIdentifier, UIView *> *)clickableAssetViews
                     withViewController:(nullable UIViewController *)viewController
-                            nativeAd:(YumiMediationNativeModel *)nativeAd;
+                              nativeAd:(YumiMediationNativeModel *)nativeAd;
     
     /// 例子：
     [self.nativeAd registerViewForInteraction:self.nativeView.adView
                                     clickableAssetViews:@{
-                                                            YumiMediationUnifiedNativeTitleAsset : self.nativeView.title,
-                                                            YumiMediationUnifiedNativeDescAsset : self.nativeView.desc,
-                                                            YumiMediationUnifiedNativeCoverImageAsset : self.nativeView.coverImage,
-                                                            YumiMediationUnifiedNativeMediaViewAsset : self.nativeView.mediaView,
-                                                            YumiMediationUnifiedNativeIconAsset : self.nativeView.icon,
-                                                            YumiMediationUnifiedNativeCallToActionAsset : self.nativeView.callToAction
-                                                            }
-                                        withViewController:self
-                                                nativeAd:adData];
+                                                          YumiMediationUnifiedNativeTitleAsset : self.nativeView.title,
+                                                          YumiMediationUnifiedNativeDescAsset : self.nativeView.desc,
+                                                          YumiMediationUnifiedNativeCoverImageAsset : self.nativeView.coverImage,
+                                                          YumiMediationUnifiedNativeMediaViewAsset : self.nativeView.mediaView,
+                                                          YumiMediationUnifiedNativeIconAsset : self.nativeView.icon,
+                                                          YumiMediationUnifiedNativeCallToActionAsset : self.nativeView.callToAction
+                                                          }
+                                     withViewController:self
+                                               nativeAd:adData];
     ```
+    - 注意: 如果您使用 `UIButton` 来展示原生广告元素，必须禁用 `userInteractionEnabled`，以便 SDK 处理事件。
+           最好的方式是避免使用 `UIButton`，而使用 `UILabel` 或者 `UIImageView`。
 
-    如果以这种方式注册视图， SDK 就可以自动处理诸如以下任务：
-    1. 记录点击
-    2. 显示广告选择叠加层 （AdMob，Facebook 支持）
-    3. 显示广告标识
+    - 如果以这种方式注册视图， SDK 就可以自动处理诸如以下任务：
+      1. 记录点击
+      2. 显示广告选择叠加层 （AdMob，Facebook 支持）
+      3. 显示广告标识
 
 - ##### Report Impression
 
@@ -510,15 +510,15 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
     ```objectivec
     [self.nativeAd registerViewForInteraction:self.nativeView.adView
                                     clickableAssetViews:@{
-                                                            YumiMediationUnifiedNativeTitleAsset : self.nativeView.title,
-                                                            YumiMediationUnifiedNativeDescAsset : self.nativeView.desc,
-                                                            YumiMediationUnifiedNativeCoverImageAsset : self.nativeView.coverImage,
-                                                            YumiMediationUnifiedNativeMediaViewAsset : self.nativeView.mediaView,
-                                                            YumiMediationUnifiedNativeIconAsset : self.nativeView.icon,
-                                                            YumiMediationUnifiedNativeCallToActionAsset : self.nativeView.callToAction
-                                                            }
-                                        withViewController:self
-                                                nativeAd:adData];
+                                                          YumiMediationUnifiedNativeTitleAsset : self.nativeView.title,
+                                                          YumiMediationUnifiedNativeDescAsset : self.nativeView.desc,
+                                                          YumiMediationUnifiedNativeCoverImageAsset : self.nativeView.coverImage,
+                                                          YumiMediationUnifiedNativeMediaViewAsset : self.nativeView.mediaView,
+                                                          YumiMediationUnifiedNativeIconAsset : self.nativeView.icon,
+                                                          YumiMediationUnifiedNativeCallToActionAsset : self.nativeView.callToAction
+                                                          }
+                                     withViewController:self
+                                               nativeAd:adData];
     
     ``` 
 
@@ -561,32 +561,39 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
 
 - ##### 原生广告选项 `YumiMediationNativeAdConfiguration`
 
-   `YumiMediationNativeAd` 的创建过程中包含的最后一个参数是一个可选的对象数组，本节将介绍这些选项。
+   `YumiMediationNativeAdConfiguration` 是 `YumiMediationNativeAd` 的创建过程中包含的最后一个参数，本节将介绍这些选项。
 
    - `disableImageLoading`
-  通过包含 `image`, `imageURL` 和 `ratios` 属性的 YumiMediationNativeAdImage 实例返回原生广告的图片素材资源。如果 disableImageLoading 设置为 false（这是默认值，在 Objective-C 中为 NO），则 SDK 会自动获取图片素材资源，并为您填充各项属性。不过，如果设置为 true（在 Objective-C 中为 YES），SDK 将只填充 imageURL，从而允许您自行决定是否下载实际图片。
+
+     通过包含 `image`, `imageURL` 和 `ratios` 属性的 YumiMediationNativeAdImage 实例返回原生广告的图片素材资源。如果 disableImageLoading 设置为 false（这是默认值，在 Objective-C 中为 NO），则 SDK 会自动获取图片素材资源，并为您填充各项属性。不过，如果设置为 true（在 Objective-C 中为 YES），SDK 将只填充 imageURL，从而允许您自行决定是否下载实际图片。
 
    - `preferredAdChoicesPosition`
-  您可以使用该属性指定“广告选择”图标应放置的位置。该图标可以显示在广告的任一角，默认为 YumiMediationAdChoicesPositionTopRightCorner。
+     
+     您可以使用该属性指定“广告选择”图标应放置的位置。该图标可以显示在广告的任一角，默认为 YumiMediationAdChoicesPositionTopRightCorner。
 
    - `preferredAdAttributionPosition`
-  您可以使用该属性指定广告标识图标应放置的位置。该图标可以显示在广告的任一角，默认为 YumiMediationAdViewPositionTopLeftCorner。
+     
+     您可以使用该属性指定广告标识图标应放置的位置。该图标可以显示在广告的任一角，默认为 YumiMediationAdViewPositionTopLeftCorner。
 
    - `preferredAdAttributionText`
-  您可以使用该属性指定广告标识的文案。根据手机语言显示为“广告”或者“Ad”。
+     
+     您可以使用该属性指定广告标识的文案。根据手机语言显示为“广告”或者“Ad”。
 
    - `preferredAdAttributionTextColor`
-  您可以使用该属性指定广告标识的文字颜色。默认白色。
+     
+     您可以使用该属性指定广告标识的文字颜色。默认白色。
 
    - `preferredAdAttributionTextBackgroundColor`
-  您可以使用该属性指定广告标识的背景颜色。默认灰色，透明度 50%。
+     
+     您可以使用该属性指定广告标识的背景颜色。默认灰色，透明度 50%。
 
    - `preferredAdAttributionTextFont`
-  您可以使用该属性指定广告标识的字体大小。默认10。
+     
+     您可以使用该属性指定广告标识的字体大小。默认10。
 
    - `hideAdAttribution`
-  您可以使用该属性指定广告标识是否显示。默认显示。
-
+     
+     您可以使用该属性指定广告标识是否显示。默认显示。
 
 - ##### 实现代理方法
 

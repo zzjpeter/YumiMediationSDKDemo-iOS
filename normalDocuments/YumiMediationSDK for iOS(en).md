@@ -2,13 +2,13 @@
    * [Summary](#summary)       
    * [Develop Encironment Configuration](#develop-encironment-configuration)   
       * [App Transport Security](#app-transport-security)   
-      * [Permissions for ios 9 and later](#permissions-for-ios-9-and-later)     
+      * [<a href="./ThirdpartyNetworkConfiguration/ThirdpartyNetworkConfiguration.md">Thirdparty Network Configuration</a>](#thirdparty-network-configuration)     
    * [Integration Method](#integration-method)   
    * [Code Sample](#code-sample)   
       * [Advertisement Forms](#advertisement-forms)   
          * [Banner](#banner)   
             * [Initialization and banner request](#initialization-and-banner-request)   
-            * [Reset banner size](#reset-banner-size)   
+            * [Set banner size](#set-banner-size)   
             * [Remove banner](#remove-banner)   
             * [Delegate implementation](#delegate-implementation)   
             * [Self-adaptation](#self-adaptation)   
@@ -26,8 +26,12 @@
             * [show splash with bottom custom view](#show-splash-with-bottom-custom-view)   
             * [Delegate implementation](#delegate-implementation-3)   
          * [Native](#native)   
-            * [Initialization and request](#initialization-and-request)   
-            * [Report Impression](#report-impression)   
+            * [Initialization and request](#initialization-and-request) 
+            * [When to request ad](#when-to-request-ad)
+            * [Register View](#register-view)    
+            * [Report Impression](#report-impression) 
+            * [Native video ads](#native-video-ads) 
+            * [YumiMediationNativeAdConfiguration](#yumimediationnativeadconfiguration)   
             * [Delegate implementation](#delegate-implementation-4)   
    * [Debug Mode](#debug-mode)   
       * [Integration Method](#integration-method-1)   
@@ -41,7 +45,7 @@
 
 1. To Readers
 
-   This documentation is intended for developers who want to integrate Yumimobi SDK in IOS products.
+   This documentation is intended for developers who want to integrate Yumimobi SDK in iOS products.
 
 2. Develop Environment
 
@@ -71,18 +75,8 @@
 
   *The `NSAllowsArbitraryLoads` exception is required to make sure your ads are not impacted by ATS on iOS 9 devices, while `NSAllowsArbitraryLoadsForMedia` and `NSAllowsArbitraryLoadsInWebContent` are required to make sure your ads are not impacted by ATS on iOS 10 devices.*
 
-- ### Permissions for ios 9 and later
-
-  Upload app to App Store, and add the following peimissions to info.plist.
-
-  ```xml
-  <!-- Calendar -->
-  <key>NSCalendarsUsageDescription</key>
-  <string>App shall access calendar with your permission</string>
-  <!-- Photos -->
-  <key>NSPhotoLibraryUsageDescription</key>
-  <string>App shall access photos with your permission</string>
-  ```
+- ### [Thirdparty Network Configuration](./ThirdpartyNetworkConfiguration/ThirdpartyNetworkConfiguration.md)
+  Please setting configurations according to the thirdparty network you choose.
 
 ## Integration Method
 
@@ -159,24 +153,42 @@
   	[super viewDidLoad];
   	self.yumiBanner = [[YumiMediationBannerView alloc] 
                        initWithPlacementID:@"Your PlacementID" 			
-                         		   channelID:@"Your ChannelID" 
+                         		     channelID:@"Your ChannelID" 
                                  versionID:@"Your VersionNumber"
                                   position:YumiMediationBannerPositionBottom
                         rootViewController:self];
-    	self.yumiBanner.delegate = self;
-    	[self.yumiBanner loadAd:YES];
-      [self.view addSubview:self.yumiBanner];
+    self.yumiBanner.delegate = self;
+    [self.yumiBanner loadAd:YES];
+    [self.view addSubview:self.yumiBanner];
   }
   @end
   ```
 
-- ##### Reset banner size
+- ##### Set banner size
 
   ```objective-c
-  /// Required to set this banner view to a proper size. Use one of the predefined standard ad sizes (such as kYumiMediationAdViewBanner320x50) If you want to specify the ad size you need to set it before calling loadAd:
-  /// default: iPhone and iPod Touch ad size. Typically 320x50.
-  /// default: iPad ad size. Typically 728x90.
-  /// If you do not need to change the default values, do not execute the following code.
+  /// Represents the fixed banner ad size
+  typedef NS_ENUM(NSUInteger,
+  YumiMediationAdViewBannerSize) {
+    /// iPhone and iPod Touch ad size. Typically 320x50.
+    kYumiMediationAdViewBanner320x50 = 1 << 0,
+    // Leaderboard size for the iPad. Typically 728x90.
+    kYumiMediationAdViewBanner728x90 = 1 << 1,
+    // Represents the fixed banner ad size - 300pt by 250pt.
+    kYumiMediationAdViewBanner300x250 = 1 << 2,
+    /// An ad size that spans the full width of the application in portrait orientation. 
+    /// The height is typically 50 pixels on an iPhone/iPod UI, and 90 pixels tall on an iPad UI.
+    kYumiMediationAdViewSmartBannerPortrait = 1 << 3,
+    /// An ad size that spans the full width of the application in landscape orientation. 
+    /// The height is typically 32 pixels on an iPhone/iPod UI, and 90 pixels tall on an iPad UI.
+    kYumiMediationAdViewSmartBannerLandscape = 1 << 4
+  };
+  ```
+  ```objective-c
+  //The SDK now supports five banner sizes
+  //iPhone and iPod Touch ad size. Typically 320x50.If there are no special requirements, there is no need to execute the code below.
+  //Leaderboard size for the iPad. Typically 728x90.If there are no special requirements, there is no need to execute the code below.
+  //If you have special requirements, select a size from the enumeration and execute the code below.
   self.yumiBanner.bannerSize = kYumiMediationAdViewBanner300x250;
   ```
 
@@ -247,10 +259,10 @@
   	[super viewDidLoad];
    	self.yumiInterstitial =  [[YumiMediationInterstitial alloc] 
                                 initWithPlacementID:@"Your PlacementID"
-  							            channelID:@"Your channelID"
-  							            versionID:@"Your versionID"
-  							   rootViewController:self];
-    	self.yumiInterstitial.delegate = self;
+  							                          channelID:@"Your channelID"
+  							                          versionID:@"Your versionID"
+  							                 rootViewController:self];
+    self.yumiInterstitial.delegate = self;
   }
   @end
   ```
@@ -297,11 +309,11 @@
   @implementation ViewController
   //the reward video placement will auto cached.
   - (void)viewDidLoad {
-  	[super viewDidLoad];
-      [[YumiMediationVideo sharedInstance] loadAdWithPlacementID:@"Your PlacementID" 
-       									             channelID:@"Your channelID" 
-       									             versionID:@"Your versionID"];
-    	[YumiMediationVideo sharedInstance].delegate = self;
+    [super viewDidLoad];
+    [[YumiMediationVideo sharedInstance] loadAdWithPlacementID:@"Your PlacementID" 
+                                                     channelID:@"Your channelID" 
+                                                     versionID:@"Your versionID"];
+    [YumiMediationVideo sharedInstance].delegate = self;
   }
   @end
   ```
@@ -310,10 +322,10 @@
 
   ```objective-c
   - (IBAction)presentYumiMediationVideo:(id)sender {
-  	if ([[YumiMediationVideo sharedInstance] isReady]) {
-      	 [[YumiMediationVideo sharedInstance] presentFromRootViewController:self];
+    if ([[YumiMediationVideo sharedInstance] isReady]) {
+      [[YumiMediationVideo sharedInstance] presentFromRootViewController:self];
     } else {
-      	NSLog(@"Ad wasn't ready");
+      NSLog(@"Ad wasn't ready");
     }
   }
   ```
@@ -352,9 +364,9 @@
   ```objective-c
   //AppKey is a reserved field that can fill in an empty string.
   [[YumiAdsSplash sharedInstance] showYumiAdsSplashWith:@"Your PlacementID"
-   											   appKey:@"nullable" 
-   								   rootViewController:self.window.rootViewController 
-   											 delegate:self]
+                                                 appKey:@"nullable" 
+                                     rootViewController:self.window.rootViewController 
+   											                       delegate:self];
   ```
 
 - ##### show splash with bottom custom view
@@ -367,10 +379,10 @@
   //view is your customView.You can show your logo there.
   //warning:view's frame is nonnull.
   [[YumiAdsSplash sharedInstance] showYumiAdsSplashWith:@"Your PlacementID" 
-   											   appKey:@"nullable" 
-   									 customBottomView:view
+                                                 appKey:@"nullable" 
+                                       customBottomView:view
                                      rootViewController:self.window.rootViewController 
-   											 delegate:self];
+                                               delegate:self];
   ```
 
 - ##### Delegate implementation
@@ -399,23 +411,33 @@
 
   ```objective-c
   #import <YumiMediationSDK/YumiMediationNativeAd.h>
+  #import <YumiMediationSDK/YumiMediationNativeAdConfiguration.h>
 
   @interface ViewController ()<YumiMediationNativeAdDelegate>
   @property (nonatomic) YumiMediationNativeAd *yumiNativeAd;
   @end
-   
+ 
   @implementation ViewController
   - (void)viewDidLoad {
-  	[super viewDidLoad];
-   	 self.yumiNativeAd = [[YumiMediationNativeAd alloc] 
-  					                        initWithPlacementID:@"Your PlacementID" 
-                                                        channelID:@"Your channelID" 
-                                                        versionID:@"Your versionID"];
-       self.yumiNativeAd.delegate = self;
-    	 [self.nativeAd loadAd:1];//You can request more than one ad.
+    [super viewDidLoad];
+    YumiMediationNativeAdConfiguration *config = [[YumiMediationNativeAdConfiguration alloc] init];
+    self.yumiNativeAd = [[YumiMediationNativeAd alloc]              
+                          initWithPlacementID:@"Your Placement ID"                       
+                                    channelID:@"Your Channel ID"                         
+                                    versionID:@"Your Version ID"                         
+                                configuration:config];
+    self.yumiNativeAd.delegate = self;
+    //You can request more than one ad.
+    [self.nativeAd loadAd:1];
   }
   @end
   ```
+- ##### When to request ad
+  Apps displaying native ads are free to request them in advance of when they'll actually be displayed. In many cases, this is the recommended practice. An app displaying a list of items with native ads mixed in, for example, can load native ads for the whole list, knowing that some will be shown only after the user scrolls the view and some may not be displayed at all.
+
+  - Warning: while prefetching ads is a great technique, it's important that you don't keep old ads around forever without displaying them. Any native ad objects that have been held without display for longer than an hour should be discarded and replaced with new ads from a new request.
+  You can call `-(BOOL)isExpired;` from `YumiMediationNativeModel.h` file to determine whether the current AD is expired.
+  - Warning: when reusing `loadAd:`, make sure you wait for each request to complete.
 
 - ##### Register View
 
@@ -423,14 +445,36 @@
   /**
    This is a method to associate a YumiNativeAd with the UIView you will use to display the native ads.
    - Parameter view: The UIView you created to render all the native ads data elements.
+   - Parameter clickableAssetViews: Dictionary of asset views that are clickable, keyed by asset IDs.
    - Parameter viewController: The UIViewController that will be used to present SKStoreProductViewController(iTunes Store product information) or the in-app browser. If nil is passed, the top view controller currently shown will be used.
-   The whole area of the UIView will be clickable.
+   - Parameter nativeAd: The current native ad model.
    */
   - (void)registerViewForInteraction:(UIView *)view
+                 clickableAssetViews:
+                    (NSDictionary<YumiMediationUnifiedNativeAssetIdentifier, UIView *> *)clickableAssetViews
                   withViewController:(nullable UIViewController *)viewController
                             nativeAd:(YumiMediationNativeModel *)nativeAd;
-  ```
 
+  /// for example:
+  [self.nativeAd registerViewForInteraction:self.nativeView.adView
+                        clickableAssetViews:@{
+                                              YumiMediationUnifiedNativeTitleAsset : self.nativeView.title,
+                                              YumiMediationUnifiedNativeDescAsset : self.nativeView.desc,
+                                              YumiMediationUnifiedNativeCoverImageAsset : self.nativeView.coverImage,
+                                              YumiMediationUnifiedNativeMediaViewAsset : self.nativeView.mediaView,
+                                              YumiMediationUnifiedNativeIconAsset : self.nativeView.icon,
+                                              YumiMediationUnifiedNativeCallToActionAsset : self.nativeView.callToAction
+                                              }
+                         withViewController:self
+                                   nativeAd:adData];
+  ```
+  - Warning: If you use UIButtons to display native ad assets, you need to disable their user interaction so that the SDK can properly receive and process UI events. Because of this extra step, it's frequently best to avoid UIButtons entirely and use UILabel and UIImageView instead.
+  - If you register the view in this way, the SDK automatically handles tasks such as the following:
+
+    - handle click event.
+    - display adChoice view (admob,facebook support)
+    - display the `Ad` text view
+      
 - ##### Report Impression
 
   ```objective-c
@@ -441,23 +485,100 @@
   */
   - (void)reportImpression:(YumiMediationNativeModel *)nativeAd view:(UIView *)view;
   ```
+- ##### Native video ads
+
+  - If you want to display video in native ads, you only need to pass your MediaView into the SDK when you register the view. `YumiMediationUnifiedNativeMediaViewAsset: self. NativeView.MediaView`. The SDK will automatically handle this filling:
+
+    - If a video resource is available, the sdk cached and played in the MediaView that you pass in.
+    - If the advertisement does not contain a video source, it downloads the first image source instead and places it in the MediaView that you pass in.
+  
+  ```objective-c
+  [self.nativeAd registerViewForInteraction:self.nativeView.adView
+                        clickableAssetViews:@{
+                                              YumiMediationUnifiedNativeTitleAsset : self.nativeView.title,
+                                              YumiMediationUnifiedNativeDescAsset : self.nativeView.desc,
+                                              YumiMediationUnifiedNativeCoverImageAsset : self.nativeView.coverImage,
+                                              YumiMediationUnifiedNativeMediaViewAsset : self.nativeView.mediaView,
+                                              YumiMediationUnifiedNativeIconAsset : self.nativeView.icon,
+                                              YumiMediationUnifiedNativeCallToActionAsset : self.nativeView.callToAction
+                                              }
+                         withViewController:self
+                                   nativeAd:adData];
+  ``` 
+  - You can call `hasVideoContent ` from `YumiMediationNativeModel.h ` to determine there contains video resources in the native model.
+    ```objective-c
+    /// Indicates whether the ad has video content.
+    @property (nonatomic, assign, readonly) BOOL hasVideoContent;
+    ``` 
+  - You can query the status of video in the following ways, from `YumiMediationNativeVideoController`
+
+    ```objective-c
+    /// Delegate for receiving video notifications.
+    @property(nonatomic, weak) id<YumiMediationNativeVideoControllerDelegate> delegate;
+    /// Play the video. Doesn't do anything if the video is already playing.
+    - (void)play;
+    /// Pause the video. Doesn't do anything if the video is already paused.
+    - (void)pause;
+    /// Returns the video's aspect ratio (width/height) or 0 if no video is present.
+    /// baidu always return 0
+    - (double)aspectRatio;
+    @protocol YumiMediationNativeVideoControllerDelegate<NSObject>
+    @optional
+    /// Tells the delegate that the video controller has began or resumed playing a video.
+    - (void)yumiMediationNativeVideoControllerDidPlayVideo:(YumiMediationNativeVideoController *)videoController;
+    /// Tells the delegate that the video controller has paused video.
+    - (void)yumiMediationNativeVideoControllerDidPauseVideo:(YumiMediationNativeVideoController *)videoController;
+    /// Tells the delegate that the video controller's video playback has ended.
+    - (void)yumiMediationNativeVideoControllerDidEndVideoPlayback:(YumiMediationNativeVideoController *)videoController;
+    @end
+    ``` 
+
+- ##### YumiMediationNativeAdConfiguration
+  YumiMediationNativeAdConfiguration is the last parameter when init YumiMediationNativeAd.
+  - `disableImageLoading`
+    
+    Image assets for native ads are returned via instances of `YumiMediationNativeAdImage`, which contains `image`,`ratios` and `imageURL` properties. If disableImageLoading is set to false, which is the default (NO in Objective-C), the SDK will fetch image assets automatically and populate both the image and the imageURL properties for you. If it's set to true (or YES in Objective-C), the SDK will only populate imageURL, allowing you to download the actual images at your discretion. Use the mainImage property of GADMediaContent to set the image for the media view when manually downloading images.
+  
+  - `preferredAdChoicesPosition`
+    
+    You can use this property to specify where the AdChoicesView should be placed. Default is `YumiMediationAdChoicesPositionTopRightCorner`
+  
+  - `preferredAdAttributionPosition`
+    
+    You can use this property to specify where the Ad text view should be placed. Default is `YumiMediationAdViewPositionTopLeftCorner`
+  
+  - `preferredAdAttributionText`
+    
+    You can use this property to specify the Ad text. Default is `Ad`.
+  
+  - `preferredAdAttributionTextColor`
+    
+    You can use this property to specify the Ad text color. Default is `gray`.
+  
+  - `preferredAdAttributionTextFont`
+    
+    You can use this property to specify the Ad text font size. Default is `10`.
+  
+  - `hideAdAttribution`
+    
+    You can use this property to hide the Ad text. Default is display.
 
 - ##### Delegate implementation
 
   ```objective-c
   /// Tells the delegate that an ad has been successfully loaded.
   - (void)yumiMediationNativeAdDidLoad:(NSArray<YumiMediationNativeModel *> *)nativeAdArray{
-      NSLog(@"Native Ad Did Load.");
+    NSLog(@"Native Ad Did Load.");
   }
 
   /// Tells the delegate that a request failed.
   - (void)yumiMediationNativeAd:(YumiMediationNativeAd *)nativeAd didFailWithError:(YumiMediationError *)error{
-      NSLog(@"NativeAd Did Fail With Error.");
+    NSLog(@"NativeAd Did Fail With Error.");
   }
 
   /// Tells the delegate that the Native view has been clicked.
   - (void)yumiMediationNativeAdDidClick:(YumiMediationNativeModel *)nativeAd{
-      NSLog(@"Native Ad Did Click.");
+    NSLog(@"Native Ad Did Click.");
   }
   ```
 
