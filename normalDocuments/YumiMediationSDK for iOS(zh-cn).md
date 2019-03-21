@@ -422,8 +422,8 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
   - (void)viewDidLoad {
 	[super viewDidLoad];
 	YumiMediationNativeAdConfiguration *config = [[YumiMediationNativeAdConfiguration alloc] init];
-	self.yumiNativeAd = [[YumiMediationNativeAd alloc] initWithPlacementID:@"Your PlacementID" 
-                                                               channelID:@"Your channelID" 
+	self.yumiNativeAd = [[YumiMediationNativeAd alloc] initWithPlacementID:@"Your PlacementID"
+                                                               channelID:@"Your channelID"
                                                                versionID:@"Your versionID"
                                                            configuration:config];
   self.yumiNativeAd.delegate = self;
