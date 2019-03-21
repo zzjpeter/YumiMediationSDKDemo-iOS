@@ -310,10 +310,9 @@
   //the reward video placement will auto cached.
   - (void)viewDidLoad {
     [super viewDidLoad];
-    [[YumiMediationVideo sharedInstance] 
-      loadAdWithPlacementID:@"Your PlacementID" 
-       						channelID:@"Your channelID" 
-       						versionID:@"Your versionID"];
+    [[YumiMediationVideo sharedInstance] loadAdWithPlacementID:@"Your PlacementID" 
+                                                     channelID:@"Your channelID" 
+                                                     versionID:@"Your versionID"];
     [YumiMediationVideo sharedInstance].delegate = self;
   }
   @end
@@ -323,7 +322,7 @@
 
   ```objective-c
   - (IBAction)presentYumiMediationVideo:(id)sender {
-  	if ([[YumiMediationVideo sharedInstance] isReady]) {
+    if ([[YumiMediationVideo sharedInstance] isReady]) {
       [[YumiMediationVideo sharedInstance] presentFromRootViewController:self];
     } else {
       NSLog(@"Ad wasn't ready");
