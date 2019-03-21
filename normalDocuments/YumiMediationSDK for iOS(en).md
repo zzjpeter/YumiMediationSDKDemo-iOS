@@ -364,9 +364,9 @@
   ```objective-c
   //AppKey is a reserved field that can fill in an empty string.
   [[YumiAdsSplash sharedInstance] showYumiAdsSplashWith:@"Your PlacementID"
-   											                         appKey:@"nullable" 
-   								                   rootViewController:self.window.rootViewController 
-   											                       delegate:self]
+                                                 appKey:@"nullable" 
+                                     rootViewController:self.window.rootViewController 
+   											                       delegate:self];
   ```
 
 - ##### show splash with bottom custom view
@@ -379,10 +379,10 @@
   //view is your customView.You can show your logo there.
   //warning:view's frame is nonnull.
   [[YumiAdsSplash sharedInstance] showYumiAdsSplashWith:@"Your PlacementID" 
-   											                         appKey:@"nullable" 
-   									                   customBottomView:view
+                                                 appKey:@"nullable" 
+                                       customBottomView:view
                                      rootViewController:self.window.rootViewController 
-   											                       delegate:self];
+                                               delegate:self];
   ```
 
 - ##### Delegate implementation
