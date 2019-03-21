@@ -8,7 +8,7 @@
       * [Advertisement Forms](#advertisement-forms)   
          * [Banner](#banner)   
             * [Initialization and banner request](#initialization-and-banner-request)   
-            * [Reset banner size](#reset-banner-size)   
+            * [Set banner size](#reset-banner-size)   
             * [Remove banner](#remove-banner)   
             * [Delegate implementation](#delegate-implementation)   
             * [Self-adaptation](#self-adaptation)   
