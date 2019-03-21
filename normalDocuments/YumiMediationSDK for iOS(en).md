@@ -182,7 +182,7 @@
     /// An ad size that spans the full width of the application in landscape orientation. 
     /// The height is typically 32 pixels on an iPhone/iPod UI, and 90 pixels tall on an iPad UI.
     kYumiMediationAdViewSmartBannerLandscape = 1 << 4
-};
+  };
   ```
   ```objective-c
   //The SDK now supports five banner sizes
