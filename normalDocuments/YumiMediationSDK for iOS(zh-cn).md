@@ -585,7 +585,7 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
 
    - `preferredAdAttributionTextBackgroundColor`
      
-     您可以使用该属性指定广告标识的背景颜色。默认灰色，透明度 50%。
+     您可以使用该属性指定广告标识的背景颜色。默认灰色。
 
    - `preferredAdAttributionTextFont`
      
