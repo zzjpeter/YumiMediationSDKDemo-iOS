@@ -537,7 +537,7 @@
   YumiMediationNativeAdConfiguration is the last parameter when init YumiMediationNativeAd.
   - `disableImageLoading`
     
-    Image assets for native ads are returned via instances of `YumiMediationNativeAdImage`, which contains `image`,`ratios` and `imageURL` properties. If disableImageLoading is set to false, which is the default (NO in Objective-C), the SDK will fetch image assets automatically and populate both the image and the imageURL properties for you. If it's set to true (or YES in Objective-C), the SDK will only populate imageURL, allowing you to download the actual images at your discretion. Use the mainImage property of GADMediaContent to set the image for the media view when manually downloading images.
+    Image assets for native ads are returned via instances of `YumiMediationNativeAdImage`, which contains `image`,`ratios` and `imageURL` properties. If disableImageLoading is set to false, which is the default (NO in Objective-C), the SDK will fetch image assets automatically and populate both the image and the imageURL properties for you. If it's set to true (or YES in Objective-C), the SDK will only populate imageURL, allowing you to download the actual images at your discretion.
   
   - `preferredAdChoicesPosition`
     
@@ -553,8 +553,12 @@
   
   - `preferredAdAttributionTextColor`
     
-    You can use this property to specify the Ad text color. Default is `gray`.
+    You can use this property to specify the Ad text color. Default is `white`.
+
+  - `preferredAdAttributionTextBackgroundColor` 
   
+    You can use this property to specify the Ad text background color. Default is `gray`.
+
   - `preferredAdAttributionTextFont`
     
     You can use this property to specify the Ad text font size. Default is `10`.
