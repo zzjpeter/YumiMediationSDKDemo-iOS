@@ -29,4 +29,4 @@
 |     I     | Interstitial |
 |     V     |    Video     |
 |     N     |    Native    |
-|     S     |    Stream    |
+|     S     |    Splash    |
