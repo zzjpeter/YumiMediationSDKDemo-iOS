@@ -636,9 +636,13 @@ Select single platform, the grey indicates  not configurated yet.
 
 select ad category, debug single platform
 
-### Test ad placementIDs
+### TEST ID
 
-| Platform | Banner   | Interstitial | Rewarded Video | Native   | Splash   |
-| -------- | -------- | ------------ | -------------- | -------- | -------- |
-| iOS      | l6ibkpae | onkkeg5i     | 5xmpgti4       | atb3ke1i | pwmf5r42 |
-
+ 
+| Formats             | Slot(Placement) ID                                                                                                                | Note                                                                                                                              |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| Banner                 | l6ibkpae                                                                                                                          | YUMI,AdMob,APPlovin,Baidu,Facebook,GDTMob  Use this test id, the above Network platform has ads                                         |
+| Interstitial  | onkkeg5i | YUMI,AdMob,Baidu,Chartboost,GDTMob,IronSource,Inmobi,IQzone, untiy Ads，vungle, ZPLAYAds Use this test id, the above Network platform has ads                                         |
+| Rewarded Video         | 5xmpgti4                                                                                                                          | YUMI,AdMob,Adcolony, APPlovin,IronSource,Inmobi,Mintegral, untiy Ads，vungle, ZPLAYAds Use this test id, the above Network platform has ads                                        | |
+| Native                 | atb3ke1i                                                                                                                          | YUMI,AdMob,Baidu,GDTMob,Facebook Use this test id, the above Network platform has ads                                                                              |
+| Splash                 | pwmf5r42                                                                                                                         | YUMI Use this test id, the above Network platform has ads                                                                                                    |
