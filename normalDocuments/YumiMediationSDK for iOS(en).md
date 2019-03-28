@@ -37,7 +37,7 @@
       * [Integration Method](#integration-method-1)   
       * [Call debug mode](#call-debug-mode)   
       * [Sample](#sample)  
-      * [Test ad placementIDs](#Test-ad-placementIDs)
+      * [TEST ID](#TEST-ID)
 
 # YumiMediationSDK iOS
 
