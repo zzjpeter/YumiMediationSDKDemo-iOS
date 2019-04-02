@@ -1,11 +1,12 @@
 source "https://github.com/CocoaPods/Specs"
+#source "https://github.com/yumimobi/Specs"
 platform :ios, '8.0'
 
 target 'YumiMediationSDKDemo' do
   # use_frameworks!
   
-    pod "YumiMediationAdapters"
     pod "YumiMediationSDK"
+    pod "YumiMediationAdapters",:subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','Unity','Vungle','Mintegral','OneWay','ZplayAds','IQzone']
     pod "YumiMediationDebugCenter-iOS"
 
   target 'YumiMediationSDKDemoTests' do
