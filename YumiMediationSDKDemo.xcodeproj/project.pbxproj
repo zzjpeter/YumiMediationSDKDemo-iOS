@@ -407,7 +407,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo-resources.sh",
 				"${PODS_ROOT}/YumiBaidu/lib/baidumobadsdk.bundle",
 				"${PODS_ROOT}/YumiDomob/IndependentVideoBundle.bundle",
 				"${PODS_ROOT}/YumiIQzone/lib/IASDKResources.bundle",
@@ -438,7 +438,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D502E83456DB64030966F724 /* [CP] Check Pods Manifest.lock */ = {
