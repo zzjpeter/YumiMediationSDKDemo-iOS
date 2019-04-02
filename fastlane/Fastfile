@@ -227,7 +227,7 @@ platform :ios do
         file.puts("|     I     | Interstitial |")
         file.puts("|     V     |    Video     |")
         file.puts("|     N     |    Native    |")
-        file.puts("|     S     |    Stream    |")
+        file.puts("|     S     |    Splash    |")
       end
       Dir.chdir(sdkVersion) do
         sh "tar cjf #{allThirdPartysSource} YumiMediationThirdPartys"
