@@ -71,7 +71,7 @@ platform :ios do
     # Push to HockeyApp
     hockey(
       api_token: "b23874100f5346cdb613ca63c57393eb",
-      public_identifier: '8247cc4ea833d70d26f28bf6aad43c9a',
+      public_identifier: '4467afeb42404f82be3ab1495cccb594',
       notify: "1",
       status: "2",
       commit_sha: ENV["TRAVIS_COMMIT"],
@@ -264,7 +264,7 @@ platform :ios do
     # Push to HockeyApp
     hockey(
       api_token: "b23874100f5346cdb613ca63c57393eb",
-      public_identifier: '8247cc4ea833d70d26f28bf6aad43c9a',
+      public_identifier: '4467afeb42404f82be3ab1495cccb594',
       notify: "1",
       status: "2",
       commit_sha: ENV["TRAVIS_COMMIT"],
