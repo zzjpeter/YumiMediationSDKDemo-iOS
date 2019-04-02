@@ -70,8 +70,8 @@ platform :ios do
 
     # Push to HockeyApp
     hockey(
-      api_token: "e4b2db23aced4eb7abbe540b925f64ec",
-      public_identifier: 'b1ec3f8648fb479f9c4666c4edc97004',
+      api_token: "b23874100f5346cdb613ca63c57393eb",
+      public_identifier: '8247cc4ea833d70d26f28bf6aad43c9a',
       notify: "1",
       status: "2",
       commit_sha: ENV["TRAVIS_COMMIT"],
@@ -248,6 +248,29 @@ platform :ios do
 
   end
 
+ # pushToHockeyApp in local
+  lane :pushToHockeyApp do
+    # Build
+    gym(
+      scheme: "YumiMediationSDKDemo",
+      workspace: "YumiMediationSDKDemo.xcworkspace",
+      configuration: "Release",
+      clean: true,
+      include_bitcode: false,
+      include_symbols: true,
+      export_method: "enterprise"
+    )
+
+    # Push to HockeyApp
+    hockey(
+      api_token: "b23874100f5346cdb613ca63c57393eb",
+      public_identifier: '8247cc4ea833d70d26f28bf6aad43c9a',
+      notify: "1",
+      status: "2",
+      commit_sha: ENV["TRAVIS_COMMIT"],
+      notes: ENV["TRAVIS_COMMIT_MESSAGE"],
+    )
+  end
   # You can define as many lanes as you want
 
   after_all do |lane|
