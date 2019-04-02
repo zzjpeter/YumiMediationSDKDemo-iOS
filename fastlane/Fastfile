@@ -70,8 +70,8 @@ platform :ios do
 
     # Push to HockeyApp
     hockey(
-      api_token: "e4b2db23aced4eb7abbe540b925f64ec",
-      public_identifier: 'b1ec3f8648fb479f9c4666c4edc97004',
+      api_token: "b23874100f5346cdb613ca63c57393eb",
+      public_identifier: '8247cc4ea833d70d26f28bf6aad43c9a',
       notify: "1",
       status: "2",
       commit_sha: ENV["TRAVIS_COMMIT"],
@@ -96,7 +96,7 @@ platform :ios do
       { :name => "Domob", :version => "3.8.0", :supportAdtype => "V" },
       { :name => "GDT", :version => "4.8.1", :supportAdtype => "B+I+N+V" },
       { :name => "InMobi", :version => "7.2.1", :supportAdtype => "B+I+V" },
-      { :name => "IronSource", :version => "6.7.10", :supportAdtype => "V+I" },
+      { :name => "IronSource", :version => "6.8.1.0", :supportAdtype => "V+I" },
       { :name => "Unity", :version => "2.3.0", :supportAdtype => "I+V" },
       { :name => "Vungle", :version => "6.2.0", :supportAdtype => "I+V" },
       { :name => "Mintegral", :version => "4.9.4", :supportAdtype => "V+I"},
@@ -227,7 +227,7 @@ platform :ios do
         file.puts("|     I     | Interstitial |")
         file.puts("|     V     |    Video     |")
         file.puts("|     N     |    Native    |")
-        file.puts("|     S     |    Stream    |")
+        file.puts("|     S     |    Splash    |")
       end
       Dir.chdir(sdkVersion) do
         sh "tar cjf #{allThirdPartysSource} YumiMediationThirdPartys"
@@ -248,6 +248,29 @@ platform :ios do
 
   end
 
+ # pushToHockeyApp in local
+  lane :pushToHockeyApp do
+    # Build
+    gym(
+      scheme: "YumiMediationSDKDemo",
+      workspace: "YumiMediationSDKDemo.xcworkspace",
+      configuration: "Release",
+      clean: true,
+      include_bitcode: false,
+      include_symbols: true,
+      export_method: "enterprise"
+    )
+
+    # Push to HockeyApp
+    hockey(
+      api_token: "b23874100f5346cdb613ca63c57393eb",
+      public_identifier: '8247cc4ea833d70d26f28bf6aad43c9a',
+      notify: "1",
+      status: "2",
+      commit_sha: ENV["TRAVIS_COMMIT"],
+      notes: ENV["TRAVIS_COMMIT_MESSAGE"],
+    )
+  end
   # You can define as many lanes as you want
 
   after_all do |lane|
