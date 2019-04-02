@@ -96,7 +96,7 @@ platform :ios do
       { :name => "Domob", :version => "3.8.0", :supportAdtype => "V" },
       { :name => "GDT", :version => "4.8.1", :supportAdtype => "B+I+N+V" },
       { :name => "InMobi", :version => "7.2.1", :supportAdtype => "B+I+V" },
-      { :name => "IronSource", :version => "6.7.10", :supportAdtype => "V+I" },
+      { :name => "IronSource", :version => "6.8.1.0", :supportAdtype => "V+I" },
       { :name => "Unity", :version => "2.3.0", :supportAdtype => "I+V" },
       { :name => "Vungle", :version => "6.2.0", :supportAdtype => "I+V" },
       { :name => "Mintegral", :version => "4.9.4", :supportAdtype => "V+I"},
