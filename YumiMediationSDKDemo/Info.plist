@@ -31,8 +31,6 @@
 	</dict>
 	<key>NSLocationUsageDescription</key>
 	<string>请允许定位</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
