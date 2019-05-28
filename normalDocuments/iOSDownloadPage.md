@@ -8,7 +8,7 @@
 |    AdColony    |  3.3.6  |   V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/YumiMediationAdColony.tar.bz2)   |      |
 |    AdMob    |  7.30.0  |   B+I+V+N      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/YumiMediationAdMob.tar.bz2)   |      |
 |    AppLovin    |  5.0.2  |   B+V+I      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/YumiMediationAppLovin.tar.bz2)   |      |
-|    Baidu    |  4.6.0  |   B+I+V+N      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/YumiMediationBaidu.tar.bz2)   |      |
+|    Baidu    |  4.6.4  |   B+I+V+N      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/YumiMediationBaidu.tar.bz2)   |      |
 |    Chartboost    |  7.3.0  |   V+I      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/YumiMediationChartboost.tar.bz2)   |      |
 |    Facebook    |  5.1.0  |   B+I+N+V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/YumiMediationFacebook.tar.bz2)   |      |
 |    Domob    |  3.8.0  |   V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/YumiMediationDomob.tar.bz2)   |      |
@@ -20,7 +20,7 @@
 |    Mintegral    |  5.3.1  |   V+I      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/YumiMediationMintegral.tar.bz2)   |      |
 |    OneWay    |  2.1.0  |   V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/YumiMediationOneWay.tar.bz2)   |      |
 |    ZplayAds    |  2.4.2  |   V+I      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/YumiMediationZplayAds.tar.bz2)   |      |
-|    IQzone    |  3.0.2134  |   B+I+V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/YumiMediationIQzone.tar.bz2)   |      |
+|    IQzone    |  3.0.2141  |   B+I+V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/YumiMediationIQzone.tar.bz2)   |      |
 |    BytedanceAds    |  2.0.1.1  |   B+I+N+V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/YumiMediationBytedanceAds.tar.bz2)   |      |
 |    AllThirdPartysAdapter    |  3.6.4  |         |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/allThirdPartys.tar.bz2)   |      |
  
