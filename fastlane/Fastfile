@@ -90,7 +90,7 @@ platform :ios do
       { :name => "AdColony", :version => "3.3.6", :supportAdtype => "V" },
       { :name => "AdMob", :version => "7.30.0", :supportAdtype => "B+I+V+N" },
       { :name => "AppLovin", :version => "5.0.2", :supportAdtype => "B+V+I" },
-      { :name => "Baidu", :version => "4.6.0", :supportAdtype => "B+I+V+N" },
+      { :name => "Baidu", :version => "4.6.4", :supportAdtype => "B+I+V+N" },
       { :name => "Chartboost", :version => "7.3.0", :supportAdtype => "V+I" },
       { :name => "Facebook", :version => "5.1.0", :supportAdtype => "B+I+N+V" },
       { :name => "Domob", :version => "3.8.0", :supportAdtype => "V" },
@@ -102,7 +102,7 @@ platform :ios do
       { :name => "Mintegral", :version => "5.3.1", :supportAdtype => "V+I"},
       { :name => "OneWay",:version => "2.1.0", :supportAdtype => "V"},
       { :name => "ZplayAds",:version => "2.4.2", :supportAdtype => "V+I"},
-      { :name => "IQzone", :version => "3.0.2134", :supportAdtype => "B+I+V" },
+      { :name => "IQzone", :version => "3.0.2141", :supportAdtype => "B+I+V" },
       { :name => "BytedanceAds", :version => "2.0.1.1", :supportAdtype => "B+I+N+V" },
     ]
     sdkVersion = "YumiMediationSDK_v"+ ENV["TRAVIS_TAG"]
