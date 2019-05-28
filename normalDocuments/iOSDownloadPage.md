@@ -1,27 +1,28 @@
-### SDK Download List 3.6.3
+### SDK Download List 3.6.4
  
 |    Name     | Version  | Support AdType | DownloadLink | Note |
 | :---------: | :------: | :------------: | :----------: | :--: |
-|    YumiMediationSDK    |  3.6.3  |    B+I+V+N+S     |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.3/YumiMediationSDK-iOS.tar.bz2)   |      |
-|        YumiMediationSDKConfig.xcconfig        |  3.6.3  |                | [link](https://adsdk.yumimobi.com/iOS/Archived/YumiMediationSDKConfig.xcconfig) |      |
-|    YumiMediationDebugCenter    |  3.6.3  |         |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.3/YumiMediationDebugCenter-iOS.tar.bz2)   |      |
-|    AdColony    |  3.3.6  |   V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.3/YumiMediationAdColony.tar.bz2)   |      |
-|    AdMob    |  7.30.0  |   B+I+V+N      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.3/YumiMediationAdMob.tar.bz2)   |      |
-|    AppLovin    |  5.0.2  |   B+V+I      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.3/YumiMediationAppLovin.tar.bz2)   |      |
-|    Baidu    |  4.6.0  |   B+I+V+N      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.3/YumiMediationBaidu.tar.bz2)   |      |
-|    Chartboost    |  7.3.0  |   V+I      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.3/YumiMediationChartboost.tar.bz2)   |      |
-|    Facebook    |  5.1.0  |   B+I+N+V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.3/YumiMediationFacebook.tar.bz2)   |      |
-|    Domob    |  3.8.0  |   V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.3/YumiMediationDomob.tar.bz2)   |      |
-|    GDT    |  4.8.1  |   B+I+N+V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.3/YumiMediationGDT.tar.bz2)   |      |
-|    InMobi    |  7.2.1  |   B+I+V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.3/YumiMediationInMobi.tar.bz2)   |      |
-|    IronSource    |  6.8.1.0  |   V+I      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.3/YumiMediationIronSource.tar.bz2)   |      |
-|    Unity    |  2.3.0  |   I+V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.3/YumiMediationUnity.tar.bz2)   |      |
-|    Vungle    |  6.2.0  |   I+V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.3/YumiMediationVungle.tar.bz2)   |      |
-|    Mintegral    |  4.9.4  |   V+I      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.3/YumiMediationMintegral.tar.bz2)   |      |
-|    OneWay    |  2.1.0  |   V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.3/YumiMediationOneWay.tar.bz2)   |      |
-|    ZplayAds    |  2.4.0  |   V+I      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.3/YumiMediationZplayAds.tar.bz2)   |      |
-|    IQzone    |  3.0.2134  |   B+I+V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.3/YumiMediationIQzone.tar.bz2)   |      |
-|    AllThirdPartysAdapter    |  3.6.3  |         |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.3/allThirdPartys.tar.bz2)   |      |
+|    YumiMediationSDK    |  3.6.4  |    B+I+V+N+S     |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/YumiMediationSDK-iOS.tar.bz2)   |      |
+|        YumiMediationSDKConfig.xcconfig        |  3.6.4  |                | [link](https://adsdk.yumimobi.com/iOS/Archived/YumiMediationSDKConfig.xcconfig) |      |
+|    YumiMediationDebugCenter    |  3.6.4  |         |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/YumiMediationDebugCenter-iOS.tar.bz2)   |      |
+|    AdColony    |  3.3.6  |   V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/YumiMediationAdColony.tar.bz2)   |      |
+|    AdMob    |  7.30.0  |   B+I+V+N      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/YumiMediationAdMob.tar.bz2)   |      |
+|    AppLovin    |  5.0.2  |   B+V+I      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/YumiMediationAppLovin.tar.bz2)   |      |
+|    Baidu    |  4.6.0  |   B+I+V+N      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/YumiMediationBaidu.tar.bz2)   |      |
+|    Chartboost    |  7.3.0  |   V+I      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/YumiMediationChartboost.tar.bz2)   |      |
+|    Facebook    |  5.1.0  |   B+I+N+V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/YumiMediationFacebook.tar.bz2)   |      |
+|    Domob    |  3.8.0  |   V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/YumiMediationDomob.tar.bz2)   |      |
+|    GDT    |  4.8.1.0  |   B+I+N+V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/YumiMediationGDT.tar.bz2)   |      |
+|    InMobi    |  7.2.1  |   B+I+V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/YumiMediationInMobi.tar.bz2)   |      |
+|    IronSource    |  6.8.1.0  |   V+I      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/YumiMediationIronSource.tar.bz2)   |      |
+|    Unity    |  2.3.0  |   I+V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/YumiMediationUnity.tar.bz2)   |      |
+|    Vungle    |  6.2.0  |   I+V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/YumiMediationVungle.tar.bz2)   |      |
+|    Mintegral    |  5.3.1  |   V+I      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/YumiMediationMintegral.tar.bz2)   |      |
+|    OneWay    |  2.1.0  |   V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/YumiMediationOneWay.tar.bz2)   |      |
+|    ZplayAds    |  2.4.2  |   V+I      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/YumiMediationZplayAds.tar.bz2)   |      |
+|    IQzone    |  3.0.2134  |   B+I+V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/YumiMediationIQzone.tar.bz2)   |      |
+|    BytedanceAds    |  2.0.1.1  |   B+I+N+V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/YumiMediationBytedanceAds.tar.bz2)   |      |
+|    AllThirdPartysAdapter    |  3.6.4  |         |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4/allThirdPartys.tar.bz2)   |      |
  
 | shortName |   FullName   |
 | :-------: | :----------: |
