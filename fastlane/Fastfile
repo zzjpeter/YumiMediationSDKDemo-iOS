@@ -94,7 +94,7 @@ platform :ios do
       { :name => "Chartboost", :version => "7.3.0", :supportAdtype => "V+I" },
       { :name => "Facebook", :version => "5.1.0", :supportAdtype => "B+I+N+V" },
       { :name => "Domob", :version => "3.8.0", :supportAdtype => "V" },
-      { :name => "GDT", :version => "4.8.1.0", :supportAdtype => "B+I+N+V" },
+      { :name => "GDT", :version => "4.10.2", :supportAdtype => "B+I+N+V" },
       { :name => "InMobi", :version => "7.2.1", :supportAdtype => "B+I+V" },
       { :name => "IronSource", :version => "6.8.1.0", :supportAdtype => "V+I" },
       { :name => "Unity", :version => "2.3.0", :supportAdtype => "I+V" },
