@@ -391,7 +391,7 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
 - ##### 设置开屏加载时的背景图片
 
   ```objective-c
-  /// 开屏加载时的背景图片
+  /// 开屏加载时的背景图片，最好是 APP 启动的 launch image
   [self.yumiSplash setLaunchImage:[UIImage imageNamed:@"YOUR_IMAGENAME"]];
   ```
 
