@@ -384,6 +384,7 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
 - ##### 设置开屏拉取时长
   ```objective-c
   /// 拉取广告超时时间，默认3s。在该超时时间内，如果广告拉取成功，则立马展示开屏广告，否则放弃此次广告展示机会。
+  /// 百度 平台不支持 这个参数
   [self.yumiSplash setFetchTime:3]; 
   ```
 
@@ -409,12 +410,11 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
   [self.yumiSplash loadAdAndShowInWindow:[UIApplication sharedApplication].keyWindow];
   ```
 
-
-
 - ##### 展示半屏广告
 
   ```objective-c
-  UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 100)];
+  /// bottom view 的高度不能超过屏幕高度的15%
+  UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height * 0.10)];
   bottomView.backgroundColor = [UIColor redColor];
   [self.yumiSplash loadAdAndShowInWindow:[UIApplication sharedApplication].keyWindow withBottomView:bottomView];
   ```
