@@ -21,9 +21,12 @@
             * [展示视频](#展示视频)   
             * [实现代理方法](#实现代理方法-2)   
          * [Splash](#splash)   
-            * [初始化及展示开屏](#初始化及展示开屏)   
-               * [展示全屏广告](#展示全屏广告)   
-               * [展示半屏广告](#展示半屏广告)   
+            * [初始化及展示开屏](#初始化及展示开屏)
+            * [设置开屏拉取时长](#设置开屏拉取时长)
+            * [设置开屏加载时的背景图片](#设置开屏加载时的背景图片)
+            * [设置开屏方向（只支持 Admob 平台）](#设置开屏方向（只支持-Admob-平台）)   
+            * [展示全屏广告](#展示全屏广告)   
+            * [展示半屏广告](#展示半屏广告)   
             * [实现代理方法](#实现代理方法-3)
          * [Native](#native)   
             * [初始化及请求](#初始化及请求) 
@@ -357,52 +360,79 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
   例如：在您 `AppDelegate.m` 的 `application:didFinishLaunchingWithOptions:` 方法中。
 
   ```objective-c
-  #import <YumiMediationSDK/YumiAdsSplash.h>
+  #import <YumiMediationSDK/YumiMediationSplash.h>
+
+  @interface AppDelegate () <YumiMediationSplashAdDelegate>
+
+  @property (nonatomic) YumiMediationSplash *yumiSplash;
+
+  @end
+
+  @implementation AppDelegate
+    
+  - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  	
+    self.yumiSplash = [[YumiMediationSplash alloc] initWithPlacementID:@"YOUR_PLACEMWNT_ID" channelID:@"YOUR_CHANNEL_ID" versionID:@"YOUR_VERSION_ID"];
+    self.yumiSplash.delegate = self;
+    
+      return YES;
+  }
+
+  @end
   ```
 
-- ###### 展示全屏广告
-
+- ##### 设置开屏拉取时长
   ```objective-c
-  //appKey 为预留字段，可填空字符串。
-  [[YumiAdsSplash sharedInstance] showYumiAdsSplashWith:@"Your PlacementID"
-                                                 appKey:@"nullable" 
-                                     rootViewController:self.window.rootViewController 
-                                               delegate:self]
+  /// 拉取广告超时时间，默认3s。在该超时时间内，如果广告拉取成功，则立马展示开屏广告，否则放弃此次广告展示机会。
+  [self.yumiSplash setFetchTime:3]; 
   ```
 
-- ###### 展示半屏广告
+- ##### 设置开屏加载时的背景图片
 
   ```objective-c
-  //appKey 为预留字段，可填空字符串。
-  UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height-100,
-          [UIScreen mainScreen].bounds.size.width, 100)]; 
-  view.backgroundColor = [UIColor redColor];
-  //view is your customView.You can show your logo there.
-  //warning:view's frame is nonnull.
-  [[YumiAdsSplash sharedInstance] showYumiAdsSplashWith:@"Your PlacementID" 
-                                                 appKey:@"nullable" 
-                                       customBottomView:view
-                                     rootViewController:self.window.rootViewController 
-                                               delegate:self];
+  /// 开屏加载时的背景图片
+  [self.yumiSplash setLaunchImage:[UIImage imageNamed:@"YOUR_IMAGENAME"]];
+  ```
+
+- ##### 设置开屏方向（只支持 Admob 平台）
+
+  ```objective-c
+  /// 开屏的方向
+  [self.yumiSplash setInterfaceOrientation:UIInterfaceOrientationPortrait];
+  ```
+
+
+
+- ##### 展示全屏广告
+
+  ```objective-c
+  [self.yumiSplash loadAdAndShowInWindow:[UIApplication sharedApplication].keyWindow];
+  ```
+
+
+
+- ##### 展示半屏广告
+
+  ```objective-c
+  UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 100)];
+  bottomView.backgroundColor = [UIColor redColor];
+  [self.yumiSplash loadAdAndShowInWindow:[UIApplication sharedApplication].keyWindow withBottomView:bottomView];
   ```
 
 - ##### 实现代理方法
 
   ```objective-c
-  - (void)yumiAdsSplashDidLoad:(YumiAdsSplash *)splash{
-      NSLog(@"yumiAdsSplashDidLoad.");
+  - (void)yumiMediationSplashAdSuccessToShow:(YumiMediationSplash *)splash {
+      NSLog(@"yumiMediationSplashAdSuccessToShow.");
   }
-  - (void)yumiAdsSplash:(YumiAdsSplash *)splash DidFailToLoad:(NSError *)error{
-      NSLog(@"yumiAdsSplash:DidFailToLoad: %@", error)
+  - (void)yumiMediationSplashAdFailToShow:(YumiMediationSplash *)splash withError:(NSError *)error {
+      NSLog(@"yumiMediationSplashAdFailToShow: %@", error)
   }
-  - (void)yumiAdsSplashDidClicked:(YumiAdsSplash *)splash{
-      NSLog(@"yumiAdsSplashDidClicked.");
+  - (void)yumiMediationSplashAdDidClick:(YumiMediationSplash *)splash {
+      NSLog(@"yumiMediationSplashAdDidClick.");
   }
-  - (void)yumiAdsSplashDidClosed:(YumiAdsSplash *)splash{
-      NSLog(@"yumiAdsSplashDidClosed.");
-  }
-  - (nullable UIImage *)yumiAdsSplashDefaultImage{
-      return UIImage;//Your default image when app start
+  - (void)yumiMediationSplashAdDidClose:(YumiMediationSplash *)splash {
+      NSLog(@"yumiMediationSplashAdDidClose.");
   }
   ```
 
@@ -645,6 +675,7 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
 	     interstitialPlacementID:@"Your interstitialPlacementID"
 	            videoPlacementID:@"Your videoPlacementID"
 	           nativePlacementID:@"Your nativePlacementID"
+             splashPlacementID:@"Your splashPlacementID"
 	                   channelID:@"Your channelID"
 	                   versionID:@"Your versionID"
 	          rootViewController:self];//your rootVC
