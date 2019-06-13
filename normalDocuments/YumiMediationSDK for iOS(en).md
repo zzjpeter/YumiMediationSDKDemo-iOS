@@ -648,6 +648,7 @@ Please ensure your app has initialized YumiMediationSDK before calling debug mod
 	     interstitialPlacementID:@"Your interstitialPlacementID"
 	            videoPlacementID:@"Your videoPlacementID"
 	           nativePlacementID:@"Your nativePlacementID"
+             splashPlacementID:@"Your splashPlacementID"
 	                   channelID:@"Your channelID"
 	                   versionID:@"Your versionID"
 	          rootViewController:self];//your rootVC
