@@ -21,7 +21,10 @@
             * [Show rewarded video](#show-rewarded-video)   
             * [Delegate implementation](#delegate-implementation-2)   
          * [Splash](#splash)   
-            * [Initialization and splash request](#initialization-and-splash-request)   
+            * [Initialization and splash request](#initialization-and-splash-request) 
+            * [set splash fetch time](#set-splash-fetch-time)   
+            * [set launch image](#set-launch-image)   
+            * [set splash orientation (only support Admob)](#set-splash-orientation-(only-support-Admob))   
             * [show splash full screen](#show-splash-full-screen)   
             * [show splash with bottom custom view](#show-splash-with-bottom-custom-view)   
             * [Delegate implementation](#delegate-implementation-3)   
@@ -356,54 +359,82 @@
   for example：in your `AppDelegate.m`  `application:didFinishLaunchingWithOptions:` 
 
   ```objective-c
-  #import <YumiMediationSDK/YumiAdsSplash.h>
+  #import <YumiMediationSDK/YumiMediationSplash.h>
+
+  @interface AppDelegate () <YumiMediationSplashAdDelegate>
+
+  @property (nonatomic) YumiMediationSplash *yumiSplash;
+
+  @end
+
+  @implementation AppDelegate
+    
+  - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  	
+    self.yumiSplash = [[YumiMediationSplash alloc] initWithPlacementID:@"YOUR_PLACEMWNT_ID" channelID:@"YOUR_CHANNEL_ID" versionID:@"YOUR_VERSION_ID"];
+    self.yumiSplash.delegate = self;
+    
+      return YES;
+  }
+
+  @end
   ```
+
+- ##### set splash fetch time
+
+  ```objective-c
+  /// Ad load timeout, default 3s.
+  /// Baidu does`t support it
+  [self.yumiSplash setFetchTime:3]; 
+  ```
+
+- ##### set launch image
+
+  ```objective-c
+  /// The background image when splash is loaded, preferably the image of the APP launch
+  [self.yumiSplash setLaunchImage:[UIImage imageNamed:@"YOUR_IMAGENAME"]];
+  ```
+
+- ##### set splash orientation (only support Admob)
+
+  ```objective-c
+  /// splash orientation
+  [self.yumiSplash setInterfaceOrientation:UIInterfaceOrientationPortrait];
+  ```
+
 
 - ##### show splash full screen
 
   ```objective-c
-  //AppKey is a reserved field that can fill in an empty string.
-  [[YumiAdsSplash sharedInstance] showYumiAdsSplashWith:@"Your PlacementID"
-                                                 appKey:@"nullable" 
-                                     rootViewController:self.window.rootViewController 
-   											                       delegate:self];
+  [self.yumiSplash loadAdAndShowInWindow:[UIApplication sharedApplication].keyWindow];
   ```
 
 - ##### show splash with bottom custom view
 
   ```objective-c
-  //AppKey is a reserved field that can fill in an empty string.
-  UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height-100,
-          [UIScreen mainScreen].bounds.size.width, 100)]; 
-  view.backgroundColor = [UIColor redColor];
-  //view is your customView.You can show your logo there.
-  //warning:view's frame is nonnull.
-  [[YumiAdsSplash sharedInstance] showYumiAdsSplashWith:@"Your PlacementID" 
-                                                 appKey:@"nullable" 
-                                       customBottomView:view
-                                     rootViewController:self.window.rootViewController 
-                                               delegate:self];
+  /// bottom view's height should not exceed 15% of the screen height.
+  UIView *bottomView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height * 0.10)];
+  bottomView.backgroundColor = [UIColor redColor];
+  [self.yumiSplash loadAdAndShowInWindow:[UIApplication sharedApplication].keyWindow withBottomView:bottomView];
   ```
 
 - ##### Delegate implementation
 
   ```objective-c
-  - (void)yumiAdsSplashDidLoad:(YumiAdsSplash *)splash{
-      NSLog(@"yumiAdsSplashDidLoad.");
+  - (void)yumiMediationSplashAdSuccessToShow:(YumiMediationSplash *)splash {
+      NSLog(@"yumiMediationSplashAdSuccessToShow.");
   }
-  - (void)yumiAdsSplash:(YumiAdsSplash *)splash DidFailToLoad:(NSError *)error{
-      NSLog(@"yumiAdsSplash:DidFailToLoad: %@", error)
+  - (void)yumiMediationSplashAdFailToShow:(YumiMediationSplash *)splash withError:(NSError *)error {
+      NSLog(@"yumiMediationSplashAdFailToShow: %@", error)
   }
-  - (void)yumiAdsSplashDidClicked:(YumiAdsSplash *)splash{
-      NSLog(@"yumiAdsSplashDidClicked.");
+  - (void)yumiMediationSplashAdDidClick:(YumiMediationSplash *)splash {
+      NSLog(@"yumiMediationSplashAdDidClick.");
   }
-  - (void)yumiAdsSplashDidClosed:(YumiAdsSplash *)splash{
-      NSLog(@"yumiAdsSplashDidClosed.");
-  }
-  - (nullable UIImage *)yumiAdsSplashDefaultImage{
-      return UIImage;//Your default image when app start
+  - (void)yumiMediationSplashAdDidClose:(YumiMediationSplash *)splash {
+      NSLog(@"yumiMediationSplashAdDidClose.");
   }
   ```
+
 
 #### Native
 
