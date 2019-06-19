@@ -12,7 +12,7 @@
 |    Chartboost    |  7.3.0  |   V+I      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4.0/YumiMediationChartboost.tar.bz2)   |      |
 |    Facebook    |  5.1.0  |   B+I+N+V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4.0/YumiMediationFacebook.tar.bz2)   |      |
 |    Domob    |  3.8.0  |   V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4.0/YumiMediationDomob.tar.bz2)   |      |
-|    GDT    |  4.10.2  |   B+I+N+V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4.0/YumiMediationGDT.tar.bz2)   |      |
+|    GDT    |  4.10.3  |   B+I+N+V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4.1/YumiMediationGDT.tar.bz2)   |      |
 |    InMobi    |  7.2.1  |   B+I+V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4.0/YumiMediationInMobi.tar.bz2)   |      |
 |    IronSource    |  6.8.1.0  |   V+I      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4.0/YumiMediationIronSource.tar.bz2)   |      |
 |    Unity    |  2.3.0  |   I+V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/3.6.4.0/YumiMediationUnity.tar.bz2)   |      |
