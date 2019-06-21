@@ -354,17 +354,38 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
 - ##### 实现代理方法
 
   ```objective-c
-  - (void)yumiMediationVideoDidOpen:(YumiMediationVideo *)video{
-      NSLog(@"Opened reward video ad.");
+  /// Tells the delegate that the video ad was received.
+  - (void)yumiMediationVideoDidReceiveAd:(YumiMediationVideo *)video {
+      NSLog(@"YumiMediationVideoDidReceiveAd");
   }
-  - (void)yumiMediationVideoDidStartPlaying:(YumiMediationVideo *)video{
-      NSLog(@"Reward video ad started playing.");
+  /// Tells the delegate that the video ad failed to load.
+  - (void)yumiMediationVideo:(YumiMediationVideo *)video didFailToLoadWithError:(NSError *)error {
+      NSLog(@"YumiMediationVideoDidFailToLoadWithError:%@",[error localizedDescription]);
   }
-  - (void)yumiMediationVideoDidClose:(YumiMediationVideo *)video{
-      NSLog(@"Reward video ad is closed.");
+  /// Tells the delegate that the video ad failed to show.
+  - (void)yumiMediationVideo:(YumiMediationVideo *)video didFailToShowWithError:(NSError *)error {
+      NSLog(@"YumiMediationVideoDidFailToShowWithError:%@",[error localizedDescription]);
   }
-  - (void)yumiMediationVideoDidReward:(YumiMediationVideo *)video{
-      NSLog(@"is Rewarded");
+  /// Tells the delegate that the video ad opened.
+  - (void)yumiMediationVideoDidOpen:(YumiMediationVideo *)video {
+      NSLog(@"YumiMediationVideoDidOpen");
+  }
+  /// Tells the delegate that the video ad start playing.
+  - (void)yumiMediationVideoDidStartPlaying:(YumiMediationVideo *)video {
+      NSLog(@"YumiMediationVideoDidStartPlaying");
+  }
+  /// Tells the delegate that the video ad closed.
+  /// You can learn about the reward info by examining the ‘isRewarded’ value.
+  - (void)yumiMediationVideoDidClosed:(YumiMediationVideo *)video isRewarded:(BOOL)isRewarded {
+      NSLog(@"YumiMediationVideoDidClosedWithReward:%d",isRewarded);
+  }
+  /// Tells the delegate that the video ad has rewarded the user.
+  - (void)yumiMediationVideoDidReward:(YumiMediationVideo *)video {
+      NSLog(@"YumiMediationVideoDidReward");
+  }
+  /// Tells the delegate that the reward video ad has been clicked by the person.
+  - (void)yumiMediationVideoDidClick:(YumiMediationVideo *)video {
+      NSLog(@"YumiMediationVideoDidClick");
   }
   ```
 
