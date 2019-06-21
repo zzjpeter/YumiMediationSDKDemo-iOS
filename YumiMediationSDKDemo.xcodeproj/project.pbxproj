@@ -273,6 +273,7 @@
 				B9A065711E8D0F6C00B1B91B /* Frameworks */,
 				B9A065721E8D0F6C00B1B91B /* Resources */,
 				136AF4A255A89A0F00B05D63 /* [CP] Copy Pods Resources */,
+				8A307692818FD541183113E6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -436,6 +437,7 @@
 				"${PODS_ROOT}/YumiIQzone/__MACOSX/IMD-static/MopubResources/MRAID.bundle",
 				"${PODS_ROOT}/YumiIQzone/IMD-static/TapjoyResources.bundle",
 				"${PODS_ROOT}/YumiIQzone/__MACOSX/IMD-static/TapjoyResources.bundle",
+				"${PODS_ROOT}/YumiInneractiveAdSDK/IASDKCore/IASDKResources.bundle",
 				"${PODS_ROOT}/YumiMediationAdapters/YumiMediationAdMob/Resources/YumiMediationAdMob.bundle",
 				"${PODS_ROOT}/YumiMediationAdapters/YumiMediationFacebook/Resources/YumiMediationFacebook.bundle",
 				"${PODS_ROOT}/YumiMediationAdapters/YumiMediationGDT/Resources/YumiMediationGDT.bundle",
@@ -472,6 +474,7 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPUnmutedBtn@3x.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MRAID.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TapjoyResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IASDKResources.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YumiMediationAdMob.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YumiMediationFacebook.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YumiMediationGDT.bundle",
@@ -483,6 +486,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A307692818FD541183113E6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo-frameworks.sh",
+				"${PODS_ROOT}/YumiFacebook/FBAudienceNetwork.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBAudienceNetwork.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D502E83456DB64030966F724 /* [CP] Check Pods Manifest.lock */ = {
