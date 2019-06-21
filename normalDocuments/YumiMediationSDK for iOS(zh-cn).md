@@ -295,12 +295,12 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
   /// Tells the delegate that the interstitial ad failed to load.
   - (void)yumiMediationInterstitial:(YumiMediationInterstitial *)interstitial
              didFailToLoadWithError:(YumiMediationError *)error {
-    NSLog(@"YumiMediationInterstitialDidFailToLoadWithError: %@", error);
+    NSLog(@"YumiMediationInterstitialDidFailToLoadWithError: %@", [error localizedDescription]);
   }
   /// Tells the delegate that the interstitial ad failed to show.
   - (void)yumiMediationInterstitial:(YumiMediationInterstitial *)interstitial
              didFailToShowWithError:(YumiMediationError *)error {
-    NSLog(@"YumiMediationInterstitialDidFailToShowWithError: %@", error);
+    NSLog(@"YumiMediationInterstitialDidFailToShowWithError: %@", [error localizedDescription]);
   }
   /// Tells the delegate that the interstitial ad opened.
   - (void)yumiMediationInterstitialDidOpen:(YumiMediationInterstitial *)interstitial {
