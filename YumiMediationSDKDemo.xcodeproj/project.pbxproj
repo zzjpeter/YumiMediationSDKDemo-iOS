@@ -127,14 +127,14 @@
 			isa = PBXGroup;
 			children = (
 				5B22634622BCB5A4001C16F4 /* YumiMediationAppViewController.xib */,
+				5B22635822BCB5A4001C16F4 /* native_back@2x.png */,
+				5B22635A22BCB5A4001C16F4 /* native_close@2x.png */,
 				5B22634722BCB5A4001C16F4 /* Tools */,
 				5B22635622BCB5A4001C16F4 /* YumiNativeView.h */,
-				5B22635722BCB5A4001C16F4 /* YumiViewController.h */,
-				5B22635822BCB5A4001C16F4 /* native_back@2x.png */,
-				5B22635922BCB5A4001C16F4 /* YumiMediationAppViewController.h */,
-				5B22635A22BCB5A4001C16F4 /* native_close@2x.png */,
 				5B22635B22BCB5A4001C16F4 /* YumiNativeView.m */,
+				5B22635722BCB5A4001C16F4 /* YumiViewController.h */,
 				5B22635C22BCB5A4001C16F4 /* YumiViewController.m */,
+				5B22635922BCB5A4001C16F4 /* YumiMediationAppViewController.h */,
 				5B22635D22BCB5A4001C16F4 /* YumiMediationAppViewController.m */,
 			);
 			path = Demo;
