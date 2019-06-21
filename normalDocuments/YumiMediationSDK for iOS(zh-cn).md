@@ -288,18 +288,35 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
 
   ```objective-c
   //implementing YumiMediationInterstitial Delegate
-  - (void)yumiMediationInterstitialDidReceiveAd:(YumiMediationInterstitial *)interstitial{
-      NSLog(@"interstitialDidReceiveAd");
+  /// Tells the delegate that the interstitial ad request succeeded.
+  - (void)yumiMediationInterstitialDidReceiveAd:(YumiMediationInterstitial *)interstitial {
+    NSLog(@"YumiMediationInterstitialDidReceiveAd");
   }
+  /// Tells the delegate that the interstitial ad failed to load.
   - (void)yumiMediationInterstitial:(YumiMediationInterstitial *)interstitial
-                   didFailWithError:(YumiMediationError *)error{
-      NSLog(@"interstitial:didFailToReceiveAdWithError: %@", error)
+             didFailToLoadWithError:(YumiMediationError *)error {
+    NSLog(@"YumiMediationInterstitialDidFailToLoadWithError: %@", error);
   }
-  - (void)yumiMediationInterstitialWillDismissScreen:(YumiMediationInterstitial *)interstitial{
-      NSLog(@"interstitialWillDismissScreen");
+  /// Tells the delegate that the interstitial ad failed to show.
+  - (void)yumiMediationInterstitial:(YumiMediationInterstitial *)interstitial
+             didFailToShowWithError:(YumiMediationError *)error {
+    NSLog(@"YumiMediationInterstitialDidFailToShowWithError: %@", error);
   }
-  - (void)yumiMediationInterstitialDidClick:(YumiMediationInterstitial *)interstitial{
-      NSLog(@"interstitialDidClick");
+  /// Tells the delegate that the interstitial ad opened.
+  - (void)yumiMediationInterstitialDidOpen:(YumiMediationInterstitial *)interstitial {
+    NSLog(@"YumiMediationInterstitialDidOpen);
+  }
+  /// Tells the delegate that the interstitial ad start playing.
+  - (void)yumiMediationInterstitialDidStartPlaying:(YumiMediationInterstitial *)interstitial {
+    NSLog(@"YumiMediationInterstitialDidStartPlaying);
+  }
+  /// Tells the delegate that the interstitial is to be animated off the screen.
+  - (void)yumiMediationInterstitialDidClosed:(YumiMediationInterstitial *)interstitial {
+    NSLog(@"YumiMediationInterstitialDidClosed);
+  }
+  /// Tells the delegate that the interstitial ad has been clicked.
+  - (void)yumiMediationInterstitialDidClick:(YumiMediationInterstitial *)interstitial {
+    NSLog(@"YumiMediationInterstitialDidClick);
   }
   ```
 
