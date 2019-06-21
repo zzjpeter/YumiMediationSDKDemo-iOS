@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -14,6 +14,7 @@
                 <outlet property="checkVideoButton" destination="kLu-4I-Vh9" id="vaH-bF-XP4"/>
                 <outlet property="clearLogButton" destination="Nol-aU-AHe" id="Zfg-rX-By5"/>
                 <outlet property="disableAutoRefresh" destination="LSk-Lw-Pra" id="CJp-KJ-yRz"/>
+                <outlet property="disableAutoRefreshLabel" destination="c8P-vC-73c" id="tM1-j8-r4V"/>
                 <outlet property="presentOrCloseAdButton" destination="o1b-gO-A5f" id="Jwc-pp-oL6"/>
                 <outlet property="requestAdButton" destination="xCB-Ge-5UR" id="uSA-wr-8gX"/>
                 <outlet property="selectAdType" destination="iJ3-dq-9tc" id="AyN-2S-PxD"/>

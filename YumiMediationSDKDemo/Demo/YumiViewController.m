@@ -13,6 +13,7 @@
 #import "YumiMediationInitializeInfoUserDefaults.h"
 #import "YumiMediationInitializeModel.h"
 #import <YumiMediationSDK/YumiTool.h>
+#import <YumiMediationSDK/YumiMediationGDPRManager.h>
 
 #define PLACEMENTIDLENGTH 1
 
@@ -29,6 +30,7 @@
 @property (weak, nonatomic) IBOutlet UISwitch *bannerH250;
 @property (weak, nonatomic) IBOutlet UISwitch *smartBannerLandscape;
 @property (weak, nonatomic) IBOutlet UISwitch *smartBannerPortrait;
+@property (weak, nonatomic) IBOutlet UISwitch *gdprSwitch;
 
 @property (nonatomic) NSString *placementID;
 @property (nonatomic) NSString *channelID;
@@ -77,6 +79,8 @@
     if (self.bannerSize == kYumiMediationAdViewSmartBannerLandscape) {
         self.smartBannerLandscape.on = YES;
     }
+    
+    self.gdprSwitch.on = ([[YumiMediationGDPRManager sharedGDPRManager] getConsentStatus] == YumiMediationConsentStatusPersonalized) ;
 }
 
 - (void)initializePlacementIDs {
@@ -175,7 +179,8 @@
     [self saveLocalStorage];
 
     if (self.isPresented) {
-        YumiMediationAdViewBannerSize bannerSizeTemp = [[YumiTool sharedTool] isiPad] ? kYumiMediationAdViewBanner728x90 : kYumiMediationAdViewBanner320x50;
+        YumiMediationAdViewBannerSize bannerSizeTemp =
+            [[YumiTool sharedTool] isiPad] ? kYumiMediationAdViewBanner728x90 : kYumiMediationAdViewBanner320x50;
         if (self.bannerH250.on) {
             bannerSizeTemp = kYumiMediationAdViewBanner300x250;
         }
@@ -219,6 +224,15 @@
 
     [yumiUserDefaults persistMediationInitializeInfo:yumiModel];
 }
+
+- (IBAction)handleGDPRValue:(UISwitch *)sender {
+    if (sender.on) {
+        [[YumiMediationGDPRManager sharedGDPRManager] updateNetworksConsentStatus:YumiMediationConsentStatusPersonalized];
+        return;
+    }
+     [[YumiMediationGDPRManager sharedGDPRManager] updateNetworksConsentStatus:YumiMediationConsentStatusNonPersonalized];
+}
+
 
 #pragma mark : -UITextFieldDelegate
 
