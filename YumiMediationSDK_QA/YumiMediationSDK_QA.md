@@ -1,6 +1,7 @@
 - [YumiMediationSDK Q&A](#yumimediationsdk-qa)
   - [Universal](#universal)
   - [iOS](#ios)
+      - [使用 Firebase 库 和 admob 库冲突解决方案](#使用-Firebase-库-和-admob-库冲突解决方案)
   - [Android](#android)
   - [Unity插件 Android问题](#unity%E6%8F%92%E4%BB%B6-android%E9%97%AE%E9%A2%98)
 
@@ -24,6 +25,20 @@
 2. 填充很低，查看抓包工具只有 https 请求。
    请查阅 [iOS ATS setting](https://github.com/yumimobi/YumiMediationSDKDemo-iOS/blob/master/normalDocuments/YumiMediationSDK%20for%20iOS(zh-cn).md#app-transport-security)
 
+### 使用 Firebase 库 和 admob 库冲突解决方案
+由于 Firebase 库中的文件和 admob 广告SDK 代码重复造成冲突，使用 cocoapods 无法完成 admob 接入，只能通过手动的方式接入admob 平台。具体步骤如下：
+1. 在 Podfile 中加入 Firebase admob 库
+
+   ```ruby
+   pod 'Firebase/AdMob'
+   ```
+
+   在终端执行 ```pod install``` 完成 Firebase admob 库的安装 
+
+2. 手动导入 YumiMediationAdMob （Yumi 的admob adapter）
+<br>下载地址是 ([SDKDownloadPage-iOS](https://github.com/yumimobi/YumiMediationSDKDemo-iOS/blob/master/normalDocuments/iOSDownloadPage.md)) 中的 AdMob。
+<br>**只需要把 Resources 和 YumiMediationAdMob.framework 导入 Xcode 工程即可** 
+   ![image](resources/001.png)
 
 ## Android
 1. Android6.0以上系统权限处理。
