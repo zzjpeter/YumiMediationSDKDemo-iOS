@@ -746,7 +746,7 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
 | Interstitial  | onkkeg5i | YUMI,AdMob,Baidu,Chartboost,GDTMob,IronSource,Inmobi,IQzone, untiy Ads，vungle, ZPLAYAds 使用此test id,以上Network平台可测试到对应平台广告 |
 | Rewarded Video         | 5xmpgti4                                                                                                                          | YUMI,AdMob,Adcolony, APPlovin,IronSource,Inmobi,Mintegral, untiy Ads，vungle, ZPLAYAds 使用此test id,以上Network平台可测试到对应平台广告 |
 | Native                 | atb3ke1i                                                                                                                          | YUMI,AdMob,Baidu,GDTMob,Facebook 使用此test id,以上Network平台可测试到对应平台广告                                        |
-| Splash                 | pwmf5r42                                                                                                                         | 使用此test id,只能测到YUMI平台广告                                                                                                     |
+| Splash                 | pwmf5r42                                                                                                                         | YUMI,Baidu,GDTMob,AdMob,穿山甲 使用 test id，以上Network平台可测试到对应平台广告                                                                                               |
 ## GDPR
 本文件是为遵守欧洲联盟的一般数据保护条例(GDPR)而提供的。
 自 YumiMediationSDK 4.1.0 起，如果您正在收集用户的信息，您可以使用下面提供的api将此信息通知给 YumiMediationSDK 和部分三方平台。
