@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -182,6 +182,20 @@
                                     <constraint firstAttribute="height" constant="25" id="X30-Ov-O5I"/>
                                 </constraints>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set GDPR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nye-Bg-FzK">
+                                <rect key="frame" x="28" y="399" width="150" height="25"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vKN-ze-Q3F">
+                                <rect key="frame" x="198" y="399" width="42" height="25"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="handleGDPRValue:" destination="whP-gf-Uak" eventType="valueChanged" id="XaV-Fs-YH1"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -192,11 +206,14 @@
                             <constraint firstItem="i5N-Pm-zdk" firstAttribute="leading" secondItem="0vB-1p-CX2" secondAttribute="leading" id="1PS-l7-Udy"/>
                             <constraint firstItem="9vC-1m-d1V" firstAttribute="centerY" secondItem="kLX-s5-U0R" secondAttribute="centerY" id="3le-rW-6Gb"/>
                             <constraint firstItem="kLX-s5-U0R" firstAttribute="width" secondItem="zWR-lY-psI" secondAttribute="width" id="71W-CX-2vX"/>
+                            <constraint firstItem="vKN-ze-Q3F" firstAttribute="leading" secondItem="NZb-rr-MON" secondAttribute="leading" id="8vB-yk-wxY"/>
                             <constraint firstItem="oH6-ui-Q2J" firstAttribute="leading" secondItem="nuk-QY-erE" secondAttribute="trailing" constant="5" id="AC4-sZ-JSB"/>
                             <constraint firstItem="9Zh-kE-ewy" firstAttribute="height" secondItem="NZb-rr-MON" secondAttribute="height" id="AK2-5P-u54"/>
                             <constraint firstItem="PpH-Ej-pg8" firstAttribute="trailing" secondItem="51v-oc-axB" secondAttribute="trailing" id="ASY-zX-Uy3"/>
                             <constraint firstItem="R10-xK-0kQ" firstAttribute="leading" secondItem="Vi2-Fy-vWV" secondAttribute="leading" id="BpF-CC-6R9"/>
+                            <constraint firstItem="Nye-Bg-FzK" firstAttribute="height" secondItem="lcH-sR-eR7" secondAttribute="height" id="EZi-rJ-Yae"/>
                             <constraint firstItem="lcH-sR-eR7" firstAttribute="leading" secondItem="kLX-s5-U0R" secondAttribute="leading" id="FDX-L8-8lr"/>
+                            <constraint firstItem="vKN-ze-Q3F" firstAttribute="centerY" secondItem="Nye-Bg-FzK" secondAttribute="centerY" id="FGD-FU-O78"/>
                             <constraint firstItem="0DQ-ML-daa" firstAttribute="width" secondItem="oH6-ui-Q2J" secondAttribute="width" id="GB8-WV-LAF"/>
                             <constraint firstItem="Vi2-Fy-vWV" firstAttribute="top" secondItem="nuk-QY-erE" secondAttribute="bottom" constant="80" id="Hq7-e1-YYk"/>
                             <constraint firstItem="PpH-Ej-pg8" firstAttribute="top" secondItem="7eA-Rg-9it" secondAttribute="bottom" constant="-1" id="Iy9-vj-hDM"/>
@@ -215,6 +232,7 @@
                             <constraint firstItem="zWR-lY-psI" firstAttribute="top" secondItem="R10-xK-0kQ" secondAttribute="bottom" constant="10" id="WWq-A0-li0"/>
                             <constraint firstItem="i5N-Pm-zdk" firstAttribute="top" secondItem="0vB-1p-CX2" secondAttribute="bottom" id="XVX-TE-adW"/>
                             <constraint firstItem="9Zh-kE-ewy" firstAttribute="width" secondItem="NZb-rr-MON" secondAttribute="width" id="Ynd-xo-xo9"/>
+                            <constraint firstItem="vKN-ze-Q3F" firstAttribute="height" secondItem="NZb-rr-MON" secondAttribute="height" id="Zvp-qF-gGL"/>
                             <constraint firstItem="lcH-sR-eR7" firstAttribute="width" secondItem="kLX-s5-U0R" secondAttribute="width" id="aJR-RW-hhn"/>
                             <constraint firstItem="NZb-rr-MON" firstAttribute="centerY" secondItem="lcH-sR-eR7" secondAttribute="centerY" id="cut-Ff-P9F"/>
                             <constraint firstItem="3iQ-eE-Hxy" firstAttribute="height" secondItem="nuk-QY-erE" secondAttribute="height" id="d5f-Z0-32c"/>
@@ -223,17 +241,21 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Vi2-Fy-vWV" secondAttribute="trailing" constant="12" id="gRS-Ot-5fe"/>
                             <constraint firstItem="i5N-Pm-zdk" firstAttribute="width" secondItem="0vB-1p-CX2" secondAttribute="width" id="i1l-EN-bXR"/>
                             <constraint firstItem="nuk-QY-erE" firstAttribute="top" secondItem="0vB-1p-CX2" secondAttribute="bottom" constant="20" id="iHe-RA-ZnL"/>
+                            <constraint firstItem="Nye-Bg-FzK" firstAttribute="top" secondItem="lcH-sR-eR7" secondAttribute="bottom" constant="10" id="jma-Lx-Roh"/>
                             <constraint firstItem="7eA-Rg-9it" firstAttribute="top" secondItem="51v-oc-axB" secondAttribute="bottom" constant="-5" id="jou-Sd-OYP"/>
                             <constraint firstItem="3iQ-eE-Hxy" firstAttribute="width" secondItem="nuk-QY-erE" secondAttribute="width" id="kkb-I4-DtF"/>
                             <constraint firstItem="zWR-lY-psI" firstAttribute="leading" secondItem="R10-xK-0kQ" secondAttribute="leading" id="kwN-hp-zYK"/>
                             <constraint firstItem="R10-xK-0kQ" firstAttribute="top" secondItem="Vi2-Fy-vWV" secondAttribute="bottom" constant="10" id="kxR-Av-4MY"/>
                             <constraint firstItem="3iQ-eE-Hxy" firstAttribute="leading" secondItem="oH6-ui-Q2J" secondAttribute="trailing" constant="5" id="l8p-cJ-1Jz"/>
+                            <constraint firstItem="vKN-ze-Q3F" firstAttribute="width" secondItem="NZb-rr-MON" secondAttribute="width" id="mAJ-uF-PSZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0DQ-ML-daa" secondAttribute="trailing" constant="5" id="moc-HI-w0z"/>
+                            <constraint firstItem="Nye-Bg-FzK" firstAttribute="width" secondItem="lcH-sR-eR7" secondAttribute="width" id="oKP-Vy-Sa1"/>
                             <constraint firstItem="9vC-1m-d1V" firstAttribute="width" secondItem="NZb-rr-MON" secondAttribute="width" id="pLm-cb-GsE"/>
                             <constraint firstItem="0vB-1p-CX2" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="20" id="ppO-kh-GSb"/>
                             <constraint firstItem="Vi2-Fy-vWV" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="12" id="swj-yS-DjH"/>
                             <constraint firstItem="NZb-rr-MON" firstAttribute="leading" secondItem="lcH-sR-eR7" secondAttribute="trailing" constant="20" id="szO-6t-c3p"/>
                             <constraint firstItem="9Zh-kE-ewy" firstAttribute="centerX" secondItem="NZb-rr-MON" secondAttribute="centerX" id="uPr-s8-wDB"/>
+                            <constraint firstItem="Nye-Bg-FzK" firstAttribute="leading" secondItem="lcH-sR-eR7" secondAttribute="leading" id="w6x-p8-jJ2"/>
                             <constraint firstItem="9vC-1m-d1V" firstAttribute="centerX" secondItem="NZb-rr-MON" secondAttribute="centerX" id="xLl-fd-erw"/>
                             <constraint firstItem="nuk-QY-erE" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leadingMargin" constant="5" id="y33-Rl-1Mj"/>
                         </constraints>
@@ -242,6 +264,7 @@
                         <outlet property="adTypeTableView" destination="PpH-Ej-pg8" id="akW-Tk-xFL"/>
                         <outlet property="bannerH250" destination="NZb-rr-MON" id="vJN-fB-aMB"/>
                         <outlet property="channelIDTextField" destination="oH6-ui-Q2J" id="SXI-KN-sKm"/>
+                        <outlet property="gdprSwitch" destination="vKN-ze-Q3F" id="aRt-Hi-kc1"/>
                         <outlet property="gotoYumiDemo" destination="Vi2-Fy-vWV" id="OpZ-fI-mk3"/>
                         <outlet property="placementIDTableView" destination="i5N-Pm-zdk" id="HKq-R4-UW0"/>
                         <outlet property="placementIDTextField" destination="0vB-1p-CX2" id="Gd8-uf-4gs"/>

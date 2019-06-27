@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		18B9EA55078CDEDC02089237 /* libPods-YumiMediationSDKDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B66BE2D981389A8993F753 /* libPods-YumiMediationSDKDemoTests.a */; };
-		6DE8698320D0D4C3001FEEC7 /* PADemoUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE8698220D0D4C3001FEEC7 /* PADemoUtils.m */; };
+		5B22635E22BCB5A4001C16F4 /* YumiMediationAppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B22634622BCB5A4001C16F4 /* YumiMediationAppViewController.xib */; };
+		5B22635F22BCB5A4001C16F4 /* CALayer+Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B22634922BCB5A4001C16F4 /* CALayer+Transition.m */; };
+		5B22636022BCB5A4001C16F4 /* YumiMediationInitializeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B22634B22BCB5A4001C16F4 /* YumiMediationInitializeModel.m */; };
+		5B22636122BCB5A4001C16F4 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B22634F22BCB5A4001C16F4 /* UIView+Toast.m */; };
+		5B22636222BCB5A4001C16F4 /* YumiNativeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B22635122BCB5A4001C16F4 /* YumiNativeView.xib */; };
+		5B22636322BCB5A4001C16F4 /* YumiMediationInitializeInfoUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B22635322BCB5A4001C16F4 /* YumiMediationInitializeInfoUserDefaults.m */; };
+		5B22636422BCB5A4001C16F4 /* PADemoUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B22635522BCB5A4001C16F4 /* PADemoUtils.m */; };
+		5B22636522BCB5A4001C16F4 /* native_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B22635822BCB5A4001C16F4 /* native_back@2x.png */; };
+		5B22636622BCB5A4001C16F4 /* native_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B22635A22BCB5A4001C16F4 /* native_close@2x.png */; };
+		5B22636722BCB5A4001C16F4 /* YumiNativeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B22635B22BCB5A4001C16F4 /* YumiNativeView.m */; };
+		5B22636822BCB5A4001C16F4 /* YumiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B22635C22BCB5A4001C16F4 /* YumiViewController.m */; };
+		5B22636922BCB5A4001C16F4 /* YumiMediationAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B22635D22BCB5A4001C16F4 /* YumiMediationAppViewController.m */; };
+		5B22636C22BCB5AE001C16F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B22636A22BCB5AE001C16F4 /* Main.storyboard */; };
 		8CC0938B05979E3B191612A6 /* libPods-YumiMediationSDKDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B4CDF1528922A11091F816 /* libPods-YumiMediationSDKDemoUITests.a */; };
-		9892DE841F99E0CC00C2E180 /* native_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9892DE6F1F99E0CC00C2E180 /* native_back@2x.png */; };
-		9892DE851F99E0CC00C2E180 /* native_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9892DE701F99E0CC00C2E180 /* native_close@2x.png */; };
-		9892DE861F99E0CC00C2E180 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892DE741F99E0CC00C2E180 /* UIView+Toast.m */; };
-		9892DE871F99E0CC00C2E180 /* CALayer+Transition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892DE771F99E0CC00C2E180 /* CALayer+Transition.m */; };
-		9892DE881F99E0CC00C2E180 /* YumiMediationInitializeInfoUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892DE791F99E0CC00C2E180 /* YumiMediationInitializeInfoUserDefaults.m */; };
-		9892DE891F99E0CC00C2E180 /* YumiMediationInitializeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892DE7B1F99E0CC00C2E180 /* YumiMediationInitializeModel.m */; };
-		9892DE8A1F99E0CC00C2E180 /* YumiNativeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9892DE7C1F99E0CC00C2E180 /* YumiNativeView.xib */; };
-		9892DE8B1F99E0CC00C2E180 /* YumiMediationAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892DE7E1F99E0CC00C2E180 /* YumiMediationAppViewController.m */; };
-		9892DE8C1F99E0CC00C2E180 /* YumiMediationAppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9892DE7F1F99E0CC00C2E180 /* YumiMediationAppViewController.xib */; };
-		9892DE8D1F99E0CC00C2E180 /* YumiNativeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892DE811F99E0CC00C2E180 /* YumiNativeView.m */; };
-		9892DE8E1F99E0CC00C2E180 /* YumiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892DE831F99E0CC00C2E180 /* YumiViewController.m */; };
-		98F0AF8D1F2AE9E6006B48AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98F0AF8B1F2AE9E6006B48AA /* Main.storyboard */; };
 		B9A065791E8D0F6C00B1B91B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A065781E8D0F6C00B1B91B /* main.m */; };
 		B9A0657C1E8D0F6C00B1B91B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A0657B1E8D0F6C00B1B91B /* AppDelegate.m */; };
 		B9A065841E8D0F6C00B1B91B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9A065831E8D0F6C00B1B91B /* Assets.xcassets */; };
@@ -51,30 +51,30 @@
 /* Begin PBXFileReference section */
 		27B66BE2D981389A8993F753 /* libPods-YumiMediationSDKDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YumiMediationSDKDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EC711C23106EE995A06D951 /* libPods-YumiMediationSDKDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YumiMediationSDKDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B22634622BCB5A4001C16F4 /* YumiMediationAppViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YumiMediationAppViewController.xib; sourceTree = "<group>"; };
+		5B22634922BCB5A4001C16F4 /* CALayer+Transition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Transition.m"; sourceTree = "<group>"; };
+		5B22634A22BCB5A4001C16F4 /* CALayer+Transition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Transition.h"; sourceTree = "<group>"; };
+		5B22634B22BCB5A4001C16F4 /* YumiMediationInitializeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YumiMediationInitializeModel.m; sourceTree = "<group>"; };
+		5B22634C22BCB5A4001C16F4 /* YumiMediationInitializeInfoUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YumiMediationInitializeInfoUserDefaults.h; sourceTree = "<group>"; };
+		5B22634E22BCB5A4001C16F4 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		5B22634F22BCB5A4001C16F4 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
+		5B22635022BCB5A4001C16F4 /* PADemoUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PADemoUtils.h; sourceTree = "<group>"; };
+		5B22635122BCB5A4001C16F4 /* YumiNativeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YumiNativeView.xib; sourceTree = "<group>"; };
+		5B22635222BCB5A4001C16F4 /* YumiMediationInitializeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YumiMediationInitializeModel.h; sourceTree = "<group>"; };
+		5B22635322BCB5A4001C16F4 /* YumiMediationInitializeInfoUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YumiMediationInitializeInfoUserDefaults.m; sourceTree = "<group>"; };
+		5B22635422BCB5A4001C16F4 /* YumiCommonHeaderFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YumiCommonHeaderFile.h; sourceTree = "<group>"; };
+		5B22635522BCB5A4001C16F4 /* PADemoUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PADemoUtils.m; sourceTree = "<group>"; };
+		5B22635622BCB5A4001C16F4 /* YumiNativeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YumiNativeView.h; sourceTree = "<group>"; };
+		5B22635722BCB5A4001C16F4 /* YumiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YumiViewController.h; sourceTree = "<group>"; };
+		5B22635822BCB5A4001C16F4 /* native_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "native_back@2x.png"; sourceTree = "<group>"; };
+		5B22635922BCB5A4001C16F4 /* YumiMediationAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YumiMediationAppViewController.h; sourceTree = "<group>"; };
+		5B22635A22BCB5A4001C16F4 /* native_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "native_close@2x.png"; sourceTree = "<group>"; };
+		5B22635B22BCB5A4001C16F4 /* YumiNativeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YumiNativeView.m; sourceTree = "<group>"; };
+		5B22635C22BCB5A4001C16F4 /* YumiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YumiViewController.m; sourceTree = "<group>"; };
+		5B22635D22BCB5A4001C16F4 /* YumiMediationAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YumiMediationAppViewController.m; sourceTree = "<group>"; };
+		5B22636B22BCB5AE001C16F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D87838E1D9BCAED5DBBD536 /* Pods-YumiMediationSDKDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YumiMediationSDKDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YumiMediationSDKDemoUITests/Pods-YumiMediationSDKDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
-		6DBE00B81FFB3BA70084828A /* YumiCommonHeaderFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YumiCommonHeaderFile.h; sourceTree = "<group>"; };
-		6DE8698120D0D4C3001FEEC7 /* PADemoUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PADemoUtils.h; sourceTree = "<group>"; };
-		6DE8698220D0D4C3001FEEC7 /* PADemoUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PADemoUtils.m; sourceTree = "<group>"; };
 		7414EC105309956644DC2D55 /* Pods-YumiMediationSDKDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YumiMediationSDKDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YumiMediationSDKDemoUITests/Pods-YumiMediationSDKDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		9892DE6F1F99E0CC00C2E180 /* native_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "native_back@2x.png"; sourceTree = "<group>"; };
-		9892DE701F99E0CC00C2E180 /* native_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "native_close@2x.png"; sourceTree = "<group>"; };
-		9892DE731F99E0CC00C2E180 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
-		9892DE741F99E0CC00C2E180 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
-		9892DE761F99E0CC00C2E180 /* CALayer+Transition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Transition.h"; sourceTree = "<group>"; };
-		9892DE771F99E0CC00C2E180 /* CALayer+Transition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Transition.m"; sourceTree = "<group>"; };
-		9892DE781F99E0CC00C2E180 /* YumiMediationInitializeInfoUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YumiMediationInitializeInfoUserDefaults.h; sourceTree = "<group>"; };
-		9892DE791F99E0CC00C2E180 /* YumiMediationInitializeInfoUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YumiMediationInitializeInfoUserDefaults.m; sourceTree = "<group>"; };
-		9892DE7A1F99E0CC00C2E180 /* YumiMediationInitializeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YumiMediationInitializeModel.h; sourceTree = "<group>"; };
-		9892DE7B1F99E0CC00C2E180 /* YumiMediationInitializeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YumiMediationInitializeModel.m; sourceTree = "<group>"; };
-		9892DE7C1F99E0CC00C2E180 /* YumiNativeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YumiNativeView.xib; sourceTree = "<group>"; };
-		9892DE7D1F99E0CC00C2E180 /* YumiMediationAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YumiMediationAppViewController.h; sourceTree = "<group>"; };
-		9892DE7E1F99E0CC00C2E180 /* YumiMediationAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YumiMediationAppViewController.m; sourceTree = "<group>"; };
-		9892DE7F1F99E0CC00C2E180 /* YumiMediationAppViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YumiMediationAppViewController.xib; sourceTree = "<group>"; };
-		9892DE801F99E0CC00C2E180 /* YumiNativeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YumiNativeView.h; sourceTree = "<group>"; };
-		9892DE811F99E0CC00C2E180 /* YumiNativeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YumiNativeView.m; sourceTree = "<group>"; };
-		9892DE821F99E0CC00C2E180 /* YumiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YumiViewController.h; sourceTree = "<group>"; };
-		9892DE831F99E0CC00C2E180 /* YumiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YumiViewController.m; sourceTree = "<group>"; };
-		98F0AF8C1F2AE9E6006B48AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		99B4CDF1528922A11091F816 /* libPods-YumiMediationSDKDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YumiMediationSDKDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADCE056284C70FFC5C262393 /* Pods-YumiMediationSDKDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YumiMediationSDKDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YumiMediationSDKDemoTests/Pods-YumiMediationSDKDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		B9A065741E8D0F6C00B1B91B /* YumiMediationSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YumiMediationSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,56 +123,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9892DE6E1F99E0CC00C2E180 /* Demo */ = {
+		5B22634522BCB5A4001C16F4 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				9892DE6F1F99E0CC00C2E180 /* native_back@2x.png */,
-				9892DE701F99E0CC00C2E180 /* native_close@2x.png */,
-				9892DE711F99E0CC00C2E180 /* Tools */,
-				9892DE7D1F99E0CC00C2E180 /* YumiMediationAppViewController.h */,
-				9892DE7E1F99E0CC00C2E180 /* YumiMediationAppViewController.m */,
-				9892DE7F1F99E0CC00C2E180 /* YumiMediationAppViewController.xib */,
-				9892DE801F99E0CC00C2E180 /* YumiNativeView.h */,
-				9892DE811F99E0CC00C2E180 /* YumiNativeView.m */,
-				9892DE821F99E0CC00C2E180 /* YumiViewController.h */,
-				9892DE831F99E0CC00C2E180 /* YumiViewController.m */,
+				5B22634622BCB5A4001C16F4 /* YumiMediationAppViewController.xib */,
+				5B22635822BCB5A4001C16F4 /* native_back@2x.png */,
+				5B22635A22BCB5A4001C16F4 /* native_close@2x.png */,
+				5B22634722BCB5A4001C16F4 /* Tools */,
+				5B22635622BCB5A4001C16F4 /* YumiNativeView.h */,
+				5B22635B22BCB5A4001C16F4 /* YumiNativeView.m */,
+				5B22635722BCB5A4001C16F4 /* YumiViewController.h */,
+				5B22635C22BCB5A4001C16F4 /* YumiViewController.m */,
+				5B22635922BCB5A4001C16F4 /* YumiMediationAppViewController.h */,
+				5B22635D22BCB5A4001C16F4 /* YumiMediationAppViewController.m */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
 		};
-		9892DE711F99E0CC00C2E180 /* Tools */ = {
+		5B22634722BCB5A4001C16F4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
-				6DE8698120D0D4C3001FEEC7 /* PADemoUtils.h */,
-				6DE8698220D0D4C3001FEEC7 /* PADemoUtils.m */,
-				6DBE00B81FFB3BA70084828A /* YumiCommonHeaderFile.h */,
-				9892DE721F99E0CC00C2E180 /* Toast */,
-				9892DE751F99E0CC00C2E180 /* TSZLayer+Transition */,
-				9892DE781F99E0CC00C2E180 /* YumiMediationInitializeInfoUserDefaults.h */,
-				9892DE791F99E0CC00C2E180 /* YumiMediationInitializeInfoUserDefaults.m */,
-				9892DE7A1F99E0CC00C2E180 /* YumiMediationInitializeModel.h */,
-				9892DE7B1F99E0CC00C2E180 /* YumiMediationInitializeModel.m */,
-				9892DE7C1F99E0CC00C2E180 /* YumiNativeView.xib */,
+				5B22634822BCB5A4001C16F4 /* TSZLayer+Transition */,
+				5B22634B22BCB5A4001C16F4 /* YumiMediationInitializeModel.m */,
+				5B22634C22BCB5A4001C16F4 /* YumiMediationInitializeInfoUserDefaults.h */,
+				5B22634D22BCB5A4001C16F4 /* Toast */,
+				5B22635022BCB5A4001C16F4 /* PADemoUtils.h */,
+				5B22635122BCB5A4001C16F4 /* YumiNativeView.xib */,
+				5B22635222BCB5A4001C16F4 /* YumiMediationInitializeModel.h */,
+				5B22635322BCB5A4001C16F4 /* YumiMediationInitializeInfoUserDefaults.m */,
+				5B22635422BCB5A4001C16F4 /* YumiCommonHeaderFile.h */,
+				5B22635522BCB5A4001C16F4 /* PADemoUtils.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
 		};
-		9892DE721F99E0CC00C2E180 /* Toast */ = {
+		5B22634822BCB5A4001C16F4 /* TSZLayer+Transition */ = {
 			isa = PBXGroup;
 			children = (
-				9892DE731F99E0CC00C2E180 /* UIView+Toast.h */,
-				9892DE741F99E0CC00C2E180 /* UIView+Toast.m */,
-			);
-			path = Toast;
-			sourceTree = "<group>";
-		};
-		9892DE751F99E0CC00C2E180 /* TSZLayer+Transition */ = {
-			isa = PBXGroup;
-			children = (
-				9892DE761F99E0CC00C2E180 /* CALayer+Transition.h */,
-				9892DE771F99E0CC00C2E180 /* CALayer+Transition.m */,
+				5B22634922BCB5A4001C16F4 /* CALayer+Transition.m */,
+				5B22634A22BCB5A4001C16F4 /* CALayer+Transition.h */,
 			);
 			path = "TSZLayer+Transition";
+			sourceTree = "<group>";
+		};
+		5B22634D22BCB5A4001C16F4 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				5B22634E22BCB5A4001C16F4 /* UIView+Toast.h */,
+				5B22634F22BCB5A4001C16F4 /* UIView+Toast.m */,
+			);
+			path = Toast;
 			sourceTree = "<group>";
 		};
 		B9A0656B1E8D0F6C00B1B91B = {
@@ -200,12 +200,12 @@
 		B9A065761E8D0F6C00B1B91B /* YumiMediationSDKDemo */ = {
 			isa = PBXGroup;
 			children = (
-				9892DE6E1F99E0CC00C2E180 /* Demo */,
+				5B22636A22BCB5AE001C16F4 /* Main.storyboard */,
+				5B22634522BCB5A4001C16F4 /* Demo */,
 				B9A0657A1E8D0F6C00B1B91B /* AppDelegate.h */,
 				B9A0657B1E8D0F6C00B1B91B /* AppDelegate.m */,
 				B9A065831E8D0F6C00B1B91B /* Assets.xcassets */,
 				B9A065851E8D0F6C00B1B91B /* LaunchScreen.storyboard */,
-				98F0AF8B1F2AE9E6006B48AA /* Main.storyboard */,
 				B9A065881E8D0F6C00B1B91B /* Info.plist */,
 				B9A065771E8D0F6C00B1B91B /* Supporting Files */,
 			);
@@ -273,6 +273,7 @@
 				B9A065711E8D0F6C00B1B91B /* Frameworks */,
 				B9A065721E8D0F6C00B1B91B /* Resources */,
 				136AF4A255A89A0F00B05D63 /* [CP] Copy Pods Resources */,
+				8A307692818FD541183113E6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -354,6 +355,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -374,13 +376,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98F0AF8D1F2AE9E6006B48AA /* Main.storyboard in Resources */,
-				9892DE8C1F99E0CC00C2E180 /* YumiMediationAppViewController.xib in Resources */,
+				5B22636C22BCB5AE001C16F4 /* Main.storyboard in Resources */,
 				B9A065871E8D0F6C00B1B91B /* LaunchScreen.storyboard in Resources */,
-				9892DE841F99E0CC00C2E180 /* native_back@2x.png in Resources */,
-				9892DE851F99E0CC00C2E180 /* native_close@2x.png in Resources */,
+				5B22636222BCB5A4001C16F4 /* YumiNativeView.xib in Resources */,
+				5B22635E22BCB5A4001C16F4 /* YumiMediationAppViewController.xib in Resources */,
 				B9A065841E8D0F6C00B1B91B /* Assets.xcassets in Resources */,
-				9892DE8A1F99E0CC00C2E180 /* YumiNativeView.xib in Resources */,
+				5B22636622BCB5A4001C16F4 /* native_close@2x.png in Resources */,
+				5B22636522BCB5A4001C16F4 /* native_back@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +438,7 @@
 				"${PODS_ROOT}/YumiIQzone/__MACOSX/IMD-static/MopubResources/MRAID.bundle",
 				"${PODS_ROOT}/YumiIQzone/IMD-static/TapjoyResources.bundle",
 				"${PODS_ROOT}/YumiIQzone/__MACOSX/IMD-static/TapjoyResources.bundle",
+				"${PODS_ROOT}/YumiInneractiveAdSDK/IASDKCore/IASDKResources.bundle",
 				"${PODS_ROOT}/YumiMediationAdapters/YumiMediationAdMob/Resources/YumiMediationAdMob.bundle",
 				"${PODS_ROOT}/YumiMediationAdapters/YumiMediationFacebook/Resources/YumiMediationFacebook.bundle",
 				"${PODS_ROOT}/YumiMediationAdapters/YumiMediationGDT/Resources/YumiMediationGDT.bundle",
@@ -472,6 +475,7 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MPUnmutedBtn@3x.png",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MRAID.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TapjoyResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IASDKResources.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YumiMediationAdMob.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YumiMediationFacebook.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YumiMediationGDT.bundle",
@@ -483,6 +487,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A307692818FD541183113E6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo-frameworks.sh",
+				"${PODS_ROOT}/YumiFacebook/FBAudienceNetwork.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBAudienceNetwork.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D502E83456DB64030966F724 /* [CP] Check Pods Manifest.lock */ = {
@@ -546,16 +568,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9892DE8B1F99E0CC00C2E180 /* YumiMediationAppViewController.m in Sources */,
-				9892DE8D1F99E0CC00C2E180 /* YumiNativeView.m in Sources */,
-				9892DE861F99E0CC00C2E180 /* UIView+Toast.m in Sources */,
-				6DE8698320D0D4C3001FEEC7 /* PADemoUtils.m in Sources */,
-				9892DE881F99E0CC00C2E180 /* YumiMediationInitializeInfoUserDefaults.m in Sources */,
-				9892DE891F99E0CC00C2E180 /* YumiMediationInitializeModel.m in Sources */,
-				9892DE8E1F99E0CC00C2E180 /* YumiViewController.m in Sources */,
 				B9A0657C1E8D0F6C00B1B91B /* AppDelegate.m in Sources */,
-				9892DE871F99E0CC00C2E180 /* CALayer+Transition.m in Sources */,
+				5B22636722BCB5A4001C16F4 /* YumiNativeView.m in Sources */,
+				5B22635F22BCB5A4001C16F4 /* CALayer+Transition.m in Sources */,
+				5B22636022BCB5A4001C16F4 /* YumiMediationInitializeModel.m in Sources */,
+				5B22636922BCB5A4001C16F4 /* YumiMediationAppViewController.m in Sources */,
+				5B22636322BCB5A4001C16F4 /* YumiMediationInitializeInfoUserDefaults.m in Sources */,
+				5B22636822BCB5A4001C16F4 /* YumiViewController.m in Sources */,
+				5B22636122BCB5A4001C16F4 /* UIView+Toast.m in Sources */,
 				B9A065791E8D0F6C00B1B91B /* main.m in Sources */,
+				5B22636422BCB5A4001C16F4 /* PADemoUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,10 +613,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		98F0AF8B1F2AE9E6006B48AA /* Main.storyboard */ = {
+		5B22636A22BCB5AE001C16F4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				98F0AF8C1F2AE9E6006B48AA /* Base */,
+				5B22636B22BCB5AE001C16F4 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
