@@ -27,7 +27,8 @@
 
 ### 使用 Firebase 库 和 admob 库冲突解决方案
 由于 Firebase 库中的文件和 admob 广告SDK 代码重复造成冲突，使用 cocoapods 无法完成 admob 接入，只能通过手动的方式接入admob 平台。具体步骤如下：
-1. 在 Podfile 中加入 Firebase admob 库
+1. 请在 ```YumiMediationAdapters```  中删除 AdMob 平台
+2. 在 Podfile 中加入 Firebase admob 库
 
    ```ruby
    pod 'Firebase/AdMob'
@@ -35,7 +36,7 @@
 
    在终端执行 ```pod install``` 完成 Firebase admob 库的安装 
 
-2. 手动导入 YumiMediationAdMob （Yumi 的admob adapter）
+3. 手动导入 YumiMediationAdMob （Yumi 的admob adapter）
 <br>下载地址是 ([SDKDownloadPage-iOS](https://github.com/yumimobi/YumiMediationSDKDemo-iOS/blob/master/normalDocuments/iOSDownloadPage.md)) 中的 AdMob。
 <br>**只需要把 Resources 和 YumiMediationAdMob.framework 导入 Xcode 工程即可** 
    ![image](resources/001.png)
