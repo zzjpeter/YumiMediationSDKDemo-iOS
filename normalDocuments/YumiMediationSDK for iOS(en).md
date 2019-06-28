@@ -758,7 +758,7 @@ Get more informationm, please visit our official website
 | Yumi | yes |   |
 | AppLovin  | yes |   |
 | Baidu  | no |   |
-| Facebook | no | Get more information, please visit Facebook website. |
+| Facebook | yes | |
 | Domob  | no |   |
 | GDT | no |   |
 | Vungle | no | setting in Vungle dashboard |
