@@ -88,13 +88,13 @@ platform :ios do
 
     allAdapters = [
       { :name => "AdColony", :version => "3.3.7", :supportAdtype => "V" },
-      { :name => "AdMob", :version => "7.44.0", :supportAdtype => "B+I+V+N" },
+      { :name => "AdMob", :version => "7.44.0", :supportAdtype => "B+I+V+N+S" },
       { :name => "AppLovin", :version => "5.0.2", :supportAdtype => "B+V+I" },
-      { :name => "Baidu", :version => "4.6.4", :supportAdtype => "B+I+V+N" },
+      { :name => "Baidu", :version => "4.6.4", :supportAdtype => "B+I+V+N+S" },
       { :name => "Chartboost", :version => "7.5.0", :supportAdtype => "V+I" },
       { :name => "Facebook", :version => "5.3.2", :supportAdtype => "B+I+N+V" },
       { :name => "Domob", :version => "3.8.0", :supportAdtype => "V" },
-      { :name => "GDT", :version => "4.10.3", :supportAdtype => "B+I+N+V" },
+      { :name => "GDT", :version => "4.10.3", :supportAdtype => "B+I+N+V+S" },
       { :name => "InMobi", :version => "8.1.0", :supportAdtype => "B+I+V" },
       { :name => "IronSource", :version => "6.8.3", :supportAdtype => "V+I" },
       { :name => "Unity", :version => "3.1.0", :supportAdtype => "I+V" },
@@ -103,7 +103,7 @@ platform :ios do
       { :name => "OneWay",:version => "2.1.0", :supportAdtype => "V"},
       { :name => "ZplayAds",:version => "2.4.2", :supportAdtype => "V+I"},
       { :name => "IQzone", :version => "3.0.2141", :supportAdtype => "B+I+V" },
-      { :name => "BytedanceAds", :version => "2.0.1.1", :supportAdtype => "B+I+N+V" },
+      { :name => "BytedanceAds", :version => "2.0.1.1", :supportAdtype => "B+I+N+V+S" },
       { :name => "InneractiveAdSDK", :version => "7.2.3", :supportAdtype => "B+I+V" },
     ]
     sdkVersion = "YumiMediationSDK_v"+ ENV["TRAVIS_TAG"]
