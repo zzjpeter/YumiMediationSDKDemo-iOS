@@ -14,7 +14,7 @@
    该参数用于统计需求使用，如无特殊需求，可填空字符串。
 3. Facebook 填充问题。
    Facebook 在国内填充较差，测试时，需开启 VPN，并保持 Facebook app 处于登录状态。
-   具体请参阅 Facebook 文档，开启测试模式。
+   具体请参阅 Facebook [测试文档](https://developers.facebook.com/docs/audience-network/testing)，开启测试模式。
 4. 启动崩溃且崩溃日志中有 Admob 相关文字。
    iOS 更新您的 info.plist 文件。[Admob 相关文档](https://developers.google.com/admob/ios/quick-start?hl=zh-cn) 
    Android 更新您的 AndroidManifest.xml。[Admob 相关文档](https://developers.google.com/admob/android/quick-start?hl=zh-cn)
