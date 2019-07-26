@@ -44,6 +44,7 @@
       * [GDPR](#gdpr)
          * [Set GDPR](#set-gdpr)
          * [Networks informations](#networks-informations)
+  * [YumiMediationSDK Q&A](#yumimediationsdk-qa)
 
 # YumiMediationSDK iOS
 
@@ -765,3 +766,6 @@ Get more informationm, please visit our official website
 | OneWay | no |   |
 | BytedanceAds | no |   |
 | ZplayAds  | no |   |
+
+## YumiMediationSDK Q&A
+If you meet any issue when integrating, click to see [YumiMediationSDK Q&A](https://github.com/yumimobi/Developer-doc/blob/master/FAQ_latest_en.md).
