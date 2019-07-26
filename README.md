@@ -18,4 +18,6 @@
 [**SDKDownloadPage-iOS**](https://github.com/yumimobi/YumiMediationSDKDemo-iOS/blob/master/normalDocuments/iOSDownloadPage.md)
 
 ## Q&A 
-[YumiMediationSDK Q&A](YumiMediationSDK_QA/YumiMediationSDK_QA.md)
+[YumiMediationSDK Q&A (zh-cn)](https://github.com/yumimobi/Developer-doc/blob/master/FAQ_latest_cn.md)
+
+[YumiMediationSDK Q&A (en)](https://github.com/yumimobi/Developer-doc/blob/master/FAQ_latest_en.md)

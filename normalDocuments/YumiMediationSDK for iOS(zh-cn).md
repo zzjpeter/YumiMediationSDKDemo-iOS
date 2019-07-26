@@ -45,6 +45,7 @@
       * [GDPR](#gdpr)
          * [设置 GDPR](#设置-gdpr)
          * [支持 GDPR 的平台](#支持-gdpr-的平台)
+   * [接入常见问题](#接入常见问题) 
 
 # YumiMediationSDK iOS
 
@@ -795,3 +796,5 @@ typedef enum : NSUInteger {
 | ZplayAds  | 否 |   |
 
 
+## 接入常见问题
+若您在接入过程中遇到任何问题，可点击查看[常见问题解答](https://github.com/yumimobi/Developer-doc/blob/master/FAQ_latest_cn.md)。
