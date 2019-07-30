@@ -676,7 +676,7 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
    - `hideAdAttribution`
      
      您可以使用该属性指定广告标识是否显示。默认显示。
-    - `expressAdSize`
+   - `expressAdSize`
       您可以使用该属性指定请求原生模板广告的大小。默认为nil
 
 - ##### 实现代理方法
