@@ -512,7 +512,7 @@
   - Warning: while prefetching ads is a great technique, it's important that you don't keep old ads around forever without displaying them. Any native ad objects that have been held without display for longer than an hour should be discarded and replaced with new ads from a new request.
   You can call `-(BOOL)isExpired;` from `YumiMediationNativeModel.h` file to determine whether the current AD is expired.
   - Warning: when reusing `loadAd:`, make sure you wait for each request to complete.
-  - Warning: You must set native express ad size if you want to support native express ad. the `expressAdSize` from `YumiMediationNativeAdConfiguration.h` file.
+  - Warning: You must set native express ad size if you want to support native express ad. you can find `expressAdSize` property in the `YumiMediationNativeAdConfiguration.h` file.
 
 - ##### Register View
 
