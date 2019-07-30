@@ -35,6 +35,7 @@
             * [Register View](#register-view)   
             * [Report Impression](#report-impression)   
             * [原生视频广告](#原生视频广告) 
+            * [原生模板广告](#原生模板广告)
             * [原生广告选项 YumiMediationNativeAdConfiguration](#原生广告选项-yumimediationnativeadconfiguration)  
             * [实现代理方法](#实现代理方法-4)   
    * [调试模式](#调试模式)
@@ -511,6 +512,7 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
     您可通过 `YumiMediationNativeModel.h` 中的 `-(BOOL)isExpired;` 来判断当前广告是否过期。
 
    - 注意：重复使用 `loadAd:` 时，请确保等待每个请求完成，然后再重新调用 `loadAd:`。
+   - 注意：如果你要支持原生模板广告，请务必设置 `YumiMediationNativeAdConfiguration` 中的 `expressAdSize` 为你需要的模板尺寸
 
 - ##### 确定加载完成时间
 
@@ -631,6 +633,14 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
     @end
     ```
 
+- ##### 原生模板广告
+  您可通过 `YumiMediationNativeModel.h` 中的 `isExpressAdView` 来判断当前广告是否是模板广告。
+
+  如果是原生模板广告，你只需要把 `YumiMediationNativeModel.h` 中的 `expressAdView` 添加到您的广告容器中。
+
+  因为原生模板广告需要注册渲染时间，请在 `yumiMediationNativeExpressAdRenderSuccess:` 渲染成功回调中去展示您的原生模板广告。
+  
+
 - ##### 原生广告选项 `YumiMediationNativeAdConfiguration`
 
    `YumiMediationNativeAdConfiguration` 是 `YumiMediationNativeAd` 的创建过程中包含的最后一个参数，本节将介绍这些选项。
@@ -666,6 +676,8 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
    - `hideAdAttribution`
      
      您可以使用该属性指定广告标识是否显示。默认显示。
+    - `expressAdSize`
+      您可以使用该属性指定请求原生模板广告的大小。默认为nil
 
 - ##### 实现代理方法
 
@@ -684,6 +696,18 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
    - (void)yumiMediationNativeAdDidClick:(YumiMediationNativeModel *)nativeAd{
        NSLog(@"Native Ad Did Click.");
    }
+  ///Tells the delegate that the Native express view has been successfully rendered.
+  - (void)yumiMediationNativeExpressAdRenderSuccess:(YumiMediationNativeModel *)nativeModel{
+      NSLog(@"Native express Ad did render success.");
+  }
+  ///Tells the delegate that the Native express view render failed
+  - (void)yumiMediationNativeExpressAd:(YumiMediationNativeModel *)nativeModel didRenderFail:(NSString *)errorMsg{
+      NSLog(@"Native express Ad did render fail.");
+  }
+  ///Tells the delegate that the Native express view has been closed
+  - (void)yumiMediationNativeExpressAdDidClickCloseButton:(YumiMediationNativeModel *)nativeModel{
+      NSLog(@"Native express Ad did click close button.");      
+  }
    ```
 
 ## 调试模式
