@@ -34,6 +34,7 @@
             * [Register View](#register-view)    
             * [Report Impression](#report-impression) 
             * [Native video ads](#native-video-ads) 
+            * [Native express ads](#Native-express-ads)
             * [YumiMediationNativeAdConfiguration](#yumimediationnativeadconfiguration)   
             * [Delegate implementation](#delegate-implementation-4)   
    * [Debug Mode](#debug-mode)   
@@ -104,7 +105,7 @@
   - If also need other platforms:
 
     ```ruby
-    pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','Unity','Vungle','Mintegral','OneWay','ZplayAds','IQzone','BytedanceAds','InneractiveAdSDK']
+    pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','Unity','Vungle','Mintegral','OneWay','ZplayAds','TapjoySDK','BytedanceAds','InneractiveAdSDK']
     ```
 
   Then run the followings at command line interface:
@@ -511,6 +512,7 @@
   - Warning: while prefetching ads is a great technique, it's important that you don't keep old ads around forever without displaying them. Any native ad objects that have been held without display for longer than an hour should be discarded and replaced with new ads from a new request.
   You can call `-(BOOL)isExpired;` from `YumiMediationNativeModel.h` file to determine whether the current AD is expired.
   - Warning: when reusing `loadAd:`, make sure you wait for each request to complete.
+  - Warning: You must set native express ad size if you want to support native express ad. you can find `expressAdSize` property in the `YumiMediationNativeAdConfiguration.h` file.
 
 - ##### Register View
 
@@ -606,6 +608,14 @@
     @end
     ``` 
 
+- ##### Native express ads
+  You can use the `isExpressAdView` in `YumiMediationNativeModel.h` to determine if the current ad is the native express ad.
+
+  If it's a native express ad, you just need to add `expressAdView` from  `YumiMediationNativeModel.h` to your express ad super view.
+  
+  Because native express ads need to be registered for rendering time, please show your native express ads in `yumiMediationNativeExpressAdRenderSuccess:` callback.
+  
+
 - ##### YumiMediationNativeAdConfiguration
   YumiMediationNativeAdConfiguration is the last parameter when init YumiMediationNativeAd.
   - `disableImageLoading`
@@ -639,6 +649,8 @@
   - `hideAdAttribution`
     
     You can use this property to hide the Ad text. Default is display.
+  - `expressAdSize`
+      You can use this property to set express ad size. Default is nil.
 
 - ##### Delegate implementation
 
@@ -656,6 +668,18 @@
   /// Tells the delegate that the Native view has been clicked.
   - (void)yumiMediationNativeAdDidClick:(YumiMediationNativeModel *)nativeAd{
     NSLog(@"Native Ad Did Click.");
+  }
+  ///Tells the delegate that the Native express view has been successfully rendered.
+  - (void)yumiMediationNativeExpressAdRenderSuccess:(YumiMediationNativeModel *)nativeModel{
+      NSLog(@"Native express Ad did render success.");
+  }
+  ///Tells the delegate that the Native express view render failed
+  - (void)yumiMediationNativeExpressAd:(YumiMediationNativeModel *)nativeModel didRenderFail:(NSString *)errorMsg{
+      NSLog(@"Native express Ad did render fail.");
+  }
+  ///Tells the delegate that the Native express view has been closed
+  - (void)yumiMediationNativeExpressAdDidClickCloseButton:(YumiMediationNativeModel *)nativeModel{
+      NSLog(@"Native express Ad did click close button.");      
   }
   ```
 

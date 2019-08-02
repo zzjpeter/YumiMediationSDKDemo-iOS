@@ -1,7 +1,7 @@
 PODS:
   - YumiAdColony (3.3.7)
   - YumiAdMob (7.44.0)
-  - YumiAppLovin (5.0.2)
+  - YumiAppLovin (6.7.1)
   - YumiBaidu (4.6.4)
   - YumiBytedanceAds (2.0.1.1)
   - YumiChartboost (7.5.0)
@@ -10,95 +10,86 @@ PODS:
   - YumiGDT (4.10.3)
   - YumiInMobi (8.1.0)
   - YumiInneractiveAdSDK (7.2.3)
-  - YumiIQzone (3.0.2141):
-    - YumiAdColony (>= 3.3.6)
-    - YumiAppLovin (>= 5.0.2)
-    - YumiChartboost (>= 7.3.0)
-    - YumiInMobi (>= 7.2.1)
-    - YumiIronSource (>= 6.7.10)
-    - YumiMediationSDK
-    - YumiMintegral (>= 3.9.1)
-    - YumiUnity (>= 2.3.0)
-    - YumiVungle (>= 6.2.0)
   - YumiIronSource (6.8.3)
-  - YumiMediationAdapters (4.1.0):
-    - YumiMediationAdapters/AdColony (= 4.1.0)
-    - YumiMediationAdapters/AdMob (= 4.1.0)
-    - YumiMediationAdapters/AppLovin (= 4.1.0)
-    - YumiMediationAdapters/Baidu (= 4.1.0)
-    - YumiMediationAdapters/BytedanceAds (= 4.1.0)
-    - YumiMediationAdapters/Chartboost (= 4.1.0)
-    - YumiMediationAdapters/Domob (= 4.1.0)
-    - YumiMediationAdapters/Facebook (= 4.1.0)
-    - YumiMediationAdapters/GDT (= 4.1.0)
-    - YumiMediationAdapters/InMobi (= 4.1.0)
-    - YumiMediationAdapters/InneractiveAdSDK (= 4.1.0)
-    - YumiMediationAdapters/IQzone (= 4.1.0)
-    - YumiMediationAdapters/IronSource (= 4.1.0)
-    - YumiMediationAdapters/Mintegral (= 4.1.0)
-    - YumiMediationAdapters/OneWay (= 4.1.0)
-    - YumiMediationAdapters/Unity (= 4.1.0)
-    - YumiMediationAdapters/Vungle (= 4.1.0)
-    - YumiMediationAdapters/ZplayAds (= 4.1.0)
-    - YumiMediationSDK (~> 4.1.0)
-  - YumiMediationAdapters/AdColony (4.1.0):
+  - YumiMediationAdapters (4.2.0):
+    - YumiMediationAdapters/AdColony (= 4.2.0)
+    - YumiMediationAdapters/AdMob (= 4.2.0)
+    - YumiMediationAdapters/AppLovin (= 4.2.0)
+    - YumiMediationAdapters/Baidu (= 4.2.0)
+    - YumiMediationAdapters/BytedanceAds (= 4.2.0)
+    - YumiMediationAdapters/Chartboost (= 4.2.0)
+    - YumiMediationAdapters/Domob (= 4.2.0)
+    - YumiMediationAdapters/Facebook (= 4.2.0)
+    - YumiMediationAdapters/GDT (= 4.2.0)
+    - YumiMediationAdapters/InMobi (= 4.2.0)
+    - YumiMediationAdapters/InneractiveAdSDK (= 4.2.0)
+    - YumiMediationAdapters/IronSource (= 4.2.0)
+    - YumiMediationAdapters/Mintegral (= 4.2.0)
+    - YumiMediationAdapters/OneWay (= 4.2.0)
+    - YumiMediationAdapters/TapjoySDK (= 4.2.0)
+    - YumiMediationAdapters/Unity (= 4.2.0)
+    - YumiMediationAdapters/Vungle (= 4.2.0)
+    - YumiMediationAdapters/ZplayAds (= 4.2.0)
+    - YumiMediationSDK (~> 4.2.0)
+  - YumiMediationAdapters/AdColony (4.2.0):
     - YumiAdColony (= 3.3.7)
-    - YumiMediationSDK (~> 4.1.0)
-  - YumiMediationAdapters/AdMob (4.1.0):
+    - YumiMediationSDK (~> 4.2.0)
+  - YumiMediationAdapters/AdMob (4.2.0):
     - YumiAdMob (= 7.44.0)
-    - YumiMediationSDK (~> 4.1.0)
-  - YumiMediationAdapters/AppLovin (4.1.0):
-    - YumiAppLovin (= 5.0.2)
-    - YumiMediationSDK (~> 4.1.0)
-  - YumiMediationAdapters/Baidu (4.1.0):
+    - YumiMediationSDK (~> 4.2.0)
+  - YumiMediationAdapters/AppLovin (4.2.0):
+    - YumiAppLovin (= 6.7.1)
+    - YumiMediationSDK (~> 4.2.0)
+  - YumiMediationAdapters/Baidu (4.2.0):
     - YumiBaidu (= 4.6.4)
-    - YumiMediationSDK (~> 4.1.0)
-  - YumiMediationAdapters/BytedanceAds (4.1.0):
+    - YumiMediationSDK (~> 4.2.0)
+  - YumiMediationAdapters/BytedanceAds (4.2.0):
     - YumiBytedanceAds (= 2.0.1.1)
-    - YumiMediationSDK (~> 4.1.0)
-  - YumiMediationAdapters/Chartboost (4.1.0):
+    - YumiMediationSDK (~> 4.2.0)
+  - YumiMediationAdapters/Chartboost (4.2.0):
     - YumiChartboost (= 7.5.0)
-    - YumiMediationSDK (~> 4.1.0)
-  - YumiMediationAdapters/Domob (4.1.0):
+    - YumiMediationSDK (~> 4.2.0)
+  - YumiMediationAdapters/Domob (4.2.0):
     - YumiDomob (= 3.8.0)
-    - YumiMediationSDK (~> 4.1.0)
-  - YumiMediationAdapters/Facebook (4.1.0):
+    - YumiMediationSDK (~> 4.2.0)
+  - YumiMediationAdapters/Facebook (4.2.0):
     - YumiFacebook (= 5.3.2)
-    - YumiMediationSDK (~> 4.1.0)
-  - YumiMediationAdapters/GDT (4.1.0):
+    - YumiMediationSDK (~> 4.2.0)
+  - YumiMediationAdapters/GDT (4.2.0):
     - YumiGDT (= 4.10.3)
-    - YumiMediationSDK (~> 4.1.0)
-  - YumiMediationAdapters/InMobi (4.1.0):
+    - YumiMediationSDK (~> 4.2.0)
+  - YumiMediationAdapters/InMobi (4.2.0):
     - YumiInMobi (= 8.1.0)
-    - YumiMediationSDK (~> 4.1.0)
-  - YumiMediationAdapters/InneractiveAdSDK (4.1.0):
+    - YumiMediationSDK (~> 4.2.0)
+  - YumiMediationAdapters/InneractiveAdSDK (4.2.0):
     - YumiInneractiveAdSDK (= 7.2.3)
-    - YumiMediationSDK (~> 4.1.0)
-  - YumiMediationAdapters/IQzone (4.1.0):
-    - YumiIQzone (= 3.0.2141)
-    - YumiMediationSDK (~> 4.1.0)
-  - YumiMediationAdapters/IronSource (4.1.0):
+    - YumiMediationSDK (~> 4.2.0)
+  - YumiMediationAdapters/IronSource (4.2.0):
     - YumiIronSource (= 6.8.3)
-    - YumiMediationSDK (~> 4.1.0)
-  - YumiMediationAdapters/Mintegral (4.1.0):
-    - YumiMediationSDK (~> 4.1.0)
+    - YumiMediationSDK (~> 4.2.0)
+  - YumiMediationAdapters/Mintegral (4.2.0):
+    - YumiMediationSDK (~> 4.2.0)
     - YumiMintegral (= 5.3.3)
-  - YumiMediationAdapters/OneWay (4.1.0):
-    - YumiMediationSDK (~> 4.1.0)
+  - YumiMediationAdapters/OneWay (4.2.0):
+    - YumiMediationSDK (~> 4.2.0)
     - YumiOneWay (= 2.1.0)
-  - YumiMediationAdapters/Unity (4.1.0):
-    - YumiMediationSDK (~> 4.1.0)
+  - YumiMediationAdapters/TapjoySDK (4.2.0):
+    - YumiMediationSDK (~> 4.2.0)
+    - YumiTapjoySDK (= 12.3.1)
+  - YumiMediationAdapters/Unity (4.2.0):
+    - YumiMediationSDK (~> 4.2.0)
     - YumiUnity (= 3.1.0)
-  - YumiMediationAdapters/Vungle (4.1.0):
-    - YumiMediationSDK (~> 4.1.0)
+  - YumiMediationAdapters/Vungle (4.2.0):
+    - YumiMediationSDK (~> 4.2.0)
     - YumiVungle (= 6.4.1)
-  - YumiMediationAdapters/ZplayAds (4.1.0):
-    - YumiMediationSDK (~> 4.1.0)
-  - YumiMediationDebugCenter-iOS (4.1.0):
-    - YumiMediationSDK (~> 4.1.0)
-  - YumiMediationSDK (4.1.0)
+  - YumiMediationAdapters/ZplayAds (4.2.0):
+    - YumiMediationSDK (~> 4.2.0)
+  - YumiMediationDebugCenter-iOS (4.2.0):
+    - YumiMediationSDK (~> 4.2.0)
+  - YumiMediationSDK (4.2.0)
   - YumiMintegral (5.3.3)
   - YumiOneWay (2.1.0)
+  - YumiTapjoySDK (12.3.1)
   - YumiUnity (3.1.0)
   - YumiVungle (6.4.1)
 
@@ -120,20 +111,20 @@ SPEC REPOS:
     - YumiGDT
     - YumiInMobi
     - YumiInneractiveAdSDK
-    - YumiIQzone
     - YumiIronSource
     - YumiMediationAdapters
     - YumiMediationDebugCenter-iOS
     - YumiMediationSDK
     - YumiMintegral
     - YumiOneWay
+    - YumiTapjoySDK
     - YumiUnity
     - YumiVungle
 
 SPEC CHECKSUMS:
   YumiAdColony: 272ba9fb09ac9eec772c803a9e4da5e17d75f4a9
   YumiAdMob: f4390b10df0eaceb25aa577289803614845b90c9
-  YumiAppLovin: e7d18fd35c447ee9c060055873f69dfba935872b
+  YumiAppLovin: c1da0685a6144ed43fc633c97a0a456d3aa367d3
   YumiBaidu: eab5aa9c216188a0f65433dc539f2e1036d3044a
   YumiBytedanceAds: dcd4b614420df402e5c43304a1fe9a469c018926
   YumiChartboost: e865c26f800edba121b8b084e69b93b5d9ab83dc
@@ -142,16 +133,16 @@ SPEC CHECKSUMS:
   YumiGDT: dcfede9ab3f9f80f8d82462ed0bb76ec73d64aab
   YumiInMobi: 8a3b599221145392086fa4ba0424afb565827863
   YumiInneractiveAdSDK: 338ff47bbfb53a5a31aae12c701bf0c85b648028
-  YumiIQzone: 8d1832d11bd316c996b463b4886a0df48e7e9975
   YumiIronSource: 278918aa3f3b36ce9eeb1f76af677eb739713390
-  YumiMediationAdapters: 88601cd7becf5c9fb5c33b056f43ca4b4c608e2c
-  YumiMediationDebugCenter-iOS: c3b3bbbd75bda4522ba8b04fea90c18a8a265986
-  YumiMediationSDK: 40ba5d486d78b4a1236d8fa6ad43683823527e7a
+  YumiMediationAdapters: 8a782df9d6addaf42275aeb12b7704c705b68041
+  YumiMediationDebugCenter-iOS: af23246afe74f53e82225be2402958bae0d069bc
+  YumiMediationSDK: f34ed710eeed2ffbb7f752ef9d2948083dcddb20
   YumiMintegral: 98a2f9fcf19ddce7d7f40b0a19438d0942b284fc
   YumiOneWay: 719211826201ed8d93b89d5051e8cb25913e3c5a
+  YumiTapjoySDK: 4e4b305733dec36503bc6be5b82504c9c7e7a628
   YumiUnity: bded950e55020e6d456520108f8e8d0b125981c4
   YumiVungle: 08ecd2c566b3d4112f13c36243edc569d2f50787
 
 PODFILE CHECKSUM: 1bb50b56a7b70f330e23ddd65bc3ac42acabfb57
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.7.4
