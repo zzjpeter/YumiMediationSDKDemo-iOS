@@ -309,19 +309,19 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
   }
   /// Tells the delegate that the interstitial ad opened.
   - (void)yumiMediationInterstitialDidOpen:(YumiMediationInterstitial *)interstitial {
-    NSLog(@"YumiMediationInterstitialDidOpen);
+    NSLog(@"YumiMediationInterstitialDidOpen");
   }
   /// Tells the delegate that the interstitial ad start playing.
   - (void)yumiMediationInterstitialDidStartPlaying:(YumiMediationInterstitial *)interstitial {
-    NSLog(@"YumiMediationInterstitialDidStartPlaying);
+    NSLog(@"YumiMediationInterstitialDidStartPlaying");
   }
   /// Tells the delegate that the interstitial is to be animated off the screen.
   - (void)yumiMediationInterstitialDidClosed:(YumiMediationInterstitial *)interstitial {
-    NSLog(@"YumiMediationInterstitialDidClosed);
+    NSLog(@"YumiMediationInterstitialDidClosed");
   }
   /// Tells the delegate that the interstitial ad has been clicked.
   - (void)yumiMediationInterstitialDidClick:(YumiMediationInterstitial *)interstitial {
-    NSLog(@"YumiMediationInterstitialDidClick);
+    NSLog(@"YumiMediationInterstitialDidClick");
   }
   ```
 
