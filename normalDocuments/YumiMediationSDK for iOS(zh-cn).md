@@ -469,7 +469,7 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
       NSLog(@"yumiMediationSplashAdSuccessToShow.");
   }
   - (void)yumiMediationSplashAdFailToShow:(YumiMediationSplash *)splash withError:(NSError *)error {
-      NSLog(@"yumiMediationSplashAdFailToShow: %@", error)
+      NSLog(@"yumiMediationSplashAdFailToShow: %@", error);
   }
   - (void)yumiMediationSplashAdDidClick:(YumiMediationSplash *)splash {
       NSLog(@"yumiMediationSplashAdDidClick.");
