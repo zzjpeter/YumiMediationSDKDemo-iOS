@@ -98,7 +98,7 @@ platform :ios do
       { :name => "InMobi", :version => "8.1.0", :supportAdtype => "B+I+V" },
       { :name => "IronSource", :version => "6.8.3", :supportAdtype => "V+I" },
       { :name => "Unity", :version => "3.1.0", :supportAdtype => "I+V" },
-      { :name => "Vungle", :version => "6.4.1", :supportAdtype => "I+V" },
+      { :name => "Vungle", :version => "6.4.2", :supportAdtype => "I+V" },
       { :name => "Mintegral", :version => "5.3.3", :supportAdtype => "V+I"},
       { :name => "OneWay",:version => "2.1.0", :supportAdtype => "V"},
       { :name => "ZplayAds",:version => "2.4.2", :supportAdtype => "V+I"},
