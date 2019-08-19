@@ -16,14 +16,14 @@
 |    InMobi    |  8.1.0  |   B+I+V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/4.2.0/YumiMediationInMobi.tar.bz2)   |      |
 |    IronSource    |  6.8.3  |   V+I      |   [link](http://adsdk.yumimobi.com/iOS/Archived/4.2.0/YumiMediationIronSource.tar.bz2)   |      |
 |    Unity    |  3.1.0  |   I+V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/4.2.0/YumiMediationUnity.tar.bz2)   |      |
-|    Vungle    |  6.4.1  |   I+V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/4.2.0/YumiMediationVungle.tar.bz2)   |      |
+|    Vungle    |  6.4.2  |   I+V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/4.2.1/YumiMediationVungle.tar.bz2)   |      |
 |    Mintegral    |  5.3.3  |   V+I      |   [link](http://adsdk.yumimobi.com/iOS/Archived/4.2.0/YumiMediationMintegral.tar.bz2)   |      |
 |    OneWay    |  2.1.0  |   V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/4.2.0/YumiMediationOneWay.tar.bz2)   |      |
 |    ZplayAds    |  2.4.2  |   V+I      |   [link](http://adsdk.yumimobi.com/iOS/Archived/4.2.0/YumiMediationZplayAds.tar.bz2)   |      |
 |    BytedanceAds    |  2.0.1.1  |   B+I+N+V+S      |   [link](http://adsdk.yumimobi.com/iOS/Archived/4.2.0/YumiMediationBytedanceAds.tar.bz2)   |      |
 |    InneractiveAdSDK    |  7.2.3  |   B+I+V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/4.2.0/YumiMediationInneractiveAdSDK.tar.bz2)   |      |
 |    TapjoySDK    |  12.3.1  |   I+V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/4.2.0/YumiMediationTapjoySDK.tar.bz2)   |      |
-|    AllThirdPartysAdapter    |  4.2.0  |         |   [link](http://adsdk.yumimobi.com/iOS/Archived/4.2.0/allThirdPartys.tar.bz2)   |      |
+|    AllThirdPartysAdapter    |  4.2.1  |         |   [link](http://adsdk.yumimobi.com/iOS/Archived/4.2.1/allThirdPartys.tar.bz2)   |      |
  
 | shortName |   FullName   |
 | :-------: | :----------: |
