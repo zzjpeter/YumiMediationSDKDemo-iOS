@@ -269,8 +269,7 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
     self.yumiInterstitial = [[YumiMediationInterstitial alloc] 
                                            initWithPlacementID:@"Your PlacementID"
                                                      channelID:@"Your channelID"
-                                                     versionID:@"Your versionID"
-                                            rootViewController:self];
+                                                     versionID:@"Your versionID"];
     self.yumiInterstitial.delegate = self;
   }
   @end
@@ -282,7 +281,7 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
   //present YumiMediationInterstitial
   - (IBAction)presentYumiMediationInterstitial:(id)sender {
     if ([self.yumiInterstitial isReady]) {
-      [self.yumiInterstitial present];
+      [self.yumiInterstitial presentFromRootViewController:self]];
     } else {
       NSLog(@"Ad wasn't ready");
     }
