@@ -106,7 +106,7 @@
    - 如果您需要聚合其他平台
 
      ```ruby
-     pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','Unity','Vungle','Mintegral','OneWay','ZplayAds','TapjoySDK','BytedanceAds','InneractiveAdSDK']
+     pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','Unity','Vungle','Mintegral','OneWay','ZplayAds','TapjoySDK','BytedanceAds','InneractiveAdSDK','PubNative']
      ```
 
    接下来在命令行界面中运行：
@@ -269,8 +269,7 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
     self.yumiInterstitial = [[YumiMediationInterstitial alloc] 
                                            initWithPlacementID:@"Your PlacementID"
                                                      channelID:@"Your channelID"
-                                                     versionID:@"Your versionID"
-                                            rootViewController:self];
+                                                     versionID:@"Your versionID"];
     self.yumiInterstitial.delegate = self;
   }
   @end
@@ -282,7 +281,7 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
   //present YumiMediationInterstitial
   - (IBAction)presentYumiMediationInterstitial:(id)sender {
     if ([self.yumiInterstitial isReady]) {
-      [self.yumiInterstitial present];
+      [self.yumiInterstitial presentFromRootViewController:self]];
     } else {
       NSLog(@"Ad wasn't ready");
     }

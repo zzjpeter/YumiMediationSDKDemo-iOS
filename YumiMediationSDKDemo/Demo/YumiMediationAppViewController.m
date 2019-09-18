@@ -81,6 +81,7 @@ static int nativeAdNumber = 4;
 - (instancetype)init {
     if (self = [super init]) {
         self = [self createVCFromCustomBundle];
+        self.modalPresentationStyle = UIModalPresentationFullScreen;
     }
     return self;
 }
@@ -366,8 +367,7 @@ static int nativeAdNumber = 4;
                 weakSelf.interstitial =
                     [[YumiMediationInterstitial alloc] initWithPlacementID:weakSelf.interstitialPlacementID
                                                                  channelID:weakSelf.channelID
-                                                                 versionID:weakSelf.versionID
-                                                        rootViewController:weakSelf];
+                                                                 versionID:weakSelf.versionID];
                 weakSelf.interstitial.delegate = weakSelf;
                 break;
 
@@ -417,7 +417,7 @@ static int nativeAdNumber = 4;
             break;
         case 1:
             if ([self.interstitial isReady]) {
-                [self.interstitial present];
+                [self.interstitial presentFromRootViewController:self];
             }
             break;
         case 2:
