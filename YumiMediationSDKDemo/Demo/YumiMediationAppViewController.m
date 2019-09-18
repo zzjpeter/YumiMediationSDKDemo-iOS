@@ -81,6 +81,7 @@ static int nativeAdNumber = 4;
 - (instancetype)init {
     if (self = [super init]) {
         self = [self createVCFromCustomBundle];
+        self.modalPresentationStyle = UIModalPresentationFullScreen;
     }
     return self;
 }
