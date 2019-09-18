@@ -414,9 +414,9 @@
 				"${PODS_ROOT}/YumiBytedanceAds/BUAdSDK.bundle",
 				"${PODS_ROOT}/YumiDomob/IndependentVideoBundle.bundle",
 				"${PODS_ROOT}/YumiInneractiveAdSDK/IASDKCore/IASDKResources.bundle",
-				"${PODS_ROOT}/YumiMediationAdapters/YumiMediationAdMob/Resources/YumiMediationAdMob.bundle",
-				"${PODS_ROOT}/YumiMediationAdapters/YumiMediationFacebook/Resources/YumiMediationFacebook.bundle",
-				"${PODS_ROOT}/YumiMediationAdapters/YumiMediationGDT/Resources/YumiMediationGDT.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/YumiMediationAdapters/YumiMediationAdMob.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/YumiMediationAdapters/YumiMediationFacebook.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/YumiMediationAdapters/YumiMediationGDT.bundle",
 				"${PODS_ROOT}/YumiMediationDebugCenter-iOS/Resources/YumiMediationDebugCenter.bundle",
 				"${PODS_ROOT}/YumiMediationSDK/Resources/YumiMediationSDK.bundle",
 				"${PODS_ROOT}/YumiMediationSDK/Resources/YumiAdsSDK.bundle",
@@ -450,11 +450,11 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo-frameworks.sh",
-				"${PODS_ROOT}/YumiFacebook/FBAudienceNetwork.framework",
+				"${PODS_ROOT}/YumiPubNative/HyBid.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBAudienceNetwork.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HyBid.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
