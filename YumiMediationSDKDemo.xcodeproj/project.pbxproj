@@ -410,6 +410,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo-resources.sh",
+				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
 				"${PODS_ROOT}/YumiBaidu/lib/baidumobadsdk.bundle",
 				"${PODS_ROOT}/YumiBytedanceAds/BUAdSDK.bundle",
 				"${PODS_ROOT}/YumiDomob/IndependentVideoBundle.bundle",
@@ -425,6 +426,7 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FacebookSDKStrings.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/baidumobadsdk.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BUAdSDK.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IndependentVideoBundle.bundle",
@@ -685,12 +687,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1.3;
+				CURRENT_PROJECT_VERSION = 20190924;
 				DEVELOPMENT_TEAM = VG25A6M88T;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = YumiMediationSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 4.3.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.YumiMediationSDKExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "9f445f8f-ab1c-4958-b506-0257824d3d39";
@@ -706,12 +709,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CURRENT_PROJECT_VERSION = 1.3;
+				CURRENT_PROJECT_VERSION = 20190924;
 				DEVELOPMENT_TEAM = L5UE3EGW93;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = YumiMediationSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 4.3.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.YumiMediationSDKExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "9f445f8f-ab1c-4958-b506-0257824d3d39";
