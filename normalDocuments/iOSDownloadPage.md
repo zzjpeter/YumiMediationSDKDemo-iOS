@@ -14,7 +14,7 @@
 |    AdColony    |  3.3.7  |   V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/4.3.2/YumiMediationAdColony.tar.bz2)   |      |
 |    AdMob    |  7.44.0  |   B+I+V+N+S      |   [link](http://adsdk.yumimobi.com/iOS/Archived/4.3.2/YumiMediationAdMob.tar.bz2)   |      |
 |    AppLovin    |  6.7.1.0  |   B+V+I      |   [link](http://adsdk.yumimobi.com/iOS/Archived/4.3.2/YumiMediationAppLovin.tar.bz2)   |      |
-|    Baidu    |  4.6.5  |   B+I+V+N+S      |   [link](http://adsdk.yumimobi.com/iOS/Archived/4.3.2/YumiMediationBaidu.tar.bz2)   |      |
+|    Baidu    |  4.6.7  |   B+I+V+N+S      |   [link](http://adsdk.yumimobi.com/iOS/Archived/4.3.2/YumiMediationBaidu.tar.bz2)   |      |
 |    Chartboost    |  8.0.1  |   V+I      |   [link](http://adsdk.yumimobi.com/iOS/Archived/4.3.2/YumiMediationChartboost.tar.bz2)   |      |
 |    Facebook    |  5.4.0  |   B+I+N+V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/4.3.2/YumiMediationFacebook.tar.bz2)   |      |
 |    Domob    |  3.8.0  |   V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/4.3.2/YumiMediationDomob.tar.bz2)   |      |
