@@ -2,8 +2,8 @@
  
 |    Name     | Version  | Support AdType | DownloadLink | Note |
 | :---------: | :------: | :------------: | :----------: | :--: |
-|    YumiMediationSDK    |  4.3.3  |    B+I+V+N+S     |   [link](http://adsdk.yumimobi.com/iOS/Archived/4.3.3/YumiMediationSDK-iOS.tar.bz2)   |      |
-|        YumiMediationSDKConfig.xcconfig        |  4.3.3  |                | [link](https://adsdk.yumimobi.com/iOS/Archived/YumiMediationSDKConfig.xcconfig) |      |
+|    YumiMediationSDK    |  4.3.4  |    B+I+V+N+S     |   [link](http://adsdk.yumimobi.com/iOS/Archived/4.3.4/YumiMediationSDK-iOS.tar.bz2)   |      |
+|        YumiMediationSDKConfig.xcconfig        |  ---  |                | [link](https://adsdk.yumimobi.com/iOS/Archived/YumiMediationSDKConfig.xcconfig) |      |
 |    YumiMediationDebugCenter    |  4.3.2  |         |   [link](http://adsdk.yumimobi.com/iOS/Archived/4.3.2/YumiMediationDebugCenter-iOS.tar.bz2)   |      |
 |    AdColony    |  3.3.7  |   V      |   [link](http://adsdk.yumimobi.com/iOS/Archived/4.3.2/YumiMediationAdColony.tar.bz2)   |      |
 |    AdMob    |  7.44.0  |   B+I+V+N+S      |   [link](http://adsdk.yumimobi.com/iOS/Archived/4.3.2/YumiMediationAdMob.tar.bz2)   |      |

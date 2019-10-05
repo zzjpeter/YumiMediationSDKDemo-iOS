@@ -97,7 +97,7 @@ PODS:
     - YumiMediationSDK (~> 4.3.0)
   - YumiMediationDebugCenter-iOS (4.3.2):
     - YumiMediationSDK (~> 4.3.0)
-  - YumiMediationSDK (4.3.3)
+  - YumiMediationSDK (4.3.4)
   - YumiMintegral (5.7.1)
   - YumiOneWay (2.1.0.0)
   - YumiPubNative (1.3.7)
@@ -151,7 +151,7 @@ SPEC CHECKSUMS:
   YumiIronSource: 278918aa3f3b36ce9eeb1f76af677eb739713390
   YumiMediationAdapters: c114d0fb7ad77d7aa555b51c2180912808a711cb
   YumiMediationDebugCenter-iOS: 0426f80eebddca453d783c880f4ec45b65f1f6e1
-  YumiMediationSDK: f1f82427728f97835c23e906ea404c09afa54991
+  YumiMediationSDK: af99a1df7971952ec0a3951a356c63535cec9eff
   YumiMintegral: e2b6c054bc270777edf70c8cb75cac14dee6a718
   YumiOneWay: 675ed5a220afd6492fa230b3444337dbfc443cb3
   YumiPubNative: ca6763402f734e5977d766c4bf1980eee7a05a12
