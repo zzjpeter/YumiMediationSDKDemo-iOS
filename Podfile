@@ -1,3 +1,5 @@
+source 'https://github.com/CocoaPods/Specs'
+source 'https://github.com/yumimobi/Specs'
 platform :ios, '8.0'
 
 target 'YumiMediationSDKDemo' do
