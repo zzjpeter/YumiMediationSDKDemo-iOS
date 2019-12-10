@@ -1,4 +1,12 @@
 PODS:
+  - AppCenter (2.5.1):
+    - AppCenter/Analytics (= 2.5.1)
+    - AppCenter/Crashes (= 2.5.1)
+  - AppCenter/Analytics (2.5.1):
+    - AppCenter/Core
+  - AppCenter/Core (2.5.1)
+  - AppCenter/Crashes (2.5.1):
+    - AppCenter/Core
   - FBSDKCoreKit (5.12.0):
     - FBSDKCoreKit/Basics (= 5.12.0)
     - FBSDKCoreKit/Core (= 5.12.0)
@@ -136,12 +144,14 @@ PODS:
   - YumiVungle (6.4.3)
 
 DEPENDENCIES:
+  - AppCenter
   - YumiMediationAdapters
   - YumiMediationDebugCenter-iOS
   - YumiMediationSDK
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - AppCenter
     - FBSDKCoreKit
     - GoogleAppMeasurement
     - GoogleUtilities
@@ -171,6 +181,7 @@ SPEC REPOS:
     - YumiMediationSDK
 
 SPEC CHECKSUMS:
+  AppCenter: fddcbac6e4baae3d93a196ceb0bfe0e4ce407dec
   FBSDKCoreKit: fa3ac4dc9b1afc9ae70b3de4dd704d1b6aeeed0d
   GoogleAppMeasurement: dfe55efa543e899d906309eaaac6ca26d249862f
   GoogleUtilities: 547a86735c6f0ee30ad17e94df4fc21f616b71cb
@@ -198,6 +209,6 @@ SPEC CHECKSUMS:
   YumiUnity: 5b8777871b94ca1ae9f55f85df2537e24ea09f46
   YumiVungle: a832fceb4589f030343321b3cc18d3ec85a195b9
 
-PODFILE CHECKSUM: 41b38a2ec20b7203e152237ebe488ed0a1f46020
+PODFILE CHECKSUM: e2ba68abcb58ba1c58bcc340cb58f9101d4f866f
 
 COCOAPODS: 1.8.4
