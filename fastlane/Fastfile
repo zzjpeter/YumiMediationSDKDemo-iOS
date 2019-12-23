@@ -189,7 +189,7 @@ platform :ios do
 
         thirdYumiMediationAdapterName = 'YumiMediation' + adapterName
         #copy adapters
-        srcAdapterPath = podDir + 'YumiMediationAdapters' + '/' + 'YumiMediationAdapters' + adapterName
+        srcAdapterPath = podDir + 'YumiMediationAdapters' + '/' + 'YumiMediation' + adapterName
         targetAdapterPath = thirdPartyPathName + '/'+ thirdYumiMediationAdapterName
         srcThirdSDKPath = podDir + thirdYumiSDKName
         targetThirdSDKPath = thirdPartyPathName + '/'+ thirdYumiMediationAdapterName + '/' +thirdYumiSDKName
