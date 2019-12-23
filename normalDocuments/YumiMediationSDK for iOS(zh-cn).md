@@ -419,15 +419,15 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
 
    在应用调用 `loadAd:` 后，可通过`YumiMediationNativeAdDelegate` 中的以下方法获取请求的结果：
 
-    ```objectivec
+```objectivec
     /// Tells the delegate that an ad has been successfully loaded.
     - (void)yumiMediationNativeAdDidLoad:(NSArray<YumiMediationNativeModel *> *)nativeAdArray;
-    ```
+```
 
-    ```objectivec
+```objectivec
     /// Tells the delegate that a request failed.
     - (void)yumiMediationNativeAd:(YumiMediationNativeAd *)nativeAd didFailWithError:(YumiMediationError *)error;
-    ```
+```
 ##### Register View
 
 ```objectivec
