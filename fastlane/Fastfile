@@ -183,20 +183,19 @@ platform :ios do
         puts "is copying #{adapterName}"
         if adapterName != "ZplayAds"
           thirdYumiSDKName = 'Yumi' + adapterName
+        else
+          thirdYumiSDKName = 'PlayableAds'
         end
+
         thirdYumiMediationAdapterName = 'YumiMediation' + adapterName
         #copy adapters
         srcAdapterPath = podDir + 'YumiMediationAdapters' + '/' + 'YumiMediationAdapters'+'/'+ adapterName
         targetAdapterPath = thirdPartyPathName + '/'+ thirdYumiMediationAdapterName
-        if adapterName != "ZplayAds"
-          srcThirdSDKPath = podDir + thirdYumiSDKName
-          targetThirdSDKPath = thirdPartyPathName + '/'+ thirdYumiMediationAdapterName + '/' +thirdYumiSDKName
-        end
+        srcThirdSDKPath = podDir + thirdYumiSDKName
+        targetThirdSDKPath = thirdPartyPathName + '/'+ thirdYumiMediationAdapterName + '/' +thirdYumiSDKName
 
         FileUtils.mv(srcAdapterPath,targetAdapterPath)
-        if adapterName != "ZplayAds"
-          FileUtils.mv(srcThirdSDKPath,targetThirdSDKPath)
-        end
+        FileUtils.mv(srcThirdSDKPath,targetThirdSDKPath)
         
         thirdSource = "#{thirdYumiMediationAdapterName}.tar.bz2"
         remoteAddress = "https://adsdk.yumimobi.com/iOS/Archived/#{ENV["TRAVIS_TAG"]}/#{thirdSource}"
@@ -228,7 +227,7 @@ platform :ios do
         file.puts("| :-------: | :----------: |")
         file.puts("|     B     |    Banner    |")
         file.puts("|     I     | Interstitial |")
-        file.puts("|     V     |    Video     |")
+        file.puts("|     V     | RewardedVideo|")
         file.puts("|     N     |    Native    |")
         file.puts("|     S     |    Splash    |")
       end
