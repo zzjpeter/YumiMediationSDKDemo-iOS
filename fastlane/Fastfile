@@ -201,7 +201,7 @@ platform :ios do
           dependencyPath2 = podDir + 'GoogleUtilities'
           dependencyPath3 = podDir + 'GoogleAppMeasurement'
           FileUtils.mv(dependencyPath1,targetThirdSDKPath)
-          Fileutils.mv(dependencyPath2,targetThirdSDKPath)
+          FileUtils.mv(dependencyPath2,targetThirdSDKPath)
           FileUtils.mv(dependencyPath3,targetThirdSDKPath)
         end
         if adapterName == 'Facebook'
