@@ -189,13 +189,25 @@ platform :ios do
 
         thirdYumiMediationAdapterName = 'YumiMediation' + adapterName
         #copy adapters
-        srcAdapterPath = podDir + 'YumiMediationAdapters' + '/' + 'YumiMediationAdapters'+'/'+ adapterName
+        srcAdapterPath = podDir + 'YumiMediationAdapters' + '/' + adapterName
         targetAdapterPath = thirdPartyPathName + '/'+ thirdYumiMediationAdapterName
         srcThirdSDKPath = podDir + thirdYumiSDKName
         targetThirdSDKPath = thirdPartyPathName + '/'+ thirdYumiMediationAdapterName + '/' +thirdYumiSDKName
 
         FileUtils.mv(srcAdapterPath,targetAdapterPath)
         FileUtils.mv(srcThirdSDKPath,targetThirdSDKPath)
+        if adapterName == 'AdMob'
+          dependencyPath1 = podDir + 'nanopb'
+          dependencyPath2 = podDir + 'GoogleUtilities'
+          dependencyPath3 = podDir + 'GoogleAppMeasurement'
+          FileUtils.mv(dependencyPath1,targetThirdSDKPath)
+          Fileutils.mv(dependencyPath2,targetThirdSDKPath)
+          FileUtils.mv(dependencyPath3,targetThirdSDKPath)
+        end
+        if adapterName == 'Facebook'
+          dependencyPath = podDir + 'FBSDKCoreKit'
+          FileUtils.mv(dependencyPath,targetThirdSDKPath)
+        end
         
         thirdSource = "#{thirdYumiMediationAdapterName}.tar.bz2"
         remoteAddress = "https://adsdk.yumimobi.com/iOS/Archived/#{ENV["TRAVIS_TAG"]}/#{thirdSource}"
