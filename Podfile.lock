@@ -7,33 +7,33 @@ PODS:
   - AppCenter/Core (2.5.1)
   - AppCenter/Crashes (2.5.1):
     - AppCenter/Core
-  - FBSDKCoreKit (5.12.0):
-    - FBSDKCoreKit/Basics (= 5.12.0)
-    - FBSDKCoreKit/Core (= 5.12.0)
-  - FBSDKCoreKit/Basics (5.12.0)
-  - FBSDKCoreKit/Core (5.12.0):
+  - FBSDKCoreKit (5.13.1):
+    - FBSDKCoreKit/Basics (= 5.13.1)
+    - FBSDKCoreKit/Core (= 5.13.1)
+  - FBSDKCoreKit/Basics (5.13.1)
+  - FBSDKCoreKit/Core (5.13.1):
     - FBSDKCoreKit/Basics
-  - GoogleAppMeasurement (6.1.6):
+  - GoogleAppMeasurement (6.1.7):
     - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
     - GoogleUtilities/MethodSwizzler (~> 6.0)
     - GoogleUtilities/Network (~> 6.0)
     - "GoogleUtilities/NSData+zlib (~> 6.0)"
     - nanopb (= 0.3.9011)
-  - GoogleUtilities/AppDelegateSwizzler (6.3.2):
+  - GoogleUtilities/AppDelegateSwizzler (6.4.0):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
     - GoogleUtilities/Network
-  - GoogleUtilities/Environment (6.3.2)
-  - GoogleUtilities/Logger (6.3.2):
+  - GoogleUtilities/Environment (6.4.0)
+  - GoogleUtilities/Logger (6.4.0):
     - GoogleUtilities/Environment
-  - GoogleUtilities/MethodSwizzler (6.3.2):
+  - GoogleUtilities/MethodSwizzler (6.4.0):
     - GoogleUtilities/Logger
-  - GoogleUtilities/Network (6.3.2):
+  - GoogleUtilities/Network (6.4.0):
     - GoogleUtilities/Logger
     - "GoogleUtilities/NSData+zlib"
     - GoogleUtilities/Reachability
-  - "GoogleUtilities/NSData+zlib (6.3.2)"
-  - GoogleUtilities/Reachability (6.3.2):
+  - "GoogleUtilities/NSData+zlib (6.4.0)"
+  - GoogleUtilities/Reachability (6.4.0):
     - GoogleUtilities/Logger
   - nanopb (0.3.9011):
     - nanopb/decode (= 0.3.9011)
@@ -169,22 +169,21 @@ SPEC REPOS:
     - YumiInMobi
     - YumiInneractiveAdSDK
     - YumiIronSource
+    - YumiMediationAdapters
+    - YumiMediationDebugCenter-iOS
+    - YumiMediationSDK
     - YumiMintegral
     - YumiOneWay
     - YumiPubNative
     - YumiTapjoySDK
     - YumiUnity
     - YumiVungle
-  https://github.com/yumimobi/Specs.git:
-    - YumiMediationAdapters
-    - YumiMediationDebugCenter-iOS
-    - YumiMediationSDK
 
 SPEC CHECKSUMS:
   AppCenter: fddcbac6e4baae3d93a196ceb0bfe0e4ce407dec
-  FBSDKCoreKit: fa3ac4dc9b1afc9ae70b3de4dd704d1b6aeeed0d
-  GoogleAppMeasurement: dfe55efa543e899d906309eaaac6ca26d249862f
-  GoogleUtilities: 547a86735c6f0ee30ad17e94df4fc21f616b71cb
+  FBSDKCoreKit: 8fb98209109fb684937f05d534305edb18c20207
+  GoogleAppMeasurement: db118eb61a97dd8c4f7014e368d3c335cbbcf80a
+  GoogleUtilities: 29bd0d8f850efbd28cff6d99e8b7da1f8d236bcf
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PlayableAds: ceb019c73d7a00b371412b0324a2f0907002ec99
   YumiAdColony: 9b28b405b5302a258b5c468a323856342a2ddb42
@@ -199,9 +198,9 @@ SPEC CHECKSUMS:
   YumiInMobi: 17f0e7c5046f21aebff36a1ad9d3be3ea66c45dd
   YumiInneractiveAdSDK: cd0d8785595c69badae058e55af0b47e3018dec0
   YumiIronSource: 2ef0c8c2d02b332dd2cbbef9d585013fe9098eca
-  YumiMediationAdapters: dfd85871f56a4a588baeb81644834e346cf867d9
-  YumiMediationDebugCenter-iOS: b6e98f0be9b257c8c3e4deb4b23e44db631690e9
-  YumiMediationSDK: 684fc42617c281a2706682ba722facca8d4c75cc
+  YumiMediationAdapters: 6e29dfad1769f255e62286baed7cb7333a776db8
+  YumiMediationDebugCenter-iOS: c5809647e16e4d2341e624e7fdee3d87222c5a17
+  YumiMediationSDK: f43fc578f32b56f463b8f2bfd4cdd967b3037b39
   YumiMintegral: e2b6c054bc270777edf70c8cb75cac14dee6a718
   YumiOneWay: b6da5b8cc6cca037e3e8bb1f70516bfbf9dd51a6
   YumiPubNative: ca6763402f734e5977d766c4bf1980eee7a05a12
@@ -209,6 +208,6 @@ SPEC CHECKSUMS:
   YumiUnity: 5b8777871b94ca1ae9f55f85df2537e24ea09f46
   YumiVungle: a832fceb4589f030343321b3cc18d3ec85a195b9
 
-PODFILE CHECKSUM: e2ba68abcb58ba1c58bcc340cb58f9101d4f866f
+PODFILE CHECKSUM: 7c5234fa627c846ffceb2a4dd3e4081a232a8031
 
 COCOAPODS: 1.8.4
