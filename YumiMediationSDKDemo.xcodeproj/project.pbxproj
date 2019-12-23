@@ -272,8 +272,8 @@
 				B9A065701E8D0F6C00B1B91B /* Sources */,
 				B9A065711E8D0F6C00B1B91B /* Frameworks */,
 				B9A065721E8D0F6C00B1B91B /* Resources */,
-				DE7AA86DA2673257098D316E /* [CP] Embed Pods Frameworks */,
-				173359308D40F846DB9EB018 /* [CP] Copy Pods Resources */,
+				4952BE7EBA87699E931642C9 /* [CP] Embed Pods Frameworks */,
+				85D638FC857D6B3251CB85D2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -403,7 +403,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		173359308D40F846DB9EB018 /* [CP] Copy Pods Resources */ = {
+		4952BE7EBA87699E931642C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo-frameworks.sh",
+				"${PODS_ROOT}/YumiPubNative/HyBid.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HyBid.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85D638FC857D6B3251CB85D2 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -411,22 +429,25 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo-resources.sh",
 				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
+				"${PODS_ROOT}/PlayableAds/Resources/ZplayMuteListener.bundle",
+				"${PODS_ROOT}/YumiAppLovin/AppLovinSDKResources.bundle",
 				"${PODS_ROOT}/YumiBaidu/lib/baidumobadsdk.bundle",
 				"${PODS_ROOT}/YumiBytedanceAds/BUAdSDK.bundle",
 				"${PODS_ROOT}/YumiDomob/IndependentVideoBundle.bundle",
 				"${PODS_ROOT}/YumiInneractiveAdSDK/IASDKCore/IASDKResources.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/YumiMediationAdapters/YumiMediationAdMob.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/YumiMediationAdapters/YumiMediationFacebook.bundle",
-				"${PODS_CONFIGURATION_BUILD_DIR}/YumiMediationAdapters/YumiMediationGDT.bundle",
+				"${PODS_ROOT}/YumiMediationAdapters/YumiMediationAdMob/Resources/YumiMediationAdMob.bundle",
+				"${PODS_ROOT}/YumiMediationAdapters/YumiMediationFacebook/Resources/YumiMediationFacebook.bundle",
+				"${PODS_ROOT}/YumiMediationAdapters/YumiMediationGDT/Resources/YumiMediationGDT.bundle",
 				"${PODS_ROOT}/YumiMediationDebugCenter-iOS/Resources/YumiMediationDebugCenter.bundle",
 				"${PODS_ROOT}/YumiMediationSDK/Resources/YumiMediationSDK.bundle",
 				"${PODS_ROOT}/YumiMediationSDK/Resources/YumiAdsSDK.bundle",
-				"${PODS_ROOT}/YumiMediationSDK/Resources/ZplayMuteListener.bundle",
-				"${PODS_ROOT}/YumiTapjoySDK/Tapjoy/Resources/TapjoyResources.bundle",
+				"${PODS_ROOT}/YumiTapjoySDK/Resources/TapjoyResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FacebookSDKStrings.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZplayMuteListener.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AppLovinSDKResources.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/baidumobadsdk.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BUAdSDK.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IndependentVideoBundle.bundle",
@@ -437,7 +458,6 @@
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YumiMediationDebugCenter.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YumiMediationSDK.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YumiAdsSDK.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZplayMuteListener.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TapjoyResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,24 +481,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DE7AA86DA2673257098D316E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo-frameworks.sh",
-				"${PODS_ROOT}/YumiPubNative/HyBid.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HyBid.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F0460564D963287E35078481 /* [CP] Check Pods Manifest.lock */ = {
@@ -687,13 +689,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 20191005;
+				CURRENT_PROJECT_VERSION = 2019121701;
 				DEVELOPMENT_TEAM = QX37QM2334;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = YumiMediationSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 4.3.4;
+				MARKETING_VERSION = 4.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.YumiMediationSDKExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "9f445f8f-ab1c-4958-b506-0257824d3d39";
@@ -709,17 +711,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				CURRENT_PROJECT_VERSION = 20191005;
+				CURRENT_PROJECT_VERSION = 2019121701;
 				DEVELOPMENT_TEAM = L5UE3EGW93;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = YumiMediationSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 4.3.4;
+				MARKETING_VERSION = 4.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.YumiMediationSDKExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "9f445f8f-ab1c-4958-b506-0257824d3d39";
-				PROVISIONING_PROFILE_SPECIFIER = Dis;
+				PROVISIONING_PROFILE_SPECIFIER = "Dis-zplay*";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;

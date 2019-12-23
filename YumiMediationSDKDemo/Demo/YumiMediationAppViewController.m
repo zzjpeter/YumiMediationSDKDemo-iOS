@@ -725,11 +725,11 @@ static int nativeAdNumber = 4;
                    adLogType:YumiMediationAdLogTypeVideo];
 }
 - (void)yumiMediationVideo:(YumiMediationVideo *)video didFailToShowWithError:(NSError *)error {
-    [self showLogConsoleWith:@"video did fail to show" adLogType:YumiMediationAdLogTypeVideo];
+    NSString *errStr = [NSString stringWithFormat:@"video did fail to show with error: %@",[error localizedDescription]];
+    [self showLogConsoleWith:errStr adLogType:YumiMediationAdLogTypeVideo];
 }
 
 #pragma mark : - YumiMediationSplashAdDelegate
-
 - (void)yumiMediationSplashAdSuccessToShow:(YumiMediationSplash *)splash {
     [self showLogConsoleWith:@"splash success to show  " adLogType:YumiMediationAdLogTypeSplash];
 }

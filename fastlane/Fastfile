@@ -86,25 +86,25 @@ platform :ios do
   lane :pushOss do
 
     allAdapters = [
-      { :name => "AdColony", :version => "3.3.7", :supportAdtype => "V" },
-      { :name => "AdMob", :version => "7.44.0", :supportAdtype => "B+I+V+N+S" },
-      { :name => "AppLovin", :version => "6.7.1.0", :supportAdtype => "B+V+I" },
+      { :name => "AdColony", :version => "4.1.1", :supportAdtype => "V" },
+      { :name => "AdMob", :version => "7.50.0", :supportAdtype => "B+I+V+N+S" },
+      { :name => "AppLovin", :version => "6.9.4", :supportAdtype => "B+V+I" },
       { :name => "Baidu", :version => "4.6.7", :supportAdtype => "B+I+V+N+S" },
-      { :name => "Chartboost", :version => "8.0.1", :supportAdtype => "V+I" },
-      { :name => "Facebook", :version => "5.4.0", :supportAdtype => "B+I+N+V" },
+      { :name => "Chartboost", :version => "8.0.3", :supportAdtype => "V+I" },
+      { :name => "Facebook", :version => "5.5.1", :supportAdtype => "B+I+N+V" },
       { :name => "Domob", :version => "3.8.0", :supportAdtype => "V" },
-      { :name => "GDT", :version => "4.10.10", :supportAdtype => "B+I+N+V+S" },
-      { :name => "InMobi", :version => "8.1.0", :supportAdtype => "B+I+V" },
-      { :name => "IronSource", :version => "6.8.3", :supportAdtype => "V+I" },
-      { :name => "Unity", :version => "3.1.0", :supportAdtype => "I+V" },
+      { :name => "GDT", :version => "4.10.19", :supportAdtype => "B+I+N+V+S" },
+      { :name => "InMobi", :version => "7.4.0", :supportAdtype => "B+I+V" },
+      { :name => "IronSource", :version => "6.8.7", :supportAdtype => "V+I" },
+      { :name => "Unity", :version => "3.3.0", :supportAdtype => "I+V" },
       { :name => "Vungle", :version => "6.4.3", :supportAdtype => "I+V" },
       { :name => "Mintegral", :version => "5.7.1", :supportAdtype => "V+I"},
-      { :name => "OneWay",:version => "2.1.0.0", :supportAdtype => "V"},
-      { :name => "ZplayAds",:version => "2.4.3", :supportAdtype => "V+I"},
+      { :name => "OneWay",:version => "2.3.0", :supportAdtype => "V"},
+      { :name => "ZplayAds",:version => "2.6.0", :supportAdtype => "V+I+B"},
       # { :name => "IQzone", :version => "3.0.2141", :supportAdtype => "B+I+V" },
       { :name => "BytedanceAds", :version => "2.0.1.1", :supportAdtype => "B+I+N+V+S" },
-      { :name => "InneractiveAdSDK", :version => "7.2.3", :supportAdtype => "B+I+V" },
-      { :name => "TapjoySDK", :version => "12.3.1", :supportAdtype => "I+V" },
+      { :name => "InneractiveAdSDK", :version => "7.4.1", :supportAdtype => "B+I+V" },
+      { :name => "TapjoySDK", :version => "12.3.4", :supportAdtype => "I+V" },
       { :name => "PubNative", :version => "1.3.7", :supportAdtype => "I+V" },
     ]
     sdkVersion = "YumiMediationSDK_v"+ ENV["TRAVIS_TAG"]
@@ -183,19 +183,30 @@ platform :ios do
         puts "is copying #{adapterName}"
         if adapterName != "ZplayAds"
           thirdYumiSDKName = 'Yumi' + adapterName
-        end
-        thirdYumiMediationAdapterName = 'YumiMediation' + adapterName
-        #copy adapters
-        srcAdapterPath = podDir + 'YumiMediationAdapters' + '/' + 'YumiMediationAdapters'+'/'+ adapterName
-        targetAdapterPath = thirdPartyPathName + '/'+ thirdYumiMediationAdapterName
-        if adapterName != "ZplayAds"
-          srcThirdSDKPath = podDir + thirdYumiSDKName
-          targetThirdSDKPath = thirdPartyPathName + '/'+ thirdYumiMediationAdapterName + '/' +thirdYumiSDKName
+        else
+          thirdYumiSDKName = 'PlayableAds'
         end
 
+        thirdYumiMediationAdapterName = 'YumiMediation' + adapterName
+        #copy adapters
+        srcAdapterPath = podDir + 'YumiMediationAdapters' + '/' + 'YumiMediation' + adapterName
+        targetAdapterPath = thirdPartyPathName + '/'+ thirdYumiMediationAdapterName
+        srcThirdSDKPath = podDir + thirdYumiSDKName
+        targetThirdSDKPath = thirdPartyPathName + '/'+ thirdYumiMediationAdapterName + '/' +thirdYumiSDKName
+
         FileUtils.mv(srcAdapterPath,targetAdapterPath)
-        if adapterName != "ZplayAds"
-          FileUtils.mv(srcThirdSDKPath,targetThirdSDKPath)
+        FileUtils.mv(srcThirdSDKPath,targetThirdSDKPath)
+        if adapterName == 'AdMob'
+          dependencyPath1 = podDir + 'nanopb'
+          dependencyPath2 = podDir + 'GoogleUtilities'
+          dependencyPath3 = podDir + 'GoogleAppMeasurement'
+          FileUtils.mv(dependencyPath1,targetThirdSDKPath)
+          FileUtils.mv(dependencyPath2,targetThirdSDKPath)
+          FileUtils.mv(dependencyPath3,targetThirdSDKPath)
+        end
+        if adapterName == 'Facebook'
+          dependencyPath = podDir + 'FBSDKCoreKit'
+          FileUtils.mv(dependencyPath,targetThirdSDKPath)
         end
         
         thirdSource = "#{thirdYumiMediationAdapterName}.tar.bz2"
@@ -228,7 +239,7 @@ platform :ios do
         file.puts("| :-------: | :----------: |")
         file.puts("|     B     |    Banner    |")
         file.puts("|     I     | Interstitial |")
-        file.puts("|     V     |    Video     |")
+        file.puts("|     V     | RewardedVideo|")
         file.puts("|     N     |    Native    |")
         file.puts("|     S     |    Splash    |")
       end
@@ -251,8 +262,10 @@ platform :ios do
 
   end
 
- # pushToHockeyApp in local
-  lane :pushToHockeyApp do
+ desc "Submit a new Beta Build to App Center"
+  lane :pushToAppCenter do
+    xcversion(version: "11.1")
+
     # Build
     gym(
       scheme: "YumiMediationSDKDemo",
@@ -261,18 +274,19 @@ platform :ios do
       clean: true,
       include_bitcode: false,
       include_symbols: true,
-      export_method: "enterprise"
+      export_method: "enterprise",
     )
 
-    # Push to HockeyApp
-    hockey(
-      api_token: "b23874100f5346cdb613ca63c57393eb",
-      public_identifier: '4467afeb42404f82be3ab1495cccb594',
-      notify: "1",
-      status: "2",
-      commit_sha: ENV["TRAVIS_COMMIT"],
-      notes: ENV["TRAVIS_COMMIT_MESSAGE"],
-    )
+    # push to App Center
+    appcenter_upload(
+      api_token: "432d532f9c8d234a64d9ffc626d81ba5f9646dae",
+      owner_name: "YumiSDK",
+      app_name: "YumiMediationSDKDemo-iOS",
+      ipa: "./YumiMediationSDKDemo.ipa",
+      dsym: "./YumiMediationSDKDemo.app.dSYM.zip",
+      release_notes: '',
+      notify_testers: true # Set to false if you don't want to notify testers of your new release (default: `false`)
+  )
   end
   # You can define as many lanes as you want
 
