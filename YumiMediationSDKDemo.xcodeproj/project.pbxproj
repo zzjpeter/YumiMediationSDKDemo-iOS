@@ -272,8 +272,8 @@
 				B9A065701E8D0F6C00B1B91B /* Sources */,
 				B9A065711E8D0F6C00B1B91B /* Frameworks */,
 				B9A065721E8D0F6C00B1B91B /* Resources */,
-				4A6A02B04D065787CED39DA6 /* [CP] Embed Pods Frameworks */,
-				FE6DB19BA3DF35A1CCB1EFC4 /* [CP] Copy Pods Resources */,
+				44583FE07C34B99C8493FCAC /* [CP] Embed Pods Frameworks */,
+				181EE5CB06FC52FF18641B6E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -403,7 +403,51 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4A6A02B04D065787CED39DA6 /* [CP] Embed Pods Frameworks */ = {
+		181EE5CB06FC52FF18641B6E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo-resources.sh",
+				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
+				"${PODS_ROOT}/PlayableAds/Resources/ZplayMuteListener.bundle",
+				"${PODS_ROOT}/YumiAppLovin/AppLovinSDKResources.bundle",
+				"${PODS_ROOT}/YumiBaidu/lib/baidumobadsdk.bundle",
+				"${PODS_ROOT}/YumiBytedanceAds/BUAdSDK.bundle",
+				"${PODS_ROOT}/YumiDomob/IndependentVideoBundle.bundle",
+				"${PODS_ROOT}/YumiInneractiveAdSDK/IASDKCore/IASDKResources.bundle",
+				"${PODS_ROOT}/YumiMediationAdapters/YumiMediationAdMob/Resources/YumiMediationAdMob.bundle",
+				"${PODS_ROOT}/YumiMediationAdapters/YumiMediationFacebook/Resources/YumiMediationFacebook.bundle",
+				"${PODS_ROOT}/YumiMediationAdapters/YumiMediationGDT/Resources/YumiMediationGDT.bundle",
+				"${PODS_ROOT}/YumiMediationDebugCenter-iOS/Resources/YumiMediationDebugCenter.bundle",
+				"${PODS_ROOT}/YumiMediationSDK/Resources/YumiMediationSDK.bundle",
+				"${PODS_ROOT}/YumiMediationSDK/Resources/YumiAdsSDK.bundle",
+				"${PODS_ROOT}/YumiTapjoySDK/Resources/TapjoyResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FacebookSDKStrings.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZplayMuteListener.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AppLovinSDKResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/baidumobadsdk.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BUAdSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IndependentVideoBundle.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IASDKResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YumiMediationAdMob.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YumiMediationFacebook.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YumiMediationGDT.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YumiMediationDebugCenter.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YumiMediationSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YumiAdsSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TapjoyResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44583FE07C34B99C8493FCAC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -473,50 +517,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FE6DB19BA3DF35A1CCB1EFC4 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo-resources.sh",
-				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
-				"${PODS_ROOT}/PlayableAds/Resources/ZplayMuteListener.bundle",
-				"${PODS_ROOT}/YumiAppLovin/AppLovinSDKResources.bundle",
-				"${PODS_ROOT}/YumiBaidu/lib/baidumobadsdk.bundle",
-				"${PODS_ROOT}/YumiBytedanceAds/BUAdSDK.bundle",
-				"${PODS_ROOT}/YumiDomob/IndependentVideoBundle.bundle",
-				"${PODS_ROOT}/YumiInneractiveAdSDK/IASDKCore/IASDKResources.bundle",
-				"${PODS_ROOT}/YumiMediationAdapters/YumiMediationAdMob/Resources/YumiMediationAdMob.bundle",
-				"${PODS_ROOT}/YumiMediationAdapters/YumiMediationFacebook/Resources/YumiMediationFacebook.bundle",
-				"${PODS_ROOT}/YumiMediationAdapters/YumiMediationGDT/Resources/YumiMediationGDT.bundle",
-				"${PODS_ROOT}/YumiMediationDebugCenter-iOS/Resources/YumiMediationDebugCenter.bundle",
-				"${PODS_ROOT}/YumiMediationSDK/Resources/YumiMediationSDK.bundle",
-				"${PODS_ROOT}/YumiMediationSDK/Resources/YumiAdsSDK.bundle",
-				"${PODS_ROOT}/YumiTapjoySDK/Resources/TapjoyResources.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FacebookSDKStrings.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/ZplayMuteListener.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AppLovinSDKResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/baidumobadsdk.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/BUAdSDK.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IndependentVideoBundle.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IASDKResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YumiMediationAdMob.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YumiMediationFacebook.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YumiMediationGDT.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YumiMediationDebugCenter.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YumiMediationSDK.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/YumiAdsSDK.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TapjoyResources.bundle",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
