@@ -1,153 +1,69 @@
-* [YumiMediationSDK iOS](#yumimediationsdk-ios)   
-   * [概述](#概述)   
-   * [开发环境配置](#开发环境配置)   
-      * [App Transport Security](#app-transport-security)
-      * [<a href="./ThirdpartyNetworkConfiguration/ThirdpartyNetworkConfiguration.md">各三方平台环境配置</a>](#各三方平台环境配置)
-   * [接入方式](#接入方式)   
-   * [代码集成示例](#代码集成示例)   
-      * [广告形式](#广告形式)   
-         * [Banner](#banner)   
-            * [初始化及请求横幅](#初始化及请求横幅)   
-            * [设置 Banner 尺寸](#设置-banner-尺寸)   
-            * [移除 Banner](#移除-banner)   
-            * [实现代理方法](#实现代理方法)   
-            * [自适应功能](#自适应功能)   
-         * [Interstitial](#interstitial)   
-            * [初始化及请求插屏](#初始化及请求插屏)   
-            * [展示插屏](#展示插屏)   
-            * [实现代理方法](#实现代理方法-1)   
-         * [Rewarded Video](#rewarded-video)   
-            * [初始化及请求视频](#初始化及请求视频)   
-            * [展示视频](#展示视频)   
-            * [实现代理方法](#实现代理方法-2)   
-         * [Splash](#splash)   
-            * [初始化及展示开屏](#初始化及展示开屏)
-            * [设置开屏拉取时长](#设置开屏拉取时长)
-            * [设置开屏加载时的背景图片](#设置开屏加载时的背景图片)
-            * [设置开屏方向（只支持 Admob 平台）](#设置开屏方向（只支持-Admob-平台）)   
-            * [展示全屏广告](#展示全屏广告)   
-            * [展示半屏广告](#展示半屏广告)   
-            * [实现代理方法](#实现代理方法-3)
-         * [Native](#native)   
-            * [初始化及请求](#初始化及请求) 
-            * [何时请求广告](#何时请求广告)  
-            * [确定加载完成时间](#确定加载完成时间)
-            * [Register View](#register-view)   
-            * [Report Impression](#report-impression)   
-            * [原生视频广告](#原生视频广告) 
-            * [原生模板广告](#原生模板广告)
-            * [原生广告选项 YumiMediationNativeAdConfiguration](#原生广告选项-yumimediationnativeadconfiguration)  
-            * [实现代理方法](#实现代理方法-4)   
-   * [调试模式](#调试模式)
-      * [接入方式](#接入方式-1)
-      * [调用调试模式](#调用调试模式)   
-      * [图示](#图示)   
-      * [TEST ID](#TEST-ID)
-      * [GDPR](#gdpr)
-         * [设置 GDPR](#设置-gdpr)
-         * [支持 GDPR 的平台](#支持-gdpr-的平台)
-   * [接入常见问题](#接入常见问题) 
-
 # YumiMediationSDK iOS
+## 开始使用
+1. 面向人群  
+   本指南适用于希望借助 Yumi SDK 通过 iOS 应用获利的发布商。  
+   要展示广告并赚取收入，第一步是将 Yumi 移动广告 SDK 集成到应用中。集成该 SDK 后，您就可以进而实施一种或多种支持的广告格式。  
 
-## 概述
+1. 开发环境  
+   Xcode 10.0 或更高版本。  
+   iOS 9.0 或更高版本。  
 
-1. 面向人群
+2. [Demo 获取地址](https://github.com/yumimobi/YumiMediationSDKDemo-iOS.git)  
 
-   本产品主要面向需要在 iOS 产品中接入玉米移动广告 SDK 的开发人员。
+## App Transport Security  
+[应用传输安全 (ATS)](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html) 是 iOS 9 中引入的隐私设置功能。  
+默认情况下，系统会为新应用启用该功能，并强制实施安全连接。  
+就任何 iOS 9 和 iOS 10 设备而言，如果运行的是使用 Xcode 7 或更高版本构建的应用且未停用 ATS，那么均会受到此项更改的影响。这可能会影响您的应用与 Google 移动广告 SDK 的集成。  
+当不符合 ATS 标准的应用试图在 iOS 9 或 iOS 10 设备上通过 HTTP 投放广告时，系统将显示以下日志消息：  
+  >App Transport Security has blocked a cleartext HTTP (http://) resource load since it is insecure. Temporary exceptions can be configured via your app's Info.plist file.    
 
-2. 开发环境
+为确保您的广告不受 ATS 影响，请执行以下操作：  
+```xml
+<key>NSAppTransportSecurity</key>
+<dict>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
+</dict>
+```  
+![ats_exceptions](resources/ats_exceptions.png)
 
-   Xcode 7.0 或更高版本。
+## 导入 YumiMediationSDK
+### CocoaPods (推荐)  
+CocoaPods 是 iOS 的依赖管理工具，使用它可以轻松管理 YumiMediationSDK。  
+打开您工程的 Podfile，选择下面其中一种方式添加到您应用的 target。  
+如果您是初次使用 CocoaPods，请查阅 [CocoaPods Guides](https://guides.cocoapods.org/using/using-cocoapods.html) 。  
+```ruby
+pod "YumiMediationSDK"
+```
 
-   iOS 8.0 或更高版本。
+如果您需要聚合其他平台  
+```ruby
+pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','Unity','Vungle','Mintegral','OneWay','ZplayAds','TapjoySDK','BytedanceAds','InneractiveAdSDK','PubNative']
+```
 
-3. [Demo 获取地址](https://github.com/yumimobi/YumiMediationSDKDemo-iOS.git)         
-## 开发环境配置
+接下来在命令行界面中运行：  
+```s
+$ pod install --repo-update
+```  
+最终通过 workspace 打开工程。  
 
-- ### App Transport Security
-
-  WWDC 15 提出的 ATS (App Transport Security) 是 Apple 在推进网络通讯安全的一个重要方式。在 iOS 9 及以上版本中，默认非 HTTPS 的网络访问是被禁止的。
-
-  因为大部分广告物料以 HTTP 形式提供，为提高广告填充率，请进行以下设置：
-
-  ```xml
-  <key>NSAppTransportSecurity</key>
-  <dict>
-      <key>NSAllowsArbitraryLoads</key>
-      <true/>
-  </dict>
-  ```
-
-  ![ats_exceptions](resources/ats_exceptions.png)
-
-  *当 `NSAllowsArbitraryLoads` 和 `NSAllowsArbitraryLoadsInWebContent` 或 `NSAllowsArbitraryLoadsForMedia` 同时存在时，根据系统不同，表现的行为也会不一样。简单说，iOS 9 只看 `NSAllowsArbitraryLoads`，而 iOS 10 会优先看 `InWebContent` 和 `ForMedia` 的部分。在 iOS 10 中，要是后两者存在的话，在相关部分就会忽略掉 `NSAllowsArbitraryLoads`；如果不存在，则遵循 `NSAllowsArbitraryLoads` 的设定。*
-
-- ### [各三方平台环境配置](./ThirdpartyNetworkConfiguration/ThirdpartyNetworkConfiguration.md)
-  请按照您接入的三方平台，进行相关配置。此内容来源于各三方平台开发文档。
-
-
-## 接入方式
-
-- CocoaPods (推荐)
-
-   CocoaPods 是 iOS 的依赖管理工具，使用它可以轻松管理 YumiMediationSDK。
-
-   打开您工程的 Podfile，选择下面其中一种方式添加到您应用的 target。
-
-   如果您是初次使用 CocoaPods，请查阅 [CocoaPods Guides](https://guides.cocoapods.org/using/using-cocoapods.html) 。
-
-   - 如果您只需要 YumiMediationSDK 
-
-     ```ruby
-     pod "YumiMediationSDK"
-     ```
-
-   - 如果您需要聚合其他平台
-
-     ```ruby
-     pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','Unity','Vungle','Mintegral','OneWay','ZplayAds','TapjoySDK','BytedanceAds','InneractiveAdSDK','PubNative']
-     ```
-
-   接下来在命令行界面中运行：
-
-   ```ruby
-   $ pod install --repo-update
-   ```
-
-   最终通过 workspace 打开工程。
-
-- 手动集成 YumiMediationSDK
-
-   1. 下载 ([SDKDownloadPage-iOS](https://github.com/yumimobi/YumiMediationSDKDemo-iOS/blob/master/normalDocuments/iOSDownloadPage.md)) YumiMediationSDK 及您所需的三方平台
-
-   2. 添加 YumiMediationSDK 及您所需的三方平台到您的工程
-
-      <img src="resources/addFiles.png" width="280" height="320"> 
-
-      <img src="resources/addFiles-2.png" width="500" height="400"> 
-
-   3. 配置脚本
-
-      按照如图所示步骤，添加 YumiMediationSDKConfig.xcconfig
-
-      ![ios02](resources/ios02.png) 
-
-   4. 导入 Framework
-
-      导入如图所示的系统动态库。
-
-      ![ios06](resources/ios06.png) 
+### 手动集成 YumiMediationSDK
+1. 下载 ([SDKDownloadPage-iOS](https://github.com/yumimobi/YumiMediationSDKDemo-iOS/blob/master/normalDocuments/iOSDownloadPage.md)) YumiMediationSDK 及您所需的三方平台。  
+2. 添加 YumiMediationSDK 及您所需的三方平台到您的工程。  
+![addFiles](resources/addFiles.png)   
+![addFiles-2](resources/addFiles-2.png)   
+3. 配置脚本。  
+按照如图所示步骤，添加 YumiMediationSDKConfig.xcconfig  
+![ios02](resources/ios02.png)   
+4. 导入 Framework。  
+导入如图所示的系统动态库。  
+![ios06](resources/ios06.png)   
 
 ## 代码集成示例
-
 ### 广告形式
-
 #### Banner
-
-- ##### 初始化及请求横幅
-
-  ```objective-c
+##### 初始化及请求横幅
+```objective-c
   #import <YumiMediationSDK/YumiMediationBannerView.h>
 
   @interface ViewController ()<YumiMediationBannerViewDelegate>
@@ -172,10 +88,9 @@
     [self.view addSubview:self.yumiBanner];
   }
   @end
-  ```
+```
 
-- ##### 设置 Banner 尺寸
-
+##### 设置 Banner 尺寸
 ```objective-c
 /// Represents the fixed banner ad size
 typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
@@ -201,9 +116,8 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
   self.yumiBanner.bannerSize = kYumiMediationAdViewBanner300x250;
 ```
 
-- ##### 移除 Banner
-
-  ```objective-c
+##### 移除 Banner  
+```objective-c
   //remove yumiBanner
   - (void)viewWillDisappear:(BOOL)animated {
       [super viewWillDisappear:animated];
@@ -213,11 +127,10 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
       	_yumiBanner = nil;
       }
   }
-  ```
+```
 
-- ##### 实现代理方法 
-
-  ```objective-c
+##### 实现代理方法 
+```objective-c
   //implementing yumiBanner delegate
   - (void)yumiMediationBannerViewDidLoad:(YumiMediationBannerView *)adView{
       NSLog(@"adViewDidReceiveAd");
@@ -228,33 +141,30 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
   - (void)yumiMediationBannerViewDidClick:(YumiMediationBannerView *)adView{
       NSLog(@"adViewDidClick");
   }
-  ```
+```
 
-- ##### 自适应功能
-
-  ```objective-c
+##### 自适应功能  
+```objective-c
   - (void)loadAd:(BOOL)isSmartBanner;
-  ```
+```  
+您在请求 `banner` 广告的同时可以设置是否开启自适应功能。  
+如果设置 `isSmartBanner` 为 `YES` ,YumiMediationBannerView 将会自动根据设备的尺寸进行适配。  
+此时您可以通过下面的方法获取 YumiMediationBannerView 的尺寸。  
 
-  您在请求 `banner` 广告的同时可以设置是否开启自适应功能。
-
-  如果设置 `isSmartBanner` 为 `YES` ,YumiMediationBannerView 将会自动根据设备的尺寸进行适配。
-
-  此时您可以通过下面的方法获取 YumiMediationBannerView 的尺寸。
-
-  ```objective-c
+```objective-c
   - (CGSize)fetchBannerAdSize;
-  ```
+```
 
- ![fzsy](resources/fzsy.png) ![zsy](resources/zsy.png) 
+![fzsy](resources/fzsy.png)   
+​	*非自适应模式*   
 
-​	*非自适应模式* 		  *自适应模式*										
+![zsy](resources/zsy.png)   
+*自适应模式*										
 
-#### Interstitial
+#### Interstitial  
+##### 初始化及请求插屏  
 
-- ##### 初始化及请求插屏
-
-  ```objective-c
+```objective-c
   #import <YumiMediationSDK/YumiMediationInterstitial.h>
 
   @interface ViewController ()<YumiMediationInterstitialDelegate>
@@ -273,11 +183,10 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
     self.yumiInterstitial.delegate = self;
   }
   @end
-  ```
+```
 
-- ##### 展示插屏
-
-  ```objective-c
+##### 展示插屏
+```objective-c
   //present YumiMediationInterstitial
   - (IBAction)presentYumiMediationInterstitial:(id)sender {
     if ([self.yumiInterstitial isReady]) {
@@ -286,11 +195,10 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
       NSLog(@"Ad wasn't ready");
     }
   }
-  ```
+```
 
-- ##### 实现代理方法
-
-  ```objective-c
+##### 实现代理方法
+```objective-c
   //implementing YumiMediationInterstitial Delegate
   /// Tells the delegate that the interstitial ad request succeeded.
   - (void)yumiMediationInterstitialDidReceiveAd:(YumiMediationInterstitial *)interstitial {
@@ -322,13 +230,12 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
   - (void)yumiMediationInterstitialDidClick:(YumiMediationInterstitial *)interstitial {
     NSLog(@"YumiMediationInterstitialDidClick");
   }
-  ```
+```
 
 #### Rewarded Video
+##### 初始化及请求视频
 
-- ##### 初始化及请求视频
-
-  ```objective-c
+```objective-c
   //视频广告位会自动加载广告，您无需重复调用。
   #import <YumiMediationSDK/YumiMediationVideo.h>
    
@@ -341,11 +248,10 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
     [YumiMediationVideo sharedInstance].delegate = self;
   }
   @end
-  ```
+```
+##### 展示视频
 
-- ##### 展示视频
-
-  ```objective-c
+```objective-c
   - (IBAction)presentYumiMediationVideo:(id)sender {
     if ([[YumiMediationVideo sharedInstance] isReady]) {
       [[YumiMediationVideo sharedInstance] presentFromRootViewController:self];
@@ -353,11 +259,10 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
       NSLog(@"Ad wasn't ready");
     }
   }
-  ```
+```
 
-- ##### 实现代理方法
-
-  ```objective-c
+##### 实现代理方法
+```objective-c
   /// Tells the delegate that the video ad was received.
   - (void)yumiMediationVideoDidReceiveAd:(YumiMediationVideo *)video {
       NSLog(@"YumiMediationVideoDidReceiveAd");
@@ -391,17 +296,14 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
   - (void)yumiMediationVideoDidClick:(YumiMediationVideo *)video {
       NSLog(@"YumiMediationVideoDidClick");
   }
-  ```
+```
 
 #### Splash
 
-- ##### 初始化及展示开屏
-
-  为了保证开屏的展示，我们推荐尽量在 App 启动时开始执行下面的方法。
-
-  例如：在您 `AppDelegate.m` 的 `application:didFinishLaunchingWithOptions:` 方法中。
-
-  ```objective-c
+##### 初始化及展示开屏
+为了保证开屏的展示，我们推荐尽量在 App 启动时开始执行下面的方法。  
+例如：在您 `AppDelegate.m` 的 `application:didFinishLaunchingWithOptions:` 方法中。  
+```objective-c
   #import <YumiMediationSDK/YumiMediationSplash.h>
 
   @interface AppDelegate () <YumiMediationSplashAdDelegate>
@@ -423,21 +325,21 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
   @end
   ```
 
-- ##### 设置开屏拉取时长
+##### 设置开屏拉取时长
   ```objective-c
   /// 拉取广告超时时间，默认3s。在该超时时间内，如果广告拉取成功，则立马展示开屏广告，否则放弃此次广告展示机会。
   /// 百度 平台不支持 这个参数
   [self.yumiSplash setFetchTime:3]; 
   ```
 
-- ##### 设置开屏加载时的背景图片
+##### 设置开屏加载时的背景图片
 
   ```objective-c
   /// 开屏加载时的背景图片，最好是 APP 启动的 launch image
   [self.yumiSplash setLaunchImage:[UIImage imageNamed:@"YOUR_IMAGENAME"]];
   ```
 
-- ##### 设置开屏方向（只支持 Admob 平台）
+##### 设置开屏方向（只支持 Admob 平台）
 
   ```objective-c
   /// 开屏的方向
@@ -446,13 +348,13 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
 
 
 
-- ##### 展示全屏广告
+##### 展示全屏广告
 
   ```objective-c
   [self.yumiSplash loadAdAndShowInWindow:[UIApplication sharedApplication].keyWindow];
   ```
 
-- ##### 展示半屏广告
+##### 展示半屏广告
 
   ```objective-c
   /// bottom view 的高度不能超过屏幕高度的15%
@@ -461,7 +363,7 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
   [self.yumiSplash loadAdAndShowInWindow:[UIApplication sharedApplication].keyWindow withBottomView:bottomView];
   ```
 
-- ##### 实现代理方法
+##### 实现代理方法
 
   ```objective-c
   - (void)yumiMediationSplashAdSuccessToShow:(YumiMediationSplash *)splash {
@@ -480,7 +382,7 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
 
 #### Native
 
-- ##### 初始化及请求
+##### 初始化及请求
 
   ```objectivec 
   #import <YumiMediationSDK/YumiMediationNativeAd.h>
@@ -503,7 +405,7 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
   }
   @end
   ```
-- ##### 何时请求广告
+##### 何时请求广告
 
   展示原生广告的应用可以在实际展示广告之前随时请求这些广告。在许多情况下，这是推荐的做法。例如，如果某款应用展示一个商品清单，其中会夹杂一些原生广告，那么该应用就可以加载整个清单中的原生广告，因为它知道一些广告仅在用户滚动浏览视图后才会展示，还有一些可能根本不会展示。
 
@@ -513,7 +415,7 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
    - 注意：重复使用 `loadAd:` 时，请确保等待每个请求完成，然后再重新调用 `loadAd:`。
    - 注意：如果你要支持原生模板广告，请务必设置 `YumiMediationNativeAdConfiguration` 中的 `expressAdSize` 为你需要的模板尺寸
 
-- ##### 确定加载完成时间
+##### 确定加载完成时间
 
    在应用调用 `loadAd:` 后，可通过`YumiMediationNativeAdDelegate` 中的以下方法获取请求的结果：
 
@@ -526,10 +428,9 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
     /// Tells the delegate that a request failed.
     - (void)yumiMediationNativeAd:(YumiMediationNativeAd *)nativeAd didFailWithError:(YumiMediationError *)error;
     ```
+##### Register View
 
-- ##### Register View
-
-    ```objectivec
+```objectivec
     /**
         注册用来渲染广告的 View
         - Parameter view: 渲染广告的 View.
@@ -554,7 +455,8 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
                                                           }
                                      withViewController:self
                                                nativeAd:adData];
-    ```
+```  
+
     - 注意: 如果您使用 `UIButton` 来展示原生广告元素，必须禁用 `userInteractionEnabled`，以便 SDK 处理事件。
            最好的方式是避免使用 `UIButton`，而使用 `UILabel` 或者 `UIImageView`。
 
@@ -562,19 +464,18 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
       1. 记录点击
       2. 显示广告选择叠加层 （AdMob，Facebook 支持）
       3. 显示广告标识
+##### Report Impression
 
-- ##### Report Impression
-
-    ```objectivec
+```objectivec
      /**
       当原生广告被展示时调用此方法
       - Parameter nativeAd: 将要被展示的广告对象.
       - Parameter view: 用来渲染广告的 View.
      */
      - (void)reportImpression:(YumiMediationNativeModel *)nativeAd view:(UIView *)view;
-    ```
+```  
 
-- ##### 原生视频广告
+##### 原生视频广告
 
   - 如果您想在原生广告中展示视频，您仅需要在注册视图时，将您的 MediaView 传入 SDK。 `YumiMediationUnifiedNativeMediaViewAsset : self.nativeView.mediaView`。
  SDK 会自动处理此填充事宜：
@@ -604,7 +505,7 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
     ```
   - YumiMediationNativeVideoController 提供以下查询视频状态的方法：
 
-    ```objectivec
+```objectivec
     /// Delegate for receiving video notifications.
     @property(nonatomic, weak) id<YumiMediationNativeVideoControllerDelegate> delegate;
 
@@ -630,9 +531,9 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
     - (void)yumiMediationNativeVideoControllerDidEndVideoPlayback:(YumiMediationNativeVideoController *)videoController;
 
     @end
-    ```
+```
 
-- ##### 原生模板广告
+##### 原生模板广告
   您可通过 `YumiMediationNativeModel.h` 中的 `isExpressAdView` 来判断当前广告是否是模板广告。
 
   如果是原生模板广告，你只需要把 `YumiMediationNativeModel.h` 中的 `expressAdView` 添加到您的广告容器中。
@@ -640,7 +541,7 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
   因为原生模板广告需要注册渲染时间，请在 `yumiMediationNativeExpressAdRenderSuccess:` 渲染成功回调中去展示您的原生模板广告。
   
 
-- ##### 原生广告选项 `YumiMediationNativeAdConfiguration`
+##### 原生广告选项 `YumiMediationNativeAdConfiguration`
 
    `YumiMediationNativeAdConfiguration` 是 `YumiMediationNativeAd` 的创建过程中包含的最后一个参数，本节将介绍这些选项。
 
@@ -678,9 +579,8 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
    - `expressAdSize`
       您可以使用该属性指定请求原生模板广告的大小。默认为nil
 
-- ##### 实现代理方法
-
-   ```objectivec
+##### 实现代理方法
+```objectivec
    /// Tells the delegate that an ad has been successfully loaded.
    - (void)yumiMediationNativeAdDidLoad:(NSArray<YumiMediationNativeModel *> *)nativeAdArray{
        NSLog(@"Native Ad Did Load.");
@@ -707,7 +607,7 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
   - (void)yumiMediationNativeExpressAdDidClickCloseButton:(YumiMediationNativeModel *)nativeModel{
       NSLog(@"Native express Ad did click close button.");      
   }
-   ```
+```
 
 ## 调试模式
 
@@ -762,15 +662,13 @@ typedef NS_ENUM(NSUInteger, YumiMediationAdViewBannerSize) {
 
 ### TEST ID
 
- 
-
-| 广告类型               | Slot(Placement) ID                                                                                                                | 备注                                                                                                                               |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| Banner                 | l6ibkpae                                                                                                                          | YUMI,AdMob,APPlovin,Baidu,Facebook,GDTMob  使用此test id,以上Network平台可测试到对应平台广告                                                 |
-| Interstitial  | onkkeg5i | YUMI,AdMob,Baidu,Chartboost,GDTMob,IronSource,Inmobi,IQzone, untiy Ads，vungle, ZPLAYAds 使用此test id,以上Network平台可测试到对应平台广告 |
-| Rewarded Video         | 5xmpgti4                                                                                                                          | YUMI,AdMob,Adcolony, APPlovin,IronSource,Inmobi,Mintegral, untiy Ads，vungle, ZPLAYAds 使用此test id,以上Network平台可测试到对应平台广告 |
-| Native                 | atb3ke1i                                                                                                                          | YUMI,AdMob,Baidu,GDTMob,Facebook 使用此test id,以上Network平台可测试到对应平台广告                                        |
-| Splash                 | pwmf5r42                                                                                                                         | YUMI,Baidu,GDTMob,AdMob,穿山甲 使用 test id，以上Network平台可测试到对应平台广告                                                                                               |
+| 广告类型       | Slot(Placement) ID | 备注                                                                                                                                       |
+| -------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Banner         | l6ibkpae           | YUMI,AdMob,APPlovin,Baidu,Facebook,GDTMob  使用此test id,以上Network平台可测试到对应平台广告                                               |
+| Interstitial   | onkkeg5i           | YUMI,AdMob,Baidu,Chartboost,GDTMob,IronSource,Inmobi,IQzone, untiy Ads，vungle, ZPLAYAds 使用此test id,以上Network平台可测试到对应平台广告 |
+| Rewarded Video | 5xmpgti4           | YUMI,AdMob,Adcolony, APPlovin,IronSource,Inmobi,Mintegral, untiy Ads，vungle, ZPLAYAds 使用此test id,以上Network平台可测试到对应平台广告   |
+| Native         | atb3ke1i           | YUMI,AdMob,Baidu,GDTMob,Facebook 使用此test id,以上Network平台可测试到对应平台广告                                                         |
+| Splash         | pwmf5r42           | YUMI,Baidu,GDTMob,AdMob,穿山甲 使用 test id，以上Network平台可测试到对应平台广告                                                           |
 ## GDPR
 本文件是为遵守欧洲联盟的一般数据保护条例(GDPR)而提供的。
 自 YumiMediationSDK 4.1.0 起，如果您正在收集用户的信息，您可以使用下面提供的api将此信息通知给 YumiMediationSDK 和部分三方平台。
@@ -793,30 +691,30 @@ typedef enum : NSUInteger {
 [[YumiMediationGDPRManager sharedGDPRManager] updateNetworksConsentStatus:YumiMediationConsentStatusPersonalized];
 ```
 ### 支持 GDPR 的平台
-统计自 YumiMediationSDK 4.1.0 起。
-详细信息请至各平台官网获取。
+统计自 YumiMediationSDK 4.1.0 起。  
+详细信息请至各平台官网获取。  
 
-| 平台名称 | 是否支持 GDPR | 备注 |
-| :----: | :--------:| :--: |
-| Unity  | 是 |   |
-| Admob  | 是 |   |
-| Mintegral | 是 |   |
-| Adcolony  | 是 |   |
-| IronSource  | 是 |   |
-| Inneractive | 是 |   |
-| Chartboost | 是 |   |
-| InMobi | 是 |   |
-| IQzone | 是 |   |
-| Yumi | 是 |   |
-| AppLovin  | 是 |   |
-| Baidu  | 否 |   |
-| Facebook | 是 | |
-| Domob  | 否 |   |
-| GDT | 否 |   |
-| Vungle | 否 | 可在 Vungle 后台设置 |
-| OneWay | 否 |   |
-| BytedanceAds | 否 |   |
-| ZplayAds  | 否 |   |
+|   平台名称   | 是否支持 GDPR |         备注         |
+| :----------: | :-----------: | :------------------: |
+|    Unity     |      是       |                      |
+|    Admob     |      是       |                      |
+|  Mintegral   |      是       |                      |
+|   Adcolony   |      是       |                      |
+|  IronSource  |      是       |                      |
+| Inneractive  |      是       |                      |
+|  Chartboost  |      是       |                      |
+|    InMobi    |      是       |                      |
+|    IQzone    |      是       |                      |
+|     Yumi     |      是       |                      |
+|   AppLovin   |      是       |                      |
+|    Baidu     |      否       |                      |
+|   Facebook   |      是       |                      |
+|    Domob     |      否       |                      |
+|     GDT      |      否       |                      |
+|    Vungle    |      否       | 可在 Vungle 后台设置 |
+|    OneWay    |      否       |                      |
+| BytedanceAds |      否       |                      |
+|   ZplayAds   |      否       |                      |
 
 
 ## 接入常见问题
