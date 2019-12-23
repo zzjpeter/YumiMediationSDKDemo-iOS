@@ -272,8 +272,8 @@
 				B9A065701E8D0F6C00B1B91B /* Sources */,
 				B9A065711E8D0F6C00B1B91B /* Frameworks */,
 				B9A065721E8D0F6C00B1B91B /* Resources */,
-				E2F8D158345025C872BDA5B0 /* [CP] Embed Pods Frameworks */,
-				758BA369F72B5C28CC59815C /* [CP] Copy Pods Resources */,
+				4952BE7EBA87699E931642C9 /* [CP] Embed Pods Frameworks */,
+				85D638FC857D6B3251CB85D2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -403,7 +403,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		758BA369F72B5C28CC59815C /* [CP] Copy Pods Resources */ = {
+		4952BE7EBA87699E931642C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo-frameworks.sh",
+				"${PODS_ROOT}/YumiPubNative/HyBid.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HyBid.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85D638FC857D6B3251CB85D2 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -463,24 +481,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E2F8D158345025C872BDA5B0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo-frameworks.sh",
-				"${PODS_ROOT}/YumiPubNative/HyBid.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HyBid.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F0460564D963287E35078481 /* [CP] Check Pods Manifest.lock */ = {
