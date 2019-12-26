@@ -1,13 +1,13 @@
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '9.0'
+platform :ios, '8.0'
 
 target 'YumiMediationSDKDemo' do
-  # use_frameworks!
+  use_frameworks!
   
-    pod "YumiMediationSDK"
-    pod "YumiMediationAdapters"
-    pod "YumiMediationDebugCenter-iOS"
-    pod 'AppCenter'
+  pod "YumiMediationSDK"
+  pod "YumiMediationAdapters"
+  pod "YumiMediationDebugCenter-iOS"
+  pod 'AppCenter'
 
   target 'YumiMediationSDKDemoTests' do
     inherit! :search_paths
