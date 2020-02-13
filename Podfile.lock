@@ -8,11 +8,11 @@ PODS:
   - AppCenter/Crashes (1.2.0):
     - AppCenter/Core
   - AtmosplayAds (3.0.1)
-  - FBSDKCoreKit (5.15.1):
-    - FBSDKCoreKit/Basics (= 5.15.1)
-    - FBSDKCoreKit/Core (= 5.15.1)
-  - FBSDKCoreKit/Basics (5.15.1)
-  - FBSDKCoreKit/Core (5.15.1):
+  - FBSDKCoreKit (6.0.0):
+    - FBSDKCoreKit/Basics (= 6.0.0)
+    - FBSDKCoreKit/Core (= 6.0.0)
+  - FBSDKCoreKit/Basics (6.0.0)
+  - FBSDKCoreKit/Core (6.0.0):
     - FBSDKCoreKit/Basics
   - GoogleAppMeasurement (6.2.2):
     - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
@@ -185,7 +185,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AppCenter: d0b68b2a7a87ac0aed78e66f36d87fd321d0a29c
   AtmosplayAds: 53c615a931c2b5d7df046adbb137172b88dcbc37
-  FBSDKCoreKit: 1d5acf7c9d7a2f92bb1a242dc60cae5b7adb91df
+  FBSDKCoreKit: fe738b172590e622c86735b45e20d196848b54df
   GoogleAppMeasurement: d0560d915abf15e692e8538ba1d58442217b6aff
   GoogleUtilities: 06eb53bb579efe7099152735900dd04bf09e7275
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
