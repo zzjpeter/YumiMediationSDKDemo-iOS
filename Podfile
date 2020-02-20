@@ -1,4 +1,3 @@
-source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 
 target 'YumiMediationSDKDemo' do
@@ -7,6 +6,7 @@ target 'YumiMediationSDKDemo' do
   pod "YumiMediationSDK"
   pod "YumiMediationAdapters"
   pod "YumiMediationDebugCenter-iOS"
+  pod "YumiMediationAdapterBytedance"
   pod 'AppCenter'
 
   target 'YumiMediationSDKDemoTests' do
