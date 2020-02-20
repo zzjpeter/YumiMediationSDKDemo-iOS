@@ -272,8 +272,8 @@
 				B9A065701E8D0F6C00B1B91B /* Sources */,
 				B9A065711E8D0F6C00B1B91B /* Frameworks */,
 				B9A065721E8D0F6C00B1B91B /* Resources */,
-				C21EC2009CC6F14B8976FDC9 /* [CP] Embed Pods Frameworks */,
-				47FA6B78AA2FBDF4CDBC7BAF /* [CP] Copy Pods Resources */,
+				CAD33649AF30ECDCB00FC219 /* [CP] Embed Pods Frameworks */,
+				B8C91C684E8309AB34786295 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -403,7 +403,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		47FA6B78AA2FBDF4CDBC7BAF /* [CP] Copy Pods Resources */ = {
+		B8C91C684E8309AB34786295 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -445,7 +445,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YumiMediationSDKDemo/Pods-YumiMediationSDKDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C21EC2009CC6F14B8976FDC9 /* [CP] Embed Pods Frameworks */ = {
+		CAD33649AF30ECDCB00FC219 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
