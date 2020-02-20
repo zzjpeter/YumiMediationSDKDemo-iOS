@@ -181,7 +181,7 @@ platform :ios do
         supportAdtype = thirdParty[:supportAdtype]
 
         puts "is copying #{adapterName}"
-        if adapterName != "ZplayAds"
+        if adapterName != "YumiAtmosplayAds"
           thirdYumiSDKName = 'Yumi' + adapterName
         else
           thirdYumiSDKName = 'AtmosplayAds'
