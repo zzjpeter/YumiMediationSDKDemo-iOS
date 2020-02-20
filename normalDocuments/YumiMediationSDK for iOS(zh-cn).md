@@ -56,8 +56,8 @@
    要展示广告并赚取收入，第一步是将 Yumi 移动广告 SDK 集成到应用中。集成该 SDK 后，您就可以进而实施一种或多种支持的广告格式。  
 
 1. 开发环境  
-   Xcode 10.0 或更高版本。  
-   iOS 9.0 或更高版本。  
+   Xcode 11.0 或更高版本。  
+   iOS 8.0 或更高版本。  
 
 2. [Demo 获取地址](https://github.com/yumimobi/YumiMediationSDKDemo-iOS.git)  
 
@@ -89,7 +89,8 @@ pod "YumiMediationSDK"
 
 如果您需要聚合其他平台  
 ```ruby
-pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','Unity','Vungle','Mintegral','OneWay','ZplayAds','TapjoySDK','BytedanceAds','InneractiveAdSDK','PubNative']
+pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','Unity','Vungle','Mintegral','OneWay','AtmosplayAds','TapjoySDK','InneractiveAdSDK','PubNative']
+pod "YumiMediationAdapterBytedance"
 ```
 
 接下来在命令行界面中运行：  
