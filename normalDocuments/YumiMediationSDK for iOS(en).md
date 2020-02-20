@@ -57,7 +57,7 @@
 
 2. Develop Environment
 
-   Xcode 7.0 and above. 
+   Xcode 11.0 and above. 
 
    iOS 8.0 and above.
 
@@ -105,7 +105,8 @@
   - If also need other platforms:
 
     ```ruby
-    pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','Unity','Vungle','Mintegral','OneWay','ZplayAds','TapjoySDK','BytedanceAds','InneractiveAdSDK','PubNative']
+    pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','Unity','Vungle','Mintegral','OneWay','AtmosplayAds','TapjoySDK','InneractiveAdSDK','PubNative']
+    pod "YumiMediationAdapterBytedance"
     ```
 
   Then run the followings at command line interface:
