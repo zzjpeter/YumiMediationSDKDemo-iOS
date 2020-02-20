@@ -184,7 +184,7 @@ platform :ios do
         if adapterName != "ZplayAds"
           thirdYumiSDKName = 'Yumi' + adapterName
         else
-          thirdYumiSDKName = 'PlayableAds'
+          thirdYumiSDKName = 'AtmosplayAds'
         end
 
         thirdYumiMediationAdapterName = 'YumiMediation' + adapterName
