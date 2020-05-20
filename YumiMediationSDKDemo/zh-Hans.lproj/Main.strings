@@ -1,0 +1,33 @@
+
+/* Class = "UITextField"; text = "1.0"; ObjectID = "0DQ-ML-daa"; */
+"0DQ-ML-daa.text" = "1.0";
+
+/* Class = "UITextField"; placeholder = "placementID"; ObjectID = "0vB-1p-CX2"; */
+"0vB-1p-CX2.placeholder" = "placementID";
+
+/* Class = "UILabel"; text = "versionID:"; ObjectID = "3iQ-eE-Hxy"; */
+"3iQ-eE-Hxy.text" = "versionID:";
+
+/* Class = "UIButton"; normalTitle = "Select AD type"; ObjectID = "51v-oc-axB"; */
+"51v-oc-axB.normalTitle" = "Select AD type";
+
+/* Class = "UILabel"; text = "Set GDPR"; ObjectID = "Nye-Bg-FzK"; */
+"Nye-Bg-FzK.text" = "Set GDPR";
+
+/* Class = "UILabel"; text = "Banner custom size"; ObjectID = "R10-xK-0kQ"; */
+"R10-xK-0kQ.text" = "Banner custom size";
+
+/* Class = "UIButton"; normalTitle = "Goto YumiMobi"; ObjectID = "Vi2-Fy-vWV"; */
+"Vi2-Fy-vWV.normalTitle" = "Goto YumiMobi";
+
+/* Class = "UILabel"; text = "SmartBannerLandscape"; ObjectID = "kLX-s5-U0R"; */
+"kLX-s5-U0R.text" = "SmartBannerLandscape";
+
+/* Class = "UILabel"; text = "Banner300x250"; ObjectID = "lcH-sR-eR7"; */
+"lcH-sR-eR7.text" = "Banner300x250";
+
+/* Class = "UILabel"; text = "channelID:"; ObjectID = "nuk-QY-erE"; */
+"nuk-QY-erE.text" = "channelID:";
+
+/* Class = "UILabel"; text = "SmartBannerPortrait"; ObjectID = "zWR-lY-psI"; */
+"zWR-lY-psI.text" = "SmartBannerPortrait";
