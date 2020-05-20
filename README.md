@@ -79,7 +79,7 @@
 ```  
 ![ats_exceptions](normalDocuments/resources/ats_exceptions.png)
 
-## 添加语言设置
+## 添加语言设置(仅针对穿山甲平台)
 注意 : 开发者必须在这里设置所支持的语言,否则会有语言显示的问题.
 例如 : 支持中文 添加 Chinese
 ![](normalDocuments/resources/language_setting.png)
