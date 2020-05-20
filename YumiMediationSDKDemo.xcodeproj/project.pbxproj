@@ -49,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B1ACEB724753601007CF728 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		5B1ACEB824753601007CF728 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		5B22634622BCB5A4001C16F4 /* YumiMediationAppViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YumiMediationAppViewController.xib; sourceTree = "<group>"; };
 		5B22634922BCB5A4001C16F4 /* CALayer+Transition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+Transition.m"; sourceTree = "<group>"; };
 		5B22634A22BCB5A4001C16F4 /* CALayer+Transition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+Transition.h"; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 				English,
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = B9A0656B1E8D0F6C00B1B91B;
 			productRefGroup = B9A065751E8D0F6C00B1B91B /* Products */;
@@ -581,6 +584,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				5B22636B22BCB5AE001C16F4 /* Base */,
+				5B1ACEB724753601007CF728 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -589,6 +593,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				B9A065861E8D0F6C00B1B91B /* Base */,
+				5B1ACEB824753601007CF728 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
