@@ -1,4 +1,4 @@
-platform :ios, '8.0'
+platform :ios, '9.0'
 
 target 'YumiMediationSDKDemo' do
   use_frameworks!
@@ -7,6 +7,7 @@ target 'YumiMediationSDKDemo' do
   pod "YumiMediationAdapters"
   pod "YumiMediationDebugCenter-iOS"
   pod "YumiMediationAdapterBytedance"
+  pod "YumiMediationAdapterAppLovin"
   pod 'AppCenter'
 
   target 'YumiMediationSDKDemoTests' do
