@@ -96,7 +96,7 @@ pod "YumiMediationSDK"
 如果您需要聚合其他平台  
 注：由于Bytedance及AppLovin新版本不再支持i386架构，请单独添加pod命令。
 ```ruby
-pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','Unity','Vungle','Mintegral','OneWay','AtmosplayAds','TapjoySDK','InneractiveAdSDK','PubNative']
+pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','Unity','Vungle','Mintegral','OneWay','AtmosplayAds','TapjoySDK','InneractiveAdSDK','PubNative']
 pod "YumiMediationAdapterBytedance"
 pod "YumiMediationAdapterAppLovin"
 ```
