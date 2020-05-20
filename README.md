@@ -79,6 +79,11 @@
 ```  
 ![ats_exceptions](normalDocuments/resources/ats_exceptions.png)
 
+## 添加语言设置
+注意 : 开发者必须在这里设置所支持的语言,否则会有语言显示的问题.
+例如 : 支持中文 添加 Chinese
+![](normalDocuments/resources/language_setting.png)
+
 ## 导入 YumiMediationSDK
 ### CocoaPods (推荐)  
 CocoaPods 是 iOS 的依赖管理工具，使用它可以轻松管理 YumiMediationSDK。  
@@ -89,9 +94,11 @@ pod "YumiMediationSDK"
 ```
 
 如果您需要聚合其他平台  
+注：由于Bytedance及AppLovin新版本不再支持i386架构，请单独添加pod命令。
 ```ruby
 pod "YumiMediationAdapters", :subspecs => ['AdColony','AdMob','AppLovin','Baidu','Chartboost','Domob','Facebook','GDT','InMobi','IronSource','Unity','Vungle','Mintegral','OneWay','AtmosplayAds','TapjoySDK','InneractiveAdSDK','PubNative']
 pod "YumiMediationAdapterBytedance"
+pod "YumiMediationAdapterAppLovin"
 ```
 
 接下来在命令行界面中运行：  
