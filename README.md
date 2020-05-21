@@ -58,7 +58,7 @@
 
 1. 开发环境  
    Xcode 10.0 或更高版本。  
-   iOS 8.0 或更高版本。  
+   iOS 9.0 或更高版本。  
 
 2. [Demo 获取地址](https://github.com/yumimobi/YumiMediationSDKDemo-iOS.git)  
 
