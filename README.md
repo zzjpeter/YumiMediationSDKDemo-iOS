@@ -770,6 +770,7 @@ typedef enum : NSUInteger {
 |   AppLovin   |      是       |                      |
 |    Baidu     |      否       |                      |
 |   Facebook   |      是       |                      |
+|  Bytedance   |      是       |                      |
 |    Domob     |      否       |                      |
 |     GDT      |      否       |                      |
 |    Vungle    |      否       | 可在 Vungle 后台设置 |
