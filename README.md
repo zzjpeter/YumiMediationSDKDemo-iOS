@@ -93,6 +93,14 @@ CocoaPods 是 iOS 的依赖管理工具，使用它可以轻松管理 YumiMediat
 pod "YumiMediationSDK"
 ```
 
+## 添加您的AppLovin SDK Key 
+在您工程的info.plist文件中添加AppLovinSdkKey。
+您可从AppLovin官网获取您的sdk key。
+```App
+<key>AppLovinSdkKey</key>
+  <string>get your applovin sdk key from applovin dash board</string>
+```
+
 如果您需要聚合其他平台  
 注：由于Bytedance及AppLovin新版本不再支持i386架构，请单独添加pod命令。
 ```ruby
