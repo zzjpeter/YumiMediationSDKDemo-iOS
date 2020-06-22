@@ -634,7 +634,7 @@ static int nativeAdNumber = 4;
     if (!_nativeAd) {
         YumiMediationNativeAdConfiguration *config = [[YumiMediationNativeAdConfiguration alloc] init];
         
-        config.expressAdSize = CGSizeMake(300, 300);
+        config.expressAdSize = CGSizeMake(228, 150);
         //        config.disableImageLoading = NO;
         //        config.preferredAdChoicesPosition = YumiMediationAdViewPositionTopRightCorner;
         //        config.preferredAdAttributionPosition = YumiMediationAdViewPositionTopLeftCorner;
@@ -851,7 +851,9 @@ static int nativeAdNumber = 4;
             return;
         }
         
-        adData.videoController.delegate = self;
+        if (adData.hasVideoContent) {
+            adData.videoController.delegate = self;
+        }
         [weakSelf.nativeAd registerViewForInteraction:weakSelf.nativeView.adView
                                   clickableAssetViews:@{
                                                         YumiMediationUnifiedNativeTitleAsset : weakSelf.nativeView.title,

@@ -9,7 +9,7 @@ PODS:
     - AppCenter/Core
   - AtmosplayAds (3.2.1)
   - FBSDKCoreKit/Basics (7.0.1)
-  - GoogleAppMeasurement (6.6.0):
+  - GoogleAppMeasurement (6.6.1):
     - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
     - GoogleUtilities/MethodSwizzler (~> 6.0)
     - GoogleUtilities/Network (~> 6.0)
@@ -183,7 +183,7 @@ SPEC CHECKSUMS:
   AppCenter: ca66175050d538b157959382dd43f1ab96cdab84
   AtmosplayAds: 687844b247ebd35bbe87375bb2a7e5c205dbbdd4
   FBSDKCoreKit: 9cc05bec0568a5955c82eb59ae95da0fe125b88d
-  GoogleAppMeasurement: 67458367830514fb20fd9e233496f1eef9d90185
+  GoogleAppMeasurement: 2fd5c5a56c069db635c8e7b92d4809a9591d0a69
   GoogleUtilities: 39530bc0ad980530298e9c4af8549e991fd033b1
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   PromisesObjC: b48e0338dbbac2207e611750777895f7a5811b75
