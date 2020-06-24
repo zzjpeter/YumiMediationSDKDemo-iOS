@@ -705,7 +705,7 @@
 				DEVELOPMENT_TEAM = YEB8KNJQ29;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = YumiMediationSDKDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 4.6.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.popstar;
@@ -728,7 +728,7 @@
 				DEVELOPMENT_TEAM = L5UE3EGW93;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = YumiMediationSDKDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 4.6.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zplay.YumiMediationSDKExample;
