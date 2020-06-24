@@ -894,7 +894,7 @@ static int nativeAdNumber = 4;
 - (void)showNativeExpressAdView:(YumiMediationNativeModel *)adData{
     __weak typeof(self) weakSelf = self;
     dispatch_async(dispatch_get_main_queue(), ^{
-        [weakSelf showLogConsoleWith:@"show native  express Ad" adLogType:YumiMediationAdLogTypeNative];
+        [weakSelf showLogConsoleWith:@"show native express Ad" adLogType:YumiMediationAdLogTypeNative];
         [weakSelf.view addSubview:weakSelf.nativeView];
         [weakSelf.nativeView.adView addSubview:adData.expressAdView];
         
