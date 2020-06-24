@@ -634,7 +634,7 @@ static int nativeAdNumber = 4;
     if (!_nativeAd) {
         YumiMediationNativeAdConfiguration *config = [[YumiMediationNativeAdConfiguration alloc] init];
         
-        config.expressAdSize = CGSizeMake(228, 150);
+        config.expressAdSize = CGSizeMake(296.4, 195);
         //        config.disableImageLoading = NO;
         //        config.preferredAdChoicesPosition = YumiMediationAdViewPositionTopRightCorner;
         //        config.preferredAdAttributionPosition = YumiMediationAdViewPositionTopLeftCorner;
@@ -851,18 +851,21 @@ static int nativeAdNumber = 4;
             return;
         }
         
+        NSMutableDictionary *clickableAssetViews = [@{
+            YumiMediationUnifiedNativeTitleAsset : weakSelf.nativeView.title,
+            YumiMediationUnifiedNativeDescAsset : weakSelf.nativeView.desc,
+            YumiMediationUnifiedNativeCoverImageAsset : weakSelf.nativeView.coverImage,
+            YumiMediationUnifiedNativeIconAsset : weakSelf.nativeView.icon,
+            YumiMediationUnifiedNativeCallToActionAsset : weakSelf.nativeView.callToAction
+        } mutableCopy];
+
         if (adData.hasVideoContent) {
             adData.videoController.delegate = self;
+            [clickableAssetViews removeObjectForKey:YumiMediationUnifiedNativeCoverImageAsset];
+            [clickableAssetViews setObject:weakSelf.nativeView.coverImage forKey:YumiMediationUnifiedNativeMediaViewAsset];
         }
         [weakSelf.nativeAd registerViewForInteraction:weakSelf.nativeView.adView
-                                  clickableAssetViews:@{
-                                                        YumiMediationUnifiedNativeTitleAsset : weakSelf.nativeView.title,
-                                                        YumiMediationUnifiedNativeDescAsset : weakSelf.nativeView.desc,
-                                                        YumiMediationUnifiedNativeCoverImageAsset : weakSelf.nativeView.coverImage,
-                                                        YumiMediationUnifiedNativeMediaViewAsset : weakSelf.nativeView.coverImage,
-                                                        YumiMediationUnifiedNativeIconAsset : weakSelf.nativeView.icon,
-                                                        YumiMediationUnifiedNativeCallToActionAsset : weakSelf.nativeView.callToAction
-                                                        }
+                                  clickableAssetViews:clickableAssetViews
                                    withViewController:weakSelf
                                              nativeAd:adData];
     });
@@ -878,9 +881,11 @@ static int nativeAdNumber = 4;
         
         weakSelf.nativeView.title.text = adData.title;
         weakSelf.nativeView.desc.text = adData.desc;
-        weakSelf.nativeView.callToAction.text = adData.callToAction;
         weakSelf.nativeView.coverImage.image = adData.coverImage.image;
         weakSelf.nativeView.icon.image = adData.icon.image;
+        if (adData.callToAction) {
+            weakSelf.nativeView.callToAction.text = adData.callToAction;
+        }
         
         [weakSelf.nativeAd reportImpression:adData view:weakSelf.nativeView.adView];
     });
