@@ -1,14 +1,14 @@
 PODS:
-  - AppCenter (3.3.0):
-    - AppCenter/Analytics (= 3.3.0)
-    - AppCenter/Crashes (= 3.3.0)
-  - AppCenter/Analytics (3.3.0):
+  - AppCenter (3.3.1):
+    - AppCenter/Analytics (= 3.3.1)
+    - AppCenter/Crashes (= 3.3.1)
+  - AppCenter/Analytics (3.3.1):
     - AppCenter/Core
-  - AppCenter/Core (3.3.0)
-  - AppCenter/Crashes (3.3.0):
+  - AppCenter/Core (3.3.1)
+  - AppCenter/Crashes (3.3.1):
     - AppCenter/Core
   - AtmosplayAds (3.2.1)
-  - FBSDKCoreKit/Basics (7.1.0)
+  - FBSDKCoreKit/Basics (7.1.1)
   - GoogleAppMeasurement (6.6.1):
     - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
     - GoogleUtilities/MethodSwizzler (~> 6.0)
@@ -167,23 +167,22 @@ SPEC REPOS:
     - YumiInMobi
     - YumiInneractiveAdSDK
     - YumiIronSource
+    - YumiMediationAdapterAppLovin
+    - YumiMediationAdapterBytedance
+    - YumiMediationAdapters
+    - YumiMediationDebugCenter-iOS
+    - YumiMediationSDK
     - YumiMintegral
     - YumiOneWay
     - YumiPubNative
     - YumiTapjoySDK
     - YumiUnity
     - YumiVungle
-  https://github.com/yumimobi/Specs.git:
-    - YumiMediationAdapterAppLovin
-    - YumiMediationAdapterBytedance
-    - YumiMediationAdapters
-    - YumiMediationDebugCenter-iOS
-    - YumiMediationSDK
 
 SPEC CHECKSUMS:
-  AppCenter: 976294db3f288d82204afc6ad71790d71be249ac
+  AppCenter: 76ecf7e959a68e36b0fd314e8dc5897660214423
   AtmosplayAds: 687844b247ebd35bbe87375bb2a7e5c205dbbdd4
-  FBSDKCoreKit: 78929d105d244f8fddfe03c44afc55d97ec12e9f
+  FBSDKCoreKit: b46507dc8b8cefed31d644e74d7cc30e2a715ef8
   GoogleAppMeasurement: 2fd5c5a56c069db635c8e7b92d4809a9591d0a69
   GoogleUtilities: 39530bc0ad980530298e9c4af8549e991fd033b1
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
@@ -200,11 +199,11 @@ SPEC CHECKSUMS:
   YumiInMobi: 17f0e7c5046f21aebff36a1ad9d3be3ea66c45dd
   YumiInneractiveAdSDK: cd0d8785595c69badae058e55af0b47e3018dec0
   YumiIronSource: e52a79519b4a0804616d4875aa912f97e811344b
-  YumiMediationAdapterAppLovin: 5f292935be5f51d936d93fe2bb37ee2b4b4de768
-  YumiMediationAdapterBytedance: 5b544467b6f83335e1220f11844d8f91add26ebc
-  YumiMediationAdapters: 84f15cc96a7836289914d16164f7dcc27805ba20
-  YumiMediationDebugCenter-iOS: b8c56aa749ec9bc658287e8ee28d340cd6692a7e
-  YumiMediationSDK: 69e3251a224d5f7654bbb4a8e07212c4aedaddc3
+  YumiMediationAdapterAppLovin: 350ce8eb41f500a352d0d339c8a6b926b75b0dcd
+  YumiMediationAdapterBytedance: ac466d23a1bf5a3b1e031d187717a3a87ee4b0e7
+  YumiMediationAdapters: 24f68d2287759ab20d8f4b3d8b0c27e8c8f546db
+  YumiMediationDebugCenter-iOS: 9c651dc13ccf16a0d24205d9faa55cad0174fada
+  YumiMediationSDK: e85666972b37b5a7a7df390537a5d24bd31f5bf1
   YumiMintegral: ad62d40dc73823dc84a6df208681e3cafdecebff
   YumiOneWay: b6da5b8cc6cca037e3e8bb1f70516bfbf9dd51a6
   YumiPubNative: ca6763402f734e5977d766c4bf1980eee7a05a12
@@ -212,6 +211,6 @@ SPEC CHECKSUMS:
   YumiUnity: 253bf214f8dad66d0f0937ef8026826caf0d798f
   YumiVungle: 589c7800d947366fef54a4471cfc79b54abb012d
 
-PODFILE CHECKSUM: ce9617f9d94bd04db9d907f14b6c9e4a86b9e3a4
+PODFILE CHECKSUM: dcda11fe8589cd19705d5cd38203c36b0349daa4
 
 COCOAPODS: 1.8.4
