@@ -11,6 +11,8 @@ target 'YumiMediationSDKDemo' do
   pod "YumiMediationDebugCenter-iOS"
   pod "YumiMediationAdapterBytedance"
   pod "YumiMediationAdapterAppLovin"
+  pod "YumiMediationAdapterAdmob"
+  pod "YumiMediationAdapterGDT"
   pod 'AppCenter'
 
   target 'YumiMediationSDKDemoTests' do
