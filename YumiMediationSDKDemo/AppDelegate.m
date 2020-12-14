@@ -9,9 +9,6 @@
 #import "AppDelegate.h"
 #import <YumiMediationSDK/YumiAdsSplash.h>
 #import <CoreLocation/CoreLocation.h>
-@import AppCenter;
-@import AppCenterAnalytics;
-@import AppCenterCrashes;
 
 @interface AppDelegate () <YumiAdsSplashDelegate>
 
@@ -26,11 +23,6 @@
     
     self.location = [[CLLocationManager alloc] init];
     [self.location requestWhenInUseAuthorization];
-    
-    [MSAppCenter start:@"cd740b22-da55-4473-bfe9-821e7e5f53ec" withServices:@[
-      [MSAnalytics class],
-      [MSCrashes class]
-    ]];
     
     return YES;
 }
