@@ -13,7 +13,6 @@ target 'YumiMediationSDKDemo' do
   pod "YumiMediationAdapterAppLovin"
   pod "YumiMediationAdapterAdmob"
   pod "YumiMediationAdapterGDT"
-  pod 'AppCenter'
 
   target 'YumiMediationSDKDemoTests' do
     inherit! :search_paths
