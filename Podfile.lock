@@ -25,6 +25,7 @@ PODS:
   - "GoogleUtilities/NSData+zlib (7.1.1)"
   - GoogleUtilities/Reachability (7.1.1):
     - GoogleUtilities/Logger
+  - LookinServer (1.0.0)
   - nanopb (2.30906.0):
     - nanopb/decode (= 2.30906.0)
     - nanopb/encode (= 2.30906.0)
@@ -131,6 +132,7 @@ PODS:
   - YumiVungle (6.5.3)
 
 DEPENDENCIES:
+  - LookinServer (~> 1.0.0)
   - YumiMediationAdapterAdmob
   - YumiMediationAdapterAppLovin
   - YumiMediationAdapterBytedance
@@ -146,6 +148,7 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleUserMessagingPlatform
     - GoogleUtilities
+    - LookinServer
     - nanopb
     - PromisesObjC
     - YumiAdColony
@@ -172,7 +175,7 @@ SPEC REPOS:
     - YumiTapjoySDK
     - YumiUnity
     - YumiVungle
-  https://github.com/yumimobi/Specs.git:
+  https://github.com/yumimobi/Specs:
     - YumiMediationSDK
 
 SPEC CHECKSUMS:
@@ -181,6 +184,7 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: 8d3c0aeede16ab7764144b5a4ca8e1d4323841b7
   GoogleUserMessagingPlatform: b168e8c46cd8f92aa3e34b584c4ca78a411ce367
   GoogleUtilities: 3dc4ff0d5e4840e2fa8eef0889620e8c33d4218c
+  LookinServer: 0002891cd3cec5e082a910e897dfe71b4f06b89e
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
   YumiAdColony: 9b28b405b5302a258b5c468a323856342a2ddb42
@@ -209,6 +213,6 @@ SPEC CHECKSUMS:
   YumiUnity: 253bf214f8dad66d0f0937ef8026826caf0d798f
   YumiVungle: 589c7800d947366fef54a4471cfc79b54abb012d
 
-PODFILE CHECKSUM: 3febca63c6f7f298448c488d5fe62d63d008d2dc
+PODFILE CHECKSUM: cceac0b69cde3dcebf8c29990a385849e05981d1
 
 COCOAPODS: 1.10.0

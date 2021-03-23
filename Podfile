@@ -14,6 +14,9 @@ target 'YumiMediationSDKDemo' do
   pod "YumiMediationAdapterAdmob"
   pod "YumiMediationAdapterGDT"
 
+  #  测试
+  pod 'LookinServer','~> 1.0.0', :configurations => ['Debug'],:inhibit_warnings => true
+  
   target 'YumiMediationSDKDemoTests' do
     inherit! :search_paths
     # Pods for testing

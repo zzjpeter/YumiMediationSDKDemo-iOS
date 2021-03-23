@@ -158,13 +158,17 @@
 
 - (void)updatedAdTypeMessageWith:(YumiAdType)adType {
     self.adType = adType;
-    NSString *adTypeMsg = [NSString stringWithFormat:@"Selected: %@", self.adTypesInfo[(NSUInteger)self.adType]];
+    NSString *adTypeInfo = self.adTypesInfo[(NSUInteger)self.adType];
+    NSString *adTypeMsg = [NSString stringWithFormat:@"Selected: %@", adTypeInfo];
     [self.selectAdTypeBtn setTitle:adTypeMsg forState:UIControlStateNormal];
+
+    NSArray *adTypeInfoArray = [adTypeInfo componentsSeparatedByString:@":"];
+    self.placementIDTextField.text = adTypeInfoArray.lastObject;
 }
 
 - (NSArray *)adTypesInfo {
     if (!_adTypesInfo) {
-        _adTypesInfo = @[ @"Banner", @"Interstitial", @"Video", @"Splash", @"Native" ];
+        _adTypesInfo = @[ @"Banner:l6ibkpae", @"Interstitial:onkkeg5i", @"Video:5xmpgti4", @"Splash:pwmf5r42", @"Native:atb3ke1i" ];
     }
     return _adTypesInfo;
 }
